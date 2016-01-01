@@ -18,7 +18,7 @@ McDonnell Douglas MD-88
   <object-name>alt</object-name>
   <object-name>asi</object-name>
   <object-name>vsi</object-name>
-  <object-name>nd_L</object-name>
+  <object-name>ehsi</object-name>
   <object-name>ai</object-name>
   <object-name>gear_indicators</object-name>
   <object-name>flaps</object-name>
@@ -40,7 +40,7 @@ McDonnell Douglas MD-88
   <object-name>lighting_panel_R</object-name>
   <object-name>lighting_panel_P</object-name>
   <object-name>eadi_R</object-name>
-  <object-name>nd_R</object-name>
+  <object-name>ehsi2</object-name>
   <object-name>alt_R</object-name>
   <object-name>asi_R</object-name>
   <object-name>vsi_R</object-name>
@@ -108,8 +108,8 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
-  <name>nd_L</name>
-  <path>Aircraft/MD-88/Models/Instruments/ND/ND_L.xml</path>
+  <name>ehsi</name>
+  <path>Aircraft/MD-88/Models/Instruments/ehsi.xml</path>
   <offsets>
     <x-m>2.252</x-m>
     <y-m>-0.513</y-m>
@@ -351,8 +351,8 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
-  <name>nd_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/ND/ND_R.xml</path>
+  <name>ehsi2</name>
+  <path>Aircraft/MD-88/Models/Instruments/ehsi2.xml</path>
   <offsets>
     <x-m>2.252</x-m>
     <y-m>0.513</y-m>
