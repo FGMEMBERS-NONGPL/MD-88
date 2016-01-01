@@ -1,0 +1,60 @@
+﻿McDonnell Douglas MD-88 for Flightgear
+
+Based on MD-82 from Andino. Its licence says:
+
+	<< This model is currently available as free for personal, non-commercial use. If used in any derivative material, please credit me where applicable.
+
+	Creative Commons license "CC-BY-NC-SA":
+
+	http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+
+	Gary R. Neely
+	January 2010
+	grneely@gmail.com
+	"Buckaroo" on the Flightgear forums >>
+
+The mentioned Creative Commons licence says:
+
+	<< You are free to:
+
+	- Share — copy and redistribute the material in any medium or format
+    	- Adapt — remix, transform, and build upon the material
+
+    	The licensor cannot revoke these freedoms as long as you follow the license terms
+
+	Under the following terms:
+
+	- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. 
+	- You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+	- NonCommercial — You may not use the material for commercial purposes.
+
+	- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. >>
+
+it0uchpods (411) has created a MD-88 addapting, remixing, transforming and building upon Andino's MD-82. Therefore, it is under the same licence: Creative Commons license "CC-BY-NC-SA": 
+
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+What it0uchpods (411) has done is:
+- Update models for 3.4
+- Changes FDM (YaSim) for better
+- Fixed autpilot bugs.
+- Other changes, like adding liveries, correcting some instruments.
+
+This model includes several liveries, taken from the Flightgear Livery Database. They are Bulgarian Air Charter (by Tobias Henkel), Continental Airlines (by Emmanuel Savage), Delta Airlines (by Emmanuel Savage), Everts Air Cargo (by Tobies Henkel), Frontier Airlines (by Emmanuel Savage), Japan Airlines (Martien var der P.), JeTran Air (by Tobias Henkel), the old Atlas Virtual Airlines (author unknown), the new GVA livery (by Fajar Sidik) and Swiss Air (Martien van der P.). This liveries are supposed to by distributed under GNU licence. 
+
+The model includes also some liveries taken from http://fgfsliveries.blogspot.com.es. They are Aerolineas Argentinas, Aeropostal, Austral, Austral/Aerolineas Argentinas, and Spanair. Aparently, they are also under the GNU licence.
+
+New textures (Insel Island, Aeromexico, PanAm, BRT) were created by Andino. They are under the GNU licence.
+
+The configuration for some views has been taken from Raptor, who offered them in the FG Forum.
+
+All this has been done for fun.
+
+
+
+
+
+
+

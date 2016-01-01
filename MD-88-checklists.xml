@@ -1,0 +1,1510 @@
+<PropertyList>
+  <checklist>
+    <title>Before Starting Engine</title>
+<page>	
+    <item>
+      <name>Preflight Inspection</name>
+      <value>COMPLETE</value>
+    </item>
+    <item>
+      <name>Passenger Briefing</name>
+      <value>COMPLETE</value>
+    </item>
+    <item>
+      <name>Seat Belts, Seat Position, Harnesses</name>
+      <value>ADJUST and LOCK</value>
+    </item>
+    <item>
+      <name>Parking Brakes</name>
+      <value>TEST and SET (shift-B)</value>
+      <condition>
+        <equals>
+          <property>/controls/gear/brake-parking</property>
+					<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/gear/brake-parking</property>
+				<value>1</value>
+	</binding>
+    </item>
+    <item>
+      <name>Throttle</name>
+      <value>IDLE</value>
+    </item>
+    <item>
+      <name>Fuel Flow</name>
+      <value>OFF</value>
+    </item>
+    <item>
+      <name>Pneu X-Feed Valve</name>
+      <value>CLOSED</value>
+    </item>
+    <item>
+      <name>Battery Master Switch</name>
+      <value>ON</value>
+    </item>
+    <item>
+      <name>Panel Lights</name>
+      <value>ON if required</value>
+    </item>
+    <item>
+      <name>Landing Gear Lever</name>
+      <value>Check Down</value>
+    </item>
+</page>
+<page>
+
+    <item>
+      <name>Flaps</name>
+      <value>UP</value>
+    </item>
+    <item>
+      <name>Spoilers</name>
+      <value>Retracted</value>
+    </item>
+    <item>
+      <name>Fuel Quantity</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Take-off Weight</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Pitot Heat</name>
+      <value>OFF</value>
+    </item>
+    <item>
+      <name>De-Ice</name>
+      <value>OFF</value>
+    </item>
+    <item>
+      <name>Flight Controls</name>
+      <value>Free and Correct</value>
+    </item>
+    <item>
+      <name>Fasten Seat Belts</name>
+      <value>On</value>
+      <condition>
+        <equals>
+          <property>/controls/switches/seatbelt-sign</property>
+		<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/seatbelt-sign</property>
+        <value>1</value>
+      </binding>
+    </item>
+    <item>
+      <name>No Smoking Sign</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Avionics</name>
+      <value>On</value>
+    </item>
+    
+</page>
+<page>
+    <item>
+      <name>Check Weather</name>
+      <value>Atis, Flight Services</value>
+    </item>
+    <item>
+      <name>De-Ice</name>
+      <value>Test / Check</value>
+    </item>
+    <item>
+      <name>Flight Plan /Request Clearance</name>
+      <value>Approved</value>
+    </item>
+    <item>
+      <name>Transponder</name>
+      <value>Standby</value>
+    </item>
+    <item>
+      <name>Beacon</name>
+      <value>On</value>
+    </item>
+
+ </page> 
+   </checklist>
+
+
+  
+  <checklist>
+    <title>Starting Engine</title>
+
+ <page> 
+    <item>
+      <name>Thrust Levers</name>
+      <value>Idle</value>
+    </item>
+    <item>
+      <name>Battery</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Start Pump</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>APU Master</name>
+      <value>Start</value>
+    </item>    
+    <item>
+      <name>Apu Air</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Check Pneumatic Press</name>
+      <value>35 PSI</value>
+    </item>
+    <item>
+      <name>Check Fuel Flow</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Check Pneu X-Feed Valve</name>
+      <value>Closed</value>
+    </item>
+    <item>
+      <name>6 Fuel Boost Pumps</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Start Pump</name>
+      <value>Off</value>
+    </item>
+
+ </page> 
+
+ <page> 
+    <item>
+      <name>Igniter OVRD</name>
+      <value>ON</value>
+    </item>
+    <item>
+      <name>Pneu X-Feed Valve</name>
+      <value>Open, upright</value>
+    </item>
+    <item>
+      <name>Fuel Flow</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Starter</name>
+      <value>ON</value>
+    </item>
+    <item>
+      <name>Repeat for the second engine</name>
+      <value>Both engines on</value>	
+    </item>
+    <item>
+      <name>Starters</name>
+      <value>Off</value>
+    </item>
+     <item>
+      <name>Pneu X-Feed Valves</name>
+      <value>Closed</value>
+    </item>
+     <item>
+      <name>Both N1 30%</name>
+      <value>Check</value>
+    </item>
+      <item>
+      <name>Both N2 60%</name>
+      <value>Check</value>
+    </item>
+      <item>
+      <name>Apu</name>
+      <value>Off</value>
+    </item>
+
+ </page> 
+  </checklist>
+  
+  <checklist>
+    <title>Before Taxi</title>
+
+<page>
+	<item>
+		<name>Nav Lights</name>
+		<value>On</value>
+	</item>
+	<item>
+		<name>Taxi Lights</name>
+		<value>On</value>
+	</item>
+	<item>
+		<name>Cabin Doors</name>
+		<value>CLOSED and LOCKED</value>
+	</item>
+	<item>
+		<name>Heading Indicators</name>
+		<value>Set</value>
+	</item>
+	<item>
+		<name>Altimeters</name>
+		<value>SET</value>
+	</item>
+	<item>
+		<name>Fuel Quantity</name>
+		<value>CHECK</value>
+	</item>
+	    <item>
+	      <name>Take-off Weight</name>
+	      <value>Check</value>
+	    </item>
+	<item>
+		<name>Radios and Avionics</name>
+		<value>Set for Departure</value>
+	</item>
+	<item>
+		<name>Autopilot</name>
+		<value>Set</value>
+	</item>
+	<item>
+		<name>Autothrottle</name>
+		<value>Set, don't activate</value>
+	</item>
+	<item>
+		<name>Elevator Trim</name>
+		<value>SET for takeoff</value>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>-0.25</value>
+				</greater-than>
+				<less-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>0.0</value>
+				</less-than>
+			</and>
+		</condition>
+		<binding>
+			<command>property-interpolate</command>
+			<property>/controls/flight/elevator-trim</property>
+			<value>-0.1</value>
+			<rate>0.1</rate>
+		</binding>
+	</item>
+</page>
+<page>
+
+	<item>
+		<name>Autobrake</name>
+		<value>Set</value>
+	</item>
+	<item>
+		<name>Request Taxi Clearance</name>
+		<value>Taxi Cleared</value>
+	</item>
+
+
+</page>
+
+  </checklist>
+
+<checklist>
+    <title>Taxi</title>
+	<item>
+		<name>Parking Brake</name>
+		<value>Release</value>
+	</item>
+	<item>
+		<name>Taxi to assigned runway</name>
+		<value>Speed Max 20 Knots</value>
+	</item>
+	<item>
+		<name>Passengers Welcome</name>
+		<value>Check</value>
+			<condition>
+			<equals>
+			  <property>/controls/switches/captain</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/captain</property>
+			<value>1</value>
+		      </binding>
+	</item>
+	<item>
+		<name>Safety Briefing</name>
+		<value>Check</value>
+			<condition>
+			<equals>
+			  <property>/controls/switches/safety</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/safety</property>
+			<value>1</value>
+		      </binding>
+	</item>
+	<item>
+		<name>Brakes</name>
+		<value>Check During Taxi</value>
+	</item>
+	<item>
+		<name>Directional Gyro / Turn</name>
+		<value>Proper Ind. during Turns</value>
+	</item>
+	<item>
+		<name>Artificial Horizon</name>
+		<value>Check during Turns</value>
+	</item>
+
+	<item>
+		      <name>Music</name>
+		      <value>If Suitable</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+ </checklist>
+  
+  <checklist>
+    <title>Before Takeoff</title>
+
+<page>
+	  
+	<item>
+		<name>Parking Brake</name>
+		<value>Set</value>
+	</item>
+	<item>
+		<name>Throttle</name>
+		<value>Idle</value>
+	</item>
+	<item>
+		<name>Elevator Trim</name>
+		<value>Set for Take-off</value>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>-0.25</value>
+				</greater-than>
+				<less-than>
+					<property>/controls/flight/elevator-trim</property>
+					<value>0.0</value>
+				</less-than>
+			</and>
+		</condition>
+		<binding>
+			<command>property-interpolate</command>
+			<property>/controls/flight/elevator-trim</property>
+			<value>-0.1</value>
+			<rate>0.1</rate>
+		</binding>
+	</item>
+	<item>
+		<name>Wing Flaps</name>
+		<value>10 deg.</value>
+	</item>
+	<item>
+		<name>Spoilers</name>
+		<value>Retracted</value>
+	</item>
+	<item>
+		<name>Flight Instruments</name>
+		<value>Check</value>
+	</item>    
+	<item>
+		<name>Engine Instruments</name>
+		<value>Check</value>
+	</item>
+	<item>
+		<name>Take Off Data V1, VR, V2</name>
+		<value>Check</value>
+	</item>    
+	<item>
+		<name>Nav Equipments</name>
+		<value>Check</value>
+	</item>    
+	<item>
+		<name>Landing Lights</name>
+		<value>On</value>
+	</item>
+</page>
+<page>    
+	<item>
+		<name>Taxi Lights</name>
+		<value>Off</value>
+	</item>    
+	<item>
+		<name>Strobe Light</name>
+		<value>On</value>
+	</item>    
+	<item>
+		<name>Pitot Heat</name>
+		<value>On</value>
+	</item>  
+	<item>
+		<name>De-Ice</name>
+		<value>As Required</value>
+	</item>
+	<item>
+		<name>Transponder</name>
+		<value>On</value>
+	</item>
+	<item>
+		<name>Request Take-off Clearance</name>
+		<value>Cleared</value>
+	</item>
+
+	<item>
+		      <name>Music</name>
+		      <value>If Suitable</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+	<item>
+		<name>Announce Take-off</name>
+		<value>Check</value>
+			<condition>
+			<equals>
+			  <property>/controls/switches/preparetakeoff</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/preparetakeoff</property>
+			<value>1</value>
+		      </binding>
+	</item>
+</page>
+
+
+  </checklist>
+  
+  <checklist>
+    <title>Takeoff</title>  
+    <item>
+      <name>Increase Thrust to N1 40%</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Takeoff Thrust</name>
+      <value>Full</value>
+    </item>
+    <item>
+      <name>Brakes</name>
+      <value>Release</value>
+    </item>
+    <item>
+      <name>V1</name>
+      <value>135 KIAS</value>
+    </item>
+    <item>
+      <name>VR</name>
+      <value>140 KIAS</value>
+      <value>Rotate</value>
+    </item>
+    <item>
+      <name>Pitch</name>
+      <value>15 deg. nose up</value>
+    </item>
+     <item>
+      <name>V2</name>
+      <value>145 KIAS</value>
+    </item>
+    <item>
+      <name>At positive climb rate</name>
+      <value>Touch Brakes</value>
+    </item>
+    <item>
+      <name>Landing Gear</name>
+      <value>Retract</value>
+    </item>
+    <item>
+      <name>At 190 KIAS</name>
+      <value>Retract Flaps</value>
+    </item>
+
+  </checklist>
+
+  <checklist>
+    <title>Climb-out</title>  
+    <item>
+      <name>Throttle</name>
+      <value>As Required</value>
+    </item>
+    <item>
+      <name>Trim for</name>
+      <value>250 KIAS / 1800 fpm</value>
+    </item>
+    <item>
+      <name>Autopilot/Autothrottle</name>
+      <value>Check and Activate</value>
+    </item>
+    <item>
+      <name>Autobrake</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Below 10000</name>
+      <value>Max 250 KIAS</value>
+    </item>
+    <item>
+      <name>ATC</name>
+      <value>As Required</value>
+    </item>
+    <item>
+      <name>Unfasten Seat Belts</name>
+      <value>If possible</value>
+	<condition>
+			<equals>
+			  <property>/controls/switches/unseatbelt</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/unseatbelt</property>
+			<value>1</value>
+		      </binding>
+    </item>
+    <item>
+      <name>Landing Lights</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Above 10000 ft</name>
+      <value>290 KIAS</value>
+    </item>
+    <item>
+	<name>Electronic Devices</name>
+	<value>Allow</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/tenthousand</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/tenthousand</property>
+		<value>1</value>
+	      </binding>
+	</item>
+  </checklist>
+
+  <checklist>
+    <title>Cruise (Above FL 180)</title>
+<page>
+    <item>
+      <name>At 18000 ft</name>
+      <value>Altimeter 29.92 (1013mb)</value>
+    </item>
+    <item>
+      <name>Speed FL 180</name>
+      <value>0.68 Mach</value>
+    </item>
+    <item>
+      <name>Speed FL 240</name>
+      <value>0.72 Mach</value>
+    </item>
+    <item>
+      <name>Speed FL 280</name>
+      <value>0.74 Mach</value>
+    </item>
+    <item>
+      <name>Speed FL 330</name>
+      <value>0.76 Mach</value>
+    </item>
+    <item>
+	<name>Announce Cruising Altitude</name>
+	<value>Check</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/cruisingalt</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/cruisingalt</property>
+		<value>1</value>
+	      </binding>
+	</item>
+   <item>
+      <name>Engine and Instruments</name>
+      <value>Check</value>
+    </item> 
+   <item>
+      <name>Fuel Quantity</name>
+      <value>Check</value>
+    </item> 
+   <item>
+      <name>Radios</name>
+      <value>Tuned and Set</value>
+    </item>
+   <item>
+      <name>Autopilot</name>
+      <value>Check and Set</value>
+    </item>
+   <item>
+      <name>Lights</name>
+      <value>As Required</value>
+    </item>
+</page>
+<page>
+     <item>
+     <name>Movie</name>
+	<value>Play</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/playmovie</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/playmovie</property>
+		<value>1</value>
+	      </binding>
+	</item>
+	<item>
+        <name>Drink</name>
+	<value>Serve</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/servedrink</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/servedrink</property>
+		<value>1</value>
+	      </binding>
+	</item>
+	<item>
+	     <name>Hot Food</name>
+	     <value>Serve</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/servehotfood</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/servehotfood</property>
+		<value>1</value>
+	      </binding>
+	</item>
+	<item>
+	     <name>Sandwich</name>
+	     <value>Serve</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/servesandwich</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/servesandwich</property>
+		<value>1</value>
+	      </binding>
+	</item>
+</page>
+
+ </checklist>
+
+  <checklist>
+    <title>Descent</title>  
+
+<page>
+    <item>
+      <name>Atis /Airport Information</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Altimeter</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Radios</name>
+      <value>Set</value>
+    </item>
+    <item>
+      <name>De-Ice</name>
+      <value>As Required</value>
+    </item>
+     <item>
+	<name>Announce Descent</name>
+	<value>Check</value>
+		<condition>
+		<equals>
+		  <property>/controls/switches/decending</property>
+			<value>1</value>
+		</equals>
+	      </condition>
+	      <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/decending</property>
+		<value>1</value>
+	      </binding>
+	</item>
+    <item>
+      <name>Descent to FL 240</name>
+      <value>0.71 Mach</value>
+    </item>
+    <item>
+      <name>Descent to FL 180</name>
+      <value>0.65 Mach</value>
+    </item>
+    <item>
+      <name>At FL 180 Altimeter</name>
+      <value>Set to local</value>
+    </item>
+    <item>
+      <name>Descent to FL 120</name>
+      <value>280 KIAS</value>
+    </item>
+</page>
+<page>
+    <item>
+      <name>Below 10000 ft</name>
+      <value>250 KIAS</value>
+    </item>
+    <item>
+      <name>Fuel Quantities and Balance</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Flaps and Landing Gear</name>
+      <value>Check</value>
+    </item>
+    <item>
+      <name>Weather</name>
+      <value>Check Atis, etc.</value>
+    </item>
+</page>
+
+  </checklist>
+
+  <checklist>
+    <title>Approach</title>
+
+<page>
+    <item>
+      <name>Fasten Seat Belts</name>
+      <value>On</value>
+      <condition>
+        <equals>
+          <property>/controls/switches/seatbelt-sign</property>
+		<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/seatbelt-sign</property>
+        <value>1</value>
+      </binding>
+    </item>
+    <item>
+      <name>APU</name>
+      <value>Start</value>
+    </item>
+    <item>
+      <name>Avionics and Radios</name>
+      <value>Set</value>
+    </item>
+    <item>
+      <name>Speed</name>
+      <value>200 KIAS</value>
+    </item>
+    <item>
+      <name>Flaps</name>
+      <value>10 deg.</value>
+    </item>
+    <item>
+      <name>Landing Lights</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Auto-Spoilers</name>
+      <value>Arm</value>
+    </item>
+    <item>
+      <name>Auto-Brake</name>
+      <value>Set (if you read the Howto)</value>
+    </item>
+    <item>
+      <name>Speed</name>
+      <value>170 KIAS</value>
+    </item>
+   <item>
+      <name>Flaps</name>
+      <value>20 deg.</value>
+    </item>
+</page>
+<page>
+    <item>
+      <name>Speed</name>
+      <value>150 KIAS</value>
+    </item>
+    <item>
+      <name>Landing Gear</name>
+      <value>Down</value>
+    </item>
+   <item>
+      <name>Announce Landing</name>
+      <value>Check</value>
+      <condition>
+        <equals>
+          <property>/controls/switches/beforeland</property>
+		<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/beforeland</property>
+        <value>1</value>
+      </binding>
+    </item>
+   <item>
+      <name>Turning to Rwy</name>
+      <value>Flaps Full Down</value>
+    </item>
+   <item>
+      <name>Final Glidslope</name>
+      <value>Speed 145 KIAS</value>
+    </item>
+   <item>
+      <name>Elevator Trim</name>
+      <value>Check</value>
+    </item>
+   <item>
+      <name>Parking Brake</name>
+      <value>Off</value>
+    </item>
+   <item>
+      <name>De-Ice</name>
+      <value>As Required</value>
+    </item>
+
+	<item>
+		      <name>Music</name>
+		      <value>If Suitable</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+
+
+</page>
+
+  </checklist>
+
+  <checklist>
+    <title>Before Landing</title>  
+    <item>
+      <name>Landing Gear</name>
+      <value>Check Down</value>
+    </item>
+    <item>
+      <name>Autopilot and Autothrottle</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Landing Speed</name>
+      <value>140 KIAS</value>
+    </item>
+    <item>
+      <name>After Touchdown</name>
+      <value>Apply Reversers</value>
+    </item>
+    <item>
+      <name>At 60 Kts</name>
+      <value>Reversers OFF</value>
+    </item>
+    <item>
+      <name>Spoilers</name>
+      <value>Verify</value>
+    </item>
+    <item>
+      <name>Autobrake</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Brakes</name>
+      <value>As required</value>
+    </item>
+
+	<item>
+		      <name>Music</name>
+		      <value>If Suitable</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+  </checklist>
+
+  <checklist>
+    <title>Taxi to Ramp</title> 
+	<item>
+		      <name>Music</name>
+		      <value>If Suitable</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+     <item>
+      <name>Announce Landed</name>
+      <value>Check</value>
+      <condition>
+        <equals>
+          <property>/controls/switches/afterland</property>
+		<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/afterland</property>
+        <value>1</value>
+      </binding>
+    </item> 
+    <item>
+      <name>Strobe Light</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Flaps</name>
+      <value>UP</value>
+    </item>
+    <item>
+      <name>Spoilers</name>
+      <value>Retracted</value>
+    </item>
+    <item>
+      <name>Taxi Lights</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Landing Lights</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Speed</name>
+      <value>Max 20 knots</value>
+    </item>
+    <item>
+      <name>Transponder</name>
+      <value>1200 / Off</value>
+    </item>
+    <item>
+      <name>Elevator Trim</name>
+      <value>Take-off setting</value>
+    </item>
+
+  </checklist>
+
+  <checklist>
+    <title>Shutdown</title>
+
+<page>
+     <item>
+      <name>At Gate</name>
+      <value>Announce</value>
+      <condition>
+        <equals>
+          <property>/controls/switches/atgate</property>
+		<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/atgate</property>
+        <value>1</value>
+      </binding>
+    </item>   
+    <item>
+      <name>Parking brakes</name>
+      <value>SET (shift-B)</value>
+      <condition>
+        <equals>
+          <property>/controls/gear/brake-parking</property>
+					<value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/gear/brake-parking</property>
+				<value>1</value>
+	</binding>
+    </item>
+    <item>
+      <name>Throttle</name>
+      <value>Idle</value>
+    </item>
+    <item>
+      <name>Passenger Signs</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Air Fan</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Pitot Heat</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>De-Ice</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Taxi Lights</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Nav Lights</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Avionics</name>
+      <value>Off</value>
+    </item>
+</page>
+<page>
+    <item>
+      <name>Fuel Flow</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>X-Feed Valve</name>
+      <value>Closed</value>
+    </item>
+    <item>
+      <name>Apu</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Beacon</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Panel Lights</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>Battery Master Switch</name>
+      <value>Off</value>
+    </item>
+    <item>
+      <name>All Switches</name>
+      <value>Verify Off</value>
+    </item>
+
+</page>
+
+  </checklist>
+  <checklist>
+	<title>Announcements</title>
+
+<page>
+		 <item>
+		      <name>Boarding/Landing Music (1)</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+
+		 <item>
+		      <name>Boarding/Landing Music (2)</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/music2</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/music2</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Fasten Seatbelts</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/seatbelt-sign</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/seatbelt-sign</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Unfasten Seatbelts</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/unseatbelt</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/unseatbelt</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Welcome</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/captain</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/captain</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Safety Briefing</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/safety</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/safety</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Prepare for Take-off</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/preparetakeoff</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/preparetakeoff</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Allow Electronic Devices</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/tenthousand</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/tenthousand</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Cruising Altitude</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/cruisingalt</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/cruisingalt</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Descending</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/decending</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/decending</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+</page>
+<page>
+
+		 <item>
+		      <name>Before Landing</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/beforeland</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/beforeland</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>After Landing</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/afterland</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/afterland</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Arrived at Gate</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/atgate</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/atgate</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Play Movie</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/playmovie</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/playmovie</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Serve Drink</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/servedrink</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/servedrink</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Serve Hot Food</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/servehotfood</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/servehotfood</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Announce At Gate</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/atgate</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/atgate</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Serve Sandwich</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/servesandwich</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/servesandwich</property>
+			<value>1</value>
+		      </binding>
+		</item>   
+
+		 <item>
+		      <name>Serve Sandwich</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/servesandwich</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/servesandwich</property>
+			<value>1</value>
+		      </binding>
+		</item> 
+
+		 <item>
+		      <name>Turbulence</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/turbulence</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/turbulence</property>
+			<value>1</value>
+		      </binding>
+		</item> 
+
+		 <item>
+		      <name>Emergency</name>
+		      <value>Check</value>
+		      <condition>
+			<equals>
+			  <property>/controls/switches/emergency</property>
+				<value>1</value>
+			</equals>
+		      </condition>
+		      <binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/emergency</property>
+			<value>1</value>
+		      </binding>
+		</item> 
+</page>
+
+  </checklist>
+</PropertyList>

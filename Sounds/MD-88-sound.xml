@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+<fx>
+
+  <rumble>
+   <name>rumble</name>
+   <mode>looped</mode>
+   <path>Sounds/rumble.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>/velocities/groundspeed-kt</property>
+    <type>log</type>
+    <factor>0.35</factor>
+   </volume>
+  </rumble>
+
+
+  <gear>
+   <name>gear</name>
+   <mode>in-transit</mode>
+   <path>Sounds/gear.wav</path>
+   <property>/gear/gear[0]/position-norm</property>
+   <pitch>
+    <internal>dt_play</internal>
+    <offset>1.0</offset>
+    <factor>-0.001</factor>
+   </pitch>
+  </gear>
+
+  <gear>
+   <name>gear-lock</name>
+   <path>Sounds/gear-lck.wav</path>
+   <condition>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+    </equals>
+   </condition>
+  </gear>
+
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>/velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+ 
+  <flap>
+   <name>flaps</name>
+   <mode>in-transit</mode>
+   <path>Sounds/flaps.wav</path>
+   <property>/surface-positions/flap-pos-norm</property>
+   <volume>
+    <factor>0.45</factor>
+   </volume>
+  </flap>
+
+  <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>Sounds/wind.wav</path>
+   <property>/velocities/airspeed-kt</property>
+   <volume>
+    <property>/position/altitude-ft</property>
+    <factor>-0.000015</factor>
+    <offset>1.0</offset>
+    <min>0.1</min>
+    <max>1.0</max>
+   </volume>
+   <volume>
+     <property>/velocities/airspeed-kt</property>
+     <factor>0.0001</factor>
+     <min>0.0</min>
+     <max>0.1</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </wind>
+
+  <!--stall>
+   <name>stall</name>
+   <path>Sounds/stall.wav</path>
+   <property>/sim/alarms/stall-warning</property>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <min>30.0</min>
+   </volume>
+  </stall-->
+
+<stall>
+   <name>stall</name>
+   <mode>looped</mode>
+   <path>Sounds/stall.wav</path>
+   <property>/sim/alarms/stall-warning</property>
+   <volume>
+    <property>/sim/alarms/stall-warning</property>
+    <max>1.0</max>
+   </volume>
+  </stall>
+
+  <engine>
+    <name>left-thrust</name>
+    <path>Sounds/jet.wav</path>
+    <condition>
+      <not><property>/engines/engine[0]/out-of-fuel</property></not>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <property>engines/engine[0]/thrust-lbs</property>
+      <factor>0.00001</factor>
+    </volume>
+  </engine>
+  <engine>
+    <name>left-n1</name>
+    <path>Sounds/whine.wav</path>
+    <condition>
+      <not><property>/engines/engine[0]/out-of-fuel</property></not>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <property>engines/engine[0]/n1-actual</property>
+      <factor>0.005</factor>
+    </volume>
+    <pitch>
+      <property>/engines/engine[0]/n1-actual</property>
+      <offset>0</offset>
+      <factor>0.01</factor>
+    </pitch>
+  </engine>
+  <engine>
+    <name>right-thrust</name>
+    <path>Sounds/jet.wav</path>
+    <condition>
+      <not><property>/engines/engine[1]/out-of-fuel</property></not>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <property>engines/engine[1]/thrust-lbs</property>
+      <factor>0.00001</factor>
+    </volume>
+  </engine>
+  <engine>
+    <name>right-n1</name>
+    <path>Sounds/whine.wav</path>
+    <condition>
+      <not><property>/engines/engine[1]/out-of-fuel</property></not>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <property>engines/engine[1]/n1-actual</property>
+      <factor>0.005</factor>
+    </volume>
+    <pitch>
+      <property>/engines/engine[1]/n1-actual</property>
+      <offset>0</offset>
+      <factor>0.01</factor>
+    </pitch>
+  </engine>
+
+<!-- Services-->
+<engine>
+	<name>fuel truck pump transfer</name>
+	<path>/Aircraft/MD-88/Sounds/electricalengine.wav</path>
+	<mode>looped</mode>
+        <condition>
+            	<less-than>	
+	         <property>/velocities/groundspeed-kt</property>
+	         <value>1</value>
+	         </less-than>
+        </condition>
+        <volume>
+            <property>/services/fuel-truck/transfer</property>
+            <value>1</value>
+        </volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+            <x-m>0.25</x-m>
+     	 	<y-m>-1.0</y-m>
+     		 <z-m>1.0</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </engine>
+
+  <engine>
+	<name>fuel truck pump clean</name>
+	<path>/Aircraft/MD-88/Sounds/electricalengine.wav</path>
+	<mode>looped</mode>
+        <condition>
+            <less-than>	
+	         <property>/velocities/groundspeed-kt</property>
+	         <value>1</value>
+	         </less-than>
+        </condition>
+        <volume>
+            <property>/services/fuel-truck/clean</property>
+            <value>1</value>
+        </volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+            <x-m>0.25</x-m>
+     	 	<y-m>-1.0</y-m>
+     		 <z-m>1.0</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </engine>
+
+
+<engine>
+	<name>de ice truck operation</name>
+	<path>/Aircraft/MD-88/Sounds/electricalengine.wav</path>
+	<mode>looped</mode>
+        <condition>
+            <less-than>	
+	         <property>/velocities/groundspeed-kt</property>
+	         <value>1</value>
+	         </less-than>
+        </condition>
+        <volume>
+            <property>/services/deicing_truck/de-ice</property>
+            <value>1</value>
+        </volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+            <x-m>-15</x-m>
+		<y-m>9.5</y-m>
+		<z-m>-3.45</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </engine>
+
+
+
+<!-- Announcements -->
+
+
+
+<music>
+<name>Music</name>
+ <path>Aircraft/MD-88/Sounds/ambientmusic0.wav</path>
+ <mode>looped</mode>
+ <condition>
+ <and>
+  <property>controls/switches/music</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</music>
+
+<music2>
+<name>Music2</name>
+ <path>Aircraft/MD-88/Sounds/ambientmusic1.wav</path>
+ <mode>looped</mode>
+ <condition>
+ <and>
+  <property>controls/switches/music2</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</music2>
+
+<seatbelt>
+<name>Seatbelt</name>
+ <path>Aircraft/MD-88/Sounds/cpl_fastenseatbelt.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/seatbelt-sign</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</seatbelt>
+
+
+<unseatbelt>
+<name>UnSeatbelt</name>
+ <path>Aircraft/MD-88/Sounds/crew_unfastenseatbelt.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/unseatbelt</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</unseatbelt>
+
+
+
+<captain>
+<name>captain</name>
+ <path>Aircraft/MD-88/Sounds/crew1_welcomeonboard.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/captain</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</captain>
+
+
+<safety>
+<name>safety</name>
+ <path>Aircraft/MD-88/Sounds/crew2_safetyaboard.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/safety</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</safety>
+
+<preparetakeoff>
+<name>preparetakeoff</name>
+ <path>Aircraft/MD-88/Sounds/crew_preparetakeoff.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/preparetakeoff</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</preparetakeoff>
+
+<tenthousand>
+<name>Allow Electronic Devices</name>
+ <path>Aircraft/MD-88/Sounds/crew3_climbingdevice.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/tenthousand</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</tenthousand>
+
+<cruisingalt>
+<name>cruisingalt</name>
+ <path>Aircraft/MD-88/Sounds/crew4_levelautobelt.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/cruisingalt</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</cruisingalt>
+
+
+<decending>
+<name>decending</name>
+ <path>Aircraft/MD-88/Sounds/crew6_descent.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/decending</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</decending>
+
+<beforeland>
+<name>beforeland</name>
+ <path>Aircraft/MD-88/Sounds/crew7_beforeland.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/beforeland</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</beforeland>
+
+<afterland>
+<name>afterland</name>
+ <path>Aircraft/MD-88/Sounds/crew8_aftland.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/afterland</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</afterland>
+
+<atgate>
+<name>atgate</name>
+ <path>Aircraft/MD-88/Sounds/crew9_atgate.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/atgate</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</atgate>
+
+<playmovie>
+<name>playmovie</name>
+ <path>Aircraft/MD-88/Sounds/crew_playmovie.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/playmovie</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</playmovie>
+
+<servedrink>
+<name>servedrink</name>
+ <path>Aircraft/MD-88/Sounds/crew_servedrink.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/servedrink</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</servedrink>
+
+<servehotfood>
+<name>servehotfood</name>
+ <path>Aircraft/MD-88/Sounds/crew_servehotfood.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/servehotfood</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</servehotfood>
+
+<servesandwich>
+<name>servesandwich</name>
+ <path>Aircraft/MD-88/Sounds/crew_servesandwich.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/servesandwich</property>
+ </and>
+ </condition>
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</servesandwich>
+
+
+<Turbulence>
+<name>Turbulence</name>
+ <path>Aircraft/MD-88/Sounds/crew5_fastenwind.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/turbulence</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</Turbulence>
+
+
+<Emergency>
+<name>Emergency</name>
+ <path>Aircraft/MD-88/Sounds/cpl_mayday.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/switches/emergency</property>
+ </and>
+ </condition>
+  
+  <position>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>-0.00</z>
+ </position>
+ <reference-dist>20.0</reference-dist>
+ <max-dist>100.0</max-dist>
+</Emergency>
+
+<crash>
+            <name>Crash</name>
+            <mode>once</mode>
+            <path>Sounds/crash.wav</path>
+            <property>sim/crashed</property>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <pitch>
+                <factor>1.2</factor>
+            </pitch>
+        </crash>
+
+</fx>
+ 
+</PropertyList>
