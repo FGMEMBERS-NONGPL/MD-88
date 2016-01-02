@@ -38,13 +38,10 @@
                           <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- -1.0 minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- 1.0 maximum output clamp -->
+      <u_min>-1.0</u_min> <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
-
-
 
   <!-- Heading Bug Hold.  2 stage cascade controller. -->
 
@@ -58,7 +55,7 @@
       <value>dg-heading-hold</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/fdm-heading-bug-error-deg</prop>
+      <prop>/autopilot/internal/heading-bug-error-deg</prop>
     </input>
     <reference>
       <value>0.0</value>
@@ -72,8 +69,8 @@
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
                            <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- 10 integrator time -->
-      <Td>0.00001</Td>     <!-- 0.00001 derivator time -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>-20.0</u_min> <!-- minimum output clamp -->
       <u_max>20.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -97,20 +94,17 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.5</Kp>        <!-- 0.5 proportional gain -->
-      <beta>1.0</beta>    <!-- 1.0 input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- 0.1 low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- 0.0 input value weighing factor for -->
+      <Kp>0.1</Kp>        <!-- proportional gain -->
+      <beta>1.0</beta>    <!-- input value weighing factor -->
+      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>       <!-- 10 integrator time -->
-      <Td>0.00001</Td>    <!-- 0.00001 derivator time -->
-      <u_min>-1</u_min> <!-- -1.0 minimum output clamp -->
-      <u_max>1</u_max>  <!-- 1.0 maximum output clamp -->
+      <Ti>10.0</Ti>       <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
+      <u_min>-1.0</u_min> <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
-
-
 
   <!-- True Heading hold.  2 stage cascade controller. -->
 
@@ -134,12 +128,12 @@
     </output>
     <config>
       <Kp>-1.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- 1.0 input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- 0.1 low pass filter weighing factor -->
+      <beta>1.0</beta>     <!-- input value weighing factor -->
+      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
                            <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- 10 integrator time -->
-      <Td>0.00001</Td>     <!-- 0.00001 derivator time -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>-20.0</u_min> <!-- minimum output clamp -->
       <u_max>20.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -163,13 +157,13 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.5</Kp>        <!-- 0.5 proportional gain -->
-      <beta>1.0</beta>    <!-- 1.0 input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- 0.1 low pass filter weighing factor -->
+      <Kp>0.1</Kp>        <!-- proportional gain -->
+      <beta>1.0</beta>    <!-- input value weighing factor -->
+      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- 10 integrator time -->
-      <Td>0.00001</Td>    <!-- 0.00001 derivator time -->
+      <Ti>10.0</Ti>       <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -226,7 +220,7 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.5</Kp>        <!-- proportional gain -->
+      <Kp>0.1</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
@@ -444,10 +438,10 @@
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>100.0</Ti>       <!-- 10 integrator time -->
+      <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!--  -1.0 minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- 1.0 maximum output clamp -->
+      <u_min>-1.0</u_min> <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -470,7 +464,7 @@
       <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
-      <Kp>-0.01</Kp>      <!-- -0.01 proportional gain -->
+      <Kp>-0.01</Kp>      <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
@@ -481,7 +475,6 @@
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
 
 
  <!-- =============================================================== -->
@@ -588,7 +581,7 @@
 
 <!--
 
-MD-81 Custom PIDs
+MD-88 Custom PIDs
 
 -->
 

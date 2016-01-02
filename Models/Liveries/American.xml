@@ -5,14 +5,14 @@
 <sim>
   <model>
     <livery>
-      <name type="string">American Airlines</name>
-      <texture>txt_fuselage.rgb</texture>
+      <name type="string">American Airlines (retro)</name>
+      <texture>Liveries/AA_fuselage.rgb</texture>
     </livery>
     <fairings>
-      <texture>txt_fuselage_fairing.rgb</texture>
+      <texture>Liveries/AA_fuselage_fairing.rgb</texture>
     </fairings>
     <rudders>
-      <texture>txt_vstab_engines.rgb</texture>
+      <texture>Liveries/AA_vstab_engines.rgb</texture>
     </rudders>
   </model>
 </sim>

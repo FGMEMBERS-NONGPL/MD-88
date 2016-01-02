@@ -109,11 +109,11 @@ McDonnell Douglas MD-88
 
 <model>
   <name>ehsi</name>
-  <path>Aircraft/MD-88/Models/Instruments/ehsi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/ND/MFD.xml</path>
   <offsets>
-    <x-m>2.252</x-m>
+    <x-m>2.254</x-m>
     <y-m>-0.513</y-m>
-    <z-m>0.746</z-m>
+    <z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -352,11 +352,11 @@ McDonnell Douglas MD-88
 
 <model>
   <name>ehsi2</name>
-  <path>Aircraft/MD-88/Models/Instruments/ehsi2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/ND/MFD.xml</path>
   <offsets>
-    <x-m>2.252</x-m>
+    <x-m>2.254</x-m>
     <y-m>0.513</y-m>
-    <z-m>0.746</z-m>
+    <z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>

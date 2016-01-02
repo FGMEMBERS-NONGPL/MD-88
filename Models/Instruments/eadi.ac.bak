@@ -4,7 +4,7 @@ MATERIAL "bezelgrey" rgb 0.501961 0.501961 0.501961  amb 0.1 0.1 0.1  emis 0 0 0
 MATERIAL "Flatblack" rgb 0 0 0  amb 0.5 0.5 0.5  emis 0 0 0  spec 0 0 0  shi 32  trans 0
 MATERIAL "glass" rgb 0.375984 0.375984 0.375984  amb 0.5 0.5 0.5  emis 0 0 0  spec 1 1 1  shi 32  trans 0.9
 OBJECT world
-kids 38
+kids 39
 OBJECT poly
 name "ALT.1"
 data 9
@@ -2227,6 +2227,23 @@ refs 4
 3 0.663993 0.282077
 2 0.477271 0.282077
 1 0.477271 0.253708
+kids 0
+OBJECT poly
+name "Roll.needle"
+data 10
+Circle.001
+crease 30.000000
+numvert 3
+0.001345 0.037351 -0.00031
+0.001345 0.033561 0.001355
+0.001345 0.033562 -0.002303
+numsurf 1
+SURF 0x10
+mat 0
+refs 3
+2 0 0
+0 0 0
+1 0 0
 kids 0
 OBJECT poly
 name "SlipBack"
