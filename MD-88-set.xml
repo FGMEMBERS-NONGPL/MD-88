@@ -186,13 +186,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
           </binding>
         </item>
         <item>
-          <label>Toggle Rudder and Throttle Display On HSI</label>
-          <binding>
-            <command>property-toggle</command>
-            <property>/sim/instrument-options/hsi/show-rudder</property>
-          </binding>
-        </item>
-        <item>
           <label>Set Comm 1 to 122.75</label>
           <binding>
             <command>property-assign</command>
