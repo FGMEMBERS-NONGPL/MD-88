@@ -1,9 +1,8 @@
 # MD-88
-MD-88
+MD-88 by it0uchpods
 
-1/1/16: 
-1) Now with NAV Display! (It doesn't work yet, just a black screen, I will fix soon.) 
-2) Updated systems, FDM, and autopilot 
-3) Added Delta Livery "Onwards and Upwards" (Thanks, ACI) 
-4) Splash screen! (Thanks, Falcon) 
-5) General bug fixes and changes 
+1/22/16: 
+1) Now with WORKING NAV Display! (Route manager system needs to implemented, but basic functions work)
+2) FDM updates
+3) Fixed Delta Livery (Thanks ACI)
+4) General bug fixes and changes 
