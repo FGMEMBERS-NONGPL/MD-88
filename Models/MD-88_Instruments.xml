@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-McDonnell Douglas MD-82
+McDonnell Douglas MD-88
 Gary R. Neely 'Buckaroo', Nov 2010
 -->
 
@@ -19,7 +19,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
   <object-name>alt</object-name>
   <object-name>asi</object-name>
   <object-name>vsi</object-name>
-  <object-name>ehsi</object-name>
+  <object-name>nd</object-name>
   <object-name>ai</object-name>
   <object-name>gear_indicators</object-name>
   <object-name>flaps</object-name>
@@ -41,7 +41,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
   <object-name>lighting_panel_R</object-name>
   <object-name>lighting_panel_P</object-name>
   <object-name>eadi_R</object-name>
-  <object-name>ehsi_R</object-name>
+  <object-name>ndfo</object-name>
   <object-name>alt_R</object-name>
   <object-name>asi_R</object-name>
   <object-name>vsi_R</object-name>
@@ -66,7 +66,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>clock</name>
-  <path>Aircraft/MD-82/Models/Instruments/clock.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/clock.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>-0.734</y-m>
@@ -77,7 +77,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>asi</name>
-  <path>Aircraft/MD-82/Models/Instruments/asi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/asi.xml</path>
   <offsets>
     <x-m>2.226</x-m>
     <y-m>-0.651</y-m>
@@ -88,7 +88,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>rmi</name>
-  <path>Aircraft/MD-82/Models/Instruments/rmi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/rmi.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>-0.639</y-m>
@@ -99,7 +99,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>eadi</name>
-  <path>Aircraft/MD-82/Models/Instruments/eadi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eadi.xml</path>
   <offsets>
     <x-m>2.225</x-m>
     <y-m>-0.513</y-m>
@@ -109,19 +109,19 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 
 <model>
-  <name>ehsi</name>
-  <path>Aircraft/MD-82/Models/Instruments/ehsi.xml</path>
+  <name>nd</name>
+  <path>Aircraft/MD-88/Models/Instruments/nd/nd.xml</path>
   <offsets>
-    <x-m>2.252</x-m>
+    <x-m>2.254</x-m>
     <y-m>-0.513</y-m>
-    <z-m>0.746</z-m>
+    <z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
 
 <model>
   <name>alt</name>
-  <path>Aircraft/MD-82/Models/Instruments/altimeter1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/altimeter1.xml</path>
   <offsets>
     <x-m>2.229</x-m>
     <y-m>-0.390</y-m>
@@ -132,7 +132,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>efisdim_L</name>
-  <path>Aircraft/MD-82/Models/Instruments/efis_dimmer.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/efis_dimmer.xml</path>
   <offsets>
     <x-m>2.230</x-m>
     <y-m>-0.320</y-m>
@@ -143,7 +143,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>vsi</name>
-  <path>Aircraft/MD-82/Models/Instruments/vsi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>-0.390</y-m>
@@ -154,7 +154,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>marker_beacons</name>
-  <path>Aircraft/MD-82/Models/Instruments/marker_beacons.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/marker_beacons.xml</path>
   <offsets>
     <x-m>2.223</x-m>
     <y-m>-0.249</y-m>
@@ -165,7 +165,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>lighting_panel_L</name>
-  <path>Aircraft/MD-82/Models/Instruments/panel_lighting.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/panel_lighting.xml</path>
   <offsets>
     <x-m>2.278</x-m>
     <y-m>-0.891</y-m>
@@ -179,7 +179,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>ai</name>
-  <path>Aircraft/MD-82/Models/Instruments/ai.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/ai.xml</path>
   <offsets>
     <x-m>2.216</x-m>
     <y-m>-0.189</y-m>
@@ -190,7 +190,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>revthrust_indicators</name>
-  <path>Aircraft/MD-82/Models/Instruments/revthrust_ind.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/revthrust_ind.xml</path>
   <offsets>
     <x-m>2.205</x-m>
     <y-m>0</y-m>
@@ -201,7 +201,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>fuel</name>
-  <path>Aircraft/MD-82/Models/Instruments/fuel.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fuel.xml</path>
   <offsets>
     <x-m>2.238</x-m>
     <y-m>-0.175</y-m>
@@ -212,7 +212,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>eprL</name>
-  <path>Aircraft/MD-82/Models/Instruments/eprL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eprL.xml</path>
   <offsets>
     <x-m>2.208</x-m>
     <y-m>-0.030</y-m>
@@ -222,7 +222,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 <model>
   <name>eprR</name>
-  <path>Aircraft/MD-82/Models/Instruments/eprR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eprR.xml</path>
   <offsets>
     <x-m>2.208</x-m>
     <y-m>0.030</y-m>
@@ -233,7 +233,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>n1L</name>
-  <path>Aircraft/MD-82/Models/Instruments/n1L.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n1L.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>-0.030</y-m>
@@ -243,7 +243,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 <model>
   <name>n1R</name>
-  <path>Aircraft/MD-82/Models/Instruments/n1R.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n1R.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>0.030</y-m>
@@ -254,7 +254,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>egtL</name>
-  <path>Aircraft/MD-82/Models/Instruments/egtL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/egtL.xml</path>
   <offsets>
     <x-m>2.233</x-m>
     <y-m>-0.030</y-m>
@@ -264,7 +264,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 <model>
   <name>egtR</name>
-  <path>Aircraft/MD-82/Models/Instruments/egtR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/egtR.xml</path>
   <offsets>
     <x-m>2.233</x-m>
     <y-m>0.030</y-m>
@@ -275,7 +275,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>n2L</name>
-  <path>Aircraft/MD-82/Models/Instruments/n2L.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n2L.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>-0.030</y-m>
@@ -285,7 +285,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 <model>
   <name>n2R</name>
-  <path>Aircraft/MD-82/Models/Instruments/n2R.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n2R.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>0.030</y-m>
@@ -296,7 +296,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>fuelflowL</name>
-  <path>Aircraft/MD-82/Models/Instruments/fuelflowL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fuelflowL.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>-0.089</y-m>
@@ -306,7 +306,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 <model>
   <name>fuelflowR</name>
-  <path>Aircraft/MD-82/Models/Instruments/fuelflowR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fuelflowR.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>0.089</y-m>
@@ -317,7 +317,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>gear_indicators</name>
-  <path>Aircraft/MD-82/Models/Instruments/landing_gear_ind.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/landing_gear_ind.xml</path>
   <offsets>
     <x-m>2.197</x-m>
     <y-m>0.171</y-m>
@@ -328,7 +328,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>flaps</name>
-  <path>Aircraft/MD-82/Models/Instruments/flaps.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/flaps.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>0.148</y-m>
@@ -342,7 +342,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>eadi_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/eadi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eadi.xml</path>
   <offsets>
     <x-m>2.225</x-m>
     <y-m>0.513</y-m>
@@ -352,19 +352,19 @@ Gary R. Neely 'Buckaroo', Nov 2010
 </model>
 
 <model>
-  <name>ehsi_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/ehsi2.xml</path>
+  <name>ndfo</name>
+  <path>Aircraft/MD-88/Models/Instruments/ndfo/nd.xml</path>
   <offsets>
-    <x-m>2.252</x-m>
+    <x-m>2.254</x-m>
     <y-m>0.513</y-m>
-    <z-m>0.746</z-m>
+    <z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
 
 <model>
   <name>clock_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/clock.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/clock.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>0.296</y-m>
@@ -375,7 +375,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>asi_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/asi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/asi.xml</path>
   <offsets>
     <x-m>2.226</x-m>
     <y-m>0.376</y-m>
@@ -386,7 +386,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>rmi_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/rmi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/rmi.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>0.388</y-m>
@@ -397,7 +397,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>alt_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/altimeter1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/altimeter1.xml</path>
   <offsets>
     <x-m>2.229</x-m>
     <y-m>0.637</y-m>
@@ -408,7 +408,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>efisdim_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/efis_dimmer.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/efis_dimmer.xml</path>
   <offsets>
     <x-m>2.230</x-m>
     <y-m>0.706</y-m>
@@ -419,7 +419,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>vsi_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/vsi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>0.637</y-m>
@@ -430,7 +430,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>lighting_panel_R</name>
-  <path>Aircraft/MD-82/Models/Instruments/panel_lighting.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/panel_lighting.xml</path>
   <offsets>
     <x-m>2.278</x-m>
     <y-m>0.891</y-m>
@@ -444,7 +444,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>fgcp</name>
-  <path>Aircraft/MD-82/Models/Instruments/fgcp.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fgcp.xml</path>
 </model>
 
 
@@ -452,7 +452,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>comm1</name>
-  <path>Aircraft/MD-82/Models/Instruments/comm1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/comm1.xml</path>
   <offsets>
     <x-m>2.777</x-m>
     <y-m>-0.074</y-m>
@@ -463,7 +463,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>comm2</name>
-  <path>Aircraft/MD-82/Models/Instruments/comm2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/comm2.xml</path>
   <offsets>
     <x-m>2.777</x-m>
     <y-m>0.074</y-m>
@@ -474,7 +474,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>nav1</name>
-  <path>Aircraft/MD-82/Models/Instruments/nav1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/nav1.xml</path>
   <offsets>
     <x-m>2.839</x-m>
     <y-m>-0.074</y-m>
@@ -485,7 +485,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>nav2</name>
-  <path>Aircraft/MD-82/Models/Instruments/nav2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/nav2.xml</path>
   <offsets>
     <x-m>2.839</x-m>
     <y-m>0.074</y-m>
@@ -496,7 +496,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>adf1</name>
-  <path>Aircraft/MD-82/Models/Instruments/adf1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/adf1.xml</path>
   <offsets>
     <x-m>2.901</x-m>
     <y-m>-0.074</y-m>
@@ -507,7 +507,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>adf2</name>
-  <path>Aircraft/MD-82/Models/Instruments/adf2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/adf2.xml</path>
   <offsets>
     <x-m>2.901</x-m>
     <y-m>0.074</y-m>
@@ -518,7 +518,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>lighting_panel_P</name>
-  <path>Aircraft/MD-82/Models/Instruments/panel_lighting.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/panel_lighting.xml</path>
   <offsets>
     <x-m>2.988</x-m>
     <y-m>-0.074</y-m>
@@ -532,7 +532,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>pneu</name>
-  <path>Aircraft/MD-82/Models/Instruments/pneu.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/pneu.xml</path>
   <offsets>
     <x-m>2.732</x-m>
     <y-m>-0.206</y-m>
@@ -543,7 +543,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>apu_rpm</name>
-  <path>Aircraft/MD-82/Models/Instruments/apu_rpm.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/apu_rpm.xml</path>
   <offsets>
     <x-m>2.937</x-m>
     <y-m>-0.002</y-m>
@@ -554,7 +554,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 
 <model>
   <name>apu_egt</name>
-  <path>Aircraft/MD-82/Models/Instruments/apu_egt.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/apu_egt.xml</path>
   <offsets>
     <x-m>2.937</x-m>
     <y-m>-0.060</y-m>

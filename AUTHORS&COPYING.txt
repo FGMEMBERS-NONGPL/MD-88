@@ -1,5 +1,4 @@
-﻿McDonnell Douglas MD-88 for Flightgear
-
+﻿McDonnell Douglas MD-88 for Flightgear by Joshua Davidson
 Based on MD-82 from Andino. Its licence says:
 
 	<< This model is currently available as free for personal, non-commercial use. If used in any derivative material, please credit me where applicable.

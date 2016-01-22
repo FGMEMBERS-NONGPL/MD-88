@@ -7,8 +7,8 @@ McDonnell Douglas MD-88
 
 <sim include="Systems/MD-88-views.xml">
   <description>McDonnell Douglas MD-88</description>
-  <author>Joshua Davidson (411, it0uchpods)</author>
-	<status>early production</status>
+  <author>Joshua Davidson (411, ATC411, it0uchpods)</author>
+	<status>Beta, Stable</status>
 
   <flight-model>yasim</flight-model>
   <aero>MD-88-yasim</aero>
@@ -135,33 +135,33 @@ For Manual Engine Start, see the checlists in the Help Menu.
   <menubar>
     <default>
       <menu n="100">
-        <label>MD-88</label>
         <item>
-          <label>Select Livery</label>
+          <label>QuickStartup</label>
+          <binding> 
+            <command>nasal</command>
+            <script>MD88.eng_magicstartup();</script>
+          </binding>
+        </item>
+		<label>MD-88</label>
+        <item>
+          <label>Livery Select</label>
           <binding>
             <command>nasal</command>
             <script>aircraft.livery.dialog.toggle()</script>
           </binding>
         </item>
         <item>
-          <label>Magic Engine Startup</label>
-          <binding> 
-            <command>nasal</command>
-            <script>MD81.eng_magicstartup();</script>
-          </binding>
-        </item>
-        <item>
           <label>Arm Auto-Spoilers</label>
           <binding> 
             <command>nasal</command>
-            <script>MD81.spoiler_arm();</script>
+            <script>MD88.spoiler_arm();</script>
           </binding>
         </item>
         <item>
           <label>Disarm Auto-Spoilers</label>
           <binding> 
             <command>nasal</command>
-            <script>MD81.spoiler_disarm();</script>
+            <script>MD88.spoiler_disarm();</script>
           </binding>
         </item>
         <!--item>
@@ -178,21 +178,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
             <property>/controls/fuel/xfeed</property>
           </binding>
         </item-->
-        <item>
-          <label>Captain's Yoke On/Off</label>
-          <binding>
-            <command>property-toggle</command>
-            <property>/sim/yoke-visible</property>
-          </binding>
-        </item>
-        <item>
-          <label>Set Comm 1 to 122.75</label>
-          <binding>
-            <command>property-assign</command>
-            <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
-            <value type="double">122.75</value>
-          </binding>
-        </item>
 
 	<item>
 	     <label>Pushback</label>
@@ -354,7 +339,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
       <desc>Disarm Auto-Spoilers</desc>
       <binding> 
         <command>nasal</command>
-        <script>MD81.spoiler_disarm();</script>
+        <script>MD88.spoiler_disarm();</script>
       </binding>
     </key>
     <key n="11">
@@ -362,7 +347,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
       <desc>Arm Auto-Spoilers</desc>
       <binding> 
         <command>nasal</command>
-        <script>MD81.spoiler_arm();</script>
+        <script>MD88.spoiler_arm();</script>
       </binding>
     </key>
     <key n="106"> 
@@ -370,7 +355,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
       <desc>Retract Speedbrakes</desc>
       <binding> 
         <command>nasal</command>
-        <script>MD81.spoiler_retract();</script>
+        <script>MD88.spoiler_retract();</script>
       </binding>
     </key>
     <key n="107"> 
@@ -378,7 +363,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
       <desc>Extend Speedbrakes</desc>
       <binding> 
         <command>nasal</command>
-        <script>MD81.spoiler_extend();</script>
+        <script>MD88.spoiler_extend();</script>
       </binding>
     </key>
     <key n="127">
@@ -398,7 +383,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
                 <desc>Autostart</desc>
                 <binding> 
             <command>nasal</command>
-            <script>MD81.eng_magicstartup();</script>
+            <script>MD88.eng_magicstartup();</script>
           </binding>
             </key>
 	<key n="108">
@@ -423,7 +408,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
 
 
 <nasal>
-  <MD81>
+  <MD88>
     <file>Aircraft/MD-88/Nasal/MD-88_fuel.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_electrical.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_pneumatics.nas</file>
@@ -441,7 +426,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <file>Aircraft/MD-88/Models/Instruments/KLN90B/kln90b.nas</file>
     <file>Aircraft/MD-88/Nasal/flightdirector.nas</file>
 -->
-  </MD81>
+  </MD88>
 </nasal>
 
 
