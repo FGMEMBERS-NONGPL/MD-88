@@ -414,7 +414,7 @@
 <animation>
   <type>rotate</type>
   <object-name>SwNoseLts</object-name>
-  <property>controls/lighting/landing-lights</property>
+  <property>sim/rendering/als-secondary-lights/use-landing-light</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -438,7 +438,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/lighting/landing-lights</property>
+      <property>sim/rendering/als-secondary-lights/use-landing-light</property>
     </binding>
   </action>
 </animation>

@@ -7,8 +7,8 @@ McDonnell Douglas MD-88
 
 <sim include="Systems/MD-88-views.xml">
   <description>McDonnell Douglas MD-88</description>
-  <author>Joshua Davidson (411, ATC411, it0uchpods)</author>
-	<status>Beta, Stable</status>
+  <author>Joshua Davidson (411, ATC411, it0uchpods), Jonathan Redpath (YV-LEGO)</author>
+	<status>Stable Beta</status>
 	<rating>
             <FDM type="int">3</FDM>
             <systems type="int">3</systems>
