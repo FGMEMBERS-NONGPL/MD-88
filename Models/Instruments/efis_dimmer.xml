@@ -11,9 +11,8 @@
   <object-name>KnobND</object-name>
   <emission>
     <red>0.2</red>
-    <green>0.1</green>
-    <blue>0.05</blue>
-    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    <green>0.2</green>
+    <blue>0.2</blue>
   </emission>
 </animation>
 
@@ -137,7 +136,7 @@
 <animation>
   <type>rotate</type>
   <object-name>KnobND</object-name>
-  <property>/controls/lighting/nd-norm</property>
+  <property>/controls/lighting/panel-norm</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>270</dep></entry>
@@ -161,7 +160,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/lighting/nd-norm</property>
+      <property>/controls/lighting/panel-norm</property>
       <step>0.1</step>
       <min>0</min>
       <max>1</max>
@@ -177,7 +176,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/lighting/nd-norm</property>
+      <property>/controls/lighting/panel-norm</property>
       <step>-0.1</step>
       <min>0</min>
       <max>1</max>

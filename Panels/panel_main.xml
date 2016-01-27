@@ -146,7 +146,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
       </action>
 
-<!-- EFIS dimmer: PFD knob -->
+<!-- EFIS dimmer: Panel knob -->
 
       <action>
         <name>PFDinc</name>
@@ -181,7 +181,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
       </action>
 
-<!-- EFIS dimmer: Nav display knob -->
+<!-- EFIS dimmer: DOME display knob -->
 
       <action>
         <name>NDinc</name>
@@ -192,7 +192,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>10</h>
         <binding>
           <command>property-adjust</command>
-          <property>/controls/lighting/nd-norm</property>
+          <property>/controls/lighting/panel-norm</property>
           <step>0.1</step>
           <min>0</min>
           <max>1</max>
@@ -208,7 +208,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>10</h>
         <binding>
           <command>property-adjust</command>
-          <property>/controls/lighting/nd-norm</property>
+          <property>/controls/lighting/panel-norm</property>
           <step>-0.1</step>
           <min>0</min>
           <max>1</max>
