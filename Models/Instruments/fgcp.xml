@@ -187,7 +187,7 @@
         <property>controls/switches/at</property>
 	<value>0</value>
       <!--command>nasal</command>
-      <script>MD81.autothrottle_toggle();</script-->
+      <script>MD88.autothrottle_toggle();</script-->
     </binding>
     <binding>
 	<command>property-assign</command>
@@ -215,7 +215,7 @@
         <property>controls/switches/at</property>
 	<value>1</value>
       <!--command>nasal</command>
-      <script>MD81.autothrottle_toggle();</script-->
+      <script>MD88.autothrottle_toggle();</script-->
     </binding>
     <binding>
 	<condition><equals>
@@ -371,7 +371,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD81.lights_beacon_toggle();</script>
+      <script>MD88.lights_beacon_toggle();</script>
     </binding>
   </action>
 </animation>
@@ -403,7 +403,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD81.lights_nav_toggle();</script>
+      <script>MD88.lights_nav_toggle();</script>
     </binding>
   </action>
 </animation>
