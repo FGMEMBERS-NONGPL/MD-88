@@ -6,7 +6,6 @@
 <animation>
   <type>material</type>
   <object-name>Bezel</object-name>
-  <object-name>KnobDH</object-name>
   <object-name>KnobPFD</object-name>
   <object-name>KnobND</object-name>
   <emission>
@@ -14,71 +13,6 @@
     <green>0.2</green>
     <blue>0.2</blue>
   </emission>
-</animation>
-
-<animation>
-  <type>rotate</type>
-  <object-name>KnobDH</object-name>
-  <property>/instrumentation/altimeter/DH</property>
-  <interpolation>
-    <entry><ind>  0</ind><dep>  0</dep></entry>
-    <entry><ind>990</ind><dep>720</dep></entry>
-  </interpolation>
-  <center>
-    <x-m>0.008</x-m>
-    <y-m>0.009</y-m>
-    <z-m>0.026</z-m>
-  </center>
-  <axis>
-    <x>-1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>KnobDH</object-name>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>/instrumentation/altimeter/DH</property>
-      <step>10</step>
-      <min>0</min>
-      <max>990</max>
-      <wrap>false</wrap>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>KnobDH</object-name>
-  <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>/instrumentation/altimeter/DH</property>
-      <step>-10</step>
-      <min>0</min>
-      <max>990</max>
-      <wrap>false</wrap>
-    </binding>
-  </action>
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>KnobTest</object-name>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>/sim/instrument-options/hsi/show-rudder</property>
-    </binding>
-  </action>
 </animation>
 
 <animation>
@@ -136,7 +70,7 @@
 <animation>
   <type>rotate</type>
   <object-name>KnobND</object-name>
-  <property>/controls/lighting/panel-norm</property>
+  <property>/controls/lighting/nd-norm</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>270</dep></entry>
@@ -160,7 +94,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/lighting/panel-norm</property>
+      <property>/controls/lighting/nd-norm</property>
       <step>0.1</step>
       <min>0</min>
       <max>1</max>
@@ -176,7 +110,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/lighting/panel-norm</property>
+      <property>/controls/lighting/nd-norm</property>
       <step>-0.1</step>
       <min>0</min>
       <max>1</max>

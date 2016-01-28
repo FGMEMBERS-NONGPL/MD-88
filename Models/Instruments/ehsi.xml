@@ -36,7 +36,7 @@
     <red>1.0</red>
     <green>1.0</green>
     <blue>1.0</blue>
-    <factor-prop>/controls/lighting/pfd-norm</factor-prop>
+    <factor-prop>/controls/lighting/nd-norm</factor-prop>
   </emission>
 </animation>
 <!--
