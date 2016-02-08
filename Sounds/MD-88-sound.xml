@@ -317,7 +317,7 @@
 
 <seatbelt>
 <name>Seatbelt</name>
- <path>Aircraft/MD-88/Sounds/cpl_fastenseatbelt.wav</path>
+ <path>Aircraft/MD-88/Sounds/seatbelt.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -337,7 +337,7 @@
 
 <unseatbelt>
 <name>UnSeatbelt</name>
- <path>Aircraft/MD-88/Sounds/crew_unfastenseatbelt.wav</path>
+ <path>Aircraft/MD-88/Sounds/unseatbelt.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -358,7 +358,7 @@
 
 <captain>
 <name>captain</name>
- <path>Aircraft/MD-88/Sounds/crew1_welcomeonboard.wav</path>
+ <path>Aircraft/MD-88/Sounds/pilotwelcome.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -377,7 +377,7 @@
 
 <safety>
 <name>safety</name>
- <path>Aircraft/MD-88/Sounds/crew2_safetyaboard.wav</path>
+ <path>Aircraft/MD-88/Sounds/safety.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -396,7 +396,7 @@
 
 <preparetakeoff>
 <name>preparetakeoff</name>
- <path>Aircraft/MD-88/Sounds/crew_preparetakeoff.wav</path>
+ <path>Aircraft/MD-88/Sounds/preptakeoff.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -413,8 +413,8 @@
 </preparetakeoff>
 
 <tenthousand>
-<name>Allow Electronic Devices</name>
- <path>Aircraft/MD-88/Sounds/crew3_climbingdevice.wav</path>
+<name>climbing</name>
+ <path>Aircraft/MD-88/Sounds/climbing.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -433,7 +433,7 @@
 
 <cruisingalt>
 <name>cruisingalt</name>
- <path>Aircraft/MD-88/Sounds/crew4_levelautobelt.wav</path>
+ <path>Aircraft/MD-88/Sounds/cruise.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -453,7 +453,7 @@
 
 <decending>
 <name>decending</name>
- <path>Aircraft/MD-88/Sounds/crew6_descent.wav</path>
+ <path>Aircraft/MD-88/Sounds/descend.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -472,7 +472,7 @@
 
 <beforeland>
 <name>beforeland</name>
- <path>Aircraft/MD-88/Sounds/crew7_beforeland.wav</path>
+ <path>Aircraft/MD-88/Sounds/unland.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -491,7 +491,7 @@
 
 <afterland>
 <name>afterland</name>
- <path>Aircraft/MD-88/Sounds/crew8_aftland.wav</path>
+ <path>Aircraft/MD-88/Sounds/landed.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -509,7 +509,7 @@
 
 <atgate>
 <name>atgate</name>
- <path>Aircraft/MD-88/Sounds/crew9_atgate.wav</path>
+ <path>Aircraft/MD-88/Sounds/unwelcome.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -525,82 +525,9 @@
  <max-dist>100.0</max-dist>
 </atgate>
 
-<playmovie>
-<name>playmovie</name>
- <path>Aircraft/MD-88/Sounds/crew_playmovie.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/playmovie</property>
- </and>
- </condition>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</playmovie>
-
-<servedrink>
-<name>servedrink</name>
- <path>Aircraft/MD-88/Sounds/crew_servedrink.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/servedrink</property>
- </and>
- </condition>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</servedrink>
-
-<servehotfood>
-<name>servehotfood</name>
- <path>Aircraft/MD-88/Sounds/crew_servehotfood.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/servehotfood</property>
- </and>
- </condition>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</servehotfood>
-
-<servesandwich>
-<name>servesandwich</name>
- <path>Aircraft/MD-88/Sounds/crew_servesandwich.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/servesandwich</property>
- </and>
- </condition>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</servesandwich>
-
-
 <Turbulence>
 <name>Turbulence</name>
- <path>Aircraft/MD-88/Sounds/crew5_fastenwind.wav</path>
+ <path>Aircraft/MD-88/Sounds/unwind.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -616,26 +543,6 @@
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </Turbulence>
-
-
-<Emergency>
-<name>Emergency</name>
- <path>Aircraft/MD-88/Sounds/cpl_mayday.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/emergency</property>
- </and>
- </condition>
-  
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</Emergency>
 
 <crash>
             <name>Crash</name>

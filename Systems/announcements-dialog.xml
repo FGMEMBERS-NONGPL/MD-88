@@ -94,7 +94,7 @@
 
     <checkbox>
       <halign>left</halign>
-      <label>Allow Electronic Devices</label>
+      <label>Climbing</label>
       <property>/controls/switches/tenthousand</property>
       <binding>
         <command>property-toggle</command>
@@ -104,7 +104,7 @@
 
     <checkbox>
       <halign>left</halign>
-      <label>Cruising Altitude</label>
+      <label>Cruising</label>
       <property>/controls/switches/cruisingalt</property>
       <binding>
         <command>property-toggle</command>
@@ -151,46 +151,6 @@
         <property>/controls/switches/atgate</property>
       </binding>
     </checkbox>
-
-  <hrule/>
-
-<checkbox>
-      <halign>left</halign>
-      <label>Play Movie</label>
-      <property>/controls/switches/playmovie</property>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/switches/playmovie</property>
-      </binding>
-    </checkbox>
-<checkbox>
-      <halign>left</halign>
-      <label>Serve Drink</label>
-      <property>/controls/switches/servedrink</property>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/switches/servedrink</property>
-      </binding>
-    </checkbox>
-<checkbox>
-      <halign>left</halign>
-      <label>Serve Hot Food</label>
-      <property>/controls/switches/servehotfood</property>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/switches/servehotfood</property>
-      </binding>
-    </checkbox>
-<checkbox>
-      <halign>left</halign>
-      <label>Serve Sandwich</label>
-      <property>/controls/switches/servesandwich</property>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/switches/servesandwich</property>
-      </binding>
-    </checkbox>
-
 
   <hrule/>
 
