@@ -250,7 +250,7 @@
       <prop>/autopilot/settings/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.05</Kp>      <!-- proportional gain -->
@@ -280,7 +280,7 @@
       <prop>/autopilot/settings/target-aoa-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.05</Kp>      <!-- proportional gain -->
@@ -336,7 +336,7 @@
 			<prop>/autopilot/internal/target-climb-rate-fps</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator</prop>
+			<prop>/controls/flight/elevator-trim</prop>
 		</output>
 		<config>
 			<Kp>-0.01</Kp>
@@ -378,7 +378,7 @@
     </config>
   </pi-simple-controller>
 
-  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
   <pid-controller>
     <name>Altitude Hold (Altimeter based) Stage 2</name>
     <debug>false</debug>
@@ -393,7 +393,7 @@
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.01</Kp>      <!-- proportional gain -->
@@ -410,7 +410,7 @@
 
   <!-- Glideslope hold. -->
 
-  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
   <pid-controller>
     <name>Glideslop Hold</name>
     <debug>false</debug>
@@ -425,7 +425,7 @@
       <prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
     </reference>
      <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.01</Kp>      <!-- proportional gain -->
@@ -456,7 +456,7 @@
       <scale>0.01667</scale>
     </reference>
     <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.01</Kp>      <!-- -0.01 proportional gain -->
@@ -559,7 +559,7 @@
       <prop>/autopilot/settings/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator</prop>
+      <prop>/controls/flight/elevator-trim</prop>
     </output>
     <config>
       <Kp>-0.05</Kp>      <!-- proportional gain -->
