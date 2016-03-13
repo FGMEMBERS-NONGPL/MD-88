@@ -145,9 +145,12 @@ McDonnell Douglas MD-88
   <name>vsi</name>
   <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
-    <x-m>2.248</x-m>
+    <!--x-m>2.248</x-m>
     <y-m>-0.390</y-m>
-    <z-m>0.766</z-m>
+    <z-m>0.766</z-m-->
+	<x-m>2.250</x-m>
+    <y-m>-0.389</y-m>
+    <z-m>0.7635</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -421,9 +424,9 @@ McDonnell Douglas MD-88
   <name>vsi_R</name>
   <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
-    <x-m>2.248</x-m>
-    <y-m>0.637</y-m>
-    <z-m>0.766</z-m>
+	<x-m>2.250</x-m>
+    <y-m>0.638</y-m>
+    <z-m>0.7635</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
