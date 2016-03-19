@@ -35,12 +35,6 @@ it0uchpods (411) has created a MD-88 addapting, remixing, transforming and build
 
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 
-What it0uchpods (411) has done is:
-- Update models for 3.4
-- Changes FDM (YaSim) for better
-- Fixed autpilot bugs.
-- Other changes, like adding liveries, correcting some instruments.
-
 This model includes several liveries, taken from the Flightgear Livery Database. They are Bulgarian Air Charter (by Tobias Henkel), Continental Airlines (by Emmanuel Savage), Delta Airlines (by Emmanuel Savage), Everts Air Cargo (by Tobies Henkel), Frontier Airlines (by Emmanuel Savage), Japan Airlines (Martien var der P.), JeTran Air (by Tobias Henkel), the old Atlas Virtual Airlines (author unknown), the new GVA livery (by Fajar Sidik) and Swiss Air (Martien van der P.). This liveries are supposed to by distributed under GNU licence. 
 
 The model includes also some liveries taken from http://fgfsliveries.blogspot.com.es. They are Aerolineas Argentinas, Aeropostal, Austral, Austral/Aerolineas Argentinas, and Spanair. Aparently, they are also under the GNU licence.
