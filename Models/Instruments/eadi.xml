@@ -14,7 +14,6 @@
   <object-name>LOC.needle</object-name>
   <object-name>GS.scale</object-name>
   <object-name>LOC.scale</object-name>
-  <object-name>ASIribbon</object-name>
   <object-name>Alttape1</object-name>
   <object-name>Alttape2</object-name>
   <object-name>ALT.1</object-name>
@@ -22,9 +21,6 @@
   <object-name>ALT.100</object-name>
   <object-name>ALT.1000</object-name>
   <object-name>ALT.10000</object-name>
-  <object-name>ASI.1</object-name>
-  <object-name>ASI.10</object-name>
-  <object-name>ASI.100</object-name>
   <object-name>INH.1</object-name>
   <object-name>INH.2</object-name>
   <object-name>INH.3</object-name>
@@ -119,84 +115,6 @@
     <y-m>0</y-m>
     <z-m>0.055</z-m>
   </center>
-</animation>
-
-<!--airspeed-->
-
-<animation>
-  <type>select</type>
-  <object-name>ASI.10</object-name>
-  <condition>
-    <greater-than>
-      <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-      <value>9.999</value>
-    </greater-than>
-  </condition>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>ASI.100</object-name>
-  <condition>
-    <greater-than>
-      <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-      <value>99.999</value>
-    </greater-than>
-  </condition>
-</animation>
-
-<animation>
-  <type>textranslate</type>
-  <object-name>ASI.100</object-name>
-  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-  <factor>0.001</factor>
-  <step>100</step>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>textranslate</type>
-  <object-name>ASI.10</object-name>
-  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-  <factor>0.01</factor>
-  <step>10</step>
-  <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>textranslate</type>
-  <object-name>ASI.1</object-name>
-  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>textranslate</type>
-  <object-name>ASIribbon</object-name>
-  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
-  <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>240</ind><dep>0.5493</dep></entry>
-  </interpolation>
-  <axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
-  </axis>
 </animation>
 
 <animation>

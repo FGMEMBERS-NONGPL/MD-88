@@ -9,26 +9,6 @@
   <!-- Trucks models and artworks courtesy of XPGoodWay Team
 (http://www.xpgoodwayteam.org/site_xpushback/) -->
 
-  <model>
-    <path>Aircraft\MD-88\Models\Pushback\warning-light.xml</path>
-    <offsets>
-      <x-m>-2.908</x-m>
-      <y-m>0.260</y-m>
-      <z-m>1.326</z-m>
-      <heading-deg>0</heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft\MD-88\Models\Pushback\warning-light.xml</path>
-    <offsets>
-      <x-m>-1.781</x-m>
-      <y-m>0.260</y-m>
-      <z-m>1.326</z-m>
-      <heading-deg>90</heading-deg>
-    </offsets>
-  </model>
-
   <animation>
     <type>spin</type>
     <object-name>wheelfl</object-name>

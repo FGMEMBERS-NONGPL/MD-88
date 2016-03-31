@@ -470,25 +470,6 @@
  <max-dist>100.0</max-dist>
 </decending>
 
-<beforeland>
-<name>beforeland</name>
- <path>Aircraft/MD-88/Sounds/unland.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/beforeland</property>
- </and>
- </condition>
-  
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>20.0</reference-dist>
- <max-dist>100.0</max-dist>
-</beforeland>
-
 <afterland>
 <name>afterland</name>
  <path>Aircraft/MD-88/Sounds/landed.wav</path>
@@ -533,7 +514,7 @@
  <and>
   <property>controls/switches/turbulence</property>
  </and>
- </condition>
+ </condition>	
   
   <position>
       <x>0.00</x>
