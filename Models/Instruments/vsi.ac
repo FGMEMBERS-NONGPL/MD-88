@@ -2,8 +2,27 @@ AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "transparent" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "transparent" rgb 0.349 0.349 0.349  amb 0.486275 0.486275 0.486275  emis 0 0 0  spec 0 0 0  shi 0  trans 0
+MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 OBJECT world
-kids 5
+kids 6
+OBJECT poly
+name "Off"
+loc 0.000375889 0.000176087 6.15483e-005
+crease 45.000000
+numvert 4
+0 0.0398161 -0.0405944
+0 -0.0398161 -0.0405944
+0 -0.0398161 0.0405944
+0 0.0398161 0.0405944
+numsurf 1
+SURF 0x10
+mat 3
+refs 4
+1 0.879687 0.45
+0 0.879687 0.55
+3 0.979688 0.55
+2 0.979688 0.45
+kids 0
 OBJECT poly
 name "block"
 loc -0.0425661 3.80512e-005 -7.98702e-005

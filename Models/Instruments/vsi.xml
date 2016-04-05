@@ -8,7 +8,7 @@
     <object-name>fond</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-
+	<object-name>needlevs</object-name>
     <object-name>vitre</object-name>
   </animation>
 
@@ -16,17 +16,30 @@
     <inherits-from>Aircraft/737-100/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+ 
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation> 
+
   <animation>
     <type>material</type>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-  <emission>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
-    <factor-prop>/controls/lighting/nd-norm</factor-prop>
-  </emission>
+    <emission>
+      <!--factor-prop>/controls/lighting/instrument-norm</factor-prop-->
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
   </animation>
 
   <animation>
@@ -53,5 +66,6 @@
       <z>  0 </z>
     </axis>
   </animation>
+
 
 </PropertyList>
