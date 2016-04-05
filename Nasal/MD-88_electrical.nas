@@ -83,6 +83,7 @@ var update_apu = func {
   if (apu_running.getValue()) {
     feed_status[feed["apu"]] = 1;
     sources[feed["apu"]].getNode("on").setValue(1);
+	
   }
   else {
     feed_status[feed["apu"]] = 0;
@@ -94,6 +95,7 @@ var update_battery = func {
   if (sw_batt.getValue()) {
     feed_status[feed["batt"]] = 1;
     sources[feed["batt"]].getNode("on").setValue(1);
+
   }
   else {
     feed_status[feed["batt"]] = 0;
@@ -150,8 +152,8 @@ var update_voltmeter = func {
 									# This is a quick-and-dirty way to do this--
 									# Better to set up an extensible xml-driven system.
 									# But I'm looking for instant-grat right now.
-#var update_bus_outputs = func {
-#  if (bus_dc.getNode("volts").getValue() > MIN_VOLTS_DC) {
+var update_bus_outputs = func {
+  if (bus_dc.getNode("volts").getValue() > MIN_VOLTS_DC) {
     #controls_panel.setValue(switch_panel.getValue());
     #controls_lighting.getNode("lamp-flaps").setValue(controls_flaps.getValue());
     #controls_lighting.getNode("lamp-gear-left").setValue(controls_gear[1].getNode("position-norm").getValue());
@@ -161,8 +163,8 @@ var update_voltmeter = func {
     #controls_lighting.getNode("nav").setValue(controls_switches.getNode("nav").getValue());
     #controls_lighting.getNode("landing-left").setValue(controls_switches.getNode("landing-left").getValue());
     #controls_lighting.getNode("landing-right").setValue(controls_switches.getNode("landing-right").getValue());
-#  }
-#  else {
+  }
+  else {
     #controls_panel.setValue(0);
     #controls_lighting.getNode("lamp-flaps").setValue(0);
     #controls_lighting.getNode("lamp-gear-left").setValue(0);
@@ -172,8 +174,8 @@ var update_voltmeter = func {
     #controls_lighting.getNode("nav").setValue(0);
     #controls_lighting.getNode("landing-left").setValue(0);
     #controls_lighting.getNode("landing-right").setValue(0);
-#  }
-#}
+  }
+}
 
 
 									# The master bus update system
