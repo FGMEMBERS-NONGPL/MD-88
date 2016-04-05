@@ -1,5 +1,5 @@
 ﻿McDonnell Douglas MD-88 for Flightgear by Joshua Davidson
-Based on MD-82 from Andino. Its licence says:
+Based on Gary Neely's MD-81. Its licence says:
 
 	<< This model is currently available as free for personal, non-commercial use. If used in any derivative material, please credit me where applicable.
 
@@ -31,7 +31,7 @@ The mentioned Creative Commons licence says:
 
 	- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. >>
 
-it0uchpods (411) has created a MD-88 addapting, remixing, transforming and building upon Andino's MD-82. Therefore, it is under the same licence: Creative Commons license "CC-BY-NC-SA": 
+it0uchpods (411) has created a MD-88 addapting, remixing, transforming and building upon Gary Neely's MD-81. Therefore, it is under the same licence: Creative Commons license "CC-BY-NC-SA": 
 
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -40,6 +40,8 @@ This model includes several liveries, taken from the Flightgear Livery Database.
 The model includes also some liveries taken from http://fgfsliveries.blogspot.com.es. They are Aerolineas Argentinas, Aeropostal, Austral, Austral/Aerolineas Argentinas, and Spanair. Aparently, they are also under the GNU licence.
 
 New textures (Insel Island, Aeromexico, PanAm, BRT) were created by Andino. They are under the GNU licence.
+
+Any sounds and instruments used were under the GNU license.
 
 The configuration for some views has been taken from Raptor, who offered them in the FG Forum.
 
