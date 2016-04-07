@@ -3,7 +3,6 @@
 # Engine support routines
 #
 # Gary Neely aka 'Buckaroo'
-# Modified by Joshua Davidson (it0uchpods)
 #
 # Functionality notes not yet copied here. If interested in details, nag me.
 #
@@ -236,7 +235,6 @@ setlistener("controls/engines/engine[1]/throttle", func {
 
 var eng_magicstartup = func {
   setprop("/controls/switches/battery",1);
-  setprop("/systems/electrical/outputs/efis",20);
   sw_ign.setValue(1);
   setprop("/controls/switches/pumpLaft",1);
   setprop("/controls/switches/pumpLfwd",1);
