@@ -19,11 +19,11 @@
 		<object-name>Off</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
+				<property>controls/switches/battery</property>
+				<value>1</value>
 			</less-than>
 		</condition>
-	</animation>  
+	</animation>
 
  <animation>
         <type>rotate</type>

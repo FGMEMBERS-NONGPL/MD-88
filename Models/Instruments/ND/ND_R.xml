@@ -10,8 +10,8 @@
         <object-name>Power.off</object-name>
         <condition>
             <less-than>
-                <property>systems/electrical/outputs/efis</property>
-                <value>15</value>
+				<property>controls/switches/battery</property>
+				<value>1</value>
             </less-than>
         </condition>
     </animation>
@@ -21,8 +21,8 @@
         <object-name>ND.screenR</object-name>
         <condition>
             <greater-than>
-                <property>systems/electrical/outputs/efis</property>
-                <value>15</value>
+				<property>controls/switches/battery</property>
+				<value>0</value>
             </greater-than>
         </condition>
     </animation>

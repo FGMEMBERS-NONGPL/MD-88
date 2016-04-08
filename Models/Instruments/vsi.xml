@@ -24,8 +24,8 @@
 		<object-name>Off</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
+				<property>controls/switches/battery</property>
+				<value>1</value>
 			</less-than>
 		</condition>
 	</animation> 
@@ -35,10 +35,11 @@
     <object-name>face</object-name>
     <object-name>needle</object-name>
     <emission>
-      <!--factor-prop>/controls/lighting/instrument-norm</factor-prop-->
+
       <red>   1.0 </red>
       <green> 1.0 </green>
       <blue>  1.0 </blue>
+	  <factor-prop>/controls/lighting/pfd-norm</factor-prop>
     </emission>
   </animation>
 

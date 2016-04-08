@@ -18,7 +18,18 @@
   <object-name>AnnParkBrake</object-name>
   <object-name>AnnSpoilExt</object-name>
 </animation>
-
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>controls/switches/battery</property>
+				<value>-1</value>
+			</less-than>
+		</condition>
+	</animation> 
 <animation>
   <type>material</type>
   <object-name>Annunciators</object-name>

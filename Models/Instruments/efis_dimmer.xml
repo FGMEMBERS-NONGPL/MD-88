@@ -6,13 +6,68 @@
 <animation>
   <type>material</type>
   <object-name>Bezel</object-name>
+  <object-name>KnobDH</object-name>
   <object-name>KnobPFD</object-name>
   <object-name>KnobND</object-name>
   <emission>
-    <red>0.2</red>
-    <green>0.2</green>
-    <blue>0.2</blue>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.01</blue>
   </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>KnobDH</object-name>
+  <property>instrumentation/altimeter/decision-height</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>990</ind><dep>720</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0.008</x-m>
+    <y-m>0.009</y-m>
+    <z-m>0.026</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>KnobDH</object-name>
+  <action>
+    <button>0</button>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/DH</property>
+      <step>10</step>
+      <min>100</min>
+      <max>990</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>KnobDH</object-name>
+  <action>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/DH</property>
+      <step>-10</step>
+      <min>100</min>
+      <max>990</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
 </animation>
 
 <animation>
@@ -39,6 +94,7 @@
   <object-name>KnobPFD</object-name>
   <action>
     <button>0</button>
+    <button>3</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -55,6 +111,7 @@
   <object-name>KnobPFD</object-name>
   <action>
     <button>1</button>
+    <button>4</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -67,7 +124,7 @@
   </action>
 </animation>
 
-<animation>
+<!--animation>
   <type>rotate</type>
   <object-name>KnobND</object-name>
   <property>/controls/lighting/nd-norm</property>
@@ -117,6 +174,6 @@
       <wrap>false</wrap>
     </binding>
   </action>
-</animation>
+</animation-->
 
 </PropertyList>

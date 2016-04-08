@@ -15,12 +15,6 @@
   <object-name>GS.scale</object-name>
   <object-name>LOC.scale</object-name>
   <object-name>Alttape1</object-name>
-  <object-name>Alttape2</object-name>
-  <object-name>ALT.1</object-name>
-  <object-name>ALT.10</object-name>
-  <object-name>ALT.100</object-name>
-  <object-name>ALT.1000</object-name>
-  <object-name>ALT.10000</object-name>
   <object-name>INH.1</object-name>
   <object-name>INH.2</object-name>
   <object-name>INH.3</object-name>
@@ -38,11 +32,12 @@
   <object-name>alt.ind</object-name>
   <object-name>nav.ind</object-name>
   <object-name>hdg.ind</object-name>
+  <object-name>block</object-name>
   <emission>
     <red>1.0</red>
     <green>1.0</green>
     <blue>1.0</blue>
-    <factor-prop>/controls/lighting/nd-norm</factor-prop>
+    <factor-prop>/controls/lighting/pfd-norm</factor-prop>
   </emission>
 </animation>
 
@@ -53,8 +48,8 @@
 		<object-name>Off</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
+				<property>controls/switches/battery</property>
+				<value>1</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -132,23 +127,13 @@
 </animation>
 
 <animation>
-  <type>select</type>
-  <object-name>Alttape1</object-name>
-  <condition>
-      <less-than>
-          <property>instrumentation/altimeter/indicated-altitude-ft</property>
-          <value>9500</value>
-          </less-than>
-  </condition>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>Alttape2</object-name>
-  <condition>
-      <greater-than>
-          <property>instrumentation/altimeter/indicated-altitude-ft</property>
-          <value>9499.999</value>
+		<name>RALToff</name>
+		<type>select</type>
+		<object-name>ROff</object-name>
+		<condition>
+			<greater-than>
+          <property>position/altitude-agl-ft</property>
+          <value>1505</value>
           </greater-than>
   </condition>
 </animation>
@@ -156,7 +141,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>Alttape1</object-name>
-  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>position/altitude-agl-ft</property>
   <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>9500</ind><dep>0.9068</dep></entry>
@@ -165,21 +150,6 @@
       <x>0</x>
       <y>1</y>
       <z>0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>textranslate</type>
-  <object-name>Alttape2</object-name>
-  <property>instrumentation/altimeter/indicated-altitude-ft</property>
-  <interpolation>
-      <entry><ind>9500</ind><dep>0</dep></entry>
-      <entry><ind>19000</ind><dep>0.9068</dep></entry>
-  </interpolation>
-  <axis>
-    <x>0</x>
-    <y>1</y>
-    <z>0</z>
   </axis>
 </animation>
 
@@ -250,71 +220,6 @@
 
 <animation>
     <type>textranslate</type>
-    <object-name>ALT.1</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.1</factor>
-    <step>1</step>
-    <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-    </axis>
-</animation>
-
-<animation>
-    <type>textranslate</type>
-    <object-name>ALT.10</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.01</factor>
-    <step>10</step>
-    <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-    </axis>
-</animation>
-
-<animation>
-    <type>textranslate</type>
-    <object-name>ALT.100</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.001</factor>
-    <step>100</step>
-    <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-    </axis>
-</animation>
-
-<animation>
-    <type>textranslate</type>
-    <object-name>ALT.1000</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.0001</factor>
-    <step>1000</step>
-    <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-    </axis>
-</animation>
-
-<animation>
-    <type>textranslate</type>
-    <object-name>ALT.10000</object-name>
-    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor>0.00001</factor>
-    <step>10000</step>
-    <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-    </axis>
-</animation>
-
-<animation>
-    <type>textranslate</type>
     <object-name>INH.1</object-name>
     <property>instrumentation/altimeter/setting-inhg</property>
     <factor>0.01</factor>
@@ -378,12 +283,12 @@
   <condition>
     <and>
       <greater-than>
-        <property>instrumentation/altimeter/DH</property>
+        <property>instrumentation/altimeter/decision-height</property>
         <value>0</value>
       </greater-than>
       <greater-than>
         <property>position/altitude-agl-ft</property>
-        <property>instrumentation/altimeter/DH</property>
+        <property>instrumentation/altimeter/decision-height</property>
       </greater-than>
     </and>
     <!--<equals><value>1</value><value>0</value></equals>-->
@@ -398,12 +303,12 @@
   <condition>
     <and>
       <greater-than>
-        <property>instrumentation/altimeter/DH</property>
+        <property>instrumentation/altimeter/decision-height</property>
         <value>0</value>
       </greater-than>
       <less-than-equals>
         <property>position/altitude-agl-ft</property>
-        <property>instrumentation/altimeter/DH</property>
+        <property>instrumentation/altimeter/decision-height</property>
       </less-than-equals>
     </and>
   </condition>
@@ -412,7 +317,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.1</object-name>
-    <property>instrumentation/altimeter/DH</property>
+    <property>instrumentation/altimeter/decision-height</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -424,7 +329,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.10</object-name>
-    <property>instrumentation/altimeter/DH</property>
+    <property>instrumentation/altimeter/decision-height</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -436,7 +341,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.100</object-name>
-    <property>instrumentation/altimeter/DH</property>
+    <property>instrumentation/altimeter/decision-height</property>
     <factor>0.001</factor>
     <step>100</step>
     <axis>
