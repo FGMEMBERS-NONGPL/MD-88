@@ -23,8 +23,8 @@
 	<and>
     <property>controls/engines/engine[0]/reverser</property>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>
@@ -49,8 +49,8 @@
 	<and>
     <property>controls/engines/engine[1]/reverser</property>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>

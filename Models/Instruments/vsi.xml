@@ -24,8 +24,8 @@
 		<object-name>Off</object-name>
 		<condition>
 			<less-than>
-				<property>controls/switches/battery</property>
-				<value>1</value>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
 			</less-than>
 		</condition>
 	</animation> 

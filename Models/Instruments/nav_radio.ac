@@ -5,7 +5,7 @@ OBJECT world
 kids 20
 OBJECT poly
 name "Off"
-loc 0.00283484 0.0134427 -0.0383979
+loc 0.000774187 0.0134427 -0.0381298
 crease 45.000000
 numvert 4
 0 0.0078633 0.028123
@@ -23,7 +23,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Off"
-loc 0.00283484 0.0134427 0.0380305
+loc 0.000774187 0.0134427 0.0380305
 crease 45.000000
 numvert 4
 0 0.0078633 -0.028123

@@ -32,8 +32,8 @@
       <value>0</value>
     </greater-than>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>
@@ -50,8 +50,8 @@
       <value>1</value>
     </equals>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>
@@ -86,8 +86,8 @@
         <value>1</value>
       </less-than>
 	  <greater-than>
-	    <property>controls/switches/battery</property>
-	    <value>0</value>
+	    <property>systems/electrical/outputs/efis</property>
+	    <value>15</value>
 	  </greater-than>
     </and>
   </condition>
@@ -104,8 +104,8 @@
       <value>1</value>
     </equals>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>
@@ -140,8 +140,8 @@
         <value>1</value>
       </less-than>
 	  <greater-than>
-	    <property>controls/switches/battery</property>
-	    <value>0</value>
+	    <property>systems/electrical/outputs/efis</property>
+	    <value>15</value>
 	  </greater-than>
     </and>
   </condition>
@@ -158,8 +158,8 @@
       <value>1</value>
     </equals>
 	<greater-than>
-	  <property>controls/switches/battery</property>
-	  <value>0</value>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
 	</greater-than>
 	</and>
   </condition>
@@ -194,8 +194,8 @@
         <value>1</value>
       </less-than>
 	  <greater-than>
-	    <property>controls/switches/battery</property>
-	    <value>0</value>
+	    <property>systems/electrical/outputs/efis</property>
+	    <value>15</value>
 	  </greater-than>
     </and>
   </condition>
