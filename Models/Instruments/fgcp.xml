@@ -250,6 +250,58 @@
   </action>
 </animation>
 
+<!--  AutoPilot Switch -->
+
+<animation>
+  <type>select</type>
+  <object-name>APSwitchOn</object-name>
+  <condition>
+    <property>/controls/switches/ap_master</property>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>APSwitchOn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+	<command>property-assign</command>
+        <property>/controls/switches/ap_master</property>
+	<value>0</value>
+    </binding>
+    <binding>
+	<command>nasal</command>
+    <script>MD88.ap_off();</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>APSwitchOff</object-name>
+  <condition>
+    <not><property>/controls/switches/ap_master</property></not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>APSwitchOff</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+	<command>property-assign</command>
+        <property>/controls/switches/ap_master</property>
+	<value>1</value>
+    </binding>
+    <binding>
+	<command>nasal</command>
+    <script>MD88.ap_refresh();</script>
+    </binding>
+  </action>
+</animation>
+
 <!--  AutoThrottle Knob (Speed selected) -->
 
 <animation>
@@ -269,11 +321,12 @@
     <z2-m>1.155154</z2-m>
   </axis>
 </animation>
+
 <animation>
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -289,12 +342,45 @@
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-speed-kt</property>
       <step>-1</step>
+      <min>0</min>
+      <max>300</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>ATKnob</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-speed-kt</property>
+      <step>10</step>
+      <min>0</min>
+      <max>300</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ATKnob</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-speed-kt</property>
+      <step>-10</step>
       <min>0</min>
       <max>300</max>
       <wrap>false</wrap>
@@ -745,7 +831,7 @@
   <type>pick</type>
   <object-name>Nav1CrsKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -761,12 +847,44 @@
   <type>pick</type>
   <object-name>Nav1CrsKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav/radials/selected-deg</property>
       <step>-1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>Nav1CrsKnob</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav/radials/selected-deg</property>
+      <step>10</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>Nav1CrsKnob</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav/radials/selected-deg</property>
+      <step>-10</step>
       <min>0</min>
       <max>360</max>
       <wrap>true</wrap>
@@ -998,14 +1116,44 @@
   <type>pick</type>
   <object-name>Nav2CrsKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>false</repeatable>
-
-
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
       <step>1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>Nav2CrsKnob</object-name>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/radials/selected-deg</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>Nav2CrsKnob</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/radials/selected-deg</property>
+      <step>10</step>
       <min>0</min>
       <max>360</max>
       <wrap>true</wrap>
@@ -1021,7 +1169,7 @@
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
-      <step>-1</step>
+      <step>-10</step>
       <min>0</min>
       <max>360</max>
       <wrap>true</wrap>
@@ -1118,13 +1266,11 @@
   </axis>
     </animation>
 
-
-
 <animation>
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1140,12 +1286,45 @@
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/target-altitude-ft</property>
       <step>-100</step>
+      <min>0</min>
+      <max>40000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>AltKnob</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/target-altitude-ft</property>
+      <step>1000</step>
+      <min>0</min>
+      <max>40000</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>AltKnob</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/target-altitude-ft</property>
+      <step>-1000</step>
       <min>0</min>
       <max>40000</max>
       <wrap>false</wrap>
@@ -1162,11 +1341,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/altitude</property>
-		<value>altitude-hold</value>
-		<value>0</value>
-            </binding>
+				<command>property-assign</command>
+				<property>controls/switches/alt</property>
+				<value>1</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/vs</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/app</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.alt_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1175,9 +1367,13 @@
         <object-name>ALTtoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/altitude</property>
-                <value>altitude-hold</value>
+                <property>controls/switches/alt</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -1345,11 +1541,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/altitude</property>
-		<value>vertical-speed-hold</value>
-		<value>0</value>
-            </binding>
+				<command>property-assign</command>
+				<property>controls/switches/alt</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/vs</property>
+				<value>1</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/app</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.vs_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1358,9 +1567,13 @@
         <object-name>VStoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/altitude</property>
-                <value>vertical-speed-hold</value>
+                <property>controls/switches/vs</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -1412,16 +1625,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/altitude</property>
-		<value>gs1-hold</value>
-		<value>0</value>
-            </binding>
-	    <!--binding>
-          <command>property-assign</command>
-          <property>autopilot/settings/vertical-speed-fpm</property>
-          <value>0</value>
-        </binding-->
+				<command>property-assign</command>
+				<property>controls/switches/alt</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/vs</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/app</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.app_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1430,9 +1651,13 @@
         <object-name>APPRtoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/altitude</property>
-                <value>gs1-hold</value>
+                <property>controls/switches/app</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -1494,13 +1719,11 @@
   </axis>
     </animation>
 
-
-
 <animation>
   <type>pick</type>
   <object-name>HdgKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1516,12 +1739,45 @@
   <type>pick</type>
   <object-name>HdgKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
       <step>-1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>HdgKnob</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <step>10</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>HdgKnob</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <step>-10</step>
       <min>0</min>
       <max>360</max>
       <wrap>true</wrap>
@@ -1539,11 +1795,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/heading</property>
-		<value>dg-heading-hold</value>
-		<value>0</value>
-            </binding>
+				<command>property-assign</command>
+				<property>controls/switches/hdg</property>
+				<value>1</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/nav</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/loc</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.hdg_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1552,9 +1821,13 @@
         <object-name>HDGtoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/heading</property>
-                <value>dg-heading-hold</value>
+                <property>controls/switches/hdg</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -1568,11 +1841,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/heading</property>
-		<value>true-heading-hold</value>
-		<value>0</value>
-            </binding>
+				<command>property-assign</command>
+				<property>controls/switches/hdg</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/nav</property>
+				<value>1</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/loc</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.nav_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1581,9 +1867,13 @@
         <object-name>NAVtoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/heading</property>
-                <value>true-heading-hold</value>
+                <property>controls/switches/nav</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 
@@ -1596,11 +1886,24 @@
             <button>0</button>
 	    <repeatable>true</repeatable>
             <binding>
-		<command>property-cycle</command>
-                <property>/autopilot/locks/heading</property>
-		<value>nav1-hold</value>
-		<value>0</value>
-            </binding>
+				<command>property-assign</command>
+				<property>controls/switches/hdg</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/nav</property>
+				<value>0</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>controls/switches/loc</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>MD88.loc_master();</script>
+			</binding>
         </action>
     </animation>
 
@@ -1609,9 +1912,13 @@
         <object-name>LOCtoggle</object-name>
         <condition>
             <equals>
-                <property>/autopilot/locks/heading</property>
-                <value>nav1-hold</value>
+                <property>controls/switches/loc</property>
+                <value>1</value>
             </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
         </condition>
     </animation>
 

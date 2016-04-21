@@ -94,13 +94,14 @@ var MD88_Savedata = func {
 setlistener("/sim/signals/fdm-initialized", func {
 								# Start the fuel system. The MD-88 uses a customized
 								# fuel routine to avoid the default cross-feed situation.
-  FuelInit();							# See MD-88_fuel.nas
+  FuelInit();					# See MD-88_fuel.nas
 								# Start the custom flight surface system. The MD-88 uses
 								# this to handle spoiler operations and tabbed control
 								# surface simulation.
-  FlightSurfaceInit();						# See MD-88_flightsurfaces.nas
-  PneumaticsInit();						# See MD-88_pneumatics.nas
-  InstrumentationInit();					# See MD-88_instrumentation_drivers.nas
+  FlightSurfaceInit();			# See MD-88_flightsurfaces.nas
+  PneumaticsInit();				# See MD-88_pneumatics.nas
+  InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
+  ap_init();					# See MD-88-autoflight.nas
   MD88_Savedata();
 });
 
