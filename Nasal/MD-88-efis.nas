@@ -75,7 +75,7 @@ var ctl_func2 = func(md,val) {
             rng = rng / 2;
             if(rng < 10) rng = 10;
         }
-		setprop("/instrumentation/efis/inputs/range-nm", rng);
+		setprop("/instrumentation/efis[1]/inputs/range-nm", rng);
     }
 }
 
