@@ -143,6 +143,8 @@ var update_electrical = func {
   #update_bus_outputs();
   update_voltmeter();
   
+
+  
   settimer(update_electrical,ELEC_UPDATE_PERIOD);			# Schedule next run
 }
 

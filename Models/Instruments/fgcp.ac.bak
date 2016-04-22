@@ -11,7 +11,7 @@ MATERIAL "Default.004" rgb 0.803922 0.803922 0.803922  amb 0.498039 0.498039 0.4
 OBJECT world
 kids 98
 OBJECT poly
-name "Machtoggle"
+name "IAStoggle"
 loc 0.00371099 -0.0177724 0.0594828
 data 8
 Mesh.008
@@ -32,7 +32,7 @@ refs 4
 1 0.911634 0.426563
 kids 0
 OBJECT poly
-name "MachOff"
+name "apprOff"
 loc -0.00388861 0.0164809 0.187316
 data 11
 apprOff.001
@@ -110,7 +110,7 @@ name "IASOff"
 loc 0 0 0.0593014
 data 6
 navOff
-texture "ap2.png"
+texture "ap.png"
 crease 30.000000
 numvert 8
 2.48568 1.18169 0.063626
@@ -162,7 +162,7 @@ OBJECT poly
 name "navOff"
 data 6
 navOff
-texture "ap.png"
+texture "ap2.png"
 crease 30.000000
 numvert 8
 2.47937 1.18559 0.063626

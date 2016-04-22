@@ -65,6 +65,10 @@
 <object-name>navOff</object-name>
 <object-name>LOC.Btn</object-name>
 <object-name>CLB.Btn</object-name>
+  <object-name>Machtoggle</object-name>
+<object-name>MachOff</object-name>
+  <object-name>IAStoggle</object-name>
+<object-name>IASOff</object-name>
 	
   <emission>
     <red>0.8</red>
@@ -366,7 +370,7 @@
       <property>/autopilot/settings/target-speed-kt</property>
       <step>10</step>
       <min>0</min>
-      <max>300</max>
+      <max>320</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -382,7 +386,7 @@
       <property>/autopilot/settings/target-speed-kt</property>
       <step>-10</step>
       <min>0</min>
-      <max>300</max>
+      <max>320</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -1907,12 +1911,76 @@
         </action>
     </animation>
 
- <animation>
+	<animation>
         <type>select</type>
         <object-name>LOCtoggle</object-name>
         <condition>
             <equals>
                 <property>controls/switches/loc</property>
+                <value>1</value>
+            </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
+        </condition>
+    </animation>
+	
+	<!-- IAS -->
+	
+	<animation>
+        <type>pick</type>
+		<object-name>IASOff</object-name>
+		<object-name>IAStoggle</object-name>
+        <action>
+            <button>0</button>
+			<repeatable>true</repeatable>
+            <binding>
+				<command>property-assign</command>
+				<property>autopilot/locks/at-mode</property>
+				<value>0</value>
+			</binding>
+        </action>
+    </animation>
+
+	<animation>
+        <type>select</type>
+        <object-name>IAStoggle</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/at-mode</property>
+                <value>0</value>
+            </equals>
+            <greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+            </greater-than>
+        </condition>
+    </animation>
+	
+	<!-- Mach -->
+	
+	<animation>
+        <type>pick</type>
+		<object-name>MachOff</object-name>
+		<object-name>Machtoggle</object-name>
+        <action>
+            <button>0</button>
+			<repeatable>true</repeatable>
+            <binding>
+				<command>property-assign</command>
+				<property>autopilot/locks/at-mode</property>
+				<value>1</value>
+			</binding>
+        </action>
+    </animation>
+
+	<animation>
+        <type>select</type>
+        <object-name>Machtoggle</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/at-mode</property>
                 <value>1</value>
             </equals>
             <greater-than>

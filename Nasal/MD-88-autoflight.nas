@@ -1,4 +1,4 @@
-# MD-88/MD-90 Autoflight system by Joshua Davidson. License: Creative Commons "BY-NC-SA"
+# MD-88/MD-90 Autoflight system by Joshua Davidson(it0uchpods/411). License: Creative Commons "BY-NC-SA"
 
 var ap_init = func {
 	setprop("/controls/switches/ap_master", 0);
