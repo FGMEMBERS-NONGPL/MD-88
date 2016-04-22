@@ -71,6 +71,7 @@
         <object-name>rng2.inc</object-name>
         <object-name>rng.dec</object-name>
         <object-name>rng2.dec</object-name>
+        <object-name>RNGTop</object-name>
         <object-name>Range.knob</object-name>
         <action>
             <button>0</button>
@@ -88,6 +89,7 @@
         <object-name>rng2.inc</object-name>
         <object-name>rng.dec</object-name>
         <object-name>rng2.dec</object-name>
+        <object-name>RNGTop</object-name>
         <object-name>Range.knob</object-name>
         <action>
             <button>1</button>
@@ -105,7 +107,7 @@
         <object-name>rng2.inc</object-name>
         <object-name>rng.dec</object-name>
         <object-name>rng2.dec</object-name>
-        <object-name>TFC</object-name>
+        <object-name>RNGTop</object-name>
         <object-name>Range.knob</object-name>
         <action>
             <button>3</button> <!--  scroll up -->
@@ -123,7 +125,7 @@
         <object-name>rng2.inc</object-name>
         <object-name>rng.dec</object-name>
         <object-name>rng2.dec</object-name>
-        <object-name>TFC</object-name>
+        <object-name>RNGTop</object-name>
         <object-name>Range.knob</object-name>
         <action>
             <button>4</button> <!--  scroll down -->
@@ -135,7 +137,7 @@
         </action>
     </animation>
 
-    <animation>
+    <!--animation>
         <type>pick</type>
         <object-name>TFC</object-name>
         <action>
@@ -146,7 +148,7 @@
                 <property>instrumentation/efis/inputs/tfc</property>
             </binding>
         </action>
-    </animation>
+    </animation-->
 
     <animation>
         <type>pick</type>
