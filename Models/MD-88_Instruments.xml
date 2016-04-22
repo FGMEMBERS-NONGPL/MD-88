@@ -57,11 +57,26 @@ McDonnell Douglas MD-88
   <object-name>pneu</object-name>
   <object-name>apu_rpm</object-name>
   <object-name>apu_egt</object-name>
+  <object-name>L_efis</object-name>
+  <object-name>R_efis</object-name> 
 </animation>
 
 
 
 <!-- Captain Panel -->
+
+<model>
+  <name>L_efis</name>
+  <path>Aircraft/MD-88/Models/Instruments/EFIS/efis_L.xml</path>
+  <offsets>
+    <x-m>2.586</x-m>
+    <y-m>-0.918</y-m>
+    <z-m>0.888</z-m>
+    <pitch-deg>-35</pitch-deg>
+    <heading-deg>38</heading-deg>
+	<roll-deg>20</roll-deg>
+  </offsets>
+</model>
 
 <model>
   <name>clock</name>
@@ -342,6 +357,19 @@ McDonnell Douglas MD-88
 
 
 <!-- Copilot Panel -->
+
+<model>
+  <name>R_efis</name>
+  <path>Aircraft/MD-88/Models/Instruments/EFIS/efis_R.xml</path>
+  <offsets>
+    <x-m>2.586</x-m>
+    <y-m>0.918</y-m>
+    <z-m>0.888</z-m>
+    <pitch-deg>-35</pitch-deg>
+    <heading-deg>-38</heading-deg>
+	<roll-deg>-20</roll-deg>
+  </offsets>
+</model>
 
 <model>
   <name>eadi_R</name>

@@ -102,6 +102,7 @@ setlistener("/sim/signals/fdm-initialized", func {
   PneumaticsInit();				# See MD-88_pneumatics.nas
   InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
   ap_init();					# See MD-88-autoflight.nas
+  nd_init();					# See MD-88_efis.nas
   MD88_Savedata();
 });
 
