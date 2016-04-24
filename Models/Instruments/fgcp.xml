@@ -2068,6 +2068,11 @@
 				<property>autopilot/locks/at-mode</property>
 				<value>0</value>
 			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>autopilot/locks/speed</property>
+				<value>speed-with-throttle</value>
+			</binding>
         </action>
     </animation>
 
@@ -2098,6 +2103,11 @@
 				<command>property-assign</command>
 				<property>autopilot/locks/at-mode</property>
 				<value>1</value>
+			</binding>
+            <binding>
+				<command>property-assign</command>
+				<property>autopilot/locks/speed</property>
+				<value>mach-with-throttle</value>
 			</binding>
         </action>
     </animation>
