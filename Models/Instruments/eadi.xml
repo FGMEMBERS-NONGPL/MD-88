@@ -28,10 +28,6 @@
   <object-name>DHamber.10</object-name>
   <object-name>DHamber.100</object-name>
   <object-name>DHamber</object-name>
-  <object-name>vs.ind</object-name>
-  <object-name>alt.ind</object-name>
-  <object-name>nav.ind</object-name>
-  <object-name>hdg.ind</object-name>
   <object-name>block</object-name>
   <object-name>FDPitch</object-name>
   <object-name>FDRoll</object-name>
@@ -389,52 +385,6 @@
         <y>0</y>
         <z>0</z>
     </axis>
-</animation>
-
-<!-- AP annunciators-->
-
-<animation>
-  <type>select</type>
-  <object-name>hdg.ind</object-name>
-  <condition>
-      <equals>
-          <property>autopilot/locks/heading</property>
-          <value>dg-heading-hold</value>
-          </equals>
-  </condition>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>nav.ind</object-name>
-  <condition>
-      <equals>
-          <property>autopilot/locks/heading</property>
-          <value>nav1-hold</value>
-          </equals>
-  </condition>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>vs.ind</object-name>
-  <condition>
-      <equals>
-          <property>autopilot/locks/altitude</property>
-          <value>vertical-speed-hold</value>
-          </equals>
-  </condition>
-</animation>
-
-<animation>
-  <type>select</type>
-  <object-name>alt.ind</object-name>
-  <condition>
-    <equals>
-      <property>autopilot/locks/altitude</property>
-      <value>altitude-hold</value>
-    </equals>
-  </condition>
 </animation>
 
 </PropertyList>

@@ -59,11 +59,24 @@ McDonnell Douglas MD-88
   <object-name>apu_egt</object-name>
   <object-name>L_efis</object-name>
   <object-name>R_efis</object-name> 
+  <object-name>apindicator_L</object-name> 
+  <object-name>apindicator_R</object-name> 
 </animation>
 
 
 
 <!-- Captain Panel -->
+
+<model>
+  <name>apindicator_L</name>
+  <path>Aircraft/MD-88/Models/Instruments/apindicator.xml</path>
+  <offsets>
+    <x-m>2.229</x-m>
+    <y-m>-0.320</y-m>
+    <z-m>0.966</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
 
 <model>
   <name>L_efis</name>
@@ -357,6 +370,17 @@ McDonnell Douglas MD-88
 
 
 <!-- Copilot Panel -->
+
+<model>
+  <name>apindicator_R</name>
+  <path>Aircraft/MD-88/Models/Instruments/apindicator.xml</path>
+  <offsets>
+    <x-m>2.229</x-m>
+    <y-m>0.320</y-m>
+    <z-m>0.966</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
 
 <model>
   <name>R_efis</name>
