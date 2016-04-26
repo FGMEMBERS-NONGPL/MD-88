@@ -11,10 +11,9 @@
   <object-name>AI.BezelMask</object-name>
   <object-name>AI.Bar.Aircraft</object-name>
   <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
   </emission>
 </animation>
 

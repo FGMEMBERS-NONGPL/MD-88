@@ -74,7 +74,7 @@
           <from-model type="bool">true</from-model>
           <from-model-idx type="int">0</from-model-idx>
           <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-          <default-field-of-view-deg type="double">66.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
           <default-pitch-deg type="double">0</default-pitch-deg>
           <default-heading-deg type="double">0</default-heading-deg>
           <front-direction-deg type="double">0</front-direction-deg>

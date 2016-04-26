@@ -61,6 +61,8 @@ McDonnell Douglas MD-88
   <object-name>R_efis</object-name> 
   <object-name>apindicator_L</object-name> 
   <object-name>apindicator_R</object-name> 
+  <object-name>enginepanel</object-name> 
+  <object-name>enginepanel2</object-name> 
 </animation>
 
 
