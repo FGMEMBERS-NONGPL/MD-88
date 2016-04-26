@@ -105,6 +105,18 @@ setlistener("/sim/signals/fdm-initialized", func {
   setprop("/controls/switches/app1", 0);
   ap_init();					# See MD-88-autoflight.nas
   nd_init();					# See MD-88_efis.nas
+  setlistener("engines/engine[0]/epr", func {
+    setprop("engines/engine[0]/eprx100", (getprop("engines/engine[0]/epr") * 100));
+  });
+  setlistener("engines/engine[1]/epr", func {
+  	setprop("engines/engine[1]/eprx100", (getprop("engines/engine[1]/epr") * 100));
+  });
+  setlistener("/surface-positions/flap-pos-norm", func {
+	var flappositionnew = getprop("/surface-positions/flap-pos-norm");
+	if (flappositionnew <= 0.8000000001) {
+	  setprop("/controls/switches/flapposnew", flappositionnew);
+	}
+  });
   MD88_Savedata();
 });
 

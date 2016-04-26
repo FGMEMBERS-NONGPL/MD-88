@@ -46,7 +46,7 @@
       <value>1</value>
     </equals>
     <greater-than>
-      <property>/control/switches/app</property>
+      <property>/controls/switches/app</property>
 	  <value>1</value>
     </greater-than>
 	</or>

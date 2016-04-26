@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>enginepanel2.ac</path>
+
+<animation>
+  <object-name>Temp1</object-name>
+  <object-name>Temp2</object-name>
+  <object-name>OilPressL1</object-name>
+  <object-name>OilPressL2</object-name>
+  <object-name>OilPressR1</object-name>
+  <object-name>OilPressR2</object-name>
+  <object-name>OilTempL1</object-name>
+  <object-name>OilTempL2</object-name>
+  <object-name>OilTempR1</object-name>
+  <object-name>OilTempR2</object-name>
+  <object-name>OilQTYL1</object-name>
+  <object-name>OilQTYL2</object-name>
+  <object-name>OilQTYR1</object-name>
+  <object-name>OilQTYR2</object-name>
+  <object-name>HydPressL1</object-name>
+  <object-name>HydPressL2</object-name>
+  <object-name>HydPressR1</object-name>
+  <object-name>HydPressR2</object-name>
+  <object-name>HydQTYL1</object-name>
+  <object-name>HydQTYL2</object-name>
+  <object-name>HydQTYR1</object-name>
+  <object-name>HydQTYR2</object-name>
+  <object-name>FlapL</object-name>
+  <object-name>FlapR</object-name>
+  <emission>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>/controls/lighting/pfd-norm</factor-prop>
+  </emission>
+</animation>
+
+<!-- Power on/off -->
+<animation>
+	<name>Power on/off</name>
+	<type>select</type>
+	<object-name>Temp1</object-name>
+	<object-name>Temp2</object-name>
+	<object-name>OilPressL1</object-name>
+	<object-name>OilPressL2</object-name>
+	<object-name>OilPressR1</object-name>
+	<object-name>OilPressR2</object-name>
+	<object-name>OilTempL1</object-name>
+	<object-name>OilTempL2</object-name>
+	<object-name>OilTempR1</object-name>
+	<object-name>OilTempR2</object-name>
+	<object-name>OilQTYL1</object-name>
+	<object-name>OilQTYL2</object-name>
+	<object-name>OilQTYR1</object-name>
+	<object-name>OilQTYR2</object-name>
+	<object-name>HydPressL1</object-name>
+	<object-name>HydPressL2</object-name>
+	<object-name>HydPressR1</object-name>
+	<object-name>HydPressR2</object-name>
+	<object-name>HydQTYL1</object-name>
+	<object-name>HydQTYL2</object-name>
+	<object-name>HydQTYR1</object-name>
+	<object-name>HydQTYR2</object-name>
+	<object-name>FlapL</object-name>
+	<object-name>FlapR</object-name>
+	<condition>
+		<greater-than>
+			<property>systems/electrical/outputs/efis</property>
+			<value>15</value>
+		</greater-than>
+	</condition>
+</animation>
+
+<!-- Temperature Celcius -->
+<animation>
+  <type>textranslate</type>
+  <object-name>Temp1</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>Temp2</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>FlapL</object-name>
+  <property>/controls/switches/flapposnew</property>
+  <factor>0.06</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>FlapR</object-name>
+  <property>/controls/switches/flapposnew</property>
+  <factor>0.06</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>-1</z>
+  </axis>
+</animation>
+
+</PropertyList>
+

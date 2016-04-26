@@ -154,7 +154,7 @@ var update_apparmelec = func {
   return 0;
   }
 }
-
+  
 var update_electrical = func {
   elec_main();
   update_locarmelec();

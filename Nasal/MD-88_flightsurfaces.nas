@@ -4,6 +4,8 @@
 #
 # Gary Neely aka 'Buckaroo'
 #
+# Modified by Joshua Davidson (it0uchpods/411)
+#
 # Elevator operations:
 #
 # The MD-80 series elevators are not typically directly controlled, but are 'flown' into position by
@@ -309,7 +311,6 @@ var flightsurface_loop = func {
 
 
 var FlightSurfaceInit = func {
-
   settimer(env_effects, 2);
   settimer(flightsurface_loop, 3);				# Delay startup a bit to allow things to initialize
 }

@@ -131,14 +131,7 @@ Speed is based on max Mach at FL350 of 0.82.
   <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
 </vstab>
 
-<!-- According to the Wikipedia: 
-
-"Originally certified with 20,000 lbf (89 kN) thrust JT8D-217s, a -217A-powered MD-88 was certified in mid-1982 and became available that year. The new version featured a higher MTOW (149,500 lb (67,800 kg)), while the JT8D-217As had a guaranteed take-off thrust at temperature of up to 29 degrees C or 5,000 ft (1,500 m) altitude. The JT8D-217C engines were also offered on the MD-88, giving improved Thrust specific fuel consumption (TSFC). Several operators took delivery of the -219-powered MD-88s, while Balair ordered its MD-88s powered by the lower-thrust -209 engine."
-
-Here I opted for the higher -219 configuration -->
-
-
-<jet x="-33.757" y="2.7" z="0.687" mass="4567" thrust="21700" egt="625" tsfc="0.498" n1-idle="30" n2-idle="55" n1-max="102.2" n2-max="106.5" epr="2.16">
+<jet x="-33.757" y="2.7" z="0.687" mass="4567" thrust="21700" egt="655" tsfc="0.498" n1-idle="23" n2-idle="54" n1-max="108.2" n2-max="112.5" epr="2.16">
   <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
   <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[0]"/>
@@ -146,7 +139,7 @@ Here I opted for the higher -219 configuration -->
 <actionpt x="-35.0" y="2.7" z="0.687"/>
 </jet>
 
-<jet x="-33.757" y="-2.7" z="0.687" mass="4567" thrust="21700" egt="625" tsfc="0.498" n1-idle="30" n2-idle="55" n1-max="102.2" n2-max="106.5" epr="2.16">
+<jet x="-33.757" y="-2.7" z="0.687" mass="4567" thrust="21700" egt="655" tsfc="0.498" n1-idle="23" n2-idle="54" n1-max="108.2" n2-max="112.5" epr="2.16">
   <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
   <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>

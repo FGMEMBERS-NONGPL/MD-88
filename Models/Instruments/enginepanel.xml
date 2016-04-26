@@ -5,25 +5,194 @@
 <path>enginepanel.ac</path>
 
 <animation>
+  <object-name>RevLON</object-name>
+  <object-name>RevRON</object-name>
+  <object-name>EPRL1</object-name>
+  <object-name>EPRL2</object-name>
+  <object-name>EPRL3</object-name>
+  <object-name>EPRR1</object-name>
+  <object-name>EPRR2</object-name>
+  <object-name>EPRR3</object-name>
   <object-name>N1L1</object-name>
   <object-name>N1L2</object-name>
   <object-name>N1L3</object-name>
   <object-name>N1R1</object-name>
   <object-name>N1R2</object-name>
   <object-name>N1R3</object-name>
+  <object-name>EGTL1</object-name>
+  <object-name>EGTL2</object-name>
+  <object-name>EGTL3</object-name>
+  <object-name>EGTR1</object-name>
+  <object-name>EGTR2</object-name>
+  <object-name>EGTR3</object-name>
+  <object-name>N2L1</object-name>
+  <object-name>N2L2</object-name>
+  <object-name>N2L3</object-name>
+  <object-name>N2R1</object-name>
+  <object-name>N2R2</object-name>
+  <object-name>N2R3</object-name>
+  <object-name>EPRLNeedle</object-name>
+  <object-name>EPRRNeedle</object-name>
+  <object-name>N1LNeedle</object-name>
+  <object-name>N1RNeedle</object-name>
+  <object-name>EGTLNeedle</object-name>
+  <object-name>EGTRNeedle</object-name>
+  <object-name>N2LNeedle</object-name>
+  <object-name>N2RNeedle</object-name>
+  <object-name>FFL1</object-name>
+  <object-name>FFL2</object-name>
+  <object-name>FFL3</object-name>
+  <object-name>FFL4</object-name>
+  <object-name>FFL5</object-name>
+  <object-name>FFR1</object-name>
+  <object-name>FFR2</object-name>
+  <object-name>FFR3</object-name>
+  <object-name>FFR4</object-name>
   <emission>
-    <red>0.5</red>
-    <green>0.5</green>
-    <blue>0.5</blue>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>/controls/lighting/pfd-norm</factor-prop>
   </emission>
+</animation>
+
+<!-- Power on/off -->
+<animation>
+	<name>Power on/off</name>
+	<type>select</type>
+	<object-name>EPRL1</object-name>
+	<object-name>EPRL2</object-name>
+	<object-name>EPRL3</object-name>
+	<object-name>EPRR1</object-name>
+	<object-name>EPRR2</object-name>
+	<object-name>EPRR3</object-name>
+	<object-name>N1L1</object-name>
+	<object-name>N1L2</object-name>
+	<object-name>N1L3</object-name>
+	<object-name>N1R1</object-name>
+	<object-name>N1R2</object-name>
+	<object-name>N1R3</object-name>
+	<object-name>EGTL1</object-name>
+	<object-name>EGTL2</object-name>
+	<object-name>EGTL3</object-name>
+	<object-name>EGTR1</object-name>
+	<object-name>EGTR2</object-name>
+	<object-name>EGTR3</object-name>
+	<object-name>N2L1</object-name>
+	<object-name>N2L2</object-name>
+	<object-name>N2L3</object-name>
+	<object-name>N2R1</object-name>
+	<object-name>N2R2</object-name>
+	<object-name>N2R3</object-name>
+	<object-name>FFL1</object-name>
+	<object-name>FFL2</object-name>
+	<object-name>FFL3</object-name>
+	<object-name>FFL4</object-name>
+	<object-name>FFL5</object-name>
+	<object-name>FFR1</object-name>
+	<object-name>FFR2</object-name>
+	<object-name>FFR3</object-name>
+	<object-name>FFR4</object-name>
+	<object-name>FFR5</object-name>
+	<object-name>EPRLNeedle</object-name>
+	<object-name>EPRRNeedle</object-name>
+	<object-name>N1LNeedle</object-name>
+	<object-name>N1RNeedle</object-name>
+	<object-name>EGTLNeedle</object-name>
+	<object-name>EGTRNeedle</object-name>
+	<object-name>N2LNeedle</object-name>
+	<object-name>N2RNeedle</object-name>
+	<condition>
+		<greater-than>
+			<property>systems/electrical/outputs/efis</property>
+			<value>15</value>
+		</greater-than>
+	</condition>
+</animation>
+
+<!-- L Engine -->
+<!-- Reverser L -->
+<animation>
+  <type>select</type>
+  <object-name>RevLON</object-name>
+  <condition>
+	<and>
+    <property>controls/engines/engine[0]/reverser</property>
+	<greater-than>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
+	</greater-than>
+	</and>
+  </condition>
+</animation>
+
+<!-- EPR L -->
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRL1</object-name>
+  <property>/engines/engine[0]/eprx100</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 <animation>
   <type>textranslate</type>
-  <object-name>N1L1</object-name>
-  <property>/engines/engine[0]/n1-actual</property>
+  <object-name>EPRL2</object-name>
+  <property>/engines/engine[0]/eprx100</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRL3</object-name>
+  <property>/engines/engine[0]/eprx100</property>
   <factor>0.1</factor>
   <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EPRLNeedle</object-name>
+  <property>/engines/engine[0]/eprx100</property>
+  <interpolation>
+    <entry><ind>100</ind><dep>  0</dep></entry>
+    <entry><ind>220</ind><dep>272</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.0293</y-m>
+    <z-m>0.0654</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- N1 L -->
+<animation>
+  <type>textranslate</type>
+  <object-name>N1L1</object-name>
+  <property>/engines/engine[0]/n1-actual</property>
+  <factor>0.001</factor>
+  <step>100</step>
   <axis>
     <x>0</x>
     <y>1</y>
@@ -48,8 +217,536 @@
   <type>textranslate</type>
   <object-name>N1L3</object-name>
   <property>/engines/engine[0]/n1-actual</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>N1LNeedle</object-name>
+  <property>/engines/engine[0]/n1-actual</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>109</ind><dep>240</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.0293</y-m>
+    <z-m>0.0114</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- EGT L -->
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTL1</object-name>
+  <property>/engines/engine[0]/egt-degf</property>
   <factor>0.001</factor>
   <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTL2</object-name>
+  <property>/engines/engine[0]/egt-degf</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTL3</object-name>
+  <property>/engines/engine[0]/egt-degf</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EGTLNeedle</object-name>
+  <property>/engines/engine[0]/egt-degf</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>900</ind><dep>240</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.0293</y-m>
+    <z-m>-0.03455</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- N2 L -->
+<animation>
+  <type>textranslate</type>
+  <object-name>N2L1</object-name>
+  <property>/engines/engine[0]/n2-actual</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N2L2</object-name>
+  <property>/engines/engine[0]/n2-actual</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N2L3</object-name>
+  <property>/engines/engine[0]/n2-actual</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>N2LNeedle</object-name>
+  <property>/engines/engine[0]/n2-actual</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>113</ind><dep>233</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.0293</y-m>
+    <z-m>-0.080</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- FF L -->
+<animation>
+  <type>textranslate</type>
+  <object-name>FFL1</object-name>
+  <property>/engines/engine[0]/fuel-flow-pph</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFL2</object-name>
+  <property>/engines/engine[0]/fuel-flow-pph</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFL3</object-name>
+  <property>/engines/engine[0]/fuel-flow-pph</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFL4</object-name>
+  <property>/engines/engine[0]/fuel-flow-pph</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFL5</object-name>
+  <property>/engines/engine[0]/fuel-flow-pph</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- R engine -->
+<!-- Reverser R -->
+<animation>
+  <type>select</type>
+  <object-name>RevRON</object-name>
+  <condition>
+	<and>
+    <property>controls/engines/engine[1]/reverser</property>
+	<greater-than>
+	  <property>systems/electrical/outputs/efis</property>
+	  <value>15</value>
+	</greater-than>
+	</and>
+  </condition>
+</animation>
+
+<!-- EPR R -->
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRR1</object-name>
+  <property>/engines/engine[1]/eprx100</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRR2</object-name>
+  <property>/engines/engine[1]/eprx100</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRR3</object-name>
+  <property>/engines/engine[1]/eprx100</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EPRRNeedle</object-name>
+  <property>/engines/engine[1]/eprx100</property>
+  <interpolation>
+    <entry><ind>100</ind><dep>  0</dep></entry>
+    <entry><ind>220</ind><dep>272</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0293</y-m>
+    <z-m>0.0654</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- N1 R -->
+<animation>
+  <type>textranslate</type>
+  <object-name>N1R1</object-name>
+  <property>/engines/engine[1]/n1-actual</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N1R2</object-name>
+  <property>/engines/engine[1]/n1-actual</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N1R3</object-name>
+  <property>/engines/engine[1]/n1-actual</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>N1RNeedle</object-name>
+  <property>/engines/engine[1]/n1-actual</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>109</ind><dep>240</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0292</y-m>
+    <z-m>0.0114</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- EGT R -->
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTR1</object-name>
+  <property>/engines/engine[1]/egt-degf</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTR2</object-name>
+  <property>/engines/engine[1]/egt-degf</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EGTR3</object-name>
+  <property>/engines/engine[1]/egt-degf</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EGTRNeedle</object-name>
+  <property>/engines/engine[1]/egt-degf</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>900</ind><dep>240</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0293</y-m>
+    <z-m>-0.03455</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- N2 R -->
+<animation>
+  <type>textranslate</type>
+  <object-name>N2R1</object-name>
+  <property>/engines/engine[1]/n2-actual</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N2R2</object-name>
+  <property>/engines/engine[1]/n2-actual</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>N2R3</object-name>
+  <property>/engines/engine[1]/n2-actual</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>N2RNeedle</object-name>
+  <property>/engines/engine[1]/n2-actual</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind>113</ind><dep>233</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0292</y-m>
+    <z-m>-0.0799</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- FF R -->
+<animation>
+  <type>textranslate</type>
+  <object-name>FFR1</object-name>
+  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFR2</object-name>
+  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFR3</object-name>
+  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFR4</object-name>
+  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FFR5</object-name>
+  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <factor>0.1</factor>
+  <step>1</step>
   <axis>
     <x>0</x>
     <y>1</y>
