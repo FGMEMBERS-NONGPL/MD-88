@@ -22,9 +22,8 @@
     <red>0.3</red>
     <green>0.3</green>
     <blue>0.3</blue>
-
   </emission>
-    </animation>
+  </animation>
 
 <!--####    InHg    ####-->
 
@@ -178,7 +177,7 @@
 		<object-name>mb04</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
 		<factor>3.38639</factor>
-	        <step>0.02952998</step>
+	    <step>0.02952998</step>
 		<axis>
 			<x>0</x>
 			<y>1</y>

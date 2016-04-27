@@ -257,6 +257,24 @@ var eng_magicstartup = func {
   settimer(eng1_run_loop, ENG_RUN_UPDATE);
 }
 
+var eng_magicshutdown = func {
+  setprop("/engines/engine[0]/state",4);
+  setprop("/engines/engine[1]/state",4);
+  setprop("/controls/engines/engine[0]/cutoff",1);
+  setprop("/controls/engines/engine[1]/cutoff",1);
+  setprop("/controls/switches/pumpLaft",0);
+  setprop("/controls/switches/pumpLfwd",0);
+  setprop("/controls/switches/pumpRaft",0);
+  setprop("/controls/switches/pumpRfwd",0);
+  setprop("/controls/switches/pumpCaft",0);
+  setprop("/controls/switches/pumpCfwd",0);
+  setprop("/engines/engine[0]/out-of-fuel",0);
+  setprop("/engines/engine[1]/out-of-fuel",0);
+  setprop("/controls/fuel/xfeed",0);
+  sw_ign.setValue(0);
+  setprop("/controls/switches/battery",0);
+}
+
 var eng_more0 = func {
   settimer(eng0_run_loop, ENG_RUN_UPDATE);
 }

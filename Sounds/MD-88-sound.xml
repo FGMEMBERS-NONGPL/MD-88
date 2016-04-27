@@ -21,7 +21,43 @@
     <factor>0.35</factor>
    </volume>
   </rumble>
-
+  
+  <squeal>
+   <name>squeal0</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+     <property>/gear/gear[0]/wow</property>
+   </condition>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+  </squeal>
+  <squeal>
+   <name>squeal1</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+     <property>/gear/gear[1]/wow</property>
+   </condition>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+  </squeal>
+  <squeal>
+   <name>squeal2</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+     <property>/gear/gear[2]/wow</property>
+   </condition>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+  </squeal>
 
   <gear>
    <name>gear</name>
@@ -45,36 +81,6 @@
     </equals>
    </condition>
   </gear>
-
-  <squeal>
-   <name>squeal</name>
-   <path>Sounds/squeal.wav</path>
-   <condition>
-    <or>
-     <property>/gear/gear[0]/wow</property>
-     <property>/gear/gear[1]/wow</property>
-     <property>/gear/gear[2]/wow</property>
-    </or>
-   </condition>
-   <volume>
-    <property>/velocities/speed-down-fps</property>
-    <factor>0.05</factor>
-   </volume>
-   <volume>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.01</factor>
-   </volume>
-   <volume>
-    <internal>dt_stop</internal>
-    <factor>0.05</factor>
-    <max>1.0</max>
-   </volume>
-   <pitch>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.0025</factor>
-    <offset>1.2</offset>
-   </pitch>
-  </squeal>
  
   <flap>
    <name>flaps</name>
