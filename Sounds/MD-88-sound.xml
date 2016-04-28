@@ -4,6 +4,17 @@
 
 <fx>
 
+  <apoff>
+   <name>apoff</name>
+   <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
+   <condition>
+     <property>/controls/switches/apoffsound</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apoff>
+
   <rumble>
    <name>rumble</name>
    <mode>looped</mode>

@@ -67,7 +67,8 @@
 <object-name>YokeR</object-name>
 <object-name>YokeTrimL</object-name>
 <object-name>YokeTrimR</object-name>
-
+<object-name>apoff</object-name>
+<object-name>apoff2</object-name>
 	
   <emission>
     <red>0.8</red>
@@ -78,7 +79,41 @@
 </animation>
 
 
+<animation>
+  <type>pick</type>
+  <object-name>apoff</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+	<command>property-assign</command>
+        <property>/controls/switches/ap_master</property>
+	<value>0</value>
+    </binding>
+    <binding>
+	<command>nasal</command>
+    <script>MD88.ap_off();</script>
+    </binding>
+  </action>
+</animation>
 
+<animation>
+  <type>pick</type>
+  <object-name>apoff2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+	<command>property-assign</command>
+        <property>/controls/switches/ap_master</property>
+	<value>0</value>
+    </binding>
+    <binding>
+	<command>nasal</command>
+    <script>MD88.ap_off();</script>
+    </binding>
+  </action>
+</animation>
 
 
 
@@ -857,13 +892,14 @@
 </animation>
 
 
-<!-- Yokes -->
+<!--  Yokes -->
 
 <animation>
   <type>select</type>
   <object-name>YokeColL</object-name>
   <object-name>YokeL</object-name>
   <object-name>YokeTrimL</object-name>
+  <object-name>apoff</object-name>
   <condition>
     <property>/sim/yoke-visible</property>
   </condition>
@@ -876,6 +912,7 @@
   <object-name>YokeColL</object-name>
   <object-name>YokeL</object-name>
   <object-name>YokeTrimL</object-name>
+  <object-name>apoff</object-name>
   <property>controls/flight/elevator</property>
   <factor>-12</factor>
   <center>
@@ -894,6 +931,7 @@
   <type>rotate</type>
   <object-name>YokeL</object-name>
   <object-name>YokeTrimL</object-name>
+  <object-name>apoff</object-name>
   <property>controls/flight/aileron</property>
   <factor>60</factor>
   <center>
@@ -913,6 +951,7 @@
   <object-name>YokeColR</object-name>
   <object-name>YokeR</object-name>
   <object-name>YokeTrimR</object-name>
+  <object-name>apoff2</object-name>
   <property>controls/flight/elevator</property>
   <factor>-12</factor>
   <center>
@@ -931,6 +970,7 @@
   <type>rotate</type>
   <object-name>YokeR</object-name>
   <object-name>YokeTrimR</object-name>
+  <object-name>apoff2</object-name>
   <property>controls/flight/aileron</property>
   <factor>60</factor>
   <center>

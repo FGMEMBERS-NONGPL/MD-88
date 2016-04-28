@@ -102,6 +102,7 @@ var ap_off = func {
 	setprop("/controls/switches/ap_master", 0);
 	setprop("/autopilot/locks/heading", 0);
 	setprop("/autopilot/locks/altitude", 0);
+	setprop("/controls/switches/apoffsound", 1);
 	hdg_master();
 	nav_master();
 	alt_master();

@@ -288,6 +288,11 @@
 	<value>1</value>
     </binding>
     <binding>
+	<command>property-assign</command>
+        <property>/controls/switches/apoffsound</property>
+	<value>0</value>
+    </binding>
+    <binding>
 	<command>nasal</command>
     <script>MD88.ap_refresh();</script>
     </binding>

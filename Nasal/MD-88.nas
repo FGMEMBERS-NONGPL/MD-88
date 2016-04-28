@@ -105,6 +105,7 @@ setlistener("/sim/signals/fdm-initialized", func {
   setprop("/controls/switches/app1", 0);
   ap_init();					# See MD-88-autoflight.nas
   nd_init();					# See MD-88_efis.nas
+  setprop("/controls/switches/apoffsound", 1);
   setlistener("engines/engine[0]/epr", func {
     setprop("engines/engine[0]/eprx100", (getprop("engines/engine[0]/epr") * 100));
   });

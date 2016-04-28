@@ -266,17 +266,6 @@ McDonnell Douglas MD-88
   </offsets>
 </model>
 
-<!--model>
-  <name>revthrust_indicators</name>
-  <path>Aircraft/MD-88/Models/Instruments/revthrust_ind.xml</path>
-  <offsets>
-    <x-m>2.205</x-m>
-    <y-m>0</y-m>
-    <z-m>0.969</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model-->
-
 <model>
   <name>fuel</name>
   <path>Aircraft/MD-88/Models/Instruments/fuel.xml</path>
@@ -287,111 +276,6 @@ McDonnell Douglas MD-88
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
-
-<!--model>
-  <name>eprL</name>
-  <path>Aircraft/MD-88/Models/Instruments/eprL.xml</path>
-  <offsets>
-    <x-m>2.208</x-m>
-    <y-m>-0.030</y-m>
-    <z-m>0.957</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>eprR</name>
-  <path>Aircraft/MD-88/Models/Instruments/eprR.xml</path>
-  <offsets>
-    <x-m>2.208</x-m>
-    <y-m>0.030</y-m>
-    <z-m>0.957</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>n1L</name>
-  <path>Aircraft/MD-88/Models/Instruments/n1L.xml</path>
-  <offsets>
-    <x-m>2.221</x-m>
-    <y-m>-0.030</y-m>
-    <z-m>0.899</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>n1R</name>
-  <path>Aircraft/MD-88/Models/Instruments/n1R.xml</path>
-  <offsets>
-    <x-m>2.221</x-m>
-    <y-m>0.030</y-m>
-    <z-m>0.899</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>egtL</name>
-  <path>Aircraft/MD-88/Models/Instruments/egtL.xml</path>
-  <offsets>
-    <x-m>2.233</x-m>
-    <y-m>-0.030</y-m>
-    <z-m>0.841</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>egtR</name>
-  <path>Aircraft/MD-88/Models/Instruments/egtR.xml</path>
-  <offsets>
-    <x-m>2.233</x-m>
-    <y-m>0.030</y-m>
-    <z-m>0.841</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>n2L</name>
-  <path>Aircraft/MD-88/Models/Instruments/n2L.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>-0.030</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>n2R</name>
-  <path>Aircraft/MD-88/Models/Instruments/n2R.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>0.030</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>fuelflowL</name>
-  <path>Aircraft/MD-88/Models/Instruments/fuelflowL.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>-0.089</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>fuelflowR</name>
-  <path>Aircraft/MD-88/Models/Instruments/fuelflowR.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>0.089</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model-->
 
 <model>
   <name>gear_indicators</name>
@@ -404,17 +288,16 @@ McDonnell Douglas MD-88
   </offsets>
 </model>
 
-<!--model>
-  <name>flaps</name>
-  <path>Aircraft/MD-88/Models/Instruments/flaps.xml</path>
+<model>
+  <name>Radar</name>
+  <path>Aircraft/MD-88/Models/Instruments/RDR-160/RDR-160.xml</path>
   <offsets>
-    <x-m>2.245</x-m>
-    <y-m>0.148</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
+    <x-m>2.32</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.70</z-m>
+  <pitch-deg>-50</pitch-deg>
   </offsets>
-</model-->
-
+</model>
 
 <!-- Copilot Panel -->
 
