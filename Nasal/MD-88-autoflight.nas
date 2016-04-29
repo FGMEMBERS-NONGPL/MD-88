@@ -41,16 +41,16 @@ var nav_master = func {
 }
 
 var locarmcheck = func {
-	var signalq = getprop("/instrumentation/nav/signal-quality-norm");
-	if (signalq <= 0.999999999) {
-		return 0;
-	} else {
+	var locdefl = getprop("instrumentation/nav/heading-needle-deflection");
+	if (locdefl > 9.999999999 or locdefl < - 9.999999999) {
 		setprop("/autopilot/locks/heading", "nav1-hold");
 		setprop("/controls/switches/loc1", 0);
 		setprop("/controls/switches/hdgl", 0);
 		setprop("/controls/switches/navl", 0);
 		setprop("/controls/switches/aplatmode", 2);
 		setprop("/controls/switches/aphldtrk", 1);
+	} else {
+		return 0;
 	}
 }
 
