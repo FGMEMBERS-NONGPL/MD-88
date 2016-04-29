@@ -26,7 +26,7 @@
       <view n="1"> <!-- "Helicopter view" -->
         <config>
           <!--<target-z-offset-m archive="y">25</target-z-offset-m>-->
-          <default-field-of-view-deg type="double">52.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
           <target-z-offset-m archive="y">22</target-z-offset-m>
           <target-y-offset-m archive="y">0</target-y-offset-m>
           <pitch-offset-deg>15</pitch-offset-deg>
@@ -35,7 +35,7 @@
 
       <view n="2"> <!-- "Chase view -->
         <config>
-          <default-field-of-view-deg type="double">52.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
           <target-z-offset-m archive="y">25</target-z-offset-m>
           <target-y-offset-m archive="y">-3</target-y-offset-m>
         </config>

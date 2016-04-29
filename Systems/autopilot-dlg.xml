@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Boeing 717-200 Autopilot Configuration Dialog -->
-
 <PropertyList>
 
 	<name>autopilot</name>
 	<layout>vbox</layout>
 
 	<text>
-		<label>Autopilot Settings</label>
+		<label>Please use in cockpit Autopilot.</label>
 	</text>
 
 	<group>
