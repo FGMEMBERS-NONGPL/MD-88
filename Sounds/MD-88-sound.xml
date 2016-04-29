@@ -106,7 +106,7 @@
   <wind>
    <name>wind</name>
    <mode>looped</mode>
-   <path>Sounds/wind.wav</path>
+   <path>Aircraft/MD-88/Sounds/wind.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
     <property>/position/altitude-ft</property>
@@ -163,7 +163,7 @@
   </engine>
   <engine>
     <name>left-n1</name>
-    <path>Sounds/whine.wav</path>
+    <path>Aircraft/MD-88/Sounds/whine.wav</path>
     <condition>
       <not><property>/engines/engine[0]/out-of-fuel</property></not>
     </condition>
@@ -179,6 +179,17 @@
     </pitch>
   </engine>
   <engine>
+    <name>left-rev</name>
+    <path>Aircraft/MD-88/Sounds/reverser.wav</path>
+    <condition>
+      <property>/controls/engines/engine[0]/reverser</property>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <factor>0.1</factor>
+    </volume>
+  </engine>
+  <engine>
     <name>right-thrust</name>
     <path>Sounds/jet.wav</path>
     <condition>
@@ -192,7 +203,7 @@
   </engine>
   <engine>
     <name>right-n1</name>
-    <path>Sounds/whine.wav</path>
+    <path>Aircraft/MD-88/Sounds/whine.wav</path>
     <condition>
       <not><property>/engines/engine[1]/out-of-fuel</property></not>
     </condition>
@@ -206,6 +217,17 @@
       <offset>0</offset>
       <factor>0.01</factor>
     </pitch>
+  </engine>
+  <engine>
+    <name>right-rev</name>
+    <path>Aircraft/MD-88/Sounds/reverser.wav</path>
+    <condition>
+      <property>/controls/engines/engine[1]/reverser</property>
+    </condition>
+    <mode>looped</mode>
+    <volume>
+      <factor>0.1</factor>
+    </volume>
   </engine>
 
 <!-- Services-->

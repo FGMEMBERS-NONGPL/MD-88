@@ -21,8 +21,7 @@ McDonnell Douglas MD-82
   <fuel-fraction>0.5</fuel-fraction>
 
   <startup>
-            <splash-texture>Aircraft/MD-88/Splashes/MD-82/splash.png</splash-texture>
-			 <splash-texture>Aircraft/MD-88/Splashes/MD-82/splash1.png</splash-texture>
+            <splash-texture>Aircraft/MD-88/MD-82-splash.png</splash-texture>
   </startup>
 
 

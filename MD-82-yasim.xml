@@ -198,8 +198,8 @@ Speed is based on max Mach at FL350 of 0.82.
 <!-- Forward ballast for nose gear, batteries, avionics, etc. -->
 <ballast x="-2.0" y="0.0" z="0.0" mass="7000.0" />
 <!-- Some ballast for mass of main landing gear assemblies -->
-<ballast x="-24.390" y="-2.0" z="-0.658" mass="3000.0" />
-<ballast x="-24.390" y="2.0" z="-0.658" mass="3000.0" />
+<ballast x="-24.390" y="-2.0" z="-0.658" mass="4000.0" />
+<ballast x="-24.390" y="2.0" z="-0.658" mass="4000.0" />
 
 <weight x="-2.9" y="0.0" z="0.6" mass-prop="/sim/weight[0]/weight-lb"/>		<!-- Crew -->
 <!-- Crude initial positioning of cargo/passengers. Would like to itemize this by location later. -->
