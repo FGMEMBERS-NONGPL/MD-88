@@ -148,9 +148,9 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit1</object-name>
-  <property>/autopilot/settings/target-mach</property>
-  <factor>1.0</factor>
-  <step>0.1</step>
+  <property>/controls/switches/mach-actual</property>
+  <factor>0.01</factor>
+  <step>10</step>
   <axis>
     <x>0</x>
     <y>1</y>
@@ -161,9 +161,9 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit2</object-name>
-  <property>/autopilot/settings/target-mach</property>
-  <factor>10</factor>
-  <step>.01</step>
+  <property>/controls/switches/mach-actual</property>
+  <factor>0.1</factor>
+  <step>1</step>
   <axis>
     <x>0</x>
     <y>1</y>
@@ -324,7 +324,7 @@
   <object-name>ATKnob</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-speed-kt</property>
@@ -340,7 +340,7 @@
   <object-name>ATKnob</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-speed-kt</property>
@@ -357,7 +357,7 @@
   <object-name>ATKnob</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-speed-kt</property>
@@ -373,7 +373,7 @@
   <object-name>ATKnob</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-speed-kt</property>
@@ -409,13 +409,13 @@
   <object-name>ATKnobMach</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-mach</property>
       <step>0.01</step>
-      <min>0</min>
-      <max>0.82</max>
+      <min>0.60</min>
+      <max>0.92</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -425,13 +425,13 @@
   <object-name>ATKnobMach</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/autopilot/settings/target-mach</property>
       <step>-0.01</step>
-      <min>0</min>
-      <max>0.82</max>
+      <min>0.60</min>
+      <max>0.92</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -829,7 +829,7 @@
   <object-name>Nav1CrsKnob</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav/radials/selected-deg</property>
@@ -845,7 +845,7 @@
   <object-name>Nav1CrsKnob</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav/radials/selected-deg</property>
@@ -861,7 +861,7 @@
   <object-name>Nav1CrsKnob</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav/radials/selected-deg</property>
@@ -877,7 +877,7 @@
   <object-name>Nav1CrsKnob</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav/radials/selected-deg</property>
@@ -1114,7 +1114,7 @@
   <object-name>Nav2CrsKnob</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
@@ -1130,7 +1130,7 @@
   <object-name>Nav2CrsKnob</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
@@ -1146,7 +1146,7 @@
   <object-name>Nav2CrsKnob</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
@@ -1162,7 +1162,7 @@
   <object-name>Nav2CrsKnob</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/instrumentation/nav[1]/radials/selected-deg</property>
@@ -1268,7 +1268,7 @@
   <object-name>AltKnob</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/target-altitude-ft</property>
@@ -1284,7 +1284,7 @@
   <object-name>AltKnob</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/target-altitude-ft</property>
@@ -1301,7 +1301,7 @@
   <object-name>AltKnob</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/target-altitude-ft</property>
@@ -1317,7 +1317,7 @@
   <object-name>AltKnob</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/target-altitude-ft</property>
@@ -1801,7 +1801,7 @@
   <object-name>HdgKnob</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
@@ -1817,7 +1817,7 @@
   <object-name>HdgKnob</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
@@ -1834,7 +1834,7 @@
   <object-name>HdgKnob</object-name>
   <action>
     <button>3</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
@@ -1850,7 +1850,7 @@
   <object-name>HdgKnob</object-name>
   <action>
     <button>4</button>
-    <repeatable>false</repeatable>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
@@ -2074,6 +2074,9 @@
 				<value>0</value>
 			</binding>
             <binding>
+				<condition>
+				<property>controls/switches/at</property>
+				</condition>
 				<command>property-assign</command>
 				<property>autopilot/locks/speed</property>
 				<value>speed-with-throttle</value>
@@ -2110,6 +2113,9 @@
 				<value>1</value>
 			</binding>
             <binding>
+				<condition>
+				<property>controls/switches/at</property>
+				</condition>
 				<command>property-assign</command>
 				<property>autopilot/locks/speed</property>
 				<value>mach-with-throttle</value>

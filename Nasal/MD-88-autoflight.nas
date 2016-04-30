@@ -14,6 +14,10 @@ var ap_init = func {
 	setprop("/controls/switches/vsl", 0);
 	setprop("/controls/switches/app", 0);
 	setprop("/controls/switches/app1", 0);
+	setprop("/controls/switches/aplatmode", 0);
+	setprop("/controls/switches/aphldtrk", 0);
+	setprop("/controls/switches/apvertmode", 0);
+	setprop("/controls/switches/aphldtrk2", 0);
 	ap_refresh();
 	print("AUTOFLIGHT ... FINE!");
 }
