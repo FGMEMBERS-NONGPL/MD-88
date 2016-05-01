@@ -135,19 +135,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
 
   <menubar>
     <default>
-	
-	  <menu n="3">
-		<item>
-		  <name>autopilot</name>
-		  <label>Autopilot Settings</label>
-		  <binding>
-			<command>nasal</command>
-			<script>
-			  autopilot.open();
-			</script>
-		  </binding>
-	    </item>
-	  </menu>
       <menu n="100">
         <item>
           <label>QuickStartup</label>
