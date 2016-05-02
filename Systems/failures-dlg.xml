@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>Failures</name>
+	<layout>vbox</layout>
+
+	<text>
+		<label>Failures Control</label>
+	</text>
+
+	<hrule />
+		
+	<text>
+		<label>Engine Failure (100 knots)</label>
+	</text>
+
+	<checkbox>
+		<label>Left Engine</label>
+		<property>/controls/switches/Lengine100fail</property>
+		<binding>
+			<command>nasal</command>
+			<script>
+			MD88.enginePresetFailureL();
+			print("LEFT ENGINE FAILURE... ARMED");</script>
+		</binding>
+		<live>false</live>
+	</checkbox>
+	
+		<checkbox>
+		<label>Right Engine</label>
+		<property>/controls/switches/Rengine100fail</property>
+		<binding>
+			<command>nasal</command>
+			<script>
+			MD88.enginePresetFailureR();
+			print("RIGHT ENGINE FAILURE... ARMED");			</script>
+		</binding>
+		<live>false</live>
+	</checkbox>
+		
+	<hrule />
+	
+	<group>
+	<layout>hbox</layout>
+
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+		<padding>5</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		
+	</group>
+
+</PropertyList>

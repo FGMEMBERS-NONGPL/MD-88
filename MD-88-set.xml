@@ -195,6 +195,19 @@ For Manual Engine Start, see the checlists in the Help Menu.
 	      <dialog-name>pushback</dialog-name>
 	     </binding>
     </item>
+	
+	<item>
+	<name>fail</name>
+	<label>Failures Dialog</label>
+	<binding>
+		<command>nasal</command>
+		<script>
+		 var fail = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/MD-88/Systems/failures-dlg.xml");
+		 fail.open();
+		</script>
+	</binding>
+	</item>
+	
 	<item>
 	<name>fuel</name>
 	<label>Fuel Truck Controls</label>
@@ -418,6 +431,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <file>Aircraft/MD-88/Nasal/MD-88_electrical.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_pneumatics.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_apu.nas</file>
+	<file>Aircraft/MD-88/Nasal/MD-88_failure.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_flightsurfaces.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_abs.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_engines.nas</file>
