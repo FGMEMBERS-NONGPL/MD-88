@@ -195,7 +195,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
 	      <dialog-name>pushback</dialog-name>
 	     </binding>
     </item>
-	
 	<item>
 	<name>fail</name>
 	<label>Failures Dialog</label>
@@ -207,7 +206,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
 		</script>
 	</binding>
 	</item>
-	
 	<item>
 	<name>fuel</name>
 	<label>Fuel Truck Controls</label>
