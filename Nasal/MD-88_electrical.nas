@@ -1,4 +1,4 @@
-# Electrical system for MD-88/MD-90 by Joshua Davidson (it0uchpods/411). Based off Andino's Electrical system for MD-88, and the electrical system from CharterVA's 737-300.
+# Electrical system for MD-88/MD-90 by Joshua Davidson (it0uchpods/411).
 
 var ELEC_UPDATE_PERIOD	= 0.5;						# A periodic update in secs
 var STD_VOLTS_AC	= 115;						# Typical volts for a power source
