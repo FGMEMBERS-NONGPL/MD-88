@@ -207,6 +207,18 @@ For Manual Engine Start, see the checlists in the Help Menu.
 	</binding>
 	</item>
 	<item>
+	<name>failreset</name>
+	<label>Failures Reset</label>
+	<binding>
+		<command>nasal</command>
+		<script>
+		setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 1);
+		#setprop("/sim/failure-manager/controls/flight/speedbrake/serviceable", 1);
+		MD88.eng_magicstartup();
+		</script>
+	</binding>
+	</item>
+	<item>
 	<name>fuel</name>
 	<label>Fuel Truck Controls</label>
 	<binding>

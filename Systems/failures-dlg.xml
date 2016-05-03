@@ -27,7 +27,7 @@
 		<live>false</live>
 	</checkbox>
 	
-		<checkbox>
+	<checkbox>
 		<label>Right Engine</label>
 		<property>/controls/switches/Rengine100fail</property>
 		<binding>
@@ -39,6 +39,40 @@
 		<live>false</live>
 	</checkbox>
 		
+	<hrule />
+	
+	<text>
+		<label>Flight Surfaces</label>
+	</text>
+	
+	<checkbox>
+		<label>Fail Flaps</label>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 0);
+			</script>
+		</binding>
+		<live>false</live>
+	</checkbox>
+	
+	<!--<checkbox>
+		<label>Speedbrake</label>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/sim/failure-manager/controls/flight/speedbrake/serviceable", 0);
+			</script>
+		</binding>
+		<live>false</live>
+	</checkbox>-->
+	
 	<hrule />
 	
 	<group>
