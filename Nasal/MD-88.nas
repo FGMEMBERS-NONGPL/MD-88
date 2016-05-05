@@ -113,9 +113,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   setlistener("engines/engine[1]/epr", func {
   	setprop("engines/engine[1]/eprx100", (getprop("engines/engine[1]/epr") * 100));
   });
-  setlistener("/autopilot/settings/target-mach", func {
-  	setprop("/controls/switches/mach-actual", (getprop("/autopilot/settings/target-mach") * 100));
-  });
   setlistener("/surface-positions/flap-pos-norm", func {
 	var flappositionnew = getprop("/surface-positions/flap-pos-norm");
 	if (flappositionnew <= 0.8000000001) {
