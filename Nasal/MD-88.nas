@@ -101,8 +101,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   FlightSurfaceInit();			# See MD-88_flightsurfaces.nas
   PneumaticsInit();				# See MD-88_pneumatics.nas
   InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
-  setprop("/controls/switches/loc1", 0);
-  setprop("/controls/switches/app1", 0);
   ap_init();					# See MD-88-autoflight.nas
   nd_init();					# See MD-88_efis.nas
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");

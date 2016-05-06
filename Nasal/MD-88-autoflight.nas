@@ -18,8 +18,36 @@ var ap_init = func {
 	setprop("/controls/switches/aphldtrk", 0);
 	setprop("/controls/switches/apvertmode", 0);
 	setprop("/controls/switches/aphldtrk2", 0);
+	update_arms();
 	ap_refresh();
 	print("AUTOFLIGHT ... FINE!");
+}
+
+var update_arms = func {
+  update_locarmelec();
+  update_apparmelec();
+
+  settimer(update_arms, 0.5);
+}
+
+var update_locarmelec = func {
+  var ap = getprop("/controls/switches/ap_master");
+  var loc1 = getprop("/controls/switches/loc1");
+  if (loc1 & ap) {
+  locarmcheck();
+  } else {
+  return 0;
+  }
+}
+
+var update_apparmelec = func {
+  var ap = getprop("/controls/switches/ap_master");
+  var app1 = getprop("/controls/switches/app1");
+  if (app1 & ap) {
+  apparmcheck();
+  } else {
+  return 0;
+  }
 }
 
 var hdg_master = func {
