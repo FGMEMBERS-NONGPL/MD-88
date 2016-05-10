@@ -427,6 +427,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <file>Aircraft/MD-88/Nasal/tyresmoke.nas</file>
 	<file>Aircraft/MD-88/Models/Instruments/ND/ND.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88-autoflight.nas</file>
+    <file>Aircraft/MD-88/Nasal/MD-88-autoflight-logic.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88-efis.nas</file>
   </MD88>
   <radar>
