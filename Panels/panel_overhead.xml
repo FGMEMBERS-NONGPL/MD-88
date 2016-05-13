@@ -58,7 +58,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.apu_switch();</script>
+          <script>MD88.apu_switch();</script>
         </binding>
       </action>
 
@@ -79,7 +79,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.apu_switch();</script>
+          <script>MD88.apu_switch();</script>
         </binding>
       </action>
 
@@ -96,7 +96,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.apu_air_switch();</script>
+          <script>MD88.apu_air_switch();</script>
         </binding>
       </action>
 
@@ -141,7 +141,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.eng_startup_1(0);</script>
+          <script>MD88.eng_startup_1(0);</script>
         </binding>
       </action>
 
@@ -158,7 +158,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.eng_startup_1(1);</script>
+          <script>MD88.eng_startup_1(1);</script>
         </binding>
       </action>
 

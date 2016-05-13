@@ -35,11 +35,11 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>2</h>
         <binding>
           <command>nasal</command>
-          <script>MD81.cutoff_toggle(0);</script>
+          <script>MD88.cutoff_toggle(0);</script>
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.eng_startup_2(0);</script>
+          <script>MD88.eng_startup_2(0);</script>
         </binding>
       </action>
       <action>
@@ -51,11 +51,11 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>2</h>
         <binding>
           <command>nasal</command>
-          <script>MD81.cutoff_toggle(1);</script>
+          <script>MD88.cutoff_toggle(1);</script>
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.eng_startup_2(1);</script>
+          <script>MD88.eng_startup_2(1);</script>
         </binding>
       </action>
 

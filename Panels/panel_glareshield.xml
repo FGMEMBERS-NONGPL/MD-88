@@ -290,7 +290,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>32</h>
         <binding>
           <command>nasal</command>
-          <script>MD81.autothrottle_toggle();</script>
+          <script>MD88.autothrottle_toggle();</script>
         </binding>
       </action-->
 
@@ -453,7 +453,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>32</h>
         <binding>
           <command>nasal</command>
-          <script>MD81.lights_beacon_toggle();</script>
+          <script>MD88.lights_beacon_toggle();</script>
         </binding>
       </action>
       <action>
@@ -465,7 +465,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         <h>32</h>
         <binding>
           <command>nasal</command>
-          <script>MD81.lights_nav_toggle();</script>
+          <script>MD88.lights_nav_toggle();</script>
         </binding>
       </action>
 

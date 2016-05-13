@@ -39,7 +39,7 @@ Gary R. Neely 'Buckaroo', Mar 2010
         </binding>
         <binding> 
           <command>nasal</command>
-          <script>MD81.abs_arm();</script>
+          <script>MD88.abs_arm();</script>
         </binding>
       </action>
 

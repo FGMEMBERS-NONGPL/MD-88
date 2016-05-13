@@ -110,7 +110,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     </binding>
     <binding> 
       <command>nasal</command>
-      <script>MD81.apu_switch();</script>
+      <script>MD88.apu_switch();</script>
     </binding>
   </action>
 </animation>
@@ -130,7 +130,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     </binding>
     <binding> 
       <command>nasal</command>
-      <script>MD81.apu_switch();</script>
+      <script>MD88.apu_switch();</script>
     </binding>
   </action>
 </animation>
@@ -166,7 +166,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     </binding>
     <binding> 
       <command>nasal</command>
-      <script>MD81.apu_air_switch();</script>
+      <script>MD88.apu_air_switch();</script>
     </binding>
   </action>
 </animation>
@@ -300,7 +300,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     </binding>
     <binding> 
       <command>nasal</command>
-      <script>MD81.eng_startup_1(0);</script>
+      <script>MD88.eng_startup_1(0);</script>
     </binding>
     <binding>
 	 <command>property-assign</command>
@@ -309,7 +309,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 	</binding>
 	<binding> 
       <command>nasal</command>
-      <script>MD81.eng_more0();</script>
+      <script>MD88.eng_more0();</script>
     </binding>
   </action>
 </animation>
@@ -345,7 +345,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     </binding>
     <binding> 
       <command>nasal</command>
-      <script>MD81.eng_startup_1(1);</script>
+      <script>MD88.eng_startup_1(1);</script>
     </binding>
 	<binding>
 	 <command>property-assign</command>
@@ -354,7 +354,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 	</binding>
 	<binding> 
       <command>nasal</command>
-      <script>MD81.eng_more1();</script>
+      <script>MD88.eng_more1();</script>
     </binding>
   </action>
 </animation>
