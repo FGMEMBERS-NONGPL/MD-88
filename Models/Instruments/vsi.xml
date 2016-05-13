@@ -11,11 +11,6 @@
 	<object-name>needlevs</object-name>
     <object-name>vitre</object-name>
   </animation>
-
-  <effect>
-    <inherits-from>Aircraft/737-100/Models/Effects/Glass/glass</inherits-from>
-    <object-name>vitre</object-name>
-  </effect>
  
 	<!-- Power on/off -->
 	<animation>
