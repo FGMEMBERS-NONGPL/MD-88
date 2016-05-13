@@ -4,6 +4,8 @@ The autoflight system and this document are subject to change without notice. Pl
 
 FIRST: Look at "How to Autoflight 1.png" to understand the knobs and switches of the autopilot!!!
 
+Left click/middle click adjust speed and heading by 10/-10. Left click/middle click adjust altitude by 1000/-1000
+
 Engaging AutoThrottle:
 
 	1) Push the AT Switch on. The AT will follow the selected speed. (Visible in the panel above altitude)

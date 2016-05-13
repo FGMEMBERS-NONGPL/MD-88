@@ -101,8 +101,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   FlightSurfaceInit();			# See MD-88_flightsurfaces.nas
   PneumaticsInit();				# See MD-88_pneumatics.nas
   InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
-  setprop("/controls/switches/loc1", 0);
-  setprop("/controls/switches/app1", 0);
   ap_init();					# See MD-88-autoflight.nas
   nd_init();					# See MD-88_efis.nas
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
@@ -112,9 +110,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   });
   setlistener("engines/engine[1]/epr", func {
   	setprop("engines/engine[1]/eprx100", (getprop("engines/engine[1]/epr") * 100));
-  });
-  setlistener("/autopilot/settings/target-mach", func {
-  	setprop("/controls/switches/mach-actual", (getprop("/autopilot/settings/target-mach") * 100));
   });
   setlistener("/surface-positions/flap-pos-norm", func {
 	var flappositionnew = getprop("/surface-positions/flap-pos-norm");

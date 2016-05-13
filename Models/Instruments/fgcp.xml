@@ -148,9 +148,9 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit1</object-name>
-  <property>/controls/switches/mach-actual</property>
-  <factor>0.01</factor>
-  <step>10</step>
+  <property>/autopilot/settings/target-mach</property>
+  <factor>1.0</factor>
+  <step>0.1</step>
   <axis>
     <x>0</x>
     <y>1</y>
@@ -161,9 +161,9 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit2</object-name>
-  <property>/controls/switches/mach-actual</property>
-  <factor>0.1</factor>
-  <step>1</step>
+  <property>/autopilot/settings/target-mach</property>
+  <factor>10</factor>
+  <step>.01</step>
   <axis>
     <x>0</x>
     <y>1</y>
@@ -248,7 +248,7 @@
   <type>select</type>
   <object-name>APSwitchOn</object-name>
   <condition>
-    <property>/controls/switches/ap_master</property>
+    <property>/controls/switches/ap_mastersw</property>
   </condition>
 </animation>
 <animation>
@@ -259,12 +259,8 @@
     <repeatable>false</repeatable>
     <binding>
 	<command>property-assign</command>
-        <property>/controls/switches/ap_master</property>
+        <property>/controls/switches/ap_mastersw</property>
 	<value>0</value>
-    </binding>
-    <binding>
-	<command>nasal</command>
-    <script>MD88.ap_off();</script>
     </binding>
   </action>
 </animation>
@@ -273,7 +269,7 @@
   <type>select</type>
   <object-name>APSwitchOff</object-name>
   <condition>
-    <not><property>/controls/switches/ap_master</property></not>
+    <not><property>/controls/switches/ap_mastersw</property></not>
   </condition>
 </animation>
 <animation>
@@ -284,17 +280,8 @@
     <repeatable>false</repeatable>
     <binding>
 	<command>property-assign</command>
-        <property>/controls/switches/ap_master</property>
+        <property>/controls/switches/ap_mastersw</property>
 	<value>1</value>
-    </binding>
-    <binding>
-	<command>property-assign</command>
-        <property>/controls/switches/apoffsound</property>
-	<value>0</value>
-    </binding>
-    <binding>
-	<command>nasal</command>
-    <script>MD88.ap_refresh();</script>
     </binding>
   </action>
 </animation>
@@ -323,7 +310,7 @@
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>0</button>
+    <button>3</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -339,7 +326,7 @@
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>1</button>
+    <button>4</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -356,7 +343,7 @@
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -372,7 +359,7 @@
   <type>pick</type>
   <object-name>ATKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1267,7 +1254,7 @@
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>0</button>
+    <button>3</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1283,7 +1270,7 @@
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>1</button>
+    <button>4</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1300,7 +1287,7 @@
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>3</button>
+    <button>0</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1316,7 +1303,7 @@
   <type>pick</type>
   <object-name>AltKnob</object-name>
   <action>
-    <button>4</button>
+    <button>1</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
@@ -1338,42 +1325,8 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/alt</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/vs</property>
+				<property>controls/switches/apvertset</property>
 				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apvertmode</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apilsmode</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aphldtrk2</property>
-				<value>0</value>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>MD88.alt_master();</script>
 			</binding>
         </action>
     </animation>
@@ -1557,42 +1510,8 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/alt</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/vs</property>
+				<property>controls/switches/apvertset</property>
 				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apvertmode</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apilsmode</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aphldtrk2</property>
-				<value>0</value>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>MD88.vs_master();</script>
 			</binding>
         </action>
     </animation>
@@ -1658,67 +1577,9 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>instrumentation/nav/signal-quality-norm</property>
-				<value>0</value>
+				<property>controls/switches/apvertset</property>
+				<value>2</value>
 			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/hdg</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/nav</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc1</property>
-				<value>1</value>
-			</binding>
-			<!--binding>
-				<command>nasal</command>
-				<script>MD88.loc_master();</script>
-			</binding-->
-            <binding>
-				<command>property-assign</command>
-				<property>instrumentation/nav/gs-rate-of-climb</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/alt</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/vs</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apilsmode</property>
-				<value>1</value>
-			</binding>
-			<!--binding>
-				<command>nasal</command>
-				<script>MD88.app_master();</script>
-			</binding-->
         </action>
     </animation>
 
@@ -1800,47 +1661,14 @@
   <type>pick</type>
   <object-name>HdgKnob</object-name>
   <action>
-    <button>0</button>
-    <repeatable>true</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>autopilot/settings/heading-bug-deg</property>
-      <step>1</step>
-      <min>0</min>
-      <max>360</max>
-      <wrap>true</wrap>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>HdgKnob</object-name>
-  <action>
-    <button>1</button>
-    <repeatable>true</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>autopilot/settings/heading-bug-deg</property>
-      <step>-1</step>
-      <min>0</min>
-      <max>360</max>
-      <wrap>true</wrap>
-    </binding>
-  </action>
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>HdgKnob</object-name>
-  <action>
     <button>3</button>
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
-      <step>10</step>
-      <min>0</min>
-      <max>360</max>
+      <step>1</step>
+      <min>1</min>
+      <max>361</max>
       <wrap>true</wrap>
     </binding>
   </action>
@@ -1854,9 +1682,42 @@
     <binding>
       <command>property-adjust</command>
       <property>autopilot/settings/heading-bug-deg</property>
+      <step>-1</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>HdgKnob</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <step>10</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>HdgKnob</object-name>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
       <step>-10</step>
-      <min>0</min>
-      <max>360</max>
+      <min>1</min>
+      <max>361</max>
       <wrap>true</wrap>
     </binding>
   </action>
@@ -1868,50 +1729,11 @@
 	<object-name>hdgOff</object-name>
         <action>
             <button>0</button>
-	    <repeatable>true</repeatable>
+			<repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/hdg</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/nav</property>
+				<property>controls/switches/aplatset</property>
 				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aplatmode</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aphldtrk</property>
-				<value>0</value>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>MD88.hdg_master();</script>
 			</binding>
         </action>
     </animation>
@@ -1941,47 +1763,8 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/hdg</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/nav</property>
+				<property>controls/switches/aplatset</property>
 				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aplatmode</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/aphldtrk</property>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>MD88.nav_master();</script>
 			</binding>
         </action>
     </animation>
@@ -2010,38 +1793,9 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>instrumentation/nav/signal-quality-norm</property>
-				<value>0</value>
+				<property>/controls/switches/aplatset</property>
+				<value>2</value>
 			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/hdg</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/nav</property>
-				<value>0</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/loc1</property>
-				<value>1</value>
-			</binding>
-            <binding>
-				<command>property-assign</command>
-				<property>controls/switches/apilsmode</property>
-				<value>0</value>
-			</binding>
-			<!--binding>
-				<command>nasal</command>
-				<script>MD88.loc_master();</script>
-			</binding-->
         </action>
     </animation>
 

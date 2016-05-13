@@ -135,30 +135,9 @@ var update_voltmeter = func {
   interpolate(test_ac,bus_ac.getNode("volts").getValue(),1.5);
 }
 
-var update_locarmelec = func {
-  var ap = getprop("/controls/switches/ap_master");
-  var loc1 = getprop("/controls/switches/loc1");
-  if (loc1 & ap) {
-  locarmcheck();
-  } else {
-  return 0;
-  }
-}
-
-var update_apparmelec = func {
-  var ap = getprop("/controls/switches/ap_master");
-  var app1 = getprop("/controls/switches/app1");
-  if (app1 & ap) {
-  apparmcheck();
-  } else {
-  return 0;
-  }
-}
   
 var update_electrical = func {
   elec_main();
-  update_locarmelec();
-  update_apparmelec();
   feed_status[feed["apu"]] = apu_running.getValue();
   feed_status[feed["batt"]] = sw_batt.getValue();
   update_bus();
