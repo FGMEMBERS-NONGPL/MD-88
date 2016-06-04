@@ -44,69 +44,27 @@ var elec_main = func {
 	var engine2_on = getprop("engines/engine[1]/state");
     if (battery_on or apugen1_on) {
         setprop("systems/electrical/on", 1);
-        setprop("systems/electrical/outputs/avionics-fan", 0);
-        setprop("systems/electrical/outputs/gps-mfd", 0);
-        setprop("systems/electrical/outputs/gps", 0);
-        setprop("systems/electrical/outputs/hsi", 0);
-        setprop("systems/electrical/outputs/comm", 0);
-        setprop("systems/electrical/outputs/comm[1]", 0);
-        setprop("systems/electrical/outputs/nav", 0);
-        setprop("systems/electrical/outputs/nav[1]", 0);
-        setprop("systems/electrical/outputs/dme", 0);
-        setprop("systems/electrical/outputs/dme[1]", 0);
-        setprop("systems/electrical/outputs/adf", 0);
-        setprop("systems/electrical/outputs/adf[1]", 0);
-        setprop("systems/electrical/outputs/mk-viii", 0);
-        setprop("systems/electrical/outputs/tacan", 0);
-        setprop("systems/electrical/outputs/turn-coordinator", 0);
-        setprop("systems/electrical/outputs/audio-panel", 0);
-        setprop("systems/electrical/outputs/audio-panel[1]", 0);
-        setprop("systems/electrical/outputs/transponder", 0);
 		setprop("systems/electrical/outputs/efis", 25);	
-	} else if (engine1_on or engine2_on == 3) {
+		aispin.start();
+	} else if (engine1_on == 3 or engine2_on == 3) {
         setprop("systems/electrical/on", 1);
-        setprop("systems/electrical/outputs/avionics-fan", 0);
-        setprop("systems/electrical/outputs/gps-mfd", 0);
-        setprop("systems/electrical/outputs/gps", 0);
-        setprop("systems/electrical/outputs/hsi", 0);
-        setprop("systems/electrical/outputs/comm", 0);
-        setprop("systems/electrical/outputs/comm[1]", 0);
-        setprop("systems/electrical/outputs/nav", 0);
-        setprop("systems/electrical/outputs/nav[1]", 0);
-        setprop("systems/electrical/outputs/dme", 0);
-        setprop("systems/electrical/outputs/dme[1]", 0);
-        setprop("systems/electrical/outputs/adf", 0);
-        setprop("systems/electrical/outputs/adf[1]", 0);
-        setprop("systems/electrical/outputs/mk-viii", 0);
-        setprop("systems/electrical/outputs/tacan", 0);
-        setprop("systems/electrical/outputs/turn-coordinator", 0);
-        setprop("systems/electrical/outputs/audio-panel", 0);
-        setprop("systems/electrical/outputs/audio-panel[1]", 0);
-        setprop("systems/electrical/outputs/transponder", 0);
 		setprop("systems/electrical/outputs/efis", 25);	
+		aispin.start();
     } else {
         setprop("systems/electrical/on", 0);
-        setprop("systems/electrical/outputs/avionics-fan", 0);
-        setprop("systems/electrical/outputs/gps-mfd", 0);
-        setprop("systems/electrical/outputs/gps", 0);
-        setprop("systems/electrical/outputs/hsi", 0);
-        setprop("systems/electrical/outputs/comm", 0);
-        setprop("systems/electrical/outputs/comm[1]", 0);
-        setprop("systems/electrical/outputs/nav", 0);
-        setprop("systems/electrical/outputs/nav[1]", 0);
-        setprop("systems/electrical/outputs/dme", 0);
-        setprop("systems/electrical/outputs/dme[1]", 0);
-        setprop("systems/electrical/outputs/adf", 0);
-        setprop("systems/electrical/outputs/adf[1]", 0);
-        setprop("systems/electrical/outputs/mk-viii", 0);
-        setprop("systems/electrical/outputs/tacan", 0);
-        setprop("systems/electrical/outputs/turn-coordinator", 0);
-        setprop("systems/electrical/outputs/audio-panel", 0);
-        setprop("systems/electrical/outputs/audio-panel[1]", 0);
-        setprop("systems/electrical/outputs/transponder", 0);
 		setprop("systems/electrical/outputs/efis", 0);	
+		ai_spin.setValue(0.2);
+		aispin.stop();
     }
 }
+
+var ai_spin	= props.globals.getNode("/instrumentation/attitude-indicator/spin");
+
+var aispinfunc = func {
+  ai_spin.setValue(1);
+}
+
+var aispin = maketimer(5, aispinfunc);
 
 var update_bus = func {
   var volts_ac = 0;							# Assume no volts on bus

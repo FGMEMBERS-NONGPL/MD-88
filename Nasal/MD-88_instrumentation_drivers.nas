@@ -10,26 +10,6 @@
 
 
 
-# Support for the backup Attitude Indicators
-#
-# The backup AI presumably relies on either vacuum or electrically powered gyros which must
-# be kept spinning to function. Some part of FG decrements the spin value, and some part
-# increments it, but it seems to rely on an engine setting (RPM) that is not reliable or perhaps
-# reasonable in the case of YASim jet engine models. Therefore I power it here by updating it
-# every 5 seconds. In time this might become part of the electrical system.
-
-
-var ai_spin	= props.globals.getNode("/instrumentation/attitude-indicator/spin");
-
-
-var update_ai = func {
-  ai_spin.setValue(1);
-  settimer(update_ai, 5);
-}
-
-
-
-
 # Support to calculate RMI needle deflections based on mode (VOR/ADF)
 # and beacon range. Simplifies RMI animations.
 #
@@ -221,6 +201,4 @@ var update_comms = func {
 var InstrumentationInit = func {
   settimer(update_rmi, 2);				# Delay startup a bit to allow things to initialize
   settimer(update_comms, 2);				# Delay startup a bit to allow things to initialize
-  interpolate(ai_spin, 1, 15);				# Spin up the backup AI gyro
-  settimer(update_ai, 20);				# Maintain spin on backup AI
 }
