@@ -14,6 +14,7 @@ var ap_logic_init = func {
 	setprop("/controls/switches/aphldtrk", 0);
 	setprop("/controls/switches/apvertmode", 3);
 	setprop("/controls/switches/aphldtrk2", 0);
+	setprop("/controls/switches/apoffsound", 1);
 	print("AUTOFLIGHT LOGIC ... FINE!");
 }
 
@@ -23,7 +24,6 @@ setlistener("/controls/switches/ap_mastersw", func {
   if (apmas == 0) {
 	setprop("/controls/switches/ap_master", 0);
     ap_off();
-    MD88_screenmssg.write("AUTOPILOT!");
   } else if (apmas == 1) {
 	setprop("/controls/switches/ap_master", 1);
 	setprop("/controls/switches/apoffsound", 0);

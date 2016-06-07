@@ -64,8 +64,8 @@ var nav_master = func {
 }
 
 var locarmcheck = func {
-	var locdefl = getprop("instrumentation/nav/heading-needle-deflection");
-	if (locdefl < 8 or locdefl > -8) {
+	var locdefl = getprop("instrumentation/nav/heading-needle-deflection-norm");
+	if ((locdefl < 0.9233) and (getprop("instrumentation/nav/signal-quality-norm") > 0.99)) {
 		setprop("/autopilot/locks/heading", "nav1-hold");
 		setprop("/controls/switches/loc1", 0);
 		setprop("/controls/switches/aplatmode", 2);
