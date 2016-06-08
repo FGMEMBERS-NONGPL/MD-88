@@ -86,7 +86,7 @@
   <object-name>ATKnob</object-name>
   <condition>
     <equals>
-      <property>autopilot/locks/at-mode</property>
+      <property>/controls/it2/apthrmode</property>
       <value>0</value>
     </equals>
   </condition>
@@ -98,7 +98,7 @@
   <object-name>ATKnobMach</object-name>
   <condition>
     <equals>
-      <property>autopilot/locks/at-mode</property>
+      <property>/controls/it2/apthrmode</property>
       <value>1</value>
     </equals>
   </condition>
@@ -177,7 +177,7 @@
   <type>select</type>
   <object-name>ATSwitchOn</object-name>
   <condition>
-    <property>controls/switches/at</property>
+    <property>/controls/it2/at_mastersw</property>
   </condition>
 </animation>
 <animation>
@@ -186,18 +186,11 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
-    <binding>
-	<command>property-assign</command>
-        <property>controls/switches/at</property>
-	<value>0</value>
-      <!--command>nasal</command>
-      <script>MD88.autothrottle_toggle();</script-->
-    </binding>
-    <binding>
-	<command>property-assign</command>
-        <property>autopilot/locks/speed</property>
-	<value></value>
-    </binding>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/at_mastersw</property>
+			<value>0</value>
+			</binding>
   </action>
 </animation>
 
@@ -205,7 +198,7 @@
   <type>select</type>
   <object-name>ATSwitchOff</object-name>
   <condition>
-    <not><property>controls/switches/at</property></not>
+    <not><property>/controls/it2/at_mastersw</property></not>
   </condition>
 </animation>
 <animation>
@@ -214,31 +207,11 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
-    <binding>
-	<command>property-assign</command>
-        <property>controls/switches/at</property>
-	<value>1</value>
-      <!--command>nasal</command>
-      <script>MD88.autothrottle_toggle();</script-->
-    </binding>
-    <binding>
-	<condition><equals>
-	<property>autopilot/locks/at-mode</property>
-	<value>0</value></equals>
-	</condition>
-	<command>property-assign</command>
-        <property>autopilot/locks/speed</property>
-	<value>speed-with-throttle</value>
-    </binding>
-    <binding>
-	<condition><equals>
-	<property>autopilot/locks/at-mode</property>
-	<value>1</value></equals>
-	</condition>
-	<command>property-assign</command>
-        <property>autopilot/locks/speed</property>
-	<value>mach-with-throttle</value>
-    </binding>
+			<binding>
+			<command>property-assign</command>
+			<property>/controls/it2/at_mastersw</property>
+			<value>1</value>
+			</binding>
   </action>
 </animation>
 
@@ -248,7 +221,7 @@
   <type>select</type>
   <object-name>APSwitchOn</object-name>
   <condition>
-    <property>/controls/switches/ap_mastersw</property>
+    <property>/controls/it2/ap_mastersw</property>
   </condition>
 </animation>
 <animation>
@@ -259,7 +232,7 @@
     <repeatable>false</repeatable>
     <binding>
 	<command>property-assign</command>
-        <property>/controls/switches/ap_mastersw</property>
+        <property>/controls/it2/ap_mastersw</property>
 	<value>0</value>
     </binding>
   </action>
@@ -269,7 +242,7 @@
   <type>select</type>
   <object-name>APSwitchOff</object-name>
   <condition>
-    <not><property>/controls/switches/ap_mastersw</property></not>
+    <not><property>/controls/it2/ap_mastersw</property></not>
   </condition>
 </animation>
 <animation>
@@ -280,7 +253,7 @@
     <repeatable>false</repeatable>
     <binding>
 	<command>property-assign</command>
-        <property>/controls/switches/ap_mastersw</property>
+        <property>/controls/it2/ap_mastersw</property>
 	<value>1</value>
     </binding>
   </action>
@@ -1325,26 +1298,11 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>0</value>
 			</binding>
         </action>
     </animation>
-
- <!--animation>
-        <type>select</type>
-        <object-name>ALTtoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/altl</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
 <!-- VS-->
 
@@ -1509,26 +1467,11 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 			</binding>
         </action>
     </animation>
-
- <!--animation>
-        <type>select</type>
-        <object-name>VStoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/vsl</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
     <animation>
         <type>pick</type>
@@ -1576,26 +1519,11 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>2</value>
 			</binding>
         </action>
     </animation>
-
- <!--animation>
-        <type>select</type>
-        <object-name>APPRtoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/app</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
 <!--Heading-->
 
@@ -1731,26 +1659,11 @@
 			<repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>0</value>
 			</binding>
         </action>
     </animation>
-
- <!--animation>
-        <type>select</type>
-        <object-name>HDGtoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/hdgl</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
 <!--NAV-->
 
@@ -1762,26 +1675,11 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>1</value>
 			</binding>
         </action>
     </animation>
-
- <!--animation>
-        <type>select</type>
-        <object-name>NAVtoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/navl</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
 <!--LOC-->
 <animation>
@@ -1792,26 +1690,11 @@
 	    <repeatable>true</repeatable>
             <binding>
 				<command>property-assign</command>
-				<property>/controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>2</value>
 			</binding>
         </action>
     </animation>
-
-	<!--animation>
-        <type>select</type>
-        <object-name>LOCtoggle</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/loc</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 	
 	<!-- IAS -->
 	
@@ -1821,36 +1704,13 @@
         <action>
             <button>0</button>
 			<repeatable>true</repeatable>
-            <binding>
+				<binding>
 				<command>property-assign</command>
-				<property>autopilot/locks/at-mode</property>
+				<property>/controls/it2/apthrset</property>
 				<value>0</value>
-			</binding>
-            <binding>
-				<condition>
-				<property>controls/switches/at</property>
-				</condition>
-				<command>property-assign</command>
-				<property>autopilot/locks/speed</property>
-				<value>speed-with-throttle</value>
-			</binding>
+				</binding>
         </action>
     </animation>
-
-	<!--animation>
-        <type>select</type>
-        <object-name>IAStoggle</object-name>
-        <condition>
-            <equals>
-                <property>autopilot/locks/at-mode</property>
-                <value>0</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 	
 	<!-- Mach -->
 	
@@ -1860,36 +1720,13 @@
         <action>
             <button>0</button>
 			<repeatable>true</repeatable>
-            <binding>
+				<binding>
 				<command>property-assign</command>
-				<property>autopilot/locks/at-mode</property>
+				<property>/controls/it2/apthrset</property>
 				<value>1</value>
-			</binding>
-            <binding>
-				<condition>
-				<property>controls/switches/at</property>
-				</condition>
-				<command>property-assign</command>
-				<property>autopilot/locks/speed</property>
-				<value>mach-with-throttle</value>
-			</binding>
+				</binding>
         </action>
     </animation>
-
-	<!--animation>
-        <type>select</type>
-        <object-name>Machtoggle</object-name>
-        <condition>
-            <equals>
-                <property>autopilot/locks/at-mode</property>
-                <value>1</value>
-            </equals>
-            <greater-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-            </greater-than>
-        </condition>
-    </animation-->
 
 </PropertyList>
 

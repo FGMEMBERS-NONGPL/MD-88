@@ -33,46 +33,21 @@
 
 		<button>
 			<legend>A/T off</legend>
-			<not><property>controls/switches/at</property></not>
-			<value>0</value>
 			<live type="bool">true</live>
 			<binding>
 			<command>property-assign</command>
-			<property>controls/switches/at</property>
+			<property>/controls/it2/at_mastersw</property>
 			<value>0</value>
-			</binding>
-			<binding>
-			<command>property-assign</command>
-			<property>autopilot/locks/speed</property>
-			<value></value>
 			</binding>
 		</button>
 		<button>
 			<legend>A/T on</legend>
-			<property>controls/switches/at</property>
+			<property>/controls/it2/at_master</property>
 			<live type="bool">true</live>
 			<binding>
 			<command>property-assign</command>
-			<property>controls/switches/at</property>
+			<property>/controls/it2/at_mastersw</property>
 			<value>1</value>
-			</binding>
-			<binding>
-			<condition><equals>
-			<property>autopilot/locks/at-mode</property>
-			<value>0</value></equals>
-			</condition>
-			<command>property-assign</command>
-			<property>autopilot/locks/speed</property>
-			<value>speed-with-throttle</value>
-			</binding>
-			<binding>
-			<condition><equals>
-			<property>autopilot/locks/at-mode</property>
-			<value>1</value></equals>
-			</condition>
-			<command>property-assign</command>
-			<property>autopilot/locks/speed</property>
-			<value>mach-with-throttle</value>
 			</binding>
 		</button>
 	</group>
@@ -82,22 +57,20 @@
 		
 		<button>
 			<legend>AP off</legend>
-			<not><property>controls/switches/ap_mastersw</property></not>
-			<value>0</value>
 			<live type="bool">true</live>
 			<binding>
 			<command>property-assign</command>
-			<property>/controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<value>0</value>
 			</binding>
 		</button>
 		<button>
 			<legend>AP on</legend>
-			<property>controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<live type="bool">true</live>
 			<binding>
 			<command>property-assign</command>
-			<property>/controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<value>1</value>
 			</binding>
 		</button>
@@ -127,7 +100,7 @@
 				<label>[SPD]</label>
 				<visible>
 					<equals>
-						<property>autopilot/locks/at-mode</property>
+						<property>/controls/it2/apthrmode</property>
 						<value>0</value>
 					</equals>
 				</visible>
@@ -145,7 +118,7 @@
 				<label>[Mach]</label>
 				<visible>
 					<equals>
-						<property>autopilot/locks/at-mode</property>
+						<property>/controls/it2/apthrmode</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -158,7 +131,7 @@
 				<label>[HDG]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>0</value>
 					</equals>
 				</visible>
@@ -167,7 +140,7 @@
 				<label>[NAV]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -176,7 +149,7 @@
 				<label>[LOC ARM]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/loc1</property>
+						<property>/controls/it2/loc1</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -185,7 +158,7 @@
 				<label>[LOC]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>2</value>
 					</equals>
 				</visible>
@@ -198,7 +171,7 @@
 				<label>[ALT]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>0</value>
 					</equals>
 				</visible>
@@ -207,7 +180,7 @@
 				<label>[VS]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -216,7 +189,7 @@
 				<label>[G/S ARM]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/app1</property>
+						<property>/controls/it2/app1</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -225,7 +198,7 @@
 				<label>[G/S]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>2</value>
 					</equals>
 				</visible>
@@ -261,16 +234,8 @@
 				<legend>SPD</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>autopilot/locks/at-mode</property>
+				<property>/controls/it2/apthrset</property>
 				<value>0</value>
-				</binding>
-				<binding>
-				<condition>
-				<property>controls/switches/at</property>
-				</condition>
-				<command>property-assign</command>
-				<property>autopilot/locks/speed</property>
-				<value>speed-with-throttle</value>
 				</binding>
 			</button>
 
@@ -296,16 +261,8 @@
 				<legend>Mach</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>autopilot/locks/at-mode</property>
+				<property>/controls/it2/apthrset</property>
 				<value>1</value>
-				</binding>
-				<binding>
-				<condition>
-				<property>controls/switches/at</property>
-				</condition>
-				<command>property-assign</command>
-				<property>autopilot/locks/speed</property>
-				<value>mach-with-throttle</value>
 				</binding>
 			</button>
 			
@@ -349,7 +306,7 @@
 				<legend>HDG</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>0</value>
 				</binding>
 			</button>
@@ -394,7 +351,7 @@
 				<legend>ALT</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>0</value>
 				</binding>
 			</button>
@@ -421,7 +378,7 @@
 				<legend>VS</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 				</binding>
 			</button>
@@ -462,7 +419,7 @@
 				<legend>NAV</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>1</value>
 				</binding>
 			</button>
@@ -471,7 +428,7 @@
 				<legend>LOC</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>2</value>
 				</binding>
 			</button>
@@ -480,7 +437,7 @@
 				<legend>ILS</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>2</value>
 				</binding>
 			</button>
