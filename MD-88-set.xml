@@ -34,7 +34,7 @@ McDonnell Douglas MD-88
 
   <systems>
     <autopilot>
-      <path>Aircraft/MD-88/Systems/MD-88-autopilot.xml</path>
+      <path>Aircraft/MD-88/Systems/it-autoflight.xml</path>
     </autopilot>
 	<autopilot>
 	  <name>Autopilot helpers</name>
