@@ -42,11 +42,11 @@
   <condition>
 	<or>
     <equals>
-      <property>/controls/it2/loc</property>
+      <property>/it-autoflight/loc</property>
       <value>1</value>
     </equals>
     <greater-than>
-      <property>/controls/it2/app</property>
+      <property>/it-autoflight/app</property>
 	  <value>1</value>
     </greater-than>
 	</or>
@@ -58,7 +58,7 @@
   <object-name>SPDN1</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>0</value>
     </equals>
   </condition>
@@ -68,7 +68,7 @@
   <object-name>SPDN2</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>0</value>
     </equals>
   </condition>
@@ -78,7 +78,7 @@
   <object-name>SPDN3</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>0</value>
     </equals>
   </condition>
@@ -89,7 +89,7 @@
   <object-name>MACHPNT</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>1</value>
     </equals>
   </condition>
@@ -99,7 +99,7 @@
   <object-name>MACHN2</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>1</value>
     </equals>
   </condition>
@@ -109,7 +109,7 @@
   <object-name>MACHN3</object-name>
   <condition>
     <equals>
-      <property>/controls/it2/apthrmode</property>
+      <property>/it-autoflight/apthrmode</property>
       <value>1</value>
     </equals>
   </condition>
@@ -118,7 +118,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>HHLD</object-name>
-  <property>/controls/it2/aphldtrk</property>
+  <property>/it-autoflight/aphldtrk</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -131,7 +131,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>VHLD</object-name>
-  <property>/controls/it2/aphldtrk2</property>
+  <property>/it-autoflight/aphldtrk2</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -144,7 +144,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>LAT</object-name>
-  <property>/controls/it2/aplatmode</property>
+  <property>/it-autoflight/aplatmode</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -157,7 +157,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>VERT</object-name>
-  <property>/controls/it2/apvertmode</property>
+  <property>/it-autoflight/apvertmode</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -170,7 +170,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>SPD</object-name>
-  <property>/controls/it2/apthrmode</property>
+  <property>/it-autoflight/apthrmode</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -183,7 +183,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ILS</object-name>
-  <property>/controls/it2/apilsmode</property>
+  <property>/it-autoflight/apilsmode</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -196,7 +196,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>SPDN1</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>/it-autoflight/settings/target-speed-kt</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -208,7 +208,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>SPDN2</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>/it-autoflight/settings/target-speed-kt</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -220,7 +220,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>SPDN3</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>/it-autoflight/settings/target-speed-kt</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -233,7 +233,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MACHN2</object-name>
-  <property>/controls/it2/mach-actual</property>
+  <property>/it-autoflight/mach-actual</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -245,7 +245,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MACHN3</object-name>
-  <property>/controls/it2/mach-actual</property>
+  <property>/it-autoflight/mach-actual</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>

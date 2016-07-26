@@ -199,7 +199,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>MD88.ctl_func("display",1);</script>
+                <script>MD88.mode_inc();</script>
             </binding>
         </action>
     </animation>
@@ -216,7 +216,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>MD88.ctl_func("display",-1);</script>
+                <script>MD88.mode_dec();</script>
             </binding>
         </action>
     </animation>
