@@ -233,7 +233,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MACHN2</object-name>
-  <property>/it-autoflight/mach-actual</property>
+  <property>/it-autoflight/target-mach</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -245,7 +245,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MACHN3</object-name>
-  <property>/it-autoflight/mach-actual</property>
+  <property>/it-autoflight/target-mach</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>

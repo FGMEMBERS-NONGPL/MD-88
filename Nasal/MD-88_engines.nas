@@ -233,7 +233,6 @@ setlistener("controls/engines/engine[1]/throttle", func {
   throttle1_fdm.setValue(throttle1.getValue()*0.93+0.07);
 });
 
-
 var eng_magicstartup = func {
   setprop("/controls/switches/battery",1);
   sw_ign.setValue(1);

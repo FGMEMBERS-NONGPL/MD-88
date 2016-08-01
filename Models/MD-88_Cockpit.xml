@@ -933,7 +933,7 @@
   <object-name>YokeTrimL</object-name>
   <object-name>apoff</object-name>
   <property>controls/flight/aileron</property>
-  <factor>60</factor>
+  <factor>90</factor>
   <center>
     <x-m>0</x-m>
     <y-m>-0.500</y-m>
@@ -972,7 +972,7 @@
   <object-name>YokeTrimR</object-name>
   <object-name>apoff2</object-name>
   <property>controls/flight/aileron</property>
-  <factor>60</factor>
+  <factor>90</factor>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.500</y-m>
