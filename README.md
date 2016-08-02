@@ -11,7 +11,8 @@ See AUTHORS&COPYING.txt
 
 ## Special thanks to:
 * Legoboyvdlp for helping with lights, failure systems, and more.
-* Gabriel for sounds and extensive testing.
+* Gabriel for extensive testing.
+* FL2070 for sounds.
 
 ## What's in the box?
 * MD-82
