@@ -43,6 +43,9 @@ McDonnell Douglas MD-88
     <electrical>
       <path>Aircraft/Generic/generic-electrical.xml</path>
     </electrical>
+    <property-rule n="101">
+        <path>Aircraft/MD-88/Sounds/MD-88-sound-control.xml</path>
+    </property-rule>
   </systems> 
 
   <instrumentation>
