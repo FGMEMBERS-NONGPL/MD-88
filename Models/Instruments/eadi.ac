@@ -5,11 +5,92 @@ MATERIAL "bezelgrey" rgb 0.501961 0.501961 0.501961  amb 0.1 0.1 0.1  emis 0 0 0
 MATERIAL "Flatblack" rgb 0 0 0  amb 0.5 0.5 0.5  emis 0 0 0  spec 0 0 0  shi 32  trans 0
 MATERIAL "glass" rgb 0.375984 0.375984 0.375984  amb 0.5 0.5 0.5  emis 0 0 0  spec 1 1 1  shi 32  trans 0.9
 MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
+MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
-kids 33
+kids 37
+OBJECT poly
+name "FDpitch_rembrandt"
+loc 0.00438232 -0.0263872 -0.00189331
+data 9
+Plane.020
+crease 30.000000
+numvert 4
+0 0.0290272 -0.0190425
+0 0.0290272 0.0227842
+0 0.0272212 0.0227842
+0 0.0272212 -0.0190425
+numsurf 1
+SURF 0x0
+mat 6
+refs 4
+3 0 0
+0 0 0
+1 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "FDroll_rembrandt"
+loc 0.00438232 -0.0044277 -0.0102743
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0238381 0.0111364
+0 -0.0116121 0.0111364
+0 -0.0116121 0.00936612
+0 0.0238381 0.00936612
+numsurf 1
+SURF 0x0
+mat 6
+refs 4
+3 0 0
+0 0 0
+1 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "FDpitch"
+loc 0.00438232 -0.0263872 -0.00189331
+data 9
+Plane.020
+crease 30.000000
+numvert 4
+0 0.0272212 -0.0190425
+0 0.0272212 0.0227842
+0 0.0290272 0.0227842
+0 0.0290272 -0.0190425
+numsurf 1
+SURF 0x0
+mat 6
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
+OBJECT poly
+name "FDroll"
+loc 0.00438232 -0.0044277 -0.0102743
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0238381 0.00936612
+0 -0.0116121 0.00936612
+0 -0.0116121 0.0111364
+0 0.0238381 0.0111364
+numsurf 1
+SURF 0x0
+mat 6
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
 OBJECT poly
 name "block"
-loc 0.00535167 0.0017263 -2.66988e-005
+loc 0.00433011 0.0017263 -2.66988e-005
 crease 45.000000
 numvert 8
 0 -0.00112001 -0.00111945
@@ -141,7 +222,7 @@ refs 4
 kids 0
 OBJECT poly
 name "blockb"
-loc 0.00535167 0.0017103 -0.0196914
+loc 0.00392861 0.0017103 -0.0196914
 crease 45.000000
 numvert 8
 0 -0.00112001 -0.00745544
@@ -198,7 +279,7 @@ refs 4
 kids 0
 OBJECT poly
 name "blockb"
-loc 0.00535167 0.00174161 0.0197004
+loc 0.00392861 0.00174161 0.0197004
 crease 45.000000
 numvert 8
 0.00039611 0.00112001 0.00745544
@@ -3008,7 +3089,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Off"
-loc 0.00578812 0.000582147 -0.000252351
+loc 0.00509721 0.000582147 -0.000252351
 crease 45.000000
 numvert 4
 0 0.0537938 -0.0639488

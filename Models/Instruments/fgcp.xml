@@ -259,6 +259,50 @@
   </action>
 </animation>
 
+<!--  Flight Director Switch -->
+
+<animation>
+  <type>select</type>
+  <object-name>FDSwitchOn</object-name>
+  <condition>
+    <property>/it-autoflight/fd_mastersw</property>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>FDSwitchOn</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/fd_mastersw</property>
+			<value>0</value>
+			</binding>
+  </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FDSwitchOff</object-name>
+  <condition>
+    <not><property>/it-autoflight/fd_mastersw</property></not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>FDSwitchOff</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/fd_mastersw</property>
+			<value>1</value>
+			</binding>
+  </action>
+</animation>
+
 <!--  AutoThrottle Knob (Speed selected) -->
 
 <animation>
@@ -426,7 +470,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD88.lights_beacon_toggle();</script>
+      <script>MD90.lights_beacon_toggle();</script>
     </binding>
   </action>
 </animation>
@@ -458,7 +502,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD88.lights_nav_toggle();</script>
+      <script>MD90.lights_nav_toggle();</script>
     </binding>
   </action>
 </animation>

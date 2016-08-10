@@ -459,10 +459,10 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
 	<file>Aircraft/MD-88/Models/Instruments/ND/ND.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88-efis.nas</file>
   </MD88>
-  <it2>
+  <itaf>
     <file>Aircraft/MD-88/Nasal/autoflight.nas</file>
     <file>Aircraft/MD-88/Nasal/autoflight-logic.nas</file>
-  </it2>
+  </itaf>
   <radar>
     <file>Aircraft/MD-88/Models/Instruments/RDR-160/RDR160.nas</file>
   </radar>
