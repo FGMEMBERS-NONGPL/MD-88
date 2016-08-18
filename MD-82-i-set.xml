@@ -146,6 +146,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
   <menubar>
     <default>
       <menu n="100">
+		<label>MD-82</label>
         <item>
           <label>QuickStartup</label>
           <binding> 
@@ -160,7 +161,14 @@ For Manual Engine Start, see the checlists in the Help Menu.
             <script>MD88.eng_magicshutdown();</script>
           </binding>
         </item>
-		<label>MD-82</label>
+		<item>
+			<name>retrofit</name>
+			<label>Toggle Retrofit</label>
+			<binding>
+				<command>property-toggle</command>
+				<property>/options/retrofit</property>
+			</binding>
+		</item>
         <item>
           <label>Livery Select</label>
           <binding>
@@ -308,6 +316,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
  <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
   <checklists include="MD-88-checklists.xml"/>
+ 
 
 </sim>
 
@@ -316,6 +325,10 @@ For Manual Engine Start, see the checlists in the Help Menu.
     <at-mode type="int">0</at-mode>
   </locks>
 </autopilot>
+
+<options>
+  <retrofit type="bool">false</retrofit>
+</options>
 
 <!--
 These n1/n2 values are used in place of FDM values in order to simulate engine

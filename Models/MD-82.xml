@@ -1941,7 +1941,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevStrutADL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>190</dep></entry>
@@ -1960,7 +1960,7 @@ in some cases based on observable cases in photos.
   <type>rotate</type>
   <object-name>EngRevStrutFVL</object-name>
   <object-name>EngRevVL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep>   0</dep></entry>
     <entry><ind>1</ind><dep>-142</dep></entry>
@@ -1977,7 +1977,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevVL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>67</dep></entry>
@@ -1994,7 +1994,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevStrutAVL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep>   0</dep></entry>
     <entry><ind>1</ind><dep>-190</dep></entry>
@@ -2013,7 +2013,7 @@ in some cases based on observable cases in photos.
   <type>rotate</type>
   <object-name>EngRevStrutFDR</object-name>
   <object-name>EngRevDR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>142</dep></entry>
@@ -2030,7 +2030,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevDR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>-67</dep></entry>
@@ -2047,7 +2047,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevStrutADR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>190</dep></entry>
@@ -2066,7 +2066,7 @@ in some cases based on observable cases in photos.
   <type>rotate</type>
   <object-name>EngRevStrutFVR</object-name>
   <object-name>EngRevVR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep>   0</dep></entry>
     <entry><ind>1</ind><dep>-142</dep></entry>
@@ -2083,7 +2083,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevVR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>67</dep></entry>
@@ -2100,7 +2100,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevStrutAVR</object-name>
-  <property>surface-positions/reverser-norm[1]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>0</ind><dep>   0</dep></entry>
     <entry><ind>1</ind><dep>-190</dep></entry>

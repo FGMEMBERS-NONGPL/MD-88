@@ -169,20 +169,12 @@
 	
 	<checkbox>
 		<label>Enable External Power Box</label>
-		<property>services/ext-pwr/enable</property>
+		<property>/controls/switches/cart</property>
 		<binding>
 			<command>dialog-apply</command>
 		</binding>
 		<live>true</live>
 	</checkbox>
-	<!--checkbox>
-		<label>Bus</label>
-		<property>controls/switches/bus</property>
-		<binding>
-			<command>dialog-apply</command>
-		</binding>
-		<live>true</live>
-	</checkbox-->
 
 
 	<hrule />

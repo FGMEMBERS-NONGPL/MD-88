@@ -68,6 +68,29 @@ McDonnell Douglas MD-88
   <object-name>enginepanel2</object-name> 
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>L_efis</object-name>
+  <object-name>eadi</object-name>
+  <object-name>ND_L</object-name>
+  <object-name>R_efis</object-name>
+  <object-name>eadi_R</object-name>
+  <object-name>ND_R</object-name>
+  <condition>
+	<property>/options/retrofit</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>att</object-name>
+  <object-name>hsi</object-name>
+  <object-name>att_R</object-name>
+  <object-name>hsi_R</object-name>
+  <condition>
+	<not><property>/options/retrofit</property></not>
+  </condition>
+</animation>
 
 
 <!-- Captain Panel -->
@@ -95,6 +118,14 @@ McDonnell Douglas MD-88
 	<roll-deg>20</roll-deg>
   </offsets>
 </model>
+
+<animation>
+  <type>select</type>
+  <object-name>L_efis</object-name>
+  <condition>
+	<property>/options/retrofit</property>
+  </condition>
+</animation>
 
 <model>
   <name>clock</name>
@@ -141,13 +172,34 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
+  <name>att</name>
+  <path>Aircraft/MD-88/Models/Instruments/att/att1.xml</path>
+  <offsets>
+    <x-m>2.225</x-m>
+    <y-m>-0.513</y-m>
+    <z-m>0.876</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
   <name>ND_L</name>
   <path>Aircraft/MD-88/Models/Instruments/ND/ND_L.xml</path>
   <offsets>
-		<x-m>2.254</x-m>
-		<y-m>-0.513</y-m>
-		<z-m>0.740</z-m>
- -    <pitch-deg>-12</pitch-deg>
+	<x-m>2.254</x-m>
+	<y-m>-0.513</y-m>
+	<z-m>0.740</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>hsi</name>
+  <path>Aircraft/MD-88/Models/Instruments/hsi/hsi1.xml</path>
+  <offsets>
+	<x-m>2.254</x-m>
+	<y-m>-0.513</y-m>
+	<z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -467,12 +519,34 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
+  <name>att_R</name>
+  <path>Aircraft/MD-88/Models/Instruments/att/att2.xml</path>
+  <offsets>
+    <x-m>2.225</x-m>
+    <y-m>0.513</y-m>
+    <z-m>0.876</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
   <name>ND_R</name>
   <path>Aircraft/MD-88/Models/Instruments/ND/ND_R.xml</path>
   <offsets>
-		<x-m>2.254</x-m>
-		<y-m>0.513</y-m>
-		<z-m>0.740</z-m>
+	<x-m>2.254</x-m>
+	<y-m>0.513</y-m>
+	<z-m>0.740</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>hsi_R</name>
+  <path>Aircraft/MD-88/Models/Instruments/hsi/hsi2.xml</path>
+  <offsets>
+	<x-m>2.254</x-m>
+	<y-m>0.513</y-m>
+	<z-m>0.740</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>

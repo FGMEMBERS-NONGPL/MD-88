@@ -146,6 +146,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
   <menubar>
     <default>
       <menu n="100">
+		<label>MD-88</label>
         <item>
           <label>QuickStartup</label>
           <binding> 
@@ -160,7 +161,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
             <script>MD88.eng_magicshutdown();</script>
           </binding>
         </item>
-		<label>MD-88</label>
         <item>
           <label>Livery Select</label>
           <binding>
