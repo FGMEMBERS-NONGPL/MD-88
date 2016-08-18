@@ -1907,7 +1907,7 @@ in some cases based on observable cases in photos.
   <type>rotate</type>
   <object-name>EngRevStrutFDL</object-name>
   <object-name>EngRevDL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>142</dep></entry>
@@ -1924,7 +1924,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>EngRevDL</object-name>
-  <property>surface-positions/reverser-norm[0]</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>-67</dep></entry>
