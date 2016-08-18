@@ -87,7 +87,7 @@
     <repeatable>false</repeatable>
 			<binding>
 			<command>property-assign</command>
-			<property>/it-autoflight/at_mastersw</property>
+			<property>/it-autoflight/ap_mastersw</property>
 			<value>0</value>
 			</binding>
   </action>
@@ -101,7 +101,7 @@
     <repeatable>false</repeatable>
 			<binding>
 			<command>property-assign</command>
-			<property>/it-autoflight/at_mastersw</property>
+			<property>/it-autoflight/ap_mastersw</property>
 			<value>0</value>
 			</binding>
   </action>
