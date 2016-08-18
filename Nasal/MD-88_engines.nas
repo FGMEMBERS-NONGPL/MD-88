@@ -254,9 +254,13 @@ var eng_magicstartup = func {
   setprop("/controls/fuel/xfeed",0);
   settimer(eng0_run_loop, ENG_RUN_UPDATE);
   settimer(eng1_run_loop, ENG_RUN_UPDATE);
+  setprop("/engines/engine/oil-pressure", 46);
+  setprop("/engines/engine[1]/oil-pressure", 49);
 }
 
 var eng_magicshutdown = func {
+  setprop("/engines/engine/oil-pressure", 0);
+  setprop("/engines/engine[1]/oil-pressure", 0);
   setprop("/engines/engine[0]/state",4);
   setprop("/engines/engine[1]/state",4);
   setprop("/controls/engines/engine[0]/cutoff",1);

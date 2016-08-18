@@ -46,6 +46,9 @@ McDonnell Douglas MD-88
     <property-rule n="101">
         <path>Aircraft/MD-88/Sounds/MD-88-sound-control.xml</path>
     </property-rule>
+    <autopilot>
+      <path>Aircraft/MD-88/Systems/engine-timing.xml</path>
+    </autopilot>
   </systems> 
 
   <instrumentation>

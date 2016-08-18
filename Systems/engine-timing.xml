@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<filter>
+		<name>Engine L Oil Pressure Filter</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/engines/engine[0]/oil-pressure</property>
+		</input>
+		<output>/engines/engine[0]/oil-pressure-filtered</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>2</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Engine R Oil Pressure Filter</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/engines/engine[1]/oil-pressure</property>
+		</input>
+		<output>/engines/engine[1]/oil-pressure-filtered</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>2</max-rate-of-change>
+	</filter>
+
+</PropertyList>
