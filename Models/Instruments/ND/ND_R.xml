@@ -10,7 +10,7 @@
         <object-name>Power.off</object-name>
         <condition>
             <less-than>
-				<property>systems/electrical/outputs/efis</property>
+				<property>systems/electrical/bus/dcR</property>
 				<value>15</value>
             </less-than>
         </condition>
@@ -21,7 +21,7 @@
         <object-name>ND.screenR</object-name>
         <condition>
             <greater-than>
-				<property>systems/electrical/outputs/efis</property>
+				<property>systems/electrical/bus/dcR</property>
 				<value>15</value>
             </greater-than>
         </condition>

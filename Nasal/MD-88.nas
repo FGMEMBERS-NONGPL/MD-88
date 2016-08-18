@@ -92,6 +92,7 @@ var MD88_Savedata = func {
 								# Initialization:
 
 setlistener("/sim/signals/fdm-initialized", func {
+  elec_init();					# Start the electrical system
 								# Start the fuel system. The MD-88 uses a customized
 								# fuel routine to avoid the default cross-feed situation.
   FuelInit();					# See MD-88_fuel.nas
@@ -101,20 +102,17 @@ setlistener("/sim/signals/fdm-initialized", func {
   FlightSurfaceInit();			# See MD-88_flightsurfaces.nas
   PneumaticsInit();				# See MD-88_pneumatics.nas
   InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
-  itaf.ap_init();				# See MD-88-autoflight.nas
-  nd_init();					# See MD-88_efis.nas
+  itaf.ap_init();				# See autoflight.nas
+  nd_init();					# See MD-88-efis.nas
+  setprop("/controls/engines/eprlim", 204);
+  setprop("/engines/engine/oil-pressure", 46);
+  setprop("/engines/engine[1]/oil-pressure", 49);
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
   setlistener("engines/engine[0]/epr", func {
     setprop("engines/engine[0]/eprx100", (getprop("engines/engine[0]/epr") * 100));
   });
   setlistener("engines/engine[1]/epr", func {
   	setprop("engines/engine[1]/eprx100", (getprop("engines/engine[1]/epr") * 100));
-  });
-  setlistener("/surface-positions/flap-pos-norm", func {
-	var flappositionnew = getprop("/surface-positions/flap-pos-norm");
-	if (flappositionnew <= 0.8000000001) {
-	  setprop("/controls/switches/flapposnew", flappositionnew);
-	}
   });
   MD88_Savedata();
 });

@@ -234,7 +234,7 @@ setlistener("controls/engines/engine[1]/throttle", func {
 });
 
 var eng_magicstartup = func {
-  setprop("/controls/switches/battery",1);
+  setprop("/controls/electrical/battery",1);
   sw_ign.setValue(1);
   setprop("/controls/switches/pumpLaft",1);
   setprop("/controls/switches/pumpLfwd",1);
@@ -271,7 +271,7 @@ var eng_magicshutdown = func {
   setprop("/engines/engine[1]/out-of-fuel",0);
   setprop("/controls/fuel/xfeed",0);
   sw_ign.setValue(0);
-  setprop("/controls/switches/battery",0);
+  setprop("/controls/electrical/battery",0);
 }
 
 var eng_more0 = func {

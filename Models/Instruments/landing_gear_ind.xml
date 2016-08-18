@@ -4,7 +4,6 @@
 
 <path>landing_gear_ind.ac</path>
 
-
 <!-- Doors -->
 <animation>
   <type>select</type>
@@ -31,10 +30,16 @@
       <property>gear/gear[0]/position-norm</property>
       <value>0</value>
     </greater-than>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -49,10 +54,16 @@
       <property>gear/gear[0]/position-norm</property>
       <value>1</value>
     </equals>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -85,10 +96,16 @@
         <property>gear/gear[0]/position-norm</property>
         <value>1</value>
       </less-than>
-	  <greater-than>
-	    <property>systems/electrical/outputs/efis</property>
-	    <value>15</value>
-	  </greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
     </and>
   </condition>
 </animation>
@@ -103,10 +120,16 @@
       <property>gear/gear[1]/position-norm</property>
       <value>1</value>
     </equals>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -139,10 +162,16 @@
         <property>gear/gear[1]/position-norm</property>
         <value>1</value>
       </less-than>
-	  <greater-than>
-	    <property>systems/electrical/outputs/efis</property>
-	    <value>15</value>
-	  </greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
     </and>
   </condition>
 </animation>
@@ -157,10 +186,16 @@
       <property>gear/gear[2]/position-norm</property>
       <value>1</value>
     </equals>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -193,10 +228,16 @@
         <property>gear/gear[2]/position-norm</property>
         <value>1</value>
       </less-than>
-	  <greater-than>
-	    <property>systems/electrical/outputs/efis</property>
-	    <value>15</value>
-	  </greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
     </and>
   </condition>
 </animation>

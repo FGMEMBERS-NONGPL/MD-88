@@ -66,10 +66,16 @@
 	<object-name>FlapL</object-name>
 	<object-name>FlapR</object-name>
 	<condition>
+		<or>
 		<greater-than>
-			<property>systems/electrical/outputs/efis</property>
+			<property>systems/electrical/bus/dcL</property>
 			<value>15</value>
 		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</condition>
 </animation>
 
@@ -100,11 +106,72 @@
   </axis>
 </animation>
 
+<!-- Oil Pressure -->
+<animation>
+  <type>textranslate</type>
+  <object-name>OilPressL1</object-name>
+  <property>/engines/engine[0]/oil-pressure</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilPressL2</object-name>
+  <property>/engines/engine[0]/oil-pressure</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilPressR1</object-name>
+  <property>/engines/engine[1]/oil-pressure</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilPressR2</object-name>
+  <property>/engines/engine[1]/oil-pressure</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Flaps -->
 <animation>
   <type>translate</type>
   <object-name>FlapL</object-name>
-  <property>/controls/switches/flapposnew</property>
-  <factor>0.06</factor>
+  <property>/surface-positions/flap-pos-norm</property>
+  <interpolation>
+	<entry><ind>00000</ind><dep>0.0000</dep></entry>
+	<entry><ind>0.125</ind><dep>0.0075</dep></entry>
+	<entry><ind>0.275</ind><dep>0.0165</dep></entry>
+	<entry><ind>0.375</ind><dep>0.0225</dep></entry>
+	<entry><ind>0.700</ind><dep>0.0423</dep></entry>
+	<entry><ind>1.000</ind><dep>0.0480</dep></entry>
+  </interpolation>
   <axis>
     <x>0</x>
     <y>0</y>
@@ -115,8 +182,15 @@
 <animation>
   <type>translate</type>
   <object-name>FlapR</object-name>
-  <property>/controls/switches/flapposnew</property>
-  <factor>0.06</factor>
+  <property>/surface-positions/flap-pos-norm</property>
+  <interpolation>
+	<entry><ind>00000</ind><dep>0.0000</dep></entry>
+	<entry><ind>0.125</ind><dep>0.0075</dep></entry>
+	<entry><ind>0.275</ind><dep>0.0165</dep></entry>
+	<entry><ind>0.375</ind><dep>0.0225</dep></entry>
+	<entry><ind>0.700</ind><dep>0.0423</dep></entry>
+	<entry><ind>1.000</ind><dep>0.0480</dep></entry>
+  </interpolation>
   <axis>
     <x>0</x>
     <y>0</y>

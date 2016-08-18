@@ -32,6 +32,8 @@ McDonnell Douglas MD-88
   <object-name>egtR</object-name>
   <object-name>n2L</object-name>
   <object-name>n2R</object-name>
+  <object-name>opL</object-name>
+  <object-name>opR</object-name>
   <object-name>fuelflowL</object-name>
   <object-name>fuelflowR</object-name>
   <object-name>fuel</object-name>
@@ -74,9 +76,9 @@ McDonnell Douglas MD-88
   <name>apindicator_L</name>
   <path>Aircraft/MD-88/Models/Instruments/apindicator.xml</path>
   <offsets>
-    <x-m>2.229</x-m>
-    <y-m>-0.320</y-m>
-    <z-m>0.966</z-m>
+    <x-m>2.210</x-m>
+    <y-m>-0.330</y-m>
+    <z-m>0.952</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -180,19 +182,8 @@ McDonnell Douglas MD-88
     <y-m>-0.390</y-m>
     <z-m>0.766</z-m-->
 	<x-m>2.250</x-m>
-    <y-m>-0.389</y-m>
+    <y-m>-0.384</y-m>
     <z-m>0.7635</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>marker_beacons</name>
-  <path>Aircraft/MD-88/Models/Instruments/marker_beacons.xml</path>
-  <offsets>
-    <x-m>2.223</x-m>
-    <y-m>-0.249</y-m>
-    <z-m>0.884</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -268,7 +259,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>eprL</name>
-  <path>Aircraft/MD-82/Models/Instruments/eprL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eprL.xml</path>
   <offsets>
     <x-m>2.208</x-m>
     <y-m>-0.025</y-m>
@@ -278,7 +269,7 @@ McDonnell Douglas MD-88
 </model>
 <model>
   <name>eprR</name>
-  <path>Aircraft/MD-82/Models/Instruments/eprR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eprR.xml</path>
   <offsets>
     <x-m>2.208</x-m>
     <y-m>0.035</y-m>
@@ -289,7 +280,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>n1L</name>
-  <path>Aircraft/MD-82/Models/Instruments/n1L.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n1L.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>-0.025</y-m>
@@ -299,7 +290,7 @@ McDonnell Douglas MD-88
 </model>
 <model>
   <name>n1R</name>
-  <path>Aircraft/MD-82/Models/Instruments/n1R.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n1R.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>0.035</y-m>
@@ -310,7 +301,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>egtL</name>
-  <path>Aircraft/MD-82/Models/Instruments/egtL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/egtL.xml</path>
   <offsets>
     <x-m>2.233</x-m>
     <y-m>-0.025</y-m>
@@ -320,7 +311,7 @@ McDonnell Douglas MD-88
 </model>
 <model>
   <name>egtR</name>
-  <path>Aircraft/MD-82/Models/Instruments/egtR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/egtR.xml</path>
   <offsets>
     <x-m>2.233</x-m>
     <y-m>0.035</y-m>
@@ -331,7 +322,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>fuelflowL</name>
-  <path>Aircraft/MD-82/Models/Instruments/fuelflowL.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fuelflowL.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>-0.025</y-m>
@@ -341,7 +332,7 @@ McDonnell Douglas MD-88
 </model>
 <model>
   <name>fuelflowR</name>
-  <path>Aircraft/MD-82/Models/Instruments/fuelflowR.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/fuelflowR.xml</path>
   <offsets>
     <x-m>2.245</x-m>
     <y-m>0.035</y-m>
@@ -351,8 +342,29 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
+  <name>opL</name>
+  <path>Aircraft/MD-88/Models/Instruments/opL.xml</path>
+  <offsets>
+    <x-m>2.208</x-m>
+    <y-m>-0.110</y-m>
+    <z-m>0.957</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+<model>
+  <name>opR</name>
+  <path>Aircraft/MD-88/Models/Instruments/opR.xml</path>
+  <offsets>
+    <x-m>2.208</x-m>
+    <y-m>0.125</y-m>
+    <z-m>0.957</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
   <name>n2L</name>
-  <path>Aircraft/MD-82/Models/Instruments/n2L.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n2L.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>-0.110</y-m>
@@ -362,7 +374,7 @@ McDonnell Douglas MD-88
 </model>
 <model>
   <name>n2R</name>
-  <path>Aircraft/MD-82/Models/Instruments/n2R.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/n2R.xml</path>
   <offsets>
     <x-m>2.221</x-m>
     <y-m>0.125</y-m>
@@ -406,13 +418,15 @@ McDonnell Douglas MD-88
 
 <!-- Copilot Panel -->
 
+<!-- Copilot Panel -->
+
 <model>
   <name>apindicator_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/apindicator.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/apindicator2.xml</path>
   <offsets>
-    <x-m>2.229</x-m>
-    <y-m>0.320</y-m>
-    <z-m>0.966</z-m>
+    <x-m>2.210</x-m>
+    <y-m>0.330</y-m>
+    <z-m>0.952</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
@@ -432,7 +446,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>eadi_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/eadi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eadi2.xml</path>
   <offsets>
     <x-m>2.225</x-m>
     <y-m>0.513</y-m>
@@ -465,7 +479,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>asi_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/asi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/asi2.xml</path>
   <offsets>
     <x-m>2.226</x-m>
     <y-m>0.376</y-m>
@@ -476,7 +490,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>rmi_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/rmi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/rmi2.xml</path>
   <offsets>
     <x-m>2.248</x-m>
     <y-m>0.388</y-m>
@@ -487,7 +501,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>alt_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/altimeter1.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/altimeter2.xml</path>
   <offsets>
     <x-m>2.229</x-m>
     <y-m>0.637</y-m>
@@ -509,10 +523,10 @@ McDonnell Douglas MD-88
 
 <model>
   <name>vsi_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/vsi2.xml</path>
   <offsets>
 	<x-m>2.250</x-m>
-    <y-m>0.638</y-m>
+    <y-m>0.643</y-m>
     <z-m>0.7635</z-m>
     <pitch-deg>-12</pitch-deg>
   </offsets>

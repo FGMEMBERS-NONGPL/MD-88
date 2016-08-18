@@ -60,6 +60,11 @@
 <animation>
 	<name>Power on/off</name>
 	<type>select</type>
+	<object-name>EPRLIM1</object-name>
+	<object-name>EPRLIM2</object-name>
+	<object-name>EPRLIM3</object-name>
+	<object-name>EPRLIML</object-name>
+	<object-name>EPRLIMR</object-name>
 	<object-name>EPRL1</object-name>
 	<object-name>EPRL2</object-name>
 	<object-name>EPRL3</object-name>
@@ -103,11 +108,57 @@
 	<object-name>N2LNeedle</object-name>
 	<object-name>N2RNeedle</object-name>
 	<condition>
+		<or>
 		<greater-than>
-			<property>systems/electrical/outputs/efis</property>
+			<property>systems/electrical/bus/dcL</property>
 			<value>15</value>
 		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</condition>
+</animation>
+
+<!-- EPR Limit -->
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRLIM1</object-name>
+  <property>/controls/engines/eprlim</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRLIM2</object-name>
+  <property>/controls/engines/eprlim</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>EPRLIM3</object-name>
+  <property>/controls/engines/eprlim</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 <!-- L Engine -->
@@ -118,10 +169,16 @@
   <condition>
 	<and>
     <property>controls/engines/engine[0]/reverser</property>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -170,6 +227,26 @@
   <type>rotate</type>
   <object-name>EPRLNeedle</object-name>
   <property>/engines/engine[0]/eprx100</property>
+  <interpolation>
+    <entry><ind>100</ind><dep>  0</dep></entry>
+    <entry><ind>220</ind><dep>272</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.0293</y-m>
+    <z-m>0.0654</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EPRLIML</object-name>
+  <property>/controls/engines/eprlim</property>
   <interpolation>
     <entry><ind>100</ind><dep>  0</dep></entry>
     <entry><ind>220</ind><dep>272</dep></entry>
@@ -440,10 +517,16 @@
   <condition>
 	<and>
     <property>controls/engines/engine[1]/reverser</property>
-	<greater-than>
-	  <property>systems/electrical/outputs/efis</property>
-	  <value>15</value>
-	</greater-than>
+		<or>
+		<greater-than>
+			<property>systems/electrical/bus/dcL</property>
+			<value>15</value>
+		</greater-than>
+		<greater-than>
+			<property>systems/electrical/bus/dcR</property>
+			<value>15</value>
+		</greater-than>
+		</or>
 	</and>
   </condition>
 </animation>
@@ -492,6 +575,26 @@
   <type>rotate</type>
   <object-name>EPRRNeedle</object-name>
   <property>/engines/engine[1]/eprx100</property>
+  <interpolation>
+    <entry><ind>100</ind><dep>  0</dep></entry>
+    <entry><ind>220</ind><dep>272</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0293</y-m>
+    <z-m>0.0654</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EPRLIMR</object-name>
+  <property>/controls/engines/eprlim</property>
   <interpolation>
     <entry><ind>100</ind><dep>  0</dep></entry>
     <entry><ind>220</ind><dep>272</dep></entry>

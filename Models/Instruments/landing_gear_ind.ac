@@ -6,6 +6,7 @@ OBJECT world
 kids 12
 OBJECT poly
 name "FaceDoorOff"
+loc 0 0 -0.0364206
 data 8
 Cube.005
 texture "txt_cockpit_warnings_1.rgb"
@@ -26,7 +27,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceDoorOn"
-loc 0.00010745 0 0
+loc 0.00010745 0 -0.0364206
 data 8
 Cube.001
 texture "txt_cockpit_warnings_1.rgb"
@@ -47,7 +48,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceLeftGreen"
-loc 0.000537255 0 0
+loc 0.000537255 0 -0.0364206
 data 8
 Cube.010
 texture "txt_cockpit_warnings_1.rgb"
@@ -68,6 +69,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceLeftOff"
+loc 0 0 -0.0364206
 data 8
 Cube.006
 texture "txt_cockpit_warnings_1.rgb"
@@ -88,7 +90,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceLeftRed"
-loc 0.000537254 0 0
+loc 0.000537254 0 -0.0364206
 data 8
 Cube.009
 texture "txt_cockpit_warnings_1.rgb"
@@ -109,7 +111,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceNoseGreen"
-loc 0.000322353 0 0
+loc 0.000322353 0 -0.0364206
 data 8
 Cube.012
 texture "txt_cockpit_warnings_1.rgb"
@@ -130,6 +132,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceNoseOff"
+loc 0 0 -0.0364206
 data 8
 Cube.007
 texture "txt_cockpit_warnings_1.rgb"
@@ -150,7 +153,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceNoseRed"
-loc 0.000256957 0 0
+loc 0.000256957 0 -0.0364206
 data 8
 Cube.011
 texture "txt_cockpit_warnings_1.rgb"
@@ -171,6 +174,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceRightOff"
+loc 0 0 -0.0364206
 data 8
 Cube.008
 texture "txt_cockpit_warnings_1.rgb"
@@ -191,7 +195,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceRightRed"
-loc 0.000175528 0 0
+loc 0.000175528 0 -0.0364206
 data 8
 Cube.013
 texture "txt_cockpit_warnings_1.rgb"
@@ -212,7 +216,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FaceRightGreen"
-loc 0.000307174 0 0
+loc 0.000307174 0 -0.0364206
 data 8
 Cube.014
 texture "txt_cockpit_warnings_1.rgb"
@@ -233,6 +237,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Shells"
+loc 0 0 -0.0364206
 data 4
 Cube
 crease 30.000000
