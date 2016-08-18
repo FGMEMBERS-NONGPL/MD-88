@@ -3,7 +3,91 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "buttonlights" rgb 0 0.501961 0  amb 0 0.501961 0  emis 0 0.501961 0  spec 0 0.501961 0  shi 32  trans 0
 MATERIAL "DefaultWhite.004" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 64  trans 0
 OBJECT world
-kids 25
+kids 29
+OBJECT poly
+name "FuelTempR1"
+loc 0.00212288 0.0720427 -0.0165279
+data 8
+Mesh.005
+texture "digitengine.png"
+crease 30.000000
+numvert 4
+0 0.014789 0.00203865
+0 0.0229436 0.00203865
+0 0.014789 0.00815461
+0 0.0229436 0.00815461
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+2 0.914898 0.0105589
+0 0.98386 0.0105589
+1 0.98386 0.102508
+3 0.914898 0.102508
+kids 0
+OBJECT poly
+name "FuelTempR2"
+loc 0.00212288 0.0720427 -0.0226729
+data 8
+Mesh.005
+texture "digitengine.png"
+crease 30.000000
+numvert 4
+0 0.0229436 0.00815461
+0 0.014789 0.00815461
+0 0.0229436 0.00203865
+0 0.014789 0.00203865
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+1 0.914898 0.0105589
+3 0.98386 0.0105589
+2 0.98386 0.102508
+0 0.914898 0.102508
+kids 0
+OBJECT poly
+name "FuelTempL2"
+loc 0.00212288 0.0720427 0.00841529
+data 8
+Mesh.005
+texture "digitengine.png"
+crease 30.000000
+numvert 4
+0 0.014789 0.00203865
+0 0.0229436 0.00203865
+0 0.014789 0.00815461
+0 0.0229436 0.00815461
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+2 0.914898 0.0105589
+0 0.98386 0.0105589
+1 0.98386 0.102508
+3 0.914898 0.102508
+kids 0
+OBJECT poly
+name "FuelTempL1"
+loc 0.00212288 0.0720427 0.0146012
+data 8
+Mesh.005
+texture "digitengine.png"
+crease 30.000000
+numvert 4
+0 0.0229436 0.00815461
+0 0.014789 0.00815461
+0 0.0229436 0.00203865
+0 0.014789 0.00203865
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+1 0.914898 0.0105589
+3 0.98386 0.0105589
+2 0.98386 0.102508
+0 0.914898 0.102508
+kids 0
 OBJECT poly
 name "FlapR"
 loc 0.00215331 -0.0438988 0.00696526

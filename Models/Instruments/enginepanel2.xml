@@ -43,6 +43,10 @@
 	<type>select</type>
 	<object-name>Temp1</object-name>
 	<object-name>Temp2</object-name>
+	<object-name>FuelTempL1</object-name>
+	<object-name>FuelTempL2</object-name>
+	<object-name>FuelTempR1</object-name>
+	<object-name>FuelTempR2</object-name>
 	<object-name>OilPressL1</object-name>
 	<object-name>OilPressL2</object-name>
 	<object-name>OilPressR1</object-name>
@@ -96,6 +100,63 @@
 <animation>
   <type>textranslate</type>
   <object-name>Temp2</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Fuel Temp -->
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelTempL1</object-name>
+  <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
+  <property>/environment/temperature-degc</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelTempL2</object-name>
+  <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
+  <property>/environment/temperature-degc</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelTempR1</object-name>
+  <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
+  <property>/environment/temperature-degc</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelTempR2</object-name>
+  <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
   <property>/environment/temperature-degc</property>
   <factor>0.1</factor>
   <step>1</step>
