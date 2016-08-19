@@ -36,6 +36,35 @@ var elec_init = func {
 	setprop("/systems/electrical/bus/acR", 0);
 	setprop("/systems/electrical/bus/genL", 0);
 	setprop("/systems/electrical/bus/genR", 0);
+    setprop("systems/electrical/outputs/adf", 0);
+    setprop("systems/electrical/outputs/audio-panel", 0);
+    setprop("systems/electrical/outputs/audio-panel[1]", 0);
+    setprop("systems/electrical/outputs/autopilot", 0);
+    setprop("systems/electrical/outputs/avionics-fan", 0);
+    setprop("systems/electrical/outputs/beacon", 0);
+    setprop("systems/electrical/outputs/bus", 0);
+    setprop("systems/electrical/outputs/cabin-lights", 0);
+    setprop("systems/electrical/outputs/dme", 0);
+    setprop("systems/electrical/outputs/efis", 0);
+    setprop("systems/electrical/outputs/flaps", 0);
+    setprop("systems/electrical/outputs/fuel-pump", 0);
+    setprop("systems/electrical/outputs/fuel-pump[1]", 0);
+    setprop("systems/electrical/outputs/gps", 0);
+    setprop("systems/electrical/outputs/gps-mfd", 0);
+    setprop("systems/electrical/outputs/hsi", 0);
+    setprop("systems/electrical/outputs/instr-ignition-switch", 0);
+    setprop("systems/electrical/outputs/instrument-lights", 0);
+    setprop("systems/electrical/outputs/landing-lights", 0);
+    setprop("systems/electrical/outputs/map-lights", 0);
+    setprop("systems/electrical/outputs/mk-viii", 0);
+    setprop("systems/electrical/outputs/nav", 0);
+    setprop("systems/electrical/outputs/nav[1]", 0);
+    setprop("systems/electrical/outputs/pitot-head", 0);
+    setprop("systems/electrical/outputs/stobe-lights", 0);
+    setprop("systems/electrical/outputs/tacan", 0);
+    setprop("systems/electrical/outputs/taxi-lights", 0);
+    setprop("systems/electrical/outputs/transponder", 0);
+    setprop("systems/electrical/outputs/turn-coordinator", 0);
 }
 
 var master_elec = func {
@@ -62,51 +91,102 @@ var master_elec = func {
 	if (extpwr_on and extL) {
 		setprop("/systems/electrical/bus/dcL", 28);
 		setprop("/systems/electrical/bus/acL", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else if (emerpwr_on) {
 		setprop("/systems/electrical/bus/dcL", 28);
 		setprop("/systems/electrical/bus/acL", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else if (rpmapu >= 99 and apuL) {
 		setprop("/systems/electrical/bus/dcL", 28);
 		setprop("/systems/electrical/bus/acL", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else if (stateL == 3 and engL) {
 		setprop("/systems/electrical/bus/dcL", 28);
 		setprop("/systems/electrical/bus/acL", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else {
 		setprop("/systems/electrical/bus/dcL", 0);
 		setprop("/systems/electrical/bus/acL", 0);
-		var dcR = getprop("/systems/electrical/bus/dcR");
-		if (dcR <= 15) {
-			setprop("systems/electrical/outputs/efis", 0);
-		}
 	}
 	
 	# Right bus yes?
 	if (extpwr_on and extR) {
 		setprop("/systems/electrical/bus/dcR", 28);
 		setprop("/systems/electrical/bus/acR", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else if (rpmapu >= 99 and apuR) {
 		setprop("/systems/electrical/bus/dcR", 28);
 		setprop("/systems/electrical/bus/acR", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else if (stateR == 3 and engR) {
 		setprop("/systems/electrical/bus/dcR", 28);
 		setprop("/systems/electrical/bus/acR", 115);
-		setprop("systems/electrical/outputs/efis", 25);	
 	} else {
 		setprop("/systems/electrical/bus/dcR", 0);
 		setprop("/systems/electrical/bus/acR", 0);
-		var dcL = getprop("/systems/electrical/bus/dcL");
-		if (dcL <= 15) {
-			setprop("systems/electrical/outputs/efis", 0);
-		}
 	}
 
 }
+
+setlistener("/systems/electrical/bus/dcL", func {
+	var dcL = getprop("/systems/electrical/bus/dcL");
+	if (dcL >= 15) {
+        setprop("systems/electrical/outputs/adf", 28);
+        setprop("systems/electrical/outputs/audio-panel", 28);
+        setprop("systems/electrical/outputs/audio-panel[1]", 28);
+        setprop("systems/electrical/outputs/autopilot", 28);
+        setprop("systems/electrical/outputs/avionics-fan", 28);
+        setprop("systems/electrical/outputs/beacon", 28);
+        setprop("systems/electrical/outputs/bus", 28);
+        setprop("systems/electrical/outputs/cabin-lights", 28);
+        setprop("systems/electrical/outputs/dme", 28);
+        setprop("systems/electrical/outputs/efis", 28);
+        setprop("systems/electrical/outputs/flaps", 28);
+        setprop("systems/electrical/outputs/fuel-pump", 28);
+        setprop("systems/electrical/outputs/fuel-pump[1]", 28);
+        setprop("systems/electrical/outputs/gps", 28);
+        setprop("systems/electrical/outputs/gps-mfd", 28);
+        setprop("systems/electrical/outputs/hsi", 28);
+        setprop("systems/electrical/outputs/instr-ignition-switch", 28);
+        setprop("systems/electrical/outputs/instrument-lights", 28);
+        setprop("systems/electrical/outputs/landing-lights", 28);
+        setprop("systems/electrical/outputs/map-lights", 28);
+        setprop("systems/electrical/outputs/mk-viii", 28);
+        setprop("systems/electrical/outputs/nav", 28);
+        setprop("systems/electrical/outputs/nav[1]", 28);
+        setprop("systems/electrical/outputs/pitot-head", 28);
+        setprop("systems/electrical/outputs/stobe-lights", 28);
+        setprop("systems/electrical/outputs/tacan", 28);
+        setprop("systems/electrical/outputs/taxi-lights", 28);
+        setprop("systems/electrical/outputs/transponder", 28);
+        setprop("systems/electrical/outputs/turn-coordinator", 28);
+	} else {
+        setprop("systems/electrical/outputs/adf", 0);
+        setprop("systems/electrical/outputs/audio-panel", 0);
+        setprop("systems/electrical/outputs/audio-panel[1]", 0);
+        setprop("systems/electrical/outputs/autopilot", 0);
+        setprop("systems/electrical/outputs/avionics-fan", 0);
+        setprop("systems/electrical/outputs/beacon", 0);
+        setprop("systems/electrical/outputs/bus", 0);
+        setprop("systems/electrical/outputs/cabin-lights", 0);
+        setprop("systems/electrical/outputs/dme", 0);
+        setprop("systems/electrical/outputs/efis", 0);
+        setprop("systems/electrical/outputs/flaps", 0);
+        setprop("systems/electrical/outputs/fuel-pump", 0);
+        setprop("systems/electrical/outputs/fuel-pump[1]", 0);
+        setprop("systems/electrical/outputs/gps", 0);
+        setprop("systems/electrical/outputs/gps-mfd", 0);
+        setprop("systems/electrical/outputs/hsi", 0);
+        setprop("systems/electrical/outputs/instr-ignition-switch", 0);
+        setprop("systems/electrical/outputs/instrument-lights", 0);
+        setprop("systems/electrical/outputs/landing-lights", 0);
+        setprop("systems/electrical/outputs/map-lights", 0);
+        setprop("systems/electrical/outputs/mk-viii", 0);
+        setprop("systems/electrical/outputs/nav", 0);
+        setprop("systems/electrical/outputs/nav[1]", 0);
+        setprop("systems/electrical/outputs/pitot-head", 0);
+        setprop("systems/electrical/outputs/stobe-lights", 0);
+        setprop("systems/electrical/outputs/tacan", 0);
+        setprop("systems/electrical/outputs/taxi-lights", 0);
+        setprop("systems/electrical/outputs/transponder", 0);
+        setprop("systems/electrical/outputs/turn-coordinator", 0);
+	}
+});
+
 
 setlistener("/controls/electrical/battery", func {
 	var batt = getprop("/controls/electrical/battery");
