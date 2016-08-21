@@ -35,12 +35,11 @@ AoA really should be 3 degrees, but 4 works better for the FDM solution.
 
 <!-- Cruise configuration -->
 <!--
-I use a throttle value of 0.9 based on the 90% maximum continuous setting of the JT8D-217.
 Speed is based on max Mach at FL350 of 0.82.
 -->
 <cruise speed="482" alt="35000" fuel="0.59">
-  <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.9"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.9"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.86"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.86"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/flight/slats" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
