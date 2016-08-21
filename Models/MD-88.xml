@@ -29,8 +29,9 @@ in some cases based on observable cases in photos.
 
 <path>mesh_airframe.ac</path>
 
- <model>
-  <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+ <!-- Tyre Smoke -->
+<model>
+  <path>Aircraft/MD-88/Models/Effects/tyre-smoke-nose.xml</path>
   <name>tyre-smoke-n</name>
   <offsets>
    <x-m>2.40</x-m>
@@ -40,8 +41,8 @@ in some cases based on observable cases in photos.
  </model>
  
  <model>
-  <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
-  <name>tyre-smoke-p</name>
+  <path>Aircraft/MD-88/Models/Effects/tyre-smoke-left.xml</path>
+  <name>tyre-smoke-l</name>
   <offsets>
    <x-m>24.36</x-m>
    <y-m>-2.57</y-m>
@@ -50,14 +51,33 @@ in some cases based on observable cases in photos.
  </model>
  
  <model>
-  <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
-  <name>tyre-smoke-s</name>
+  <path>Aircraft/MD-88/Models/Effects/tyre-smoke-right.xml</path>
+  <name>tyre-smoke-r</name>
   <offsets>
    <x-m>24.36</x-m>
    <y-m>2.57</y-m>
    <z-m>-2.436</z-m>
   </offsets>
  </model>
+
+<!-- Contrails -->
+	<model>
+		<path>Aircraft/MD-88/Models/Effects/Contrail/contrail.xml</path>
+		<offsets>
+			<x-m>37.746</x-m>
+			<y-m>-2.795</y-m>
+			<z-m>0.982</z-m>
+		</offsets>
+	</model>
+	
+<model>
+		<path>Aircraft/MD-88/Models/Effects/Contrail/contrail.xml</path>
+		<offsets>
+			<x-m>37.146</x-m>
+			<y-m>2.915</y-m>
+			<z-m>0.982</z-m>
+		</offsets>
+	</model>
 
 <!-- Fuel Truck -->
 
