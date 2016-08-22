@@ -16,11 +16,12 @@ McDonnell Douglas MD-88
   <object-name>rmi</object-name>
   <object-name>eadi</object-name>
   <object-name>alt</object-name>
+  <object-name>stbyalt</object-name>
   <object-name>altbezel</object-name>
   <object-name>asi</object-name>
   <object-name>vsi</object-name>
   <object-name>ND_L</object-name>
-  <object-name>ai</object-name>
+  <object-name>stbyai</object-name>
   <object-name>gear_indicators</object-name>
   <object-name>flaps</object-name>
   <object-name>marker_beacons</object-name>
@@ -255,7 +256,7 @@ McDonnell Douglas MD-88
 <!-- Center Panel -->
 
 <model>
-  <name>ai</name>
+  <name>stbyai</name>
   <path>Aircraft/MD-88/Models/Instruments/ai.xml</path>
   <offsets>
     <x-m>2.216</x-m>
@@ -277,7 +278,7 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
-  <name>alt</name>
+  <name>stbyalt</name>
   <path>Aircraft/MD-88/Models/Instruments/stbyalt.xml</path>
   <offsets>
     <x-m>2.238</x-m>
