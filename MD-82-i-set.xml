@@ -466,7 +466,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <file>Aircraft/MD-88/Nasal/MD-88_abs.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_engines.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_instrumentation_drivers.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88.nas</file>
+    <file>Aircraft/MD-88/Nasal/MD-82.nas</file>
     <file>Aircraft/MD-88/Nasal/ground-services.nas</file>
     <file>Aircraft/MD-88/Nasal/tyresmoke.nas</file>
 	<file>Aircraft/MD-88/Models/Instruments/ND/ND.nas</file>

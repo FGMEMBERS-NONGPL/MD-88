@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-McDonnell Douglas MD-88
+McDonnell Douglas MD-82
 -->
 
 
@@ -67,6 +67,10 @@ McDonnell Douglas MD-88
   <object-name>apindicator_R</object-name> 
   <object-name>enginepanel</object-name> 
   <object-name>enginepanel2</object-name> 
+  <object-name>att</object-name>
+  <object-name>hsi</object-name>
+  <object-name>att_R</object-name>
+  <object-name>hsi_R</object-name>
 </animation>
 
 <animation>

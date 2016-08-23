@@ -314,6 +314,10 @@ For Manual Engine Start, see the checlists in the Help Menu.
   </locks>
 </autopilot>
 
+<options>
+  <retrofit type="bool">false</retrofit>
+</options>
+
 <!--
 These n1/n2 values are used in place of FDM values in order to simulate engine
 startup/shutdown procedures. During normal engine operation, FDM values are mapped
