@@ -234,7 +234,7 @@ setlistener("controls/engines/engine[1]/throttle", func {
 });
 
 var eng_magicstartup = func {
-  setprop("/controls/electrical/battery",1);
+  setprop("/controls/electrical/battery", 1);
   sw_ign.setValue(1);
   setprop("/controls/switches/pumpLaft",1);
   setprop("/controls/switches/pumpLfwd",1);
@@ -256,9 +256,11 @@ var eng_magicstartup = func {
   settimer(eng1_run_loop, ENG_RUN_UPDATE);
   setprop("/engines/engine/oil-pressure", 46);
   setprop("/engines/engine[1]/oil-pressure", 49);
+  setprop("/controls/electrical/galley", 1);
 }
 
 var eng_magicshutdown = func {
+  setprop("/controls/electrical/galley", 0);
   setprop("/engines/engine/oil-pressure", 0);
   setprop("/engines/engine[1]/oil-pressure", 0);
   setprop("/engines/engine[0]/state",4);
@@ -275,7 +277,7 @@ var eng_magicshutdown = func {
   setprop("/engines/engine[1]/out-of-fuel",0);
   setprop("/controls/fuel/xfeed",0);
   sw_ign.setValue(0);
-  setprop("/controls/electrical/battery",0);
+  setprop("/controls/electrical/battery", 0);
 }
 
 var eng_more0 = func {

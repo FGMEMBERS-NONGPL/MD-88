@@ -74,6 +74,275 @@ Gary R. Neely 'Buckaroo', Nov 2010
   </emission>
 </animation>
 
+<!-- Lower Electrical Panel -->
+
+<animation>
+  <type>select</type>
+  <object-name>apupwravailon</object-name>
+  <condition>
+	<greater-than>
+	  <property>/systems/apu/rpm</property>
+	  <value>95</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>apulbus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/apu/Lsw</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>apulbus</object-name>
+  <property>/controls/electrical/apu/Lsw</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.91</x-m>
+    <y-m>0</y-m>
+    <z-m>1.595</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>apurbus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/apu/Rsw</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>apurbus</object-name>
+  <property>/controls/electrical/apu/Rsw</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.91</x-m>
+    <y-m>0</y-m>
+    <z-m>1.595</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>extpwravailon</object-name>
+  <condition>
+	<equals>
+	  <property>/controls/switches/cart</property>
+	  <value>1</value>
+	</equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>extlbus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/ext/Lsw</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>extlbus</object-name>
+  <property>/controls/electrical/ext/Lsw</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.872</x-m>
+    <y-m>0</y-m>
+    <z-m>1.575</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>extrbus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/ext/Rsw</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>extrbus</object-name>
+  <property>/controls/electrical/ext/Rsw</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.872</x-m>
+    <y-m>0</y-m>
+    <z-m>1.575</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>galleybus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/galley</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>galleybus</object-name>
+  <property>/controls/electrical/galley</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.852</x-m>
+    <y-m>0</y-m>
+    <z-m>1.565</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>acxtie</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/xtie/acxtie</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>acxtie</object-name>
+  <property>/controls/electrical/xtie/acxtie</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.84</x-m>
+    <y-m>0</y-m>
+    <z-m>1.558</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>dcxtie</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/controls/electrical/xtie/dcxtie</property>
+	  <value>0</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>dcxtie</object-name>
+  <property>/controls/electrical/xtie/dcxtie</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>50</dep></entry>
+    <entry><ind>1</ind><dep> 0</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.81</x-m>
+    <y-m>0</y-m>
+    <z-m>1.544</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
 <!-- Emergency Power Stuff -->
 
 <animation>

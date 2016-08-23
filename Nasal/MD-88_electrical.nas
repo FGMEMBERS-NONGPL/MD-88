@@ -26,6 +26,10 @@ var elec_init = func {
 	setprop("/controls/electrical/ext/Lsw", 0);
 	setprop("/controls/electrical/ext/Rsw", 0);
 	setprop("/controls/electrical/emerpwr", 0);
+	var acxtie = setprop("/controls/electrical/xtie/acxtie", 1);
+	var dcxtie = setprop("/controls/electrical/xtie/dcxtie", 0);
+	var xtieL = setprop("/controls/electrical/xtie/xtieL", 0);
+	var xtieR = setprop("/controls/electrical/xtie/xtieR", 0);
 	setprop("/controls/electrical/apu/Lsw", 0);
 	setprop("/controls/electrical/apu/Rsw", 0);
 	setprop("/controls/electrical/eng/Lsw", 1);
@@ -73,6 +77,10 @@ var master_elec = func {
 	var extL = getprop("/controls/electrical/ext/Lsw");
 	var extR = getprop("/controls/electrical/ext/Rsw");
 	var emerpwr_on = getprop("/controls/electrical/emerpwr");
+	var acxtie = getprop("/controls/electrical/xtie/acxtie");
+	var dcxtie = getprop("/controls/electrical/xtie/dcxtie");
+	var xtieL = getprop("/controls/electrical/xtie/xtieL");
+	var xtieR = getprop("/controls/electrical/xtie/xtieR");
 	var rpmapu = getprop("/systems/apu/rpm");
 	var apuL = getprop("/controls/electrical/apu/Lsw");
 	var apuR = getprop("/controls/electrical/apu/Rsw");
@@ -87,39 +95,84 @@ var master_elec = func {
 	var Lgen = getprop("/systems/electrical/bus/genL");
 	var Rgen = getprop("/systems/electrical/bus/genR");
 	
-	# Left bus yes?
+	# Left cross tie yes?
+	if (extpwr_on and extL) {
+		setprop("/controls/electrical/xtie/xtieR", 1);
+	} else if (rpmapu >= 99 and apuL) {
+		setprop("/controls/electrical/xtie/xtieR", 1);
+	} else if (stateL == 3 and engL) {
+		setprop("/controls/electrical/xtie/xtieR", 1);
+	} else {
+		setprop("/controls/electrical/xtie/xtieR", 0);
+	}
+	
+	# Right cross tie yes?
+	if (extpwr_on and extR) {
+		setprop("/controls/electrical/xtie/xtieL", 1);
+	} else if (rpmapu >= 99 and apuR) {
+		setprop("/controls/electrical/xtie/xtieL", 1);
+	} else if (stateR == 3 and engR) {
+		setprop("/controls/electrical/xtie/xtieL", 1);
+	} else {
+		setprop("/controls/electrical/xtie/xtieL", 0);
+	}
+	
+	
+	# Left DC bus yes?
 	if (extpwr_on and extL) {
 		setprop("/systems/electrical/bus/dcL", 28);
-		setprop("/systems/electrical/bus/acL", 115);
 	} else if (emerpwr_on) {
 		setprop("/systems/electrical/bus/dcL", 28);
-		setprop("/systems/electrical/bus/acL", 115);
 	} else if (rpmapu >= 99 and apuL) {
 		setprop("/systems/electrical/bus/dcL", 28);
-		setprop("/systems/electrical/bus/acL", 115);
 	} else if (stateL == 3 and engL) {
 		setprop("/systems/electrical/bus/dcL", 28);
-		setprop("/systems/electrical/bus/acL", 115);
+	} else if (xtieL == 1 and dcxtie == 1) {
+		setprop("/systems/electrical/bus/dcL", 28);
 	} else {
 		setprop("/systems/electrical/bus/dcL", 0);
+	}
+	
+	# Right DC bus yes?
+	if (extpwr_on and extR) {
+		setprop("/systems/electrical/bus/dcR", 28);
+	} else if (rpmapu >= 99 and apuR) {
+		setprop("/systems/electrical/bus/dcR", 28);
+	} else if (stateR == 3 and engR) {
+		setprop("/systems/electrical/bus/dcR", 28);
+	} else if (xtieR == 1 and dcxtie == 1) {
+		setprop("/systems/electrical/bus/dcR", 28);
+	} else {
+		setprop("/systems/electrical/bus/dcR", 0);
+	}
+	
+	# Left AC bus yes?
+	if (extpwr_on and extL) {
+		setprop("/systems/electrical/bus/acL", 115);
+	} else if (emerpwr_on) {
+		setprop("/systems/electrical/bus/acL", 115);
+	} else if (rpmapu >= 99 and apuL) {
+		setprop("/systems/electrical/bus/acL", 115);
+	} else if (stateL == 3 and engL) {
+		setprop("/systems/electrical/bus/acL", 115);
+	} else if (xtieL == 1 and acxtie == 1) {
+		setprop("/systems/electrical/bus/acL", 115);
+	} else {
 		setprop("/systems/electrical/bus/acL", 0);
 	}
 	
-	# Right bus yes?
+	# Right AC bus yes?
 	if (extpwr_on and extR) {
-		setprop("/systems/electrical/bus/dcR", 28);
 		setprop("/systems/electrical/bus/acR", 115);
 	} else if (rpmapu >= 99 and apuR) {
-		setprop("/systems/electrical/bus/dcR", 28);
 		setprop("/systems/electrical/bus/acR", 115);
 	} else if (stateR == 3 and engR) {
-		setprop("/systems/electrical/bus/dcR", 28);
+		setprop("/systems/electrical/bus/acR", 115);
+	} else if (xtieR == 1 and acxtie == 1) {
 		setprop("/systems/electrical/bus/acR", 115);
 	} else {
-		setprop("/systems/electrical/bus/dcR", 0);
 		setprop("/systems/electrical/bus/acR", 0);
 	}
-
 }
 
 setlistener("/systems/electrical/bus/dcL", func {
@@ -184,6 +237,20 @@ setlistener("/systems/electrical/bus/dcL", func {
         setprop("systems/electrical/outputs/taxi-lights", 0);
         setprop("systems/electrical/outputs/transponder", 0);
         setprop("systems/electrical/outputs/turn-coordinator", 0);
+	}
+});
+
+setlistener("/systems/electrical/bus/acR", func {
+	var acR = getprop("/systems/electrical/bus/acR");
+	var galley = getprop("/controls/electrical/galley");
+	if (acR >= 100) {
+		if (galley == 1) {
+			setprop("systems/electrical/bus/galley", 115);
+		} else if (galley == 0) {
+			setprop("systems/electrical/bus/galley", 0);
+		}
+	} else {
+		setprop("systems/electrical/bus/galley", 0);
 	}
 });
 
