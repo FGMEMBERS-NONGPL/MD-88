@@ -26,10 +26,11 @@ var elec_init = func {
 	setprop("/controls/electrical/ext/Lsw", 0);
 	setprop("/controls/electrical/ext/Rsw", 0);
 	setprop("/controls/electrical/emerpwr", 0);
-	var acxtie = setprop("/controls/electrical/xtie/acxtie", 1);
-	var dcxtie = setprop("/controls/electrical/xtie/dcxtie", 0);
-	var xtieL = setprop("/controls/electrical/xtie/xtieL", 0);
-	var xtieR = setprop("/controls/electrical/xtie/xtieR", 0);
+	setprop("/controls/electrical/galley", 0);
+	setprop("/controls/electrical/xtie/acxtie", 1);
+	setprop("/controls/electrical/xtie/dcxtie", 0);
+	setprop("/controls/electrical/xtie/xtieL", 0);
+	setprop("/controls/electrical/xtie/xtieR", 0);
 	setprop("/controls/electrical/apu/Lsw", 0);
 	setprop("/controls/electrical/apu/Rsw", 0);
 	setprop("/controls/electrical/eng/Lsw", 1);
@@ -94,6 +95,7 @@ var master_elec = func {
 	var acbusR = getprop("/systems/electrical/bus/acR");
 	var Lgen = getprop("/systems/electrical/bus/genL");
 	var Rgen = getprop("/systems/electrical/bus/genR");
+	var galley = getprop("/controls/electrical/galley");
 	
 	# Left cross tie yes?
 	if (extpwr_on and extL) {
