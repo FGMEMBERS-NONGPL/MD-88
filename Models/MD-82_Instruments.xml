@@ -252,6 +252,28 @@ McDonnell Douglas MD-88
   </offsets>
 </model>
 
+<model>
+  <name>altbezel</name>
+  <path>Aircraft/MD-88/Models/Instruments/altimeter2.xml</path>
+  <offsets>
+	<x-m>2.250</x-m>
+    <y-m>-0.286</y-m>
+    <z-m>0.7635</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>stbyalt</name>
+  <path>Aircraft/MD-88/Models/Instruments/stbyalt.xml</path>
+  <offsets>
+	<x-m>2.250</x-m>
+    <y-m>-0.286</y-m>
+    <z-m>0.7635</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
 
 <!-- Center Panel -->
 
@@ -265,28 +287,6 @@ McDonnell Douglas MD-88
     <pitch-deg>-12</pitch-deg>
   </offsets>
 </model>
-
-<!--model>
-  <name>altbezel</name>
-  <path>Aircraft/MD-88/Models/Instruments/altimeter2.xml</path>
-  <offsets>
-    <x-m>2.238</x-m>
-    <y-m>-0.189</y-m>
-    <z-m>0.815</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>stbyalt</name>
-  <path>Aircraft/MD-88/Models/Instruments/stbyalt.xml</path>
-  <offsets>
-    <x-m>2.238</x-m>
-    <y-m>-0.189</y-m>
-    <z-m>0.815</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model-->
 
 <model>
   <name>revthrust_indicators</name>
