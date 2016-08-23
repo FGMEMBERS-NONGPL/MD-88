@@ -437,6 +437,27 @@ McDonnell Douglas MD-88
 </model>
 
 <model>
+  <name>otL</name>
+  <path>Aircraft/MD-88/Models/Instruments/otL.xml</path>
+  <offsets>
+    <x-m>2.221</x-m>
+    <y-m>0.125</y-m>
+    <z-m>0.899</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+<model>
+  <name>otR</name>
+  <path>Aircraft/MD-88/Models/Instruments/otR.xml</path>
+  <offsets>
+    <x-m>2.221</x-m>
+    <y-m>0.185</y-m>
+    <z-m>0.899</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
   <name>ft</name>
   <path>Aircraft/MD-88/Models/Instruments/ft.xml</path>
   <offsets>

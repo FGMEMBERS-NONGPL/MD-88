@@ -109,5 +109,41 @@
         </input>
 		<output>/engines/engine[1]/oil-pressure</output>
     </filter>
+	
+    <filter>
+        <name>Oil Temp L</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/egt-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>320</ind><dep>63</dep></entry>
+                    <entry><ind>665</ind><dep>97</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/oil-temp</output>
+    </filter>
+	
+    <filter>
+        <name>Oil Temp R</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/egt-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>320</ind><dep>63</dep></entry>
+                    <entry><ind>665</ind><dep>97</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/oil-temp</output>
+    </filter>
 
 </PropertyList>

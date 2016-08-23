@@ -219,6 +219,59 @@
   </axis>
 </animation>
 
+<!-- Oil Pressure -->
+<animation>
+  <type>textranslate</type>
+  <object-name>OilTempL1</object-name>
+  <property>/engines/engine[0]/oil-temp</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilTempL2</object-name>
+  <property>/engines/engine[0]/oil-temp</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilTempR1</object-name>
+  <property>/engines/engine[1]/oil-temp</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilTempR2</object-name>
+  <property>/engines/engine[1]/oil-temp</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
 <!-- Flaps -->
 <animation>
   <type>translate</type>
