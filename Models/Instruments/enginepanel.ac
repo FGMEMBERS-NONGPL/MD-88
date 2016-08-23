@@ -4,7 +4,7 @@ MATERIAL "buttonlights" rgb 0 0.501961 0  amb 0 0.501961 0  emis 0 0.501961 0  s
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 55
+kids 49
 OBJECT poly
 name "EPRLIM3"
 loc 0.00219859 0.10071 -0.0107547
@@ -286,69 +286,6 @@ refs 4
 kids 0
 OBJECT poly
 name "FFR1"
-loc 0.00219859 -0.118946 -0.0221826
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.00974808 0.000933941
-0 0.0168313 0.000933941
-0 0.00974808 0.00624628
-0 0.0168313 0.00624628
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-2 0.914898 0.0105589
-0 0.98386 0.0105589
-1 0.98386 0.102508
-3 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFR2"
-loc 0.00219859 -0.118946 -0.0274469
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.0168313 0.00624628
-0 0.00974808 0.00624628
-0 0.0168313 0.00093394
-0 0.00974808 0.00093394
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-1 0.914898 0.0105589
-3 0.98386 0.0105589
-2 0.98386 0.102508
-0 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFR3"
-loc 0.00219859 -0.118946 -0.0328622
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.00974808 0.000933938
-0 0.0168313 0.000933938
-0 0.00974808 0.00624628
-0 0.0168313 0.00624628
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-2 0.914898 0.0105589
-0 0.98386 0.0105589
-1 0.98386 0.102508
-3 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFR4"
 loc 0.00219859 -0.118946 -0.0382775
 data 8
 Mesh.005
@@ -369,7 +306,7 @@ refs 4
 0 0.914898 0.102508
 kids 0
 OBJECT poly
-name "FFR5"
+name "FFR2"
 loc 0.00219859 -0.118946 -0.0436929
 data 8
 Mesh.005
@@ -391,69 +328,6 @@ refs 4
 kids 0
 OBJECT poly
 name "FFL1"
-loc 0.00219859 -0.118946 0.0353367
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.0168313 0.00624628
-0 0.00974808 0.00624628
-0 0.0168313 0.000933941
-0 0.00974808 0.000933941
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-1 0.914898 0.0105589
-3 0.98386 0.0105589
-2 0.98386 0.102508
-0 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFL2"
-loc 0.00219859 -0.118946 0.0300723
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.00974808 0.00093394
-0 0.0168313 0.00093394
-0 0.00974808 0.00624628
-0 0.0168313 0.00624628
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-2 0.914898 0.0105589
-0 0.98386 0.0105589
-1 0.98386 0.102508
-3 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFL3"
-loc 0.00219859 -0.118946 0.024808
-data 8
-Mesh.005
-texture "digitengine.png"
-crease 30.000000
-numvert 4
-0 0.0168313 0.00624628
-0 0.00974808 0.00624628
-0 0.0168313 0.00093394
-0 0.00974808 0.00093394
-numsurf 1
-SURF 0x10
-mat 3
-refs 4
-1 0.914898 0.0105589
-3 0.98386 0.0105589
-2 0.98386 0.102508
-0 0.914898 0.102508
-kids 0
-OBJECT poly
-name "FFL4"
 loc 0.00219859 -0.118946 0.0195436
 data 8
 Mesh.005
@@ -474,7 +348,7 @@ refs 4
 3 0.914898 0.102508
 kids 0
 OBJECT poly
-name "FFL5"
+name "FFL2"
 loc 0.00219859 -0.118946 0.0142793
 data 8
 Mesh.005

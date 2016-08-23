@@ -19,10 +19,10 @@
 <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/engines/engine[1]/fuel-flow-pph</property>
+  <property>/engines/engine[1]/fuel-flow-actual</property>
   <interpolation>
-    <entry><ind>    0</ind><dep>  0</dep></entry>
-    <entry><ind>16000</ind><dep>288</dep></entry>
+    <entry><ind> 0</ind><dep>  0</dep></entry>
+    <entry><ind>16</ind><dep>288</dep></entry>
   </interpolation>
   <axis>
     <x>-1</x>

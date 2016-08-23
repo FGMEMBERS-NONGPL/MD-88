@@ -28,7 +28,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[0]/egt-degf</property> 
+                    <property>/engines/engine[1]/egt-degf</property> 
                     <entry><ind>0</ind><dep>0</dep></entry>
                     <entry><ind>65</ind><dep>320</dep></entry>
                     <entry><ind>725</ind><dep>665</dep></entry>
@@ -36,6 +36,42 @@
             </expression>
         </input>
 		<output>/engines/engine[1]/egt-actual</output>
+    </filter>
+	
+    <filter>
+        <name>FF L</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/fuel-flow-pph</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>0.1</ind><dep>2</dep></entry>
+                    <entry><ind>12000</ind><dep>12</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/fuel-flow-actual</output>
+    </filter>
+	
+    <filter>
+        <name>FF R</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/fuel-flow-pph</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>0.1</ind><dep>2</dep></entry>
+                    <entry><ind>12000</ind><dep>12</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/fuel-flow-actual</output>
     </filter>
 
     <filter>
