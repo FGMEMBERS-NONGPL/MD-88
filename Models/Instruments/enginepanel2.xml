@@ -170,7 +170,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>OilPressL1</object-name>
-  <property>/engines/engine[0]/oil-pressure-filtered</property>
+  <property>/engines/engine[0]/oil-pressure</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -183,7 +183,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>OilPressL2</object-name>
-  <property>/engines/engine[0]/oil-pressure-filtered</property>
+  <property>/engines/engine[0]/oil-pressure</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -196,7 +196,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>OilPressR1</object-name>
-  <property>/engines/engine[1]/oil-pressure-filtered</property>
+  <property>/engines/engine[1]/oil-pressure</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -209,7 +209,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>OilPressR2</object-name>
-  <property>/engines/engine[1]/oil-pressure-filtered</property>
+  <property>/engines/engine[1]/oil-pressure</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>

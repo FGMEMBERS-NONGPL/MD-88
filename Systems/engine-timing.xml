@@ -2,30 +2,76 @@
 
 <PropertyList>
 
-	<filter>
-		<name>Engine L Oil Pressure Filter</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<input>
-			<property>/engines/engine[0]/oil-pressure</property>
-		</input>
-		<output>/engines/engine[0]/oil-pressure-filtered</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>2</max-rate-of-change>
-	</filter>
+    <filter>
+        <name>EGT L</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/egt-degf</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>65</ind><dep>320</dep></entry>
+                    <entry><ind>725</ind><dep>665</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/egt-actual</output>
+    </filter>
 	
-	<filter>
-		<name>Engine R Oil Pressure Filter</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<input>
-			<property>/engines/engine[1]/oil-pressure</property>
-		</input>
-		<output>/engines/engine[1]/oil-pressure-filtered</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>2</max-rate-of-change>
-	</filter>
+    <filter>
+        <name>EGT R</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/egt-degf</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>65</ind><dep>320</dep></entry>
+                    <entry><ind>725</ind><dep>665</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/egt-actual</output>
+    </filter>
+
+    <filter>
+        <name>Oil Pressure L</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>20</ind><dep>42</dep></entry>
+                    <entry><ind>105</ind><dep>53</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/oil-pressure</output>
+    </filter>
+	
+    <filter>
+        <name>Oil Pressure R</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/n1-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>20</ind><dep>42</dep></entry>
+                    <entry><ind>105</ind><dep>53</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/oil-pressure</output>
+    </filter>
 
 </PropertyList>

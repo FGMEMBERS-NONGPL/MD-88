@@ -326,7 +326,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTL1</object-name>
-  <property>/engines/engine[0]/egt-degf</property>
+  <property>/engines/engine[0]/egt-actual</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -339,7 +339,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTL2</object-name>
-  <property>/engines/engine[0]/egt-degf</property>
+  <property>/engines/engine[0]/egt-actual</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -352,7 +352,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTL3</object-name>
-  <property>/engines/engine[0]/egt-degf</property>
+  <property>/engines/engine[0]/egt-actual</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -365,7 +365,7 @@
 <animation>
   <type>rotate</type>
   <object-name>EGTLNeedle</object-name>
-  <property>/engines/engine[0]/egt-degf</property>
+  <property>/engines/engine[0]/egt-actual</property>
   <interpolation>
     <entry><ind>  0</ind><dep>  0</dep></entry>
     <entry><ind>900</ind><dep>240</dep></entry>
@@ -674,7 +674,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTR1</object-name>
-  <property>/engines/engine[1]/egt-degf</property>
+  <property>/engines/engine[1]/egt-actual</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -687,7 +687,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTR2</object-name>
-  <property>/engines/engine[1]/egt-degf</property>
+  <property>/engines/engine[1]/egt-actual</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -700,7 +700,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EGTR3</object-name>
-  <property>/engines/engine[1]/egt-degf</property>
+  <property>/engines/engine[1]/egt-actual</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -713,7 +713,7 @@
 <animation>
   <type>rotate</type>
   <object-name>EGTRNeedle</object-name>
-  <property>/engines/engine[1]/egt-degf</property>
+  <property>/engines/engine[1]/egt-actual</property>
   <interpolation>
     <entry><ind>  0</ind><dep>  0</dep></entry>
     <entry><ind>900</ind><dep>240</dep></entry>

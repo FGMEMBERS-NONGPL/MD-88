@@ -221,17 +221,7 @@ var eng1_shutdown_monitor = func {
 									# On any control change, update FDM throttle.
 
 var throttle0		= props.globals.getNode("controls/engines/engine[0]/throttle");
-var throttle0_fdm	= props.globals.getNode("controls/engines/engine[0]/throttle-fdm");
 var throttle1		= props.globals.getNode("controls/engines/engine[1]/throttle");
-var throttle1_fdm	= props.globals.getNode("controls/engines/engine[1]/throttle-fdm");
-
-
-setlistener("controls/engines/engine[0]/throttle", func {
-  throttle0_fdm.setValue(throttle0.getValue()*0.93+0.07);
-});
-setlistener("controls/engines/engine[1]/throttle", func {
-  throttle1_fdm.setValue(throttle1.getValue()*0.93+0.07);
-});
 
 var eng_magicstartup = func {
   setprop("/controls/electrical/battery", 1);
@@ -254,15 +244,11 @@ var eng_magicstartup = func {
   setprop("/controls/fuel/xfeed",0);
   settimer(eng0_run_loop, ENG_RUN_UPDATE);
   settimer(eng1_run_loop, ENG_RUN_UPDATE);
-  setprop("/engines/engine/oil-pressure", 46);
-  setprop("/engines/engine[1]/oil-pressure", 49);
   setprop("/controls/electrical/galley", 1);
 }
 
 var eng_magicshutdown = func {
   setprop("/controls/electrical/galley", 0);
-  setprop("/engines/engine/oil-pressure", 0);
-  setprop("/engines/engine[1]/oil-pressure", 0);
   setprop("/engines/engine[0]/state",4);
   setprop("/engines/engine[1]/state",4);
   setprop("/controls/engines/engine[0]/cutoff",1);
