@@ -315,7 +315,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 </autopilot>
 
 <options>
-  <retrofit type="bool">false</retrofit>
+  <retrofit type="bool">true</retrofit>
 </options>
 
 <!--
