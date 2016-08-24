@@ -272,6 +272,59 @@
   </axis>
 </animation>
 
+<!-- Oil Quantity -->
+<animation>
+  <type>textranslate</type>
+  <object-name>OilQTYL1</object-name>
+  <property>/engines/engine[0]/oil-q</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilQTYL2</object-name>
+  <property>/engines/engine[0]/oil-q</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilQTYR1</object-name>
+  <property>/engines/engine[1]/oil-q</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>OilQTYR2</object-name>
+  <property>/engines/engine[1]/oil-q</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
 <!-- Flaps -->
 <animation>
   <type>translate</type>

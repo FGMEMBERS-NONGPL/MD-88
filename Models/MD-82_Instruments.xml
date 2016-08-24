@@ -462,6 +462,27 @@ McDonnell Douglas MD-82
 </model>
 
 <model>
+  <name>oqL</name>
+  <path>Aircraft/MD-88/Models/Instruments/oqL.xml</path>
+  <offsets>
+    <x-m>2.233</x-m>
+    <y-m>0.125</y-m>
+    <z-m>0.841</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+<model>
+  <name>oqR</name>
+  <path>Aircraft/MD-88/Models/Instruments/oqR.xml</path>
+  <offsets>
+    <x-m>2.233</x-m>
+    <y-m>0.185</y-m>
+    <z-m>0.841</z-m>
+    <pitch-deg>-12</pitch-deg>
+  </offsets>
+</model>
+
+<model>
   <name>ft</name>
   <path>Aircraft/MD-88/Models/Instruments/ft.xml</path>
   <offsets>

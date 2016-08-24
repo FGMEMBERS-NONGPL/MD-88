@@ -84,6 +84,7 @@ var MD88_Savedata = func {
   aircraft.data.add("/controls/lighting/pfd-norm");		# Primary flight display lighting
   aircraft.data.add("/controls/lighting/nd-norm");		# Navigational display lighting
   aircraft.data.add("/controls/lighting/panel-norm");		# Standard instrument lighting
+  aircraft.data.add("/options/retrofit");	# Retrofit
 }
 
 
