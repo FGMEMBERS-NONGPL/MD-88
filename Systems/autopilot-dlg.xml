@@ -33,20 +33,31 @@
 		<layout>hbox</layout>
 		<button>
 			<legend>A/T</legend>
+            <pref-width>40</pref-width>
 			<binding>
 			<command>property-toggle</command>
 			<property>/it-autoflight/at_mastersw</property>
 			</binding>
 		</button>
 		<button>
-			<legend>AP</legend>
+			<legend>AP1</legend>
+            <pref-width>40</pref-width>
 			<binding>
 			<command>property-toggle</command>
 			<property>/it-autoflight/ap_mastersw</property>
 			</binding>
 		</button>
 		<button>
+			<legend>AP2</legend>
+            <pref-width>40</pref-width>
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/ap_mastersw2</property>
+			</binding>
+		</button>
+		<button>
 			<legend>FD</legend>
+            <pref-width>40</pref-width>
 			<binding>
 			<command>property-toggle</command>
 			<property>/it-autoflight/fd_mastersw</property>
@@ -66,10 +77,19 @@
 			</visible>
 		</text>
 		<text>
-			<label>[AP]</label>
+			<label>[AP1]</label>
 			<visible>
 				<equals>
 					<property>/it-autoflight/ap_master</property>
+					<value>1</value>
+				</equals>
+			</visible>
+		</text>
+		<text>
+			<label>[AP2]</label>
+			<visible>
+				<equals>
+					<property>/it-autoflight/ap_master2</property>
 					<value>1</value>
 				</equals>
 			</visible>

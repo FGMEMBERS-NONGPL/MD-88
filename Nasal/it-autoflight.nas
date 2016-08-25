@@ -45,13 +45,36 @@ var ap_init = func {
 setlistener("/it-autoflight/ap_mastersw", func {
   var apmas = getprop("/it-autoflight/ap_mastersw");
   if (apmas == 0) {
+	if (getprop("/it-autoflight/ap_master2") == 0) {
+		setprop("/it-autoflight/ap_enable", 0);
+	}
 	setprop("/it-autoflight/ap_master", 0);
 	if (getprop("/it-autoflight/enableapoffsound") == 1) {
 	  setprop("/it-autoflight/apoffsound", 1);	
 	  setprop("/it-autoflight/enableapoffsound", 0);	  
 	}
   } else if (apmas == 1) {
+	setprop("/it-autoflight/ap_enable", 1);
 	setprop("/it-autoflight/ap_master", 1);
+	setprop("/it-autoflight/enableapoffsound", 1);
+	setprop("/it-autoflight/apoffsound", 0);
+  }
+});
+
+setlistener("/it-autoflight/ap_mastersw2", func {
+  var apmas = getprop("/it-autoflight/ap_mastersw");
+  if (apmas == 0) {
+	if (getprop("/it-autoflight/ap_master") == 0) {
+		setprop("/it-autoflight/ap_enable", 0);
+	}
+	setprop("/it-autoflight/ap_master2", 0);
+	if (getprop("/it-autoflight/enableapoffsound") == 1) {
+	  setprop("/it-autoflight/apoffsound", 1);	
+	  setprop("/it-autoflight/enableapoffsound", 0);	  
+	}
+  } else if (apmas == 1) {
+	setprop("/it-autoflight/ap_enable", 1);
+	setprop("/it-autoflight/ap_master2", 1);
 	setprop("/it-autoflight/enableapoffsound", 1);
 	setprop("/it-autoflight/apoffsound", 0);
   }
