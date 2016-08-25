@@ -84,6 +84,17 @@
 
 <!-- Temperature Celcius -->
 <animation>
+  <type>select</type>
+  <object-name>Temp1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/environment/temperature-degc</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
   <type>textranslate</type>
   <object-name>Temp1</object-name>
   <property>/environment/temperature-degc</property>
@@ -111,6 +122,18 @@
 
 <!-- Fuel Temp -->
 <animation>
+  <type>select</type>
+  <object-name>FuelTempL1</object-name>
+  <condition>
+	<greater-than>
+	  <!--property>/systems/fuel/temperatureL</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
+	  <property>/environment/temperature-degc</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
   <type>textranslate</type>
   <object-name>FuelTempL1</object-name>
   <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
@@ -136,6 +159,18 @@
     <y>1</y>
     <z>0</z>
   </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FuelTempR1</object-name>
+  <condition>
+	<greater-than>
+	  <!--property>/systems/fuel/temperatureR</property--> <!-- Will be changed when I add the fuel system, and anti-ice system -->
+	  <property>/environment/temperature-degc</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
 </animation>
 
 <animation>
@@ -168,6 +203,17 @@
 
 <!-- Oil Pressure -->
 <animation>
+  <type>select</type>
+  <object-name>OilPressL1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[0]/oil-pressure</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
   <type>textranslate</type>
   <object-name>OilPressL1</object-name>
   <property>/engines/engine[0]/oil-pressure</property>
@@ -191,6 +237,17 @@
     <y>1</y>
     <z>0</z>
   </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>OilPressR1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[1]/oil-pressure</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
 </animation>
 
 <animation>
@@ -219,7 +276,18 @@
   </axis>
 </animation>
 
-<!-- Oil Pressure -->
+<!-- Oil Temperature -->
+<animation>
+  <type>select</type>
+  <object-name>OilTempL1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[0]/oil-temp</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
 <animation>
   <type>textranslate</type>
   <object-name>OilTempL1</object-name>
@@ -244,6 +312,17 @@
     <y>1</y>
     <z>0</z>
   </axis>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>OilTempR1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[1]/oil-temp</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
 </animation>
 
 <animation>
@@ -274,6 +353,17 @@
 
 <!-- Oil Quantity -->
 <animation>
+  <type>select</type>
+  <object-name>OilQTYL1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[0]/oil-q</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
   <type>textranslate</type>
   <object-name>OilQTYL1</object-name>
   <property>/engines/engine[0]/oil-q</property>
@@ -300,6 +390,17 @@
 </animation>
 
 <animation>
+  <type>select</type>
+  <object-name>OilQTYR1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/engines/engine[1]/oil-q</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
   <type>textranslate</type>
   <object-name>OilQTYR1</object-name>
   <property>/engines/engine[1]/oil-q</property>
@@ -323,6 +424,52 @@
     <y>1</y>
     <z>0</z>
   </axis>
+</animation>
+
+<!-- Hydraulic Pressure -->
+<animation>
+  <type>select</type>
+  <object-name>HydPressL1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/unused/value</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>HydPressR1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/unused/value</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<!-- Hydraulic Quantity -->
+<animation>
+  <type>select</type>
+  <object-name>HydQTYL1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/unused/value</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>HydQTYR1</object-name>
+  <condition>
+	<greater-than>
+	  <property>/unused/value</property>
+	  <value>10</value>
+	</greater-than>
+  </condition>
 </animation>
 
 <!-- Flaps -->
