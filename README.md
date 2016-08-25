@@ -16,6 +16,7 @@ See AUTHORS&COPYING.txt
 
 ## What's in the box?
 * MD-82
+* MD-87
 * MD-88
 
 ## Other MD-80s

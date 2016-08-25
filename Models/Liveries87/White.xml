@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">White</name>
+      <texture>MD-87/txt_fuselage.rgb</texture>
+    </livery>
+    <fairings>
+      <texture>MD-87/txt_fuselage_fairing.rgb</texture>
+    </fairings>
+    <rudders>
+      <texture>MD-87/txt_vstab_engines.rgb</texture>
+    </rudders>
+  </model>
+</sim>
+</PropertyList>
