@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-McDonnell Douglas MD-88
+McDonnell Douglas MD-87
 Gary R. Neely 'Buckaroo'
 
 Lighting control properties are passed over MP, therefore the animations
@@ -200,4 +200,3 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
 </animation>
 
 </PropertyList>
-
