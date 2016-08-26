@@ -303,6 +303,48 @@
   </action>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>FDSwitch2On</object-name>
+  <condition>
+    <property>/it-autoflight/fd_mastersw2</property>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>FDSwitch2On</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/fd_mastersw2</property>
+			<value>0</value>
+			</binding>
+  </action>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FDSwitch2Off</object-name>
+  <condition>
+    <not><property>/it-autoflight/fd_mastersw2</property></not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>FDSwitch2Off</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/fd_mastersw2</property>
+			<value>1</value>
+			</binding>
+  </action>
+</animation>
+
 <!--  AutoThrottle Knob (Speed selected) -->
 
 <animation>
@@ -470,7 +512,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD90.lights_beacon_toggle();</script>
+      <script>MD88.lights_beacon_toggle();</script>
     </binding>
   </action>
 </animation>
@@ -502,7 +544,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>MD90.lights_nav_toggle();</script>
+      <script>MD88.lights_nav_toggle();</script>
     </binding>
   </action>
 </animation>

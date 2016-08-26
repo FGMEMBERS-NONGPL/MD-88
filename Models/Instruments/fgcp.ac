@@ -75,7 +75,7 @@ refs 4
 6 0.284621 0.68076
 kids 0
 OBJECT poly
-name "FDSwitchOff"
+name "FDSwitch2Off"
 loc -0.00497341 0.419177 -0.17933
 data 8
 Cube.096
@@ -164,7 +164,7 @@ refs 4
 12 0.29014 0.80236
 kids 0
 OBJECT poly
-name "FDSwitchOn"
+name "FDSwitch2On"
 loc -0.00497341 0.419177 -0.17933
 data 8
 Cube.108

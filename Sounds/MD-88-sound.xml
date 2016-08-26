@@ -7,7 +7,10 @@
    <name>apoff</name>
    <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
    <condition>
-     <property>/it-autoflight/apoffsound</property>
+	  <or>
+		<property>/it-autoflight/apoffsound</property>
+		<property>/it-autoflight/apoffsound2</property>
+	  </or>
    </condition>
    <volume>
     <factor>10.0</factor>
