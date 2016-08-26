@@ -120,7 +120,7 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
   <type>flash</type>
   <object-name>GlowWingtipL</object-name>
   <center>
-   <x-m>27.550</x-m>
+   <x-m>29.950</x-m>
    <y-m>-16.055</y-m>
    <z-m>-0.050</z-m>
   </center>
@@ -141,7 +141,7 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
   <type>flash</type>
   <object-name>GlowWingtipR</object-name>
   <center>
-   <x-m>27.550</x-m>
+   <x-m>29.950</x-m>
    <y-m>16.055</y-m>
    <z-m>0.050</z-m>
   </center>
@@ -162,7 +162,7 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
   <type>flash</type>
   <object-name>GlowWingtipAftL</object-name>
   <center>
-   <x-m>28.954</x-m>
+   <x-m>31.354</x-m>
    <y-m>-16.364</y-m>
    <z-m>-0.042</z-m>
   </center>
@@ -182,7 +182,7 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
   <type>flash</type>
   <object-name>GlowWingtipAftR</object-name>
   <center>
-   <x-m>28.954</x-m>
+   <x-m>31.354</x-m>
    <y-m>16.364</y-m>
    <z-m>-0.042</z-m>
   </center>
