@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-    <!-- MD-88 Views, from Raptor in the FG Forum -->
+    <!-- MD-87 Views, from Raptor in the FG Forum -->
 
     <PropertyList>
 
@@ -16,7 +16,7 @@
           <y-offset-m archive="y" type="double">1.3</y-offset-m>
           <z-offset-m archive="y" type="double">8.5</z-offset-m>
           <pitch-offset-deg>-12</pitch-offset-deg>
-          <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">74.0</default-field-of-view-deg>
           <limits>
             <enabled type="bool">false</enabled>
           </limits>
@@ -74,7 +74,7 @@
           <from-model type="bool">true</from-model>
           <from-model-idx type="int">0</from-model-idx>
           <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-          <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">72.0</default-field-of-view-deg>
           <default-pitch-deg type="double">0</default-pitch-deg>
           <default-heading-deg type="double">0</default-heading-deg>
           <front-direction-deg type="double">0</front-direction-deg>
@@ -97,7 +97,6 @@
         </config>
       </view>
 
-
       <view n="102">
         <name>Observer View</name>
         <enabled type="bool">false</enabled>
@@ -107,7 +106,7 @@
           <from-model type="bool">true</from-model>
           <from-model-idx type="int">0</from-model-idx>
           <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-          <default-field-of-view-deg type="double">66.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">74.0</default-field-of-view-deg>
           <default-pitch-deg type="double">0</default-pitch-deg>
           <default-heading-deg type="double">0</default-heading-deg>
           <front-direction-deg type="double">0</front-direction-deg>
@@ -130,7 +129,7 @@
       </view>
 
 		<view n="103">
-			<name>Wing View</name>
+			<name>Wing right</name>
 			<type>lookfrom</type>
 			<internal archive="y">true</internal>
 			<config>
@@ -143,6 +142,20 @@
 				<pitch-offset-deg>0</pitch-offset-deg>
 			</config>
 		</view>
+                
+                <view n="104">
+			<name>Wing left</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<default-field-of-view-deg type="double">95.0</default-field-of-view-deg>
+				<x-offset-m archive="y">-2.00</x-offset-m>
+				<y-offset-m archive="y">1.10</y-offset-m>
+				<z-offset-m archive="y">28.15</z-offset-m>
+				<heading-offset-deg>70</heading-offset-deg>
+				<pitch-offset-deg>0</pitch-offset-deg>
+			</config>
+		</view>
 
     </PropertyList>
-
