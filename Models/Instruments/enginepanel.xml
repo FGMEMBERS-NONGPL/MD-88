@@ -113,7 +113,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRLIM1</object-name>
-  <property>/controls/engines/eprlim</property>
+  <property>/controls/engines/eprlimx100</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -126,7 +126,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRLIM2</object-name>
-  <property>/controls/engines/eprlim</property>
+  <property>/controls/engines/eprlimx100</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -139,7 +139,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRLIM3</object-name>
-  <property>/controls/engines/eprlim</property>
+  <property>/controls/engines/eprlimx100</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -175,7 +175,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRL1</object-name>
-  <property>/engines/engine[0]/eprx100</property>
+  <property>/engines/engine[0]/epr-actualx100</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -188,7 +188,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRL2</object-name>
-  <property>/engines/engine[0]/eprx100</property>
+  <property>/engines/engine[0]/epr-actualx100</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -201,7 +201,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRL3</object-name>
-  <property>/engines/engine[0]/eprx100</property>
+  <property>/engines/engine[0]/epr-actualx100</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -214,10 +214,10 @@
 <animation>
   <type>rotate</type>
   <object-name>EPRLNeedle</object-name>
-  <property>/engines/engine[0]/eprx100</property>
+  <property>/engines/engine[0]/epr-actual</property>
   <interpolation>
-    <entry><ind>100</ind><dep>  0</dep></entry>
-    <entry><ind>220</ind><dep>272</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+    <entry><ind>2.2</ind><dep>272</dep></entry>
   </interpolation>
   <center>
     <x-m>0</x-m>
@@ -236,8 +236,8 @@
   <object-name>EPRLIML</object-name>
   <property>/controls/engines/eprlim</property>
   <interpolation>
-    <entry><ind>100</ind><dep>  0</dep></entry>
-    <entry><ind>220</ind><dep>272</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+    <entry><ind>2.2</ind><dep>272</dep></entry>
   </interpolation>
   <center>
     <x-m>0</x-m>
@@ -562,7 +562,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRR1</object-name>
-  <property>/engines/engine[1]/eprx100</property>
+  <property>/engines/engine[1]/epr-actualx100</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -575,7 +575,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRR2</object-name>
-  <property>/engines/engine[1]/eprx100</property>
+  <property>/engines/engine[1]/epr-actualx100</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -588,7 +588,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>EPRR3</object-name>
-  <property>/engines/engine[1]/eprx100</property>
+  <property>/engines/engine[1]/epr-actualx100</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -601,10 +601,10 @@
 <animation>
   <type>rotate</type>
   <object-name>EPRRNeedle</object-name>
-  <property>/engines/engine[1]/eprx100</property>
+  <property>/engines/engine[1]/epr-actual</property>
   <interpolation>
-    <entry><ind>100</ind><dep>  0</dep></entry>
-    <entry><ind>220</ind><dep>272</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+    <entry><ind>2.2</ind><dep>272</dep></entry>
   </interpolation>
   <center>
     <x-m>0</x-m>
@@ -623,8 +623,8 @@
   <object-name>EPRLIMR</object-name>
   <property>/controls/engines/eprlim</property>
   <interpolation>
-    <entry><ind>100</ind><dep>  0</dep></entry>
-    <entry><ind>220</ind><dep>272</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+    <entry><ind>2.2</ind><dep>272</dep></entry>
   </interpolation>
   <center>
     <x-m>0</x-m>

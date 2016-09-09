@@ -977,56 +977,5 @@
   </axis>
 </animation>
 
-<animation>
-        <type>rotate</type>
-        <object-name>Etrim</object-name>
-        <property>controls/flight/elevator-trim</property>
-        <factor>160.0</factor>
-        <center>
-            <x-m>2.63</x-m>
-            <y-m>0.0</y-m>
-            <z-m>0.64</z-m>
-        </center>
-        <axis>
-            <x>0.0</x>
-            <y>-1.0</y>
-            <z>0.0</z>
-        </axis>
-    </animation>
-
- <animation>
-        <type>pick</type>
-        <object-name>Etrim</object-name>
-        <action>
-            <button>3</button>
-            <repeatable>true</repeatable>
-            <binding>
-                <command>property-adjust</command>
-                <property>controls/flight/elevator-trim</property>
-                <step>0.001</step>
-                <!--min>-8000</min>
-                <max>6000</max-->
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>Etrim</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>true</repeatable>
-            <binding>
-            <command>property-adjust</command>
-            <property>controls/flight/elevator-trim</property>
-            <step>-0.001</step>
-            <!--min>-8000</min>
-            <max>6000</max-->
-            </binding>
-        </action>
-    </animation>
-
-
-
 </PropertyList>
 

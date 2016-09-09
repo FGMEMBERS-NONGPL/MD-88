@@ -2,6 +2,8 @@ AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "buttonlights" rgb 0 0.835294 0  amb 0 0.835294 0  emis 0 0.835294 0  spec 0 0.835294 0  shi 32  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 128  trans 0
+MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 1 0.466667 0  emis 0.341176 0.341176 0.341176  spec 0 0 0  shi 32  trans 0
+MATERIAL "ac3dmat9" rgb 0 0 1  amb 0 0 1  emis 0 0 0  spec 0 0 1  shi 128  trans 0
 OBJECT world
 kids 49
 OBJECT poly
@@ -48,7 +50,7 @@ refs 4
 kids 0
 OBJECT poly
 name "EPRLIM1"
-loc 0.00219859 0.10071 0.00203641
+loc 0.00219859 0.10071 0.00270787
 data 8
 Mesh.005
 texture "digitengine.png"
@@ -78,7 +80,7 @@ numvert 4
 0 -0.00211379 0.00456838
 numsurf 1
 SURF 0x30
-mat 1
+mat 3
 refs 4
 3 0 1
 1 0 0
@@ -96,7 +98,7 @@ numvert 4
 0 6.10799e-005 0.00108225
 numsurf 1
 SURF 0x30
-mat 1
+mat 3
 refs 4
 0 0 1
 2 0 0
@@ -114,7 +116,7 @@ numvert 4
 0 6.10799e-005 0.00108225
 numsurf 1
 SURF 0x30
-mat 1
+mat 3
 refs 4
 0 0 1
 2 0 0
@@ -132,7 +134,7 @@ numvert 4
 0 -0.00211379 0.00456838
 numsurf 1
 SURF 0x30
-mat 1
+mat 3
 refs 4
 3 0 1
 1 0 0
@@ -423,7 +425,7 @@ numvert 4
 0 0.0218216 -0.0805003
 numsurf 1
 SURF 0x10
-mat 2
+mat 4
 refs 4
 2 0.914898 0.0105589
 0 0.98386 0.0105589
@@ -444,7 +446,7 @@ numvert 4
 0 0.00984582 -0.0639014
 numsurf 1
 SURF 0x10
-mat 2
+mat 4
 refs 4
 1 0.914898 0.0105589
 3 0.98386 0.0105589

@@ -105,13 +105,14 @@ setlistener("/sim/signals/fdm-initialized", func {
   nd_init();					# See MD-88-efis.nas
   setprop("/engines/engine/oil-q", 14);
   setprop("/engines/engine[1]/oil-q", 13);
-  setprop("/controls/engines/eprlim", 204);
+  setprop("/controls/engines/eprlim", 2.01);
+  setprop("/controls/engines/eprlimx100", 201);
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
-  setlistener("engines/engine[0]/epr", func {
-    setprop("engines/engine[0]/eprx100", (getprop("engines/engine[0]/epr") * 100));
+  setlistener("engines/engine[0]/epr-actual", func {
+    setprop("engines/engine[0]/epr-actualx100", (getprop("engines/engine[0]/epr-actual") * 100));
   });
-  setlistener("engines/engine[1]/epr", func {
-  	setprop("engines/engine[1]/eprx100", (getprop("engines/engine[1]/epr") * 100));
+  setlistener("engines/engine[1]/epr-actual", func {
+  	setprop("engines/engine[1]/epr-actualx100", (getprop("engines/engine[1]/epr-actual") * 100));
   });
   MD88_Savedata();
 });
