@@ -39,8 +39,8 @@ AoA really should be 3 degrees, but 4 works better for the FDM solution.
 Speed is based on max Mach at FL350 of 0.82.
 -->
 <cruise speed="482" alt="35000" fuel="0.59">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.94"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.94"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.86"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.86"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/flight/slats" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -196,7 +196,7 @@ Speed is based on max Mach at FL350 of 0.82.
 
 
 <!-- Forward ballast for nose gear, batteries, avionics, etc. -->
-<ballast x="-2.0" y="0.0" z="0.0" mass="4000.0" />
+<ballast x="-2.0" y="0.0" z="0.0" mass="6000.0" />
 <!-- Some ballast for mass of main landing gear assemblies -->
 <ballast x="-24.390" y="-2.0" z="-0.658" mass="4000.0" />
 <ballast x="-24.390" y="2.0" z="-0.658" mass="4000.0" />
