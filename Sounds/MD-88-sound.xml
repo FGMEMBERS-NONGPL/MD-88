@@ -730,7 +730,7 @@
 	
 	<MDA_CMB>
 		<name>MDA CMB 1</name>
-		<path>FL2070/XMDA_CMB_1.wav</path>
+		<path>FL2070/xMDA_CMB_1.wav</path>
 		<mode>looped</mode>
 		<property>engines/engine[0]/epr</property>
 		<volume>
@@ -753,7 +753,7 @@
 	
 	<MDA_CMB>
 		<name>MDA CMB 2</name>
-		<path>FL2070/XMDA_CMB_2.wav</path>
+		<path>FL2070/xMDA_CMB_2.wav</path>
 		<mode>looped</mode>
 		<property>engines/engine[0]/epr</property>
 		<volume>
@@ -776,7 +776,7 @@
 	
 	<MDB_CMB>
 		<name>MDB CMB 1</name>
-		<path>FL2070/XMDB_CMB_1.wav</path>
+		<path>FL2070/xMDB_CMB_1.wav</path>
 		<mode>looped</mode>
 		<property>engines/engine[0]/epr</property>
 		<volume>
@@ -799,7 +799,7 @@
 	
 	<MDB_CMB>
 		<name>MDB CMB 2</name>
-		<path>FL2070/XMDB_CMB_2.wav</path>
+		<path>FL2070/xMDB_CMB_2.wav</path>
 		<mode>looped</mode>
 		<property>engines/engine[0]/epr</property>
 		<volume>
