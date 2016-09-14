@@ -70,7 +70,6 @@ McDonnell Douglas MD-82
   <!-- Flap detents -->
   <flaps>
     <setting>0.00</setting>
-    <setting>0.125</setting> <!-- 5 deg should be slats -->
     <setting>0.275</setting> <!-- 11 deg (standard takeoff) -->
     <setting>0.375</setting> <!-- 15 deg (standard takeoff)-->
     <setting>0.7</setting>   <!-- 28 deg (standard landing) -->

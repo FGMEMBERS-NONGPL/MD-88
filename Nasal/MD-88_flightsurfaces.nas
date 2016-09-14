@@ -29,8 +29,8 @@
 #
 # Slat operations:
 #
-# Slats are currently slaved to flap position based on my current understanding.
-# Mid-sealed: flaps to 13%, Extended: flaps 15-40%
+# Slats are extended first, then flaps. Joshua Davidson has built a custom controller for this.
+# 
 #
 # Spoiler operations:
 #
@@ -194,12 +194,38 @@ var spoiler_disarm = func {
 var pos_flaps	= props.globals.getNode("/controls/flight/flaps");
 var pos_slats	= props.globals.getNode("/controls/flight/slats");
 
-setlistener("/controls/flight/flaps", func {
-  var flaps = pos_flaps.getValue();
-  if (flaps >= 0.375)	{ pos_slats.setValue(1.0); return 0; }
-  if (flaps > 0)	{ pos_slats.setValue(0.5); return 0; }
-  pos_slats.setValue(0);
-});
+# Custom Flap/Slat System by Joshua Davidson (it0uchpods)
+controls.flapsDown = func(step) {
+	if (step > 0) {  # Flaps Down
+		if (getprop("/controls/flight/slats") == 0) {
+			setprop("/controls/flight/slats", 1);
+		} else if (getprop("/controls/flight/slats") == 1) {
+			if(step == 0) return;
+			if(props.globals.getNode("/sim/flaps") != nil) {
+				globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
+				return;
+			}
+			# Hard-coded flaps movement in 3 equal steps:
+			var val = 0.3333334 * step + getprop("/controls/flight/flaps");
+			setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
+		}
+	} else if (step < 0) {  # Flaps Up
+		if (getprop("/controls/flight/flaps") == 0) {
+			setprop("/controls/flight/slats", 0);
+		} else if (getprop("/controls/flight/flaps") > 0) {
+			if(step == 0) return;
+			if(props.globals.getNode("/sim/flaps") != nil) {
+				globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
+				return;
+			}
+			# Hard-coded flaps movement in 3 equal steps:
+			var val = 0.3333334 * step + getprop("/controls/flight/flaps");
+			setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
+		}
+	} else {
+		return 0;
+	}
+}
 
 
 								# Primary flight surface loop
