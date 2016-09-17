@@ -49,6 +49,17 @@
 
 <animation>
 	<type>select</type>
+	<object-name>RETD</object-name>
+	<condition>
+		<equals>
+			<property>/it-autoflight/retard</property>
+			<value>1</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
 	<object-name>FLCH</object-name>
 	<condition>
 		<equals>
@@ -91,62 +102,38 @@
 <animation>
   <type>select</type>
   <object-name>SPDN1</object-name>
-  <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>0</value>
-    </equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
   <object-name>SPDN2</object-name>
-  <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>0</value>
-    </equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
   <object-name>SPDN3</object-name>
   <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>0</value>
-    </equals>
+	<and>
+      <equals>
+        <property>/it-autoflight/apthrmode</property>
+        <value>0</value>
+      </equals>
+      <equals>
+        <property>/it-autoflight/retard</property>
+        <value>0</value>
+      </equals>
+	</and>
   </condition>
 </animation>
 
 <animation>
   <type>select</type>
   <object-name>MACHPNT</object-name>
-  <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>1</value>
-    </equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
   <object-name>MACHN2</object-name>
-  <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>1</value>
-    </equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
   <object-name>MACHN3</object-name>
   <condition>
-    <equals>
-      <property>/it-autoflight/apthrmode</property>
-      <value>1</value>
-    </equals>
+	<and>
+      <equals>
+        <property>/it-autoflight/apthrmode</property>
+        <value>1</value>
+      </equals>
+      <equals>
+        <property>/it-autoflight/retard</property>
+        <value>0</value>
+      </equals>
+	</and>
   </condition>
 </animation>
 

@@ -315,7 +315,6 @@ var retardchk = func {
     if (altpos < retardalt) {
 	  if (aton == 1) {
 	    setprop("/it-autoflight/retard", 1);
-	    setprop("/it-autoflight/apthrmode2", 1);
 		atofft.start();
 	  } else {
 	    setprop("/it-autoflight/retard", 0);

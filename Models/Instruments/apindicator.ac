@@ -3,7 +3,28 @@ MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 20
+kids 21
+OBJECT poly
+name "RETD"
+loc 0.00147385 -0.00765654 0.101835
+data 8
+Mesh.005
+texture "apindicator9.rgb"
+crease 30.000000
+numvert 4
+0 0.00452118 -0.0382164
+0 0.00452118 -0.0592887
+0 0.0180847 -0.0382164
+0 0.0180847 -0.0592887
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+2 0.914898 0.0105589
+0 0.98386 0.0105589
+1 0.98386 0.102508
+3 0.914898 0.102508
+kids 0
 OBJECT poly
 name "CLMP"
 loc 0.0014865 -0.0064276 0.0532051
