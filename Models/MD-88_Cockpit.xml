@@ -72,8 +72,6 @@
 <object-name>PitchTrim</object-name>
 <object-name>AToffL</object-name>
 <object-name>AToffR</object-name>
-<object-name>Instruments</object-name>
-<object-name>OverheadPanel</object-name>
 	
   <emission>
     <red>0.6</red>

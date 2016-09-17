@@ -336,15 +336,15 @@
 				</binding>
 			</button>
 			
-			<!--button>
+			<button>
 				<row>2</row>
 				<col>1</col>
 				<legend>ARM</legend>
 				<binding>
 				<command>property-toggle</command>
-				<property>/it-autoflight/at-arm</property>
+				<property>/it-autoflight/autothrarm</property>
 				</binding>
-			</button-->
+			</button>
 		</group>
 
 		<group>
