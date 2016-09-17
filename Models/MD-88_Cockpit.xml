@@ -90,12 +90,39 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
-			<binding>
-			<command>property-assign</command>
-			<property>/it-autoflight/ap_mastersw</property>
-			<value>0</value>
-			</binding>
+	<binding>
+		<command>property-assign</command>
+		<property>/it-autoflight/ap_mastersw</property>
+		<value>0</value>
+	</binding>
+    <binding>
+        <command>property-assign</command>
+        <property>/controls/flight/apoff</property>
+        <value>1</value>
+    </binding>
+    <mod-up>
+        <binding>
+            <command>property-assign</command>
+            <property>/controls/flight/apoff</property>
+            <value>0</value>
+        </binding>
+    </mod-up>
   </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>apoff</object-name>
+  <property>controls/flight/apoff</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>-0.001</dep></entry>
+    <entry><ind>1</ind><dep> 0.001</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 <animation>
@@ -104,12 +131,39 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
-			<binding>
-			<command>property-assign</command>
-			<property>/it-autoflight/ap_mastersw</property>
-			<value>0</value>
-			</binding>
+	<binding>
+		<command>property-assign</command>
+		<property>/it-autoflight/ap_mastersw</property>
+		<value>0</value>
+	</binding>
+    <binding>
+        <command>property-assign</command>
+        <property>/controls/flight/apoff2</property>
+        <value>1</value>
+    </binding>
+    <mod-up>
+        <binding>
+            <command>property-assign</command>
+            <property>/controls/flight/apoff2</property>
+            <value>0</value>
+        </binding>
+    </mod-up>
   </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>apoff2</object-name>
+  <property>controls/flight/apoff2</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>-0.001</dep></entry>
+    <entry><ind>1</ind><dep> 0.001</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 
@@ -189,7 +243,7 @@
 <animation>
   <type>pick</type>
   <object-name>AToffL</object-name>
-  <object-name>AToffR</object-name>
+  <object-name>AToffL1</object-name>
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
@@ -198,7 +252,76 @@
       <property>/it-autoflight/at_mastersw</property>
 	  <value>0</value>
     </binding>
+    <binding>
+        <command>property-assign</command>
+        <property>/controls/flight/atoff</property>
+        <value>1</value>
+    </binding>
+    <mod-up>
+        <binding>
+            <command>property-assign</command>
+            <property>/controls/flight/atoff</property>
+            <value>0</value>
+        </binding>
+    </mod-up>
   </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>AToffL</object-name>
+  <property>controls/flight/atoff</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>    0</dep></entry>
+    <entry><ind>1</ind><dep>0.002</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>AToffR</object-name>
+  <object-name>AToffR1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-assign</command>
+      <property>/it-autoflight/at_mastersw</property>
+	  <value>0</value>
+    </binding>
+    <binding>
+        <command>property-assign</command>
+        <property>/controls/flight/atoff2</property>
+        <value>1</value>
+    </binding>
+    <mod-up>
+        <binding>
+            <command>property-assign</command>
+            <property>/controls/flight/atoff2</property>
+            <value>0</value>
+        </binding>
+    </mod-up>
+  </action>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>AToffR</object-name>
+  <property>controls/flight/atoff2</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>     0</dep></entry>
+    <entry><ind>1</ind><dep>-0.002</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
 </animation>
 
 
@@ -251,9 +374,6 @@
     </binding>
   </action>
 </animation>
-
-<object-name>AToffL</object-name>
-<object-name>AToffR</object-name>
 
 <animation>
   <type>rotate</type>
@@ -341,7 +461,8 @@
   <object-name>ThrottleL</object-name>
   <object-name>ThrottleRevL</object-name>
   <object-name>AToffL</object-name>
-  <property>controls/engines/engine[0]/throttle</property>
+  <object-name>AToffL1</object-name>
+  <property>controls/engines/engine[0]/throttle-lever</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>55</dep></entry>
@@ -362,7 +483,8 @@
   <object-name>ThrottleR</object-name>
   <object-name>ThrottleRevR</object-name>
   <object-name>AToffR</object-name>
-  <property>controls/engines/engine[1]/throttle</property>
+  <object-name>AToffR1</object-name>
+  <property>controls/engines/engine[1]/throttle-lever</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>55</dep></entry>
@@ -385,7 +507,6 @@
   <object-name>ThrottleL</object-name>
   <object-name>ThrottleRevL</object-name>
   <action>
-    <button>0</button>
     <button>3</button>
     <repeatable>false</repeatable>
     <binding>
@@ -403,7 +524,6 @@
   <object-name>ThrottleL</object-name>
   <object-name>ThrottleRevL</object-name>
   <action>
-    <button>1</button>
     <button>4</button>
     <repeatable>false</repeatable>
     <binding>
@@ -421,7 +541,6 @@
   <object-name>ThrottleR</object-name>
   <object-name>ThrottleRevR</object-name>
   <action>
-    <button>0</button>
     <button>3</button>
     <repeatable>false</repeatable>
     <binding>
@@ -439,7 +558,6 @@
   <object-name>ThrottleR</object-name>
   <object-name>ThrottleRevR</object-name>
   <action>
-    <button>1</button>
     <button>4</button>
     <repeatable>false</repeatable>
     <binding>
@@ -1042,7 +1160,7 @@
   <center>
     <x-m>0</x-m>
     <y-m>-0.500</y-m>
-    <z-m>0.856</z-m>
+    <z-m>0.8715</z-m>
   </center>
   <axis>
     <x>-1.0</x>
@@ -1081,7 +1199,7 @@
   <center>
     <x-m>0.0</x-m>
     <y-m>0.500</y-m>
-    <z-m>0.856</z-m>
+    <z-m>0.8715</z-m>
   </center>
   <axis>
     <x>-1.0</x>

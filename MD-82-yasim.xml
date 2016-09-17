@@ -24,8 +24,8 @@ weight configurations, based on MD-80 flight tables and lots of trial-and-error.
 AoA really should be 3 degrees, but 4 works better for the FDM solution.
 -->
 <approach speed="135" aoa="4" fuel="0.3">
-  <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.2"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.2"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.2"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.2"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/flight/slats" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
@@ -38,8 +38,8 @@ AoA really should be 3 degrees, but 4 works better for the FDM solution.
 Speed is based on max Mach at FL350 of 0.82.
 -->
 <cruise speed="482" alt="35000" fuel="0.59">
-  <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.86"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.86"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.86"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.86"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/flight/slats" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -130,7 +130,7 @@ Speed is based on max Mach at FL350 of 0.82.
 </vstab>
 
 <jet x="-33.757" y="2.7" z="0.687" mass="4567" thrust="20000" egt="655" tsfc="0.498" n1-idle="23" n2-idle="54" n1-max="108.2" n2-max="112.5" epr="2.16">
-  <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
   <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[0]"/>
   <control-speed control="REVERSE_THRUST" transition-time="2"/>
@@ -138,7 +138,7 @@ Speed is based on max Mach at FL350 of 0.82.
 </jet>
 
 <jet x="-33.757" y="-2.7" z="0.687" mass="4567" thrust="20000" egt="655" tsfc="0.498" n1-idle="23" n2-idle="54" n1-max="108.2" n2-max="112.5" epr="2.16">
-  <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
   <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
   <control-speed control="REVERSE_THRUST" transition-time="2"/>

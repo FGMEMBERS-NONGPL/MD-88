@@ -179,5 +179,31 @@
         </input>
 		<output>/engines/engine[1]/oil-temp</output>
     </filter>
+	
+	<filter>
+		<name>Throttle L</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/controls/engines/engine[0]/throttle-fdm</property>
+		</input>
+		<output>/controls/engines/engine[0]/throttle-lever</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.95</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Throttle R</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/controls/engines/engine[1]/throttle-fdm</property>
+		</input>
+		<output>/controls/engines/engine[1]/throttle-lever</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.95</max-rate-of-change>
+	</filter>
 
 </PropertyList>
