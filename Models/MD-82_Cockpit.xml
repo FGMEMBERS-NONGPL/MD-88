@@ -497,7 +497,7 @@
         <type>pick</type>
         <object-name>PitchTrim</object-name>
         <action>
-                <button>1</button>
+                <button>0</button>
                 <repeatable>true</repeatable>
                 <binding>
                         <command>property-adjust</command>
@@ -509,7 +509,7 @@
                 <binding>
                         <command>property-assign</command>
                         <property>/controls/flight/pitchtrimlever</property>
-                        <value>1</value>
+                        <value>-1</value>
                 </binding>
                 <mod-up>
                     <binding>
@@ -520,7 +520,7 @@
                 </mod-up>
         </action>
         <action>
-                <button>0</button>
+                <button>1</button>
                 <repeatable>true</repeatable>
                 <binding>
                         <command>property-adjust</command>
@@ -532,7 +532,7 @@
                 <binding>
                         <command>property-assign</command>
                         <property>/controls/flight/pitchtrimlever</property>
-                        <value>-1</value>
+                        <value>1</value>
                 </binding>
                 <mod-up>
                     <binding>
