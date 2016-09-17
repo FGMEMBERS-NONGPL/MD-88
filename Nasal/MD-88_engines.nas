@@ -221,7 +221,17 @@ var eng1_shutdown_monitor = func {
 									# On any control change, update FDM throttle.
 
 var throttle0		= props.globals.getNode("controls/engines/engine[0]/throttle");
+var throttle0_fdm	= props.globals.getNode("controls/engines/engine[0]/throttle-fdm");
 var throttle1		= props.globals.getNode("controls/engines/engine[1]/throttle");
+var throttle1_fdm	= props.globals.getNode("controls/engines/engine[1]/throttle-fdm");
+
+
+setlistener("controls/engines/engine[0]/throttle", func {
+  throttle0_fdm.setValue(throttle0.getValue()*0.96+0.04);
+});
+setlistener("controls/engines/engine[1]/throttle", func {
+  throttle1_fdm.setValue(throttle1.getValue()*0.96+0.04);
+});
 
 var eng_magicstartup = func {
   setprop("/controls/electrical/battery", 1);
