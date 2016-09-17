@@ -43,6 +43,8 @@ New textures (Insel Island, Aeromexico, PanAm, BRT) were created by Andino. They
 
 Any sounds and instruments used were under the GNU license.
 
+Soundpack by FL2070, under GPL 2.0 license
+
 The configuration for some views has been taken from Raptor, who offered them in the FG Forum.
 
 All this has been done for fun.
