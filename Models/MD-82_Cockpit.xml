@@ -667,9 +667,9 @@
   <object-name>PitchTrim</object-name>
   <property>/controls/flight/pitchtrimlever</property>
   <interpolation>
-    <entry><ind>-1</ind><dep>-30</dep></entry>
+    <entry><ind>-1</ind><dep>-20</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>
-    <entry><ind> 1</ind><dep> 30</dep></entry>
+    <entry><ind> 1</ind><dep> 20</dep></entry>
   </interpolation>   
   <center>
     <x-m>2.616</x-m>
