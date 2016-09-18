@@ -72,6 +72,8 @@
 <object-name>PitchTrim</object-name>
 <object-name>AToffL</object-name>
 <object-name>AToffR</object-name>
+<object-name>AToffL1</object-name>
+<object-name>AToffR1</object-name>
 	
   <emission>
     <red>0.6</red>
@@ -235,6 +237,8 @@
   <object-name>PitchTrim</object-name>
   <object-name>AToffL</object-name>
   <object-name>AToffR</object-name>
+  <object-name>AToffL1</object-name>
+  <object-name>AToffR1</object-name>
 </animation>
 
 <!-- Throttle AT Off -->
