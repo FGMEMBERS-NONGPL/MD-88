@@ -160,12 +160,7 @@ setlistener("/it-autoflight/apvertset", func {
 	flchthrust();
   } else if (vertset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
-	var locyes = getprop("/it-autoflight/aplatmode");
-	if (locyes = 2) {
-	  # Intentionally blank
-	} else {
-	  setprop("/it-autoflight/loc1", 1);
-	}
+	setprop("/it-autoflight/loc1", 1);
 	setprop("/instrumentation/nav/gs-rate-of-climb", 0);
 	setprop("/it-autoflight/app1", 1);
 	setprop("/it-autoflight/apilsmode", 1);
@@ -325,7 +320,7 @@ var retardchk = func {
 
 var atoffchk = func{
   var altpos = getprop("/position/altitude-agl-ft");
-  if (altpos <= 10) {
+  if (altpos <= 15) {
 	setprop("/it-autoflight/at_mastersw", 0);
 	atofft.stop();
   }
