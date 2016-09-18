@@ -322,6 +322,14 @@ var atoffchk = func{
   var altpos = getprop("/position/altitude-agl-ft");
   if (altpos <= 15) {
 	setprop("/it-autoflight/at_mastersw", 0);
+	setprop("/controls/engines/engine[0]/throttle", 0);
+	setprop("/controls/engines/engine[1]/throttle", 0);
+	setprop("/controls/engines/engine[2]/throttle", 0);
+	setprop("/controls/engines/engine[3]/throttle", 0);
+	setprop("/controls/engines/engine[4]/throttle", 0);
+	setprop("/controls/engines/engine[5]/throttle", 0);
+	setprop("/controls/engines/engine[6]/throttle", 0);
+	setprop("/controls/engines/engine[7]/throttle", 0);
 	atofft.stop();
   }
 }
