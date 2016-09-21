@@ -85,7 +85,7 @@ var wind_hdg		= props.globals.getNode("/environment/wind-from-heading-deg");
 var wind_spd		= props.globals.getNode("/environment/wind-speed-kt");
 
 var el_pos_adj		= props.globals.getNode("/controls/flight/el-pos-adj");
-var el_pos		= props.globals.getNode("/surface-positions/elevator-pos-norm",1);
+var el_pos		= props.globals.getNode("/controls/flight/elevator",1);
 var el_pos_ani		= props.globals.getNode("/surface-positions/elevator-pos-ani-norm",1);
 var ail_pos_left	= props.globals.getNode("/surface-positions/left-aileron-pos-norm",1);
 var ail_pos_right	= props.globals.getNode("/surface-positions/right-aileron-pos-norm",1);

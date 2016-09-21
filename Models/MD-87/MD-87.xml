@@ -775,7 +775,7 @@ in some cases based on observable cases in photos.
   <object-name>AileronL</object-name>
   <object-name>AilTabControlL</object-name>
   <object-name>AilTabTrimL</object-name>
-  <property>surface-positions/left-aileron-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
     <entry><ind>-1</ind><dep>-20</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -832,7 +832,7 @@ in some cases based on observable cases in photos.
   <object-name>AileronR</object-name>
   <object-name>AilTabControlR</object-name>
   <object-name>AilTabTrimR</object-name>
-  <property>surface-positions/right-aileron-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[1]</property>
   <interpolation>
     <entry><ind>-1</ind><dep>-15</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1004,7 +1004,7 @@ in some cases based on observable cases in photos.
   <object-name>ElTabControlL</object-name>
   <object-name>ElTabGearedL</object-name>
   <object-name>ElTabAntifloatL</object-name>
-  <property>surface-positions/elevator-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
    <entry><ind>-1</ind><dep>-20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1040,7 +1040,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>ElTabGearedL</object-name>
-  <property>surface-positions/elevator-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
    <entry><ind>-1</ind><dep> 20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1062,7 +1062,7 @@ in some cases based on observable cases in photos.
   <object-name>ElTabControlR</object-name>
   <object-name>ElTabGearedR</object-name>
   <object-name>ElTabAntifloatR</object-name>
-  <property>surface-positions/elevator-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
    <entry><ind>-1</ind><dep>-20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1098,7 +1098,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>ElTabGearedR</object-name>
-  <property>surface-positions/elevator-pos-ani-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
    <entry><ind>-1</ind><dep> 20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
