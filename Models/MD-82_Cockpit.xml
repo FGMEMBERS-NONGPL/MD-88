@@ -95,6 +95,11 @@
 		<property>/it-autoflight/ap_mastersw</property>
 		<value>0</value>
 	</binding>
+	<binding>
+		<command>property-assign</command>
+		<property>/it-autoflight/ap_mastersw2</property>
+		<value>0</value>
+	</binding>
     <binding>
         <command>property-assign</command>
         <property>/controls/flight/apoff</property>
@@ -134,6 +139,11 @@
 	<binding>
 		<command>property-assign</command>
 		<property>/it-autoflight/ap_mastersw</property>
+		<value>0</value>
+	</binding>
+	<binding>
+		<command>property-assign</command>
+		<property>/it-autoflight/ap_mastersw2</property>
 		<value>0</value>
 	</binding>
     <binding>
