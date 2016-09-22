@@ -299,6 +299,9 @@ For Manual Engine Start, see the checlists in the Help Menu.
       <float n="6" alias="/controls/flight/spoilers-pos-norm-left"/>
       <float n="7" alias="/controls/flight/spoilers-pos-norm-right"/>
       <float n="8" alias="/controls/flight/spoilers-pos-norm-ground"/>
+      <float n="9" alias="/controls/flight/aileron"/>
+      <float n="10" alias="/controls/flight/elevator"/>
+      <float n="11" alias="/controls/flight/elevator-trim"/>
       <int n="0" alias="/controls/lighting/beacon"/>
       <int n="1" alias="/controls/lighting/wingtipaft"/>
       <int n="2" alias="/controls/lighting/nav"/>

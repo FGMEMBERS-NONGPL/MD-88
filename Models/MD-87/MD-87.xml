@@ -793,7 +793,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>AilTabControlL</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[9]</property>
   <interpolation>
     <entry><ind>-1</ind><dep>20</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -850,7 +850,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>AilTabControlR</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[9]</property>
   <interpolation>
     <entry><ind>-1</ind><dep>-20</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -980,7 +980,7 @@ in some cases based on observable cases in photos.
   <object-name>ElTabControlR</object-name>
   <object-name>ElTabGearedR</object-name>
   <object-name>ElTabAntifloatR</object-name>
-  <property>controls/flight/elevator-trim</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <interpolation>
    <entry><ind>-1</ind><dep>-10</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1022,7 +1022,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>ElTabControlL</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[10]</property>
   <interpolation>
    <entry><ind>-1</ind><dep> 20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -1080,7 +1080,7 @@ in some cases based on observable cases in photos.
 <animation>
   <type>rotate</type>
   <object-name>ElTabControlR</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[10]</property>
   <interpolation>
    <entry><ind>-1</ind><dep> 20</dep></entry>
    <entry><ind> 0</ind><dep>  0</dep></entry>
