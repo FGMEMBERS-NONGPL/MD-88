@@ -45,6 +45,10 @@ Any sounds and instruments used were under the GNU license.
 
 Soundpack by FL2070, under GPL 2.0 license
 
+Some sounds, bugfixes, and effects by Gabriel Hernandez (GabrielYV) under GNU license.
+
+Announcements by Tristin Rains (KP420), and/or Rick Hardslab (MDN666), under GNU license
+
 The configuration for some views has been taken from Raptor, who offered them in the FG Forum.
 
 All this has been done for fun.

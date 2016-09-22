@@ -105,8 +105,8 @@ setlistener("/sim/signals/fdm-initialized", func {
   nd_init();					# See MD-88-efis.nas
   setprop("/engines/engine/oil-q", 14);
   setprop("/engines/engine[1]/oil-q", 13);
-  setprop("/controls/engines/eprlim", 2.01);
-  setprop("/controls/engines/eprlimx100", 201);
+  setprop("/controls/engines/eprlim", 1.92);
+  setprop("/controls/engines/eprlimx100", 192);
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
   setprop("/it-autoflight/settings/retard-enable", 1);  # Enable or disable automatic autothrottle retard.
   setprop("/it-autoflight/settings/retard-ft", 35);     # Add this to change the retard altitude, default is 50ft AGL.
