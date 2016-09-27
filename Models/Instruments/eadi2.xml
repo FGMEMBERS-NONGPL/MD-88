@@ -279,15 +279,14 @@
   <condition>
     <and>
       <greater-than>
-        <property>instrumentation/altimeter/decision-height</property>
+        <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
         <value>0</value>
       </greater-than>
       <greater-than>
+        <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
         <property>position/altitude-agl-ft</property>
-        <property>instrumentation/altimeter/decision-height</property>
       </greater-than>
     </and>
-    <!--<equals><value>1</value><value>0</value></equals>-->
   </condition>
 </animation>
 <animation>
@@ -299,12 +298,12 @@
   <condition>
     <and>
       <greater-than>
-        <property>instrumentation/altimeter/decision-height</property>
+        <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
         <value>0</value>
       </greater-than>
       <less-than-equals>
+        <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
         <property>position/altitude-agl-ft</property>
-        <property>instrumentation/altimeter/decision-height</property>
       </less-than-equals>
     </and>
   </condition>
@@ -313,7 +312,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.1</object-name>
-    <property>instrumentation/altimeter/decision-height</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -325,7 +324,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.10</object-name>
-    <property>instrumentation/altimeter/decision-height</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -337,7 +336,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DH.100</object-name>
-    <property>instrumentation/altimeter/decision-height</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.001</factor>
     <step>100</step>
     <axis>
@@ -350,7 +349,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DHamber.1</object-name>
-    <property>position/altitude-agl-ft</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -362,7 +361,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DHamber.10</object-name>
-    <property>position/altitude-agl-ft</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -374,7 +373,7 @@
 <animation>
     <type>textranslate</type>
     <object-name>DHamber.100</object-name>
-    <property>position/altitude-agl-ft</property>
+    <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
     <factor>0.001</factor>
     <step>100</step>
     <axis>

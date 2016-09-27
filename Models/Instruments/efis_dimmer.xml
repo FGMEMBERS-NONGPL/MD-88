@@ -19,7 +19,7 @@
 <animation>
   <type>rotate</type>
   <object-name>KnobDH</object-name>
-  <property>instrumentation/altimeter/decision-height</property>
+  <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
   <interpolation>
     <entry><ind>  0</ind><dep>  0</dep></entry>
     <entry><ind>990</ind><dep>720</dep></entry>
@@ -44,10 +44,10 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/altimeter/DH</property>
+      <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
       <step>10</step>
-      <min>100</min>
-      <max>990</max>
+      <min>0</min>
+      <max>1000</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -61,10 +61,10 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/altimeter/DH</property>
+      <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
       <step>-10</step>
-      <min>100</min>
-      <max>990</max>
+      <min>0</min>
+      <max>1000</max>
       <wrap>false</wrap>
     </binding>
   </action>
