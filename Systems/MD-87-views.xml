@@ -16,7 +16,7 @@
           <y-offset-m archive="y" type="double">1.3</y-offset-m>
           <z-offset-m archive="y" type="double">8.5</z-offset-m>
           <pitch-offset-deg>-12</pitch-offset-deg>
-          <default-field-of-view-deg type="double">79.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
           <limits>
             <enabled type="bool">false</enabled>
           </limits>
@@ -90,7 +90,7 @@
           <y-offset-m archive="y" type="double">1.3</y-offset-m>
           <z-offset-m archive="y" type="double">8.5</z-offset-m>
           <pitch-offset-deg>-12</pitch-offset-deg>
-          <default-field-of-view-deg type="double">79.0</default-field-of-view-deg>
+          <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
           <limits>
             <enabled type="bool">false</enabled>
           </limits>
