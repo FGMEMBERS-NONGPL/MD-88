@@ -21,7 +21,7 @@
         <type>select</type>
         <object-name>gs.needle</object-name>
         <condition>
-				<property>instrumentation/nav/has-gs</property>
+				<property>instrumentation/nav[1]/has-gs</property>
 			</condition>
 		</animation>
 
@@ -34,7 +34,7 @@
         <condition>
 				<and>
 					<property>systems/electrical/outputs/nav</property>
-					<property>instrumentation/nav/in-range</property>
+					<property>instrumentation/nav[1]/in-range</property>
 				</and>
 			</condition>
 		</animation>
@@ -49,7 +49,7 @@
 					<property>systems/electrical/outputs/nav</property>
 				</not>
 				<not>
-					<property>instrumentation/nav/in-range</property>
+					<property>instrumentation/nav[1]/in-range</property>
 				</not>
 			</or>
         </condition>
@@ -59,7 +59,7 @@
         <type>select</type>
         <object-name>toflag</object-name>
         <condition>
-				<property>instrumentation/nav/to-flag</property>
+				<property>instrumentation/nav[1]/to-flag</property>
 		</condition>
     </animation>
 
@@ -67,7 +67,7 @@
         <type>select</type>
         <object-name>fromflag</object-name>
         <condition>
-				<property>instrumentation/nav/from-flag</property>
+				<property>instrumentation/nav[1]/from-flag</property>
 		</condition>
     </animation>
 
@@ -78,18 +78,9 @@
         <object-name>HSI.crsdeflection</object-name>
         <object-name>toflag</object-name>
         <object-name>fromflag</object-name>
-        <property>orientation/heading-magnetic-deg</property>
-        <axis>
-            <x>1.0</x>
-            <y>0</y>
-            <z>0.0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
+        <object-name>HSI.hdgbug</object-name>
         <object-name>HSI.navbrg</object-name>
-        <property>orientation/heading-deg</property>
+        <property>orientation/heading-magnetic-deg</property>
         <axis>
             <x>1.0</x>
             <y>0</y>
@@ -103,7 +94,7 @@
         <object-name>HSI.crsdeflection</object-name>
         <object-name>toflag</object-name>
         <object-name>fromflag</object-name>
-        <property>instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <axis>
             <x>-1.0</x>
             <y>0</y>
@@ -114,7 +105,7 @@
 	<animation>
         <type>translate</type>
         <object-name>HSI.crsdeflection</object-name>
-        <property>instrumentation/nav/heading-needle-deflection</property>
+        <property>instrumentation/nav[1]/heading-needle-deflection</property>
 			<interpolation>
             <entry><ind>-5</ind><dep>-0.0117</dep></entry>
             <entry><ind>0.0</ind><dep>0</dep></entry>
@@ -130,7 +121,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.hdgbug</object-name>
-        <property>autopilot/internal/heading-bug-error-deg</property>
+        <property>/it-autoflight/settings/heading-bug-deg</property>
         <axis>
             <x>-1.0</x>
             <y>0</y>
@@ -141,7 +132,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.navbrg</object-name>
-        <property>instrumentation/nav/heading-deg</property>
+        <property>instrumentation/nav[1]/heading-deg</property>
         <axis>
             <x>-1.0</x>
             <y>0</y>
@@ -152,7 +143,7 @@
     <animation>
         <type>translate</type>
         <object-name>gs.needle</object-name>
-        <property>instrumentation/nav/gs-needle-deflection</property>
+        <property>instrumentation/nav[1]/gs-needle-deflection</property>
 			<interpolation>
             <entry><ind>-2.0</ind><dep>-0.0133</dep></entry>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -169,7 +160,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.crs100</object-name>
-        <property>instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>0.001</factor>
 			<step>100</step>
 		<axis>
@@ -182,7 +173,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.crs10</object-name>
-        <property>instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>0.01</factor>
 			<step>10</step>
 		<axis>
@@ -195,7 +186,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.crs1</object-name>
-        <property>instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>0.1</factor>
 			<step>1</step>
 		<axis>
@@ -210,7 +201,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.dst100</object-name>
-        <property>instrumentation/nav/nav-distance</property>
+        <property>instrumentation/nav[1]/nav-distance</property>
         <factor>0.000000539956803</factor>
 			<step>185200</step>
 		<axis>
@@ -223,7 +214,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.dst10</object-name>
-        <property>instrumentation/nav/nav-distance</property>
+        <property>instrumentation/nav[1]/nav-distance</property>
         <factor>0.00000539956803</factor>
 			<step>18520</step>
 		<axis>
@@ -236,7 +227,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.dst1</object-name>
-        <property>instrumentation/nav/nav-distance</property>
+        <property>instrumentation/nav[1]/nav-distance</property>
         <factor>0.0000539956803</factor>
 			<step>1852</step>
 		<axis>
@@ -249,7 +240,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>HSI.dst0</object-name>
-        <property>instrumentation/nav/nav-distance</property>
+        <property>instrumentation/nav[1]/nav-distance</property>
         <factor>0.000539956803</factor>
 			<step>185.2</step>
 		<axis>
@@ -262,7 +253,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.crsknob</object-name>
-        <property>instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>2</factor>
         <center>
             <x-m>0</x-m>
@@ -279,7 +270,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.hdgknob</object-name>
-        <property>autopilot/settings/heading-bug-deg</property>
+        <property>/it-autoflight/settings/heading-bug-deg</property>
         <factor>2</factor>
         <center>
             <x-m>0</x-m>
@@ -304,7 +295,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/nav/radials/selected-deg</property>
+                <property>instrumentation/nav[1]/radials/selected-deg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -322,7 +313,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/nav/radials/selected-deg</property>
+                <property>instrumentation/nav[1]/radials/selected-deg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
@@ -338,7 +329,7 @@
             <button>3</button>
              <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/nav/radials/selected-deg</property>
+                <property>instrumentation/nav[1]/radials/selected-deg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -354,7 +345,7 @@
             <button>4</button>
              <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/nav/radials/selected-deg</property>
+                <property>instrumentation/nav[1]/radials/selected-deg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
@@ -372,7 +363,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>autopilot/settings/heading-bug-deg</property>
+                <property>/it-autoflight/settings/heading-bug-deg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -390,7 +381,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>autopilot/settings/heading-bug-deg</property>
+                <property>/it-autoflight/settings/heading-bug-deg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
@@ -406,7 +397,7 @@
             <button>3</button>
              <binding>
                 <command>property-adjust</command>
-                <property>autopilot/settings/heading-bug-deg</property>
+                <property>/it-autoflight/settings/heading-bug-deg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -422,7 +413,7 @@
             <button>4</button>
              <binding>
                 <command>property-adjust</command>
-                <property>autopilot/settings/heading-bug-deg</property>
+                <property>/it-autoflight/settings/heading-bug-deg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>

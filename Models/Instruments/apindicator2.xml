@@ -10,6 +10,8 @@
   <object-name>VERT</object-name>
   <object-name>SPD</object-name>
   <object-name>ILS</object-name>
+  <object-name>RETD</object-name>
+  <object-name>CLMP</object-name>
   <object-name>SPDN1</object-name>
   <object-name>SPDN2</object-name>
   <object-name>SPDN3</object-name>
@@ -39,6 +41,7 @@
 <animation>
 	<type>select</type>
 	<object-name>CLMP</object-name>
+	<object-name>CLMPC</object-name>
 	<condition>
 		<equals>
 			<property>/it-autoflight/apvertmode</property>
