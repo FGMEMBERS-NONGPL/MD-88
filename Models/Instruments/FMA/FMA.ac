@@ -26,7 +26,7 @@ refs 4
 3 0.914898 0.102508
 kids 0
 OBJECT poly
-name "CLMP"
+name "CLMPC"
 loc 0.00148504 -0.00546729 0.0474806
 crease 45.000000
 numvert 4
@@ -222,7 +222,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ILS"
-loc 0.00146058 -0.00587997 0.0563871
+loc 0.00146058 -0.00587997 0.0591562
 data 8
 Mesh.005
 texture "apindicator6.rgb"
