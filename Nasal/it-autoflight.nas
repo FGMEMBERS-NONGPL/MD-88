@@ -264,12 +264,12 @@ var flchthrust = func {
 	    setprop("/it-autoflight/txtvertmode", "THR IDLE");
     } else {
 	  setprop("/it-autoflight/apthrmode2", 0);
-	  setprop("/it-autoflight/txtthrmode", "THR");
+	  setprop("/it-autoflight/txtthrmode", "THRUST");
 	  setprop("/it-autoflight/apvertset", 3);
 	}
   } else {
 	setprop("/it-autoflight/apthrmode2", 0);
-	  setprop("/it-autoflight/txtthrmode", "THR");
+	  setprop("/it-autoflight/txtthrmode", "THRUST");
 	flchtimer.stop();
   }
 }
