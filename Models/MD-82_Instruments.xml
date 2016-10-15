@@ -63,8 +63,8 @@ McDonnell Douglas MD-82
   <object-name>apu_egt</object-name>
   <object-name>L_efis</object-name>
   <object-name>R_efis</object-name> 
-  <object-name>apindicator_L</object-name> 
-  <object-name>apindicator_R</object-name> 
+  <object-name>FMA_L</object-name> 
+  <object-name>FMA_R</object-name> 
   <object-name>enginepanel</object-name> 
   <object-name>enginepanel2</object-name> 
   <object-name>att</object-name>
@@ -101,8 +101,8 @@ McDonnell Douglas MD-82
 <!-- Captain Panel -->
 
 <model>
-  <name>apindicator_L</name>
-  <path>Aircraft/MD-88/Models/Instruments/apindicator.xml</path>
+  <name>FMA_L</name>
+  <path>Aircraft/MD-88/Models/Instruments/FMA/FMA.xml</path>
   <offsets>
     <x-m>2.210</x-m>
     <y-m>-0.330</y-m>
@@ -531,8 +531,8 @@ McDonnell Douglas MD-82
 <!-- Copilot Panel -->
 
 <model>
-  <name>apindicator_R</name>
-  <path>Aircraft/MD-88/Models/Instruments/apindicator2.xml</path>
+  <name>FMA_R</name>
+  <path>Aircraft/MD-88/Models/Instruments/FMA/FMA2.xml</path>
   <offsets>
     <x-m>2.210</x-m>
     <y-m>0.330</y-m>

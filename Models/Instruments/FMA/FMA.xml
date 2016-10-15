@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-<path>apindicator.ac</path>
+<path>FMA.ac</path>
 
 <animation>
   <object-name>HHLD</object-name>
@@ -32,7 +32,7 @@
 	<object-name>Off</object-name>
 	<condition>
 		<less-than>
-			<property>systems/electrical/bus/dcR</property>
+			<property>systems/electrical/bus/dcL</property>
 			<value>15</value>
 		</less-than>
 	</condition>
