@@ -51,6 +51,8 @@ Announcements by Tristin Rains (KP420), and/or Rick Hardslab (MDN666), under GNU
 
 The configuration for some views has been taken from Raptor, who offered them in the FG Forum.
 
+Some instrument textures/liveries/other textures by chad3006, under GNY license.
+
 All this has been done for fun.
 
 
