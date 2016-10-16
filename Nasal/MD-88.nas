@@ -109,8 +109,9 @@ setlistener("/sim/signals/fdm-initialized", func {
   setprop("/controls/engines/eprlimx100", 205);
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
   setprop("/it-autoflight/settings/retard-enable", 1);  # Enable or disable automatic autothrottle retard.
-  setprop("/it-autoflight/settings/retard-ft", 35);     # Add this to change the retard altitude, default is 50ft AGL.
+  setprop("/it-autoflight/settings/retard-ft", 20);     # Add this to change the retard altitude, default is 50ft AGL.
   setprop("/it-autoflight/settings/land-flap", 0.7);    # Define the landing flaps here. This is needed for autoland, and retard.
+  setprop("/it-autoflight/settings/land-enable", 1);    # Enable or disable automatic landing.
   setlistener("engines/engine[0]/epr-actual", func {
     setprop("engines/engine[0]/epr-actualx100", (getprop("engines/engine[0]/epr-actual") * 100));
   });
