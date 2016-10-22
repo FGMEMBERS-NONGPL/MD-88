@@ -382,17 +382,6 @@ in some cases based on observable cases in photos.
   <path>Aircraft/MD-88/Models/MD-88_Lights.xml</path>
 </model>
 
-
-<!-- Level Of Detail -->
-
-<animation>
-  <type>range</type>
-  <object-name>Cockpit</object-name>
-  <min-m>0</min-m>
-  <max-m>75</max-m>
-</animation>
-
-
 <!-- Livery machine texture assignments -->
 <animation>
   <type>material</type>
