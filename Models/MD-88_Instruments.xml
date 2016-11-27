@@ -176,9 +176,6 @@ McDonnell Douglas MD-88
   <name>vsi</name>
   <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
-    <!--x-m>2.248</x-m>
-    <y-m>-0.390</y-m>
-    <z-m>0.766</z-m-->
 	<x-m>2.250</x-m>
     <y-m>-0.384</y-m>
     <z-m>0.7635</z-m>
@@ -213,7 +210,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>altbezel</name>
-  <path>Aircraft/MD-88/Models/Instruments/altimeter2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/stby-bezel.xml</path>
   <offsets>
     <x-m>2.238</x-m>
     <y-m>-0.189</y-m>
@@ -235,7 +232,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>enginepanel</name>
-  <path>Aircraft/MD-88/Models/Instruments/enginepanel.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eng/eng1.xml</path>
   <offsets>
     <x-m>2.230</x-m>
     <y-m>-0.066</y-m>
@@ -246,7 +243,7 @@ McDonnell Douglas MD-88
 
 <model>
   <name>enginepanel2</name>
-  <path>Aircraft/MD-88/Models/Instruments/enginepanel2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/eng/eng2.xml</path>
   <offsets>
     <x-m>2.230</x-m>
     <y-m>0.06</y-m>

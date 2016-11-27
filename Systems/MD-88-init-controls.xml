@@ -2,37 +2,6 @@
 
 <PropertyList>
 
-		<autoflight>
-			<autopilot>
-				<engage type="bool">false</engage>
-			</autopilot>
-			<flight-director>
-				<engage type="bool">false</engage>
-			</flight-director>
-			<yaw-damper>
-				<engage type="bool">false</engage>
-			</yaw-damper>
-			<yaw-damper>
-				<engage type="bool">false</engage>
-			</yaw-damper>
-			<altitude-select type="double">10000</altitude-select>
-			<autothrottle-engage type="bool">false</autothrottle-engage>
-			<basic-roll-mode type="int">0</basic-roll-mode>
-			<basic-roll-target-heading-deg type="double">0</basic-roll-target-heading-deg>
-			<basic-roll-target-roll-deg type="double">0</basic-roll-target-roll-deg>
-			<bank-angle-select type="float">30</bank-angle-select>
-			<disengage-pos-norm type="int">0</disengage-pos-norm>
-			<heading-select type="double">360</heading-select>
-			<lateral-mode type="int">0</lateral-mode>
-			<mach-select type="double">0</mach-select>
-			<nav-mode type="int">0</nav-mode>
-			<pitch-select type="double">0</pitch-select>
-			<speed-mode type="int">0</speed-mode>
-			<speed-select type="double">200</speed-select>
-			<vertical-mode type="int">0</vertical-mode>
-			<vertical-speed-select type="double">1800</vertical-speed-select>
-		</autoflight>
-
 <autobrakes>
   <ABS type="int">0</ABS>
   <ABS-select type="int">1</ABS-select>
@@ -43,6 +12,8 @@
 </gear>
 
 <engines>
+  <kp>0.01</kp>
+  <kp-spd>0.5</kp-spd>
   <engine n="0">
     <cutoff type="bool">1</cutoff>
     <throttle-fdm type="double">0.07</throttle-fdm>

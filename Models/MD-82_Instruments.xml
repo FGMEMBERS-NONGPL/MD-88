@@ -81,6 +81,8 @@ McDonnell Douglas MD-82
   <object-name>R_efis</object-name>
   <object-name>eadi_R</object-name>
   <object-name>ND_R</object-name>
+  <object-name>efisdim_L</object-name>
+  <object-name>efisdim_R</object-name>
   <condition>
 	<property>/options/retrofit</property>
   </condition>
@@ -235,9 +237,6 @@ McDonnell Douglas MD-82
   <name>vsi</name>
   <path>Aircraft/MD-88/Models/Instruments/vsi.xml</path>
   <offsets>
-    <!--x-m>2.248</x-m>
-    <y-m>-0.390</y-m>
-    <z-m>0.766</z-m-->
 	<x-m>2.250</x-m>
     <y-m>-0.384</y-m>
     <z-m>0.7635</z-m>
@@ -258,7 +257,7 @@ McDonnell Douglas MD-82
 
 <model>
   <name>altbezel</name>
-  <path>Aircraft/MD-88/Models/Instruments/altimeter2.xml</path>
+  <path>Aircraft/MD-88/Models/Instruments/stby-bezel.xml</path>
   <offsets>
 	<x-m>2.250</x-m>
     <y-m>-0.286</y-m>

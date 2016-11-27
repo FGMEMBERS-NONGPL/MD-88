@@ -12,7 +12,7 @@
                 <table>
                     <property>/engines/engine[0]/n1-actual</property> 
                     <entry><ind>    0</ind><dep>1.00</dep></entry>
-                    <entry><ind>   23</ind><dep>1.01</dep></entry>
+                    <entry><ind>   25</ind><dep>1.01</dep></entry>
                     <entry><ind>108.2</ind><dep>2.12</dep></entry>
                 </table>
             </expression>
@@ -30,7 +30,7 @@
                 <table>
                     <property>/engines/engine[1]/n1-actual</property> 
                     <entry><ind>    0</ind><dep>1.00</dep></entry>
-                    <entry><ind>   23</ind><dep>1.01</dep></entry>
+                    <entry><ind>   25</ind><dep>1.01</dep></entry>
                     <entry><ind>108.2</ind><dep>2.12</dep></entry>
                 </table>
             </expression>
@@ -46,9 +46,11 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[0]/egt-degf</property> 
-                    <entry><ind>55</ind><dep>302</dep></entry>
-                    <entry><ind>725</ind><dep>665</dep></entry>
+                    <property>/engines/engine[0]/n1-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>6</ind><dep>563</dep></entry>
+                    <entry><ind>22</ind><dep>300</dep></entry>
+                    <entry><ind>110</ind><dep>700</dep></entry>
                 </table>
             </expression>
         </input>
@@ -63,9 +65,11 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[1]/egt-degf</property> 
-                    <entry><ind>55</ind><dep>302</dep></entry>
-                    <entry><ind>725</ind><dep>665</dep></entry>
+                    <property>/engines/engine[1]/n1-actual</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>6</ind><dep>563</dep></entry>
+                    <entry><ind>22</ind><dep>300</dep></entry>
+                    <entry><ind>110</ind><dep>700</dep></entry>
                 </table>
             </expression>
         </input>
@@ -190,7 +194,24 @@
 		</input>
 		<output>/controls/engines/engine[0]/throttle-lever</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.95</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.95</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<value>2</value>
+		</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -203,7 +224,24 @@
 		</input>
 		<output>/controls/engines/engine[1]/throttle-lever</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.95</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.95</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<value>2</value>
+		</max-rate-of-change>
 	</filter>
 
 </PropertyList>

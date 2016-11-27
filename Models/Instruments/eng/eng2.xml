@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-<path>enginepanel2.ac</path>
+<path>eng2.ac</path>
 
 <animation>
   <object-name>Temp1</object-name>
@@ -78,6 +78,10 @@
 	<object-name>HydQTYR2</object-name>
 	<object-name>FlapL</object-name>
 	<object-name>FlapR</object-name>
+	<object-name>statTO</object-name>
+	<object-name>statDISAG</object-name>
+	<object-name>statAUTO</object-name>
+	<object-name>statLAND</object-name>
 	<condition>
 		<or>
 		<greater-than>
@@ -759,7 +763,7 @@
   </condition>
 </animation>
 
-<!-- Flaps -->
+<!-- Flaps/Stats -->
 <animation>
   <type>translate</type>
   <object-name>FlapL</object-name>
@@ -767,10 +771,10 @@
   <interpolation>
 	<entry><ind>00000</ind><dep>0.0000</dep></entry>
 	<entry><ind>0.125</ind><dep>0.0075</dep></entry>
-	<entry><ind>0.275</ind><dep>0.0165</dep></entry>
-	<entry><ind>0.375</ind><dep>0.0225</dep></entry>
-	<entry><ind>0.700</ind><dep>0.0423</dep></entry>
-	<entry><ind>1.000</ind><dep>0.0480</dep></entry>
+	<entry><ind>0.275</ind><dep>0.0190</dep></entry>
+	<entry><ind>0.375</ind><dep>0.0255</dep></entry>
+	<entry><ind>0.700</ind><dep>0.0467</dep></entry>
+	<entry><ind>1.000</ind><dep>0.0505</dep></entry>
   </interpolation>
   <axis>
     <x>0</x>
@@ -786,16 +790,84 @@
   <interpolation>
 	<entry><ind>00000</ind><dep>0.0000</dep></entry>
 	<entry><ind>0.125</ind><dep>0.0075</dep></entry>
-	<entry><ind>0.275</ind><dep>0.0165</dep></entry>
-	<entry><ind>0.375</ind><dep>0.0225</dep></entry>
-	<entry><ind>0.700</ind><dep>0.0423</dep></entry>
-	<entry><ind>1.000</ind><dep>0.0480</dep></entry>
+	<entry><ind>0.275</ind><dep>0.0190</dep></entry>
+	<entry><ind>0.375</ind><dep>0.0255</dep></entry>
+	<entry><ind>0.700</ind><dep>0.0467</dep></entry>
+	<entry><ind>1.000</ind><dep>0.0505</dep></entry>
   </interpolation>
   <axis>
     <x>0</x>
     <y>0</y>
     <z>-1</z>
   </axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>slatTO</object-name>
+	<condition>
+		<and>	
+			<greater-than>
+				<property>/surface-positions/slat-pos-norm</property>
+				<value>0.74</value>
+			</greater-than>
+			<less-than>
+				<property>/surface-positions/slat-pos-norm</property>
+				<value>0.76</value>
+			</less-than>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>slatDISAG</object-name>
+	<condition>
+		<or>
+			<and>	
+				<greater-than-equals>
+					<property>/surface-positions/slat-pos-norm</property>
+					<value>0.01</value>
+				</greater-than-equals>
+				<less-than-equals>
+					<property>/surface-positions/slat-pos-norm</property>
+					<value>0.74</value>
+				</less-than-equals>
+			</and>
+			<and>
+				<greater-than-equals>
+					<property>/surface-positions/slat-pos-norm</property>
+					<value>0.76</value>
+				</greater-than-equals>
+				<less-than-equals>
+					<property>/surface-positions/slat-pos-norm</property>
+					<value>0.99</value>
+				</less-than-equals>
+			</and>
+		</or>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>slatAUTO</object-name>
+	<condition>
+		<greater-than>
+			<property>/unused/value</property>
+			<value>999</value>
+		</greater-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>slatLAND</object-name>
+	<condition>
+		<greater-than>
+			<property>/surface-positions/slat-pos-norm</property>
+			<value>0.99</value>
+		</greater-than>
+	</condition>
 </animation>
 
 </PropertyList>

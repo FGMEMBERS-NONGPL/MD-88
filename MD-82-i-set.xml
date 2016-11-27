@@ -40,8 +40,9 @@ McDonnell Douglas MD-82
     <autopilot>
       <path>Aircraft/MD-88/Systems/it-autoflight.xml</path>
     </autopilot>
+	<!-- Uses a custom EPR based autothrottle -->
     <autopilot>
-      <path>Aircraft/MD-88/Systems/it-autothrust.xml</path>
+      <path>Aircraft/MD-88/Systems/custom-autothrust.xml</path>
     </autopilot>
     <property-rule n="101">
         <path>Aircraft/MD-88/Sounds/MD-88-sound-control.xml</path>
@@ -328,17 +329,27 @@ For Manual Engine Start, see the checlists in the Help Menu.
 			<umin>-0.50</umin>
 			<umax>0.50</umax>
 			<kp>0.06</kp>
-			<kp-vorloc>0.08</kp-vorloc>
+			<ti>10.0</ti>
+			<td>0.00001</td>
 		</roll>
+		<vorloc>
+			<kp>0.08</kp>
+			<ti>10.0</ti>
+			<td>0.00001</td>
+		</vorloc>
 		<pitch>
 			<umin>-0.35</umin>
 			<umax>0.35</umax>
 			<kp>-0.09</kp>
+			<ti>10.0</ti>
+			<td>0.0001</td>
 		</pitch>
 		<flch>
 			<umin>-0.30</umin>
 			<umax>0.30</umax>
 			<kp>-0.10</kp>
+			<ti>10.0</ti>
+			<td>0.00001</td>
 		</flch>
 		<gs>
 			<kp>0.10</kp>
@@ -498,6 +509,9 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
   <itaf>
     <file>Aircraft/MD-88/Nasal/it-autoflight.nas</file>
   </itaf>
+  <thrust>
+	<file>Aircraft/MD-88/Nasal/thrust.nas</file>
+  </thrust>
   <radar>
     <file>Aircraft/MD-88/Models/Instruments/RDR-160/RDR160.nas</file>
   </radar>

@@ -1,24 +1,11 @@
 # This file converts the IT-AUTOFLIGHT Mode numbers, and converts them into text strings needed for the FMA.
 # Joshua Davidson (it0uchpods/411)
 
-# Speed or Mach?
-var speedmach = func {
-  if (getprop("/it-autoflight/apvertmode") == 4) {
-    # Do nothing because it's in FLCH mode.
-  } else {
-    if (getprop("/it-autoflight/apthrmode") == 0) {
-      setprop("/FMA/thr", "SPD");
-    } else if (getprop("/it-autoflight/apthrmode") == 1) {
-      setprop("/FMA/thr", "MACH");
-    }
-  }
-}
-
 # IAS or MACH FLCH?
-var speedmach = func {
+var flch-speedmach = func {
   if (getprop("/it-autoflight/apvertmode") == 4) {
     if (getprop("/it-autoflight/apthrmode") == 0) {
-      setprop("/FMA/pitch", "SPD");
+      setprop("/FMA/pitch", "IAS");
     } else if (getprop("/it-autoflight/apthrmode") == 1) {
       setprop("/FMA/pitch", "MACH");
     }
@@ -27,20 +14,7 @@ var speedmach = func {
 
 # Update Speed or Mach
 setlistener("/it-autoflight/apthrmode", func {
-  speedmach();
   flch-spdmach();
-});
-
-# Master Thrust
-setlistener("/it-autoflight/apthrmode2", func {
-  var latset = getprop("/it-autoflight/apthrmode2");
-  if (latset == 0) {
-	speedmach();
-  } else if (latset == 1) {
-	setprop("/FMA/thr", "IDLE");
-  } else if (latset == 2) {
-	setprop("/FMA/thr", "CLMP");
-  }
 });
 
 # Master Lateral

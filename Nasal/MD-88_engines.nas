@@ -283,5 +283,3 @@ var eng_more0 = func {
 var eng_more1 = func {
   settimer(eng1_run_loop, ENG_RUN_UPDATE);
 }
-
-

@@ -194,39 +194,70 @@ var spoiler_disarm = func {
 var pos_flaps	= props.globals.getNode("/controls/flight/flaps");
 var pos_slats	= props.globals.getNode("/controls/flight/slats");
 
-# Custom Flap/Slat System by Joshua Davidson (it0uchpods)
+# Custom Flap/Slat System by Joshua Davidson (it0uchpods/411)
+# Dial a Flap will be added as soon as I can find enough infos about it
+
+setprop("/controls/flight/flap-lever", 0);
+
 controls.flapsDown = func(step) {
-	if (step > 0) {  # Flaps Down
-		if (getprop("/controls/flight/slats") == 0) {
-			setprop("/controls/flight/slats", 1);
-		} else if (getprop("/controls/flight/slats") == 1) {
-			if(step == 0) return;
-			if(props.globals.getNode("/sim/flaps") != nil) {
-				globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
-				return;
-			}
-			# Hard-coded flaps movement in 3 equal steps:
-			var val = 0.3333334 * step + getprop("/controls/flight/flaps");
-			setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
+	if (step == 1) {
+		if (getprop("/controls/flight/flap-lever") == 0) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.000);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.275);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.375);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/flight/slats", 1.000);
+			setprop("/controls/flight/flaps", 0.700);
+			setprop("/controls/flight/flap-lever", 4);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 4) {
+			setprop("/controls/flight/slats", 1.000);
+			setprop("/controls/flight/flaps", 1.000);
+			setprop("/controls/flight/flap-lever", 5);
+			return;
 		}
-	} else if (step < 0) {  # Flaps Up
-		if (getprop("/controls/flight/flaps") == 0) {
-			setprop("/controls/flight/slats", 0);
-		} else if (getprop("/controls/flight/flaps") > 0) {
-			if(step == 0) return;
-			if(props.globals.getNode("/sim/flaps") != nil) {
-				globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
-				return;
-			}
-			# Hard-coded flaps movement in 3 equal steps:
-			var val = 0.3333334 * step + getprop("/controls/flight/flaps");
-			setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
+	} else if (step == -1) {
+		if (getprop("/controls/flight/flap-lever") == 5) {
+			setprop("/controls/flight/slats", 1.000);
+			setprop("/controls/flight/flaps", 0.700);
+			setprop("/controls/flight/flap-lever", 4);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 4) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.375);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.275);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/flight/slats", 0.750);
+			setprop("/controls/flight/flaps", 0.000);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/flight/slats", 0.000);
+			setprop("/controls/flight/flaps", 0.000);
+			setprop("/controls/flight/flap-lever", 0);
+			return;
 		}
 	} else {
 		return 0;
 	}
 }
-
 
 								# Primary flight surface loop
 								# Since this is likely run every frame for best effect,
