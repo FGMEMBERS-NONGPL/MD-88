@@ -2,31 +2,6 @@
 <PropertyList>
 
 	<path>FMA.ac</path>
-
-	<!-- Pitch -->
-    <text>
-        <name>pitch-c1</name>
-        <offsets>
-            <x-m>0.0015</x-m>
-            <y-m>0</y-m>
-            <z-m>0.001</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">text-value</type>
-        <format type="string">%s</format>
-        <truncate type="bool">false</truncate>
-        <font type="string">Aircraft/MD-88/Fonts/MD80FMA.ttf</font>
-        <property>/fma/pitch/c1</property>
-        <draw-text type="bool">true</draw-text>
-        <draw-alignment type="bool">false</draw-alignment>
-        <draw-boundingbox type="bool">false</draw-boundingbox>
-        <character-size>0.014</character-size>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
 	
 	<!-- Colors -->
 	<animation>
