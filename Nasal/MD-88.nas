@@ -56,28 +56,6 @@ var lights_beacon_toggle = func {
 }
 
 
-								# AP/AT stuff: (will live elsewhere eventually)
-
-#autothrottle		= props.globals.getNode("/autopilot/locks/speed");
-#autothrottle_mode	= props.globals.getNode("/autopilot/locks/at-mode");
-#at_switch		= props.globals.getNode("/controls/switches/at");
-#var autothrottle_toggle = func {
-#  if (!autothrottle.getValue())	{
-#    at_switch.setValue(1);					# Set switch to on position
-#    if (autothrottle_mode.getValue() == 0) {			# AT mode 0 is speed
-#      autothrottle.setValue("speed-with-throttle");
-#    }
-#    else {							# At mode 1 is mach
-#      autothrottle.setValue("mach-with-throttle");
-#    }
-#  }
-#  else {
-#    autothrottle.setValue("");
-#    at_switch.setValue(0);
-#  }
-#}
-
-
 								# Establish which settings are saved on exit
 var MD88_Savedata = func {
   aircraft.data.add("/controls/lighting/digital-norm");		# Numeric readouts lighting
