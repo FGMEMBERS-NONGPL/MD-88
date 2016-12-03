@@ -203,6 +203,6 @@ var InstrumentationInit = func {
   settimer(update_comms, 2);				# Delay startup a bit to allow things to initialize
 }
 
-setlistener("/it-autoflight/settings/target-mach", func {
-	setprop("/it-autoflight/settings/target-mach-x100", getprop("/it-autoflight/settings/target-mach") * 100);
+setlistener("/it-autoflight/input/spd-mach", func {
+	setprop("/it-autoflight/input/spd-mach-x100", getprop("/it-autoflight/input/spd-mach") * 100);
 });

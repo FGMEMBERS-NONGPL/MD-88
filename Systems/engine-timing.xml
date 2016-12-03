@@ -197,7 +197,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -206,7 +206,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -227,7 +227,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -236,7 +236,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>1</value>
 				</equals>
 			</condition>
