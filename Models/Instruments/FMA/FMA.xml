@@ -4,7 +4,7 @@
 	<path>FMA.ac</path>
 	
 	<!-- Colors -->
-	<animation>
+	<!--animation>
 		<type>material</type>
 		<object-name>pitch-c1</object-name>
 		<diffuse>
@@ -27,6 +27,6 @@
 			<green>0.543</green>
 			<blue>0.35</blue>
 		</emission>
-	</animation>
+	</animation-->
 
 </PropertyList>
