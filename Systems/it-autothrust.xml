@@ -265,7 +265,7 @@
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -280,7 +280,7 @@
 						<value>0</value>
 					</not-equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -290,7 +290,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/retard</property>
+					<property>/it-autoflight/output/retard</property>
 					<value>1</value>
 				</equals>
 			</condition>

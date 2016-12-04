@@ -316,7 +316,6 @@ For Manual Engine Start, see the checlists in the Help Menu.
 
 <it-autoflight>
 	<config>
-		<no-generics>1</no-generics>
 		<roll>
 			<umin>-0.50</umin>
 			<umax>0.50</umax>

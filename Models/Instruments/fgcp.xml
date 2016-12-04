@@ -148,7 +148,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit1</object-name>
-  <property>/it-autoflight/settings/target-mach-x100</property>
+  <property>/it-autoflight/input/spd-mach-x100</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -161,7 +161,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>MachDigit2</object-name>
-  <property>/it-autoflight/settings/target-mach-x100</property>
+  <property>/it-autoflight/input/spd-mach-x100</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
