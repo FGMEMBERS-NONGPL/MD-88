@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Build 108
+# V3.0.0 Build 109
 # This program is 100% GPL!
 
 print("IT-AUTOFLIGHT: Please Wait!");
@@ -459,6 +459,8 @@ setlistener("/it-autoflight/input/hdg", func {
 setlistener("/it-autoflight/input/toga", func {
   if (getprop("/it-autoflight/input/toga") == 1) {
 	setprop("/it-autoflight/input/vert", 7);
+	setprop("/it-autoflight/output/loc-armed", 0);
+	setprop("/it-autoflight/output/appr-armed", 0);
 	setprop("/it-autoflight/input/toga", 0);
   }
 });
