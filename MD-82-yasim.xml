@@ -87,6 +87,7 @@ Speed is based on max Mach at FL350 of 0.82.
   <spoiler start="0.078" end="0.554" lift="0.7" drag="2.0"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+  <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
   <control-input axis="/controls/flight/slats" control="SLAT"/>
   <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
