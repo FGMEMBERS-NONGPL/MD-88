@@ -396,7 +396,7 @@ var minmax = func {
       setprop("/it-autoflight/internal/max-pitch", 8);
       setprop("/it-autoflight/internal/min-pitch", -5);
 	  var vertmode = getprop("/it-autoflight/output/vert");
-	  if (vertmode == 1 or vertmode == 2 or vertmode == 4) {
+	  if (vertmode == 1 or vertmode == 2 or vertmode == 4 or vertmode == 5 or vertmode == 6 or vertmode == 7) {
 	    # Do not change the vertical mode because we are not trying to capture altitude.
 	  } else {
 	    setprop("/it-autoflight/mode/vert", "ALT HLD");
