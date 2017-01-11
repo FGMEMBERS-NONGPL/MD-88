@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Build 109
+# V3.0.0 Build 110
 # This program is 100% GPL!
 
 print("IT-AUTOFLIGHT: Please Wait!");
@@ -245,6 +245,7 @@ var vertical = func {
 	minmaxtimer.start();
 	setprop("/it-autoflight/output/vert", 0);
 	setprop("/it-autoflight/mode/vert", "ALT CAP");
+	thrustmode();
   } else if (vertset == 4) {
 	alandt.stop();
 	alandt1.stop();
