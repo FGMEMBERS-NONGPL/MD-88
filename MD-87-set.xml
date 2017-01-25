@@ -348,6 +348,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 		</autoland>
 	</config>
 	<settings>
+		<enable-cws>0</enable-cws>
 		<flare-altitude>35</flare-altitude>
 		<land-enable>1</land-enable>
 		<land-flap>0.7</land-flap>
