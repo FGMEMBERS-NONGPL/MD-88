@@ -204,5 +204,5 @@ var InstrumentationInit = func {
 }
 
 setlistener("/it-autoflight/input/spd-mach", func {
-	setprop("/it-autoflight/input/spd-mach-x100", getprop("/it-autoflight/input/spd-mach") * 100);
+	setprop("/it-autoflight/input/spd-mach-x1000", getprop("/it-autoflight/input/spd-mach") * 1000);
 });

@@ -9,7 +9,27 @@ MATERIAL "Default.004" rgb 0.8 0.8 0.8  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 5
 MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 MATERIAL "Default.004" rgb 0.803922 0.803922 0.803922  amb 0.498039 0.498039 0.498039  emis 0 0 0  spec 0.298039 0.298039 0.298039  shi 50  trans 0
 OBJECT world
-kids 101
+kids 102
+OBJECT poly
+name "MachDigit1"
+data 8
+Cube.099
+texture "digits.rgb"
+crease 30.000000
+numvert 4
+2.48247 1.18578 0.113772
+2.48247 1.18578 0.104401
+2.48515 1.17315 0.113772
+2.48515 1.17315 0.104401
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+3 0.987667 0.000779254
+1 0.987667 0.109471
+0 0.908782 0.109471
+2 0.908782 0.000779254
+kids 0
 OBJECT poly
 name "FDletters2"
 loc -2.36281 -1.09803 -0.09082
@@ -4421,7 +4441,7 @@ refs 4
 23 0.163054 0.727661
 kids 0
 OBJECT poly
-name "MachDigit1"
+name "MachDigit2"
 data 8
 Cube.106
 texture "digits.rgb"
@@ -4441,7 +4461,7 @@ refs 4
 1 0.908782 0.000779254
 kids 0
 OBJECT poly
-name "MachDigit2"
+name "MachDigit3"
 data 8
 Cube.107
 texture "digits.rgb"
@@ -7275,6 +7295,7 @@ OBJECT poly
 name "Off"
 loc 2.48445 1.17874 0.101058
 crease 45.000000
+hidden
 numvert 4
 -0.0016377 0.00817204 -0.0157251
 0.00124478 -0.00620604 -0.0157251
