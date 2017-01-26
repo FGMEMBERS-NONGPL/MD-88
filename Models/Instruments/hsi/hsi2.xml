@@ -121,7 +121,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.hdgbug</object-name>
-        <property>/it-autoflight/settings/heading-bug-deg</property>
+        <property>/it-autoflight/input/hdg</property>
         <axis>
             <x>-1.0</x>
             <y>0</y>
@@ -270,7 +270,7 @@
     <animation>
         <type>rotate</type>
         <object-name>HSI.hdgknob</object-name>
-        <property>/it-autoflight/settings/heading-bug-deg</property>
+        <property>/it-autoflight/input/hdg</property>
         <factor>2</factor>
         <center>
             <x-m>0</x-m>
@@ -363,7 +363,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>/it-autoflight/settings/heading-bug-deg</property>
+                <property>/it-autoflight/input/hdg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -381,7 +381,7 @@
 				<interval-sec>0.2</interval-sec>
              <binding>
                 <command>property-adjust</command>
-                <property>/it-autoflight/settings/heading-bug-deg</property>
+                <property>/it-autoflight/input/hdg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
@@ -397,7 +397,7 @@
             <button>3</button>
              <binding>
                 <command>property-adjust</command>
-                <property>/it-autoflight/settings/heading-bug-deg</property>
+                <property>/it-autoflight/input/hdg</property>
                 <step>1</step>
                 <min>0</min>
                 <max>360</max>
@@ -413,7 +413,7 @@
             <button>4</button>
              <binding>
                 <command>property-adjust</command>
-                <property>/it-autoflight/settings/heading-bug-deg</property>
+                <property>/it-autoflight/input/hdg</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>360</max>
