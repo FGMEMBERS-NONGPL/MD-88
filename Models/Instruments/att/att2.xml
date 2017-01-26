@@ -17,7 +17,7 @@
         <condition>
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
-				<property>/it-autoflight/fd_master</property>
+				<property>/it-autoflight/input/fd2</property>
 			</and>
         </condition>
     </animation>
@@ -29,7 +29,7 @@
         <condition>
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
-				<property>/it-autoflight/fd_master</property>
+				<property>/it-autoflight/input/fd2</property>
 			</and>
         </condition>
     </animation>
