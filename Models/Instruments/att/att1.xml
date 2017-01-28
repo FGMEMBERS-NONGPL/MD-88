@@ -49,19 +49,6 @@
     </animation>
 
     <animation>
-        <type>translate</type>
-        <object-name>FDroll</object-name>
-        <object-name>FDroll_rembrandt</object-name>
-        <property>/it-autoflight/fd/roll-bar</property>
-        <factor>0.0007</factor>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
         <type>select</type>
         <object-name>gs.flag</object-name>
         <condition>
