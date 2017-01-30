@@ -32,6 +32,7 @@ var ap_init = func {
 	setprop("/it-autoflight/output/appr-armed", 0);
 	setprop("/it-autoflight/output/thr-mode", 2);
 	setprop("/it-autoflight/output/retard", 0);
+	setprop("/it-autoflight/output/lat", 5);
 	setprop("/it-autoflight/settings/min-pitch", -8);
 	setprop("/it-autoflight/settings/max-pitch", 8);
 	setprop("/it-autoflight/internal/min-pitch", -8);
