@@ -339,7 +339,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 			<alt>0.03</alt>
 			<vs>0.07</vs>
 			<fpa>0.30</fpa>
-			<flch>-0.70</flch>
+			<flch>-0.35</flch>
 			<gs>0.11</gs>
 		</cmd>
 		<autoland>
