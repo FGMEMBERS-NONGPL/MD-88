@@ -35,7 +35,7 @@ var colddark = func {
 	itaf.ap_init();
 	MD88.nd_init();
 	if (getprop("/engines/engine[1]/n2-actual") < 2) {
-		colddark2();
+		colddark_b();
 	} else {
 		var colddark_eng_off = setlistener("/engines/engine[1]/n2-actual", func {
 			if (getprop("/engines/engine[1]/n2-actual") < 2) {
