@@ -15,12 +15,14 @@
   <kp>0.01</kp>
   <kp-spd>0.5</kp-spd>
   <engine n="0">
+	<start-switch type="bool">0</start-switch>
     <cutoff type="bool">1</cutoff>
-    <throttle-fdm type="double">0.07</throttle-fdm>
+    <throttle-fdm type="double">0.04</throttle-fdm>
   </engine>
   <engine n="1">
+	<start-switch type="bool">0</start-switch>
     <cutoff type="bool">1</cutoff>
-    <throttle-fdm type="double">0.07</throttle-fdm>
+    <throttle-fdm type="double">0.04</throttle-fdm>
   </engine>
 </engines>
 

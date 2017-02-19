@@ -148,142 +148,43 @@ For Manual Engine Start, see the checlists in the Help Menu.
       <menu n="100">
 		<label>MD-82</label>
         <item>
-          <label>QuickStartup</label>
-          <binding> 
-            <command>nasal</command>
-            <script>MD88.eng_magicstartup();</script>
-          </binding>
-        </item>
-        <item>
-          <label>QuickShutdown</label>
-          <binding> 
-            <command>nasal</command>
-            <script>MD88.eng_magicshutdown();</script>
-          </binding>
+			<label>Aircraft Config</label>
+			<binding> 
+				<command>nasal</command>
+				<script>
+				acconfig.main_dlg.open();
+				</script>
+			</binding>
         </item>
 		<item>
-			<name>retrofit</name>
-			<label>Toggle Retrofit</label>
+			 <label>Pushback</label>
+			 <name>pushback</name>
+			 <binding>
+			  <command>dialog-show</command>
+			  <dialog-name>pushback</dialog-name>
+			 </binding>
+		</item>
+		<item>
+			<label>Announcements</label>
 			<binding>
-				<command>property-toggle</command>
-				<property>/options/retrofit</property>
+				<command>nasal</command>
+				<script>
+				var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", "Aircraft/MD-88/Systems/announcements-dialog.xml");
+				mal.open();
+				</script>
 			</binding>
 		</item>
-        <item>
-          <label>Livery Select</label>
-          <binding>
-            <command>nasal</command>
-            <script>aircraft.livery.dialog.toggle()</script>
-          </binding>
-        </item>
-        <item>
-          <label>Arm Auto-Spoilers</label>
-          <binding> 
-            <command>nasal</command>
-            <script>MD88.spoiler_arm();</script>
-          </binding>
-        </item>
-        <item>
-          <label>Disarm Auto-Spoilers</label>
-          <binding> 
-            <command>nasal</command>
-            <script>MD88.spoiler_disarm();</script>
-          </binding>
-        </item>
-        <!--item>
-          <label>Toggle Fuel Cutoff Lockouts</label>
-          <binding> 
-            <command>property-toggle</command>
-            <property>/controls/fuel/lockout-cutoffs</property>
-          </binding>
-        </item-->
-        <!--item>
-          <label>Toggle Cross-Feed</label>
-          <binding> 
-            <command>property-toggle</command>
-            <property>/controls/fuel/xfeed</property>
-          </binding>
-        </item-->
-
-	<item>
-	     <label>Pushback</label>
-	     <name>pushback</name>
-	     <binding>
-	      <command>dialog-show</command>
-	      <dialog-name>pushback</dialog-name>
-	     </binding>
-    </item>
-	<item>
-	<name>fail</name>
-	<label>Failures Dialog</label>
-	<binding>
-		<command>nasal</command>
-		<script>
-		 var fail = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/MD-88/Systems/failures-dlg.xml");
-		 fail.open();
-		</script>
-	</binding>
-	</item>
-	<item>
-	<name>failreset</name>
-	<label>Failures Reset</label>
-	<binding>
-		<command>nasal</command>
-		<script>
-		setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 1);
-		#setprop("/sim/failure-manager/controls/flight/speedbrake/serviceable", 1);
-		MD88.eng_magicstartup();
-		</script>
-	</binding>
-	</item>
-	<item>
-	<name>fuel</name>
-	<label>Fuel Truck Controls</label>
-	<binding>
-		<command>nasal</command>
-		<script>
-		 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/MD-88/Systems/fuel-truck.xml");
-		 fuel.open();
-		</script>
-	</binding>
-	</item>
-
-	<item>
-		<name>gs</name>
-		<label>Ground Services</label>
-		<binding>
-			<command>nasal</command>
-			<script>
-			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/MD-88/Systems/ground-services-dlg.xml");
-			 gs.open();
-			</script>
-		</binding>
-	</item>
-                        
-
 		<item>
-		      <label>Announcements</label>
-		      <binding>
-		       <command>nasal</command>
-		       <script>
-			  var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", 
-				                                              "Aircraft/MD-88/Systems/announcements-dialog.xml");
-			mal.open();
-		       </script>
-		      </binding>
+			<name>stairs</name>
+			<label>Stairways Controls</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+				var stair = gui.Dialog.new("sim/gui/dialogs/stairs/dialog", "Aircraft/MD-88/Systems/stairs.xml");
+				stair.open();
+				</script>
+			</binding>
 		</item>
-		<item>
-				<name>stairs</name>
-				<label>Stairways Controls</label>
-				<binding>
-					<command>nasal</command>
-					<script>
-					 var stair = gui.Dialog.new("sim/gui/dialogs/stairs/dialog", "Aircraft/MD-88/Systems/stairs.xml");
-					 stair.open();
-					</script>
-				</binding>
-			</item>
-
       </menu>
     </default>
   </menubar>
@@ -384,12 +285,14 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <fuel-flow-pph type="float">0.0</fuel-flow-pph>
     <n1-actual type="float">0.0</n1-actual>
     <n2-actual type="float">0.0</n2-actual>
+    <egt-actual type="float">0.0</egt-actual>
     <state type="int">0</state>
   </engine>
   <engine n="1">
     <fuel-flow-pph type="float">0.0</fuel-flow-pph>
     <n1-actual type="float">0.0</n1-actual>
     <n2-actual type="float">0.0</n2-actual>
+    <egt-actual type="float">0.0</egt-actual>
     <state type="int">0</state>
   </engine>
 </engines>
@@ -503,14 +406,8 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
 
 <nasal>
   <MD88>
-    <file>Aircraft/MD-88/Nasal/MD-88_fuel.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88_electrical.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88_pneumatics.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88_apu.nas</file>
-	<file>Aircraft/MD-88/Nasal/MD-88_failure.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_flightsurfaces.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_abs.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88_engines.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_instrumentation_drivers.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-82.nas</file>
     <file>Aircraft/MD-88/Nasal/ground-services.nas</file>
@@ -518,6 +415,14 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
 	<file>Aircraft/MD-88/Models/Instruments/ND/ND.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88-efis.nas</file>
   </MD88>
+  <acconfig>
+	<file>Aircraft/MD-88/AircraftConfig/acconfig.nas</file>
+  </acconfig>
+  <systems>
+    <file>Aircraft/MD-88/Nasal/electrical.nas</file>
+    <file>Aircraft/MD-88/Nasal/engines.nas</file>
+    <file>Aircraft/MD-88/Nasal/fuel.nas</file>
+  </systems>
   <itaf>
     <file>Aircraft/MD-88/Nasal/it-autoflight.nas</file>
   </itaf>

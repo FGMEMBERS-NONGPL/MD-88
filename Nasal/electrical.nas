@@ -1,15 +1,14 @@
-# Electrical system for MD-88/MD-90 by Joshua Davidson (it0uchpods/411).
+# MD-88/MD-90 Electrical System
+# Joshua Davidson (it0uchpods)
 
-var ELEC_UPDATE_PERIOD	= 1;					# A periodic update in secs
-var STD_VOLTS_AC	= 115;						# Typical volts for a power source
-var MIN_VOLTS_AC	= 115;						# Typical minimum voltage level for generic equipment
-var STD_VOLTS_DC	= 28;						# Typical volts for a power source
-var MIN_VOLTS_DC	= 25;						# Typical minimum voltage level for generic equipment
-var STD_AMPS		= 0;						# Not used yet
+var ELEC_UPDATE_PERIOD	= 1;
+var STD_VOLTS_AC	= 115;
+var MIN_VOLTS_AC	= 115;
+var STD_VOLTS_DC	= 28;
+var MIN_VOLTS_DC	= 25;
+var STD_AMPS		= 0;
 var NUM_ENGINES		= 2;
 
-
-									# Handy handles for DC source feed indices
 var feed	= {	eng1	: 0,
 			eng2	: 1,
 			apu	: 2,
@@ -18,8 +17,8 @@ var feed	= {	eng1	: 0,
 			rect1	: 5,
 			rect2	: 6
 		  };
-var feed_status	= [0,0,0,0,0,0,0];					# For fast feed switch checking
-var RECT_OFFSET = 5;							# Handy rectifier index offset
+var feed_status	= [0,0,0,0,0,0,0];
+var RECT_OFFSET = 5;
 
 var elec_init = func {
 	setprop("/controls/electrical/battery", 0);   # Set all the stuff I need
@@ -41,6 +40,7 @@ var elec_init = func {
 	setprop("/systems/electrical/bus/acR", 0);
 	setprop("/systems/electrical/bus/genL", 0);
 	setprop("/systems/electrical/bus/genR", 0);
+	setprop("/systems/electrical/on", 0);
     setprop("systems/electrical/outputs/adf", 0);
     setprop("systems/electrical/outputs/audio-panel", 0);
     setprop("systems/electrical/outputs/audio-panel[1]", 0);
@@ -70,6 +70,13 @@ var elec_init = func {
     setprop("systems/electrical/outputs/taxi-lights", 0);
     setprop("systems/electrical/outputs/transponder", 0);
     setprop("systems/electrical/outputs/turn-coordinator", 0);
+	setlistener("/systems/electrical/bus/dcL", func {
+		update_elec_stby();
+	});
+
+	setlistener("/controls/electrical/emerpwr", func {
+		update_elec_stby();
+	});
 }
 
 var master_elec = func {
@@ -123,8 +130,6 @@ var master_elec = func {
 	# Left DC bus yes?
 	if (extpwr_on and extL) {
 		setprop("/systems/electrical/bus/dcL", 28);
-	} else if (emerpwr_on) {
-		setprop("/systems/electrical/bus/dcL", 28);
 	} else if (rpmapu >= 99 and apuL) {
 		setprop("/systems/electrical/bus/dcL", 28);
 	} else if (stateL == 3 and engL) {
@@ -151,8 +156,6 @@ var master_elec = func {
 	# Left AC bus yes?
 	if (extpwr_on and extL) {
 		setprop("/systems/electrical/bus/acL", 115);
-	} else if (emerpwr_on) {
-		setprop("/systems/electrical/bus/acL", 115);
 	} else if (rpmapu >= 99 and apuL) {
 		setprop("/systems/electrical/bus/acL", 115);
 	} else if (stateL == 3 and engL) {
@@ -177,9 +180,10 @@ var master_elec = func {
 	}
 }
 
-setlistener("/systems/electrical/bus/dcL", func {
-	var dcL = getprop("/systems/electrical/bus/dcL");
-	if (dcL >= 15) {
+var update_elec_stby = func {
+	if ((getprop("/systems/electrical/bus/dcL") >= 15) or (getprop("/controls/electrical/emerpwr") == 1)) {
+        setprop("systems/electrical/on", 1);
+		aispin.start();
         setprop("systems/electrical/outputs/adf", 28);
         setprop("systems/electrical/outputs/audio-panel", 28);
         setprop("systems/electrical/outputs/audio-panel[1]", 28);
@@ -210,6 +214,9 @@ setlistener("/systems/electrical/bus/dcL", func {
         setprop("systems/electrical/outputs/transponder", 28);
         setprop("systems/electrical/outputs/turn-coordinator", 28);
 	} else {
+        setprop("systems/electrical/on", 0);
+		ai_spin.setValue(0.2);
+		aispin.stop();
         setprop("systems/electrical/outputs/adf", 0);
         setprop("systems/electrical/outputs/audio-panel", 0);
         setprop("systems/electrical/outputs/audio-panel[1]", 0);
@@ -240,7 +247,7 @@ setlistener("/systems/electrical/bus/dcL", func {
         setprop("systems/electrical/outputs/transponder", 0);
         setprop("systems/electrical/outputs/turn-coordinator", 0);
 	}
-});
+}
 
 setlistener("/systems/electrical/bus/acR", func {
 	var acR = getprop("/systems/electrical/bus/acR");
@@ -253,19 +260,6 @@ setlistener("/systems/electrical/bus/acR", func {
 		}
 	} else {
 		setprop("systems/electrical/bus/galley", 0);
-	}
-});
-
-
-setlistener("/controls/electrical/battery", func {
-	var batt = getprop("/controls/electrical/battery");
-	if (batt == 0) {
-        setprop("systems/electrical/on", 0);
-		ai_spin.setValue(0.2);
-		aispin.stop();
-	} else if (batt == 1) {
-        setprop("systems/electrical/on", 1);
-		aispin.start();
 	}
 });
 

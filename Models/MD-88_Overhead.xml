@@ -407,7 +407,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwAPU_Master</object-name>
-  <property>controls/switches/apu-master</property>
+  <property>/controls/switches/apu-master</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>25</dep></entry>
@@ -438,10 +438,6 @@ Gary R. Neely 'Buckaroo', Nov 2010
       <max>2</max>
       <wrap>false</wrap>
     </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.apu_switch();</script>
-    </binding>
   </action>
 </animation>
 <animation>
@@ -458,17 +454,13 @@ Gary R. Neely 'Buckaroo', Nov 2010
       <max>2</max>
       <wrap>false</wrap>
     </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.apu_switch();</script>
-    </binding>
   </action>
 </animation>
 
 <animation>
   <type>rotate</type>
   <object-name>SwAPU_Air</object-name>
-  <property>controls/switches/apu-air</property>
+  <property>/controls/switches/apu-air</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>25</dep></entry>
@@ -493,10 +485,6 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <binding>
       <command>property-toggle</command>
       <property>/controls/switches/apu-air</property>
-    </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.apu_air_switch();</script>
     </binding>
   </action>
 </animation>
@@ -540,7 +528,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwStartPump</object-name>
-  <property>controls/switches/start-pump</property>
+  <property>/controls/fuel/switches/start-pump</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -564,7 +552,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/start-pump</property>
+      <property>/controls/fuel/switches/start-pump</property>
     </binding>
   </action>
 </animation>
@@ -572,7 +560,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwIgn</object-name>
-  <property>controls/switches/eng-ign</property>
+  <property>/controls/engines/ignition</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>25</dep></entry>
@@ -596,7 +584,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/eng-ign</property>
+      <property>/controls/engines/ignition</property>
     </binding>
   </action>
 </animation>
@@ -604,7 +592,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwEngStartL</object-name>
-  <property>controls/switches/eng-start[0]/position</property>
+  <property>/controls/engines/engine[0]/start-switch</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>25</dep></entry>
@@ -628,20 +616,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>/controls/switches/eng-start[0]/position</property>
-    </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.eng_startup_1(0);</script>
-    </binding>
-    <binding>
-	 <command>property-assign</command>
-	 <property>/engines/engine[0]/out-of-fuel</property>
-	 <value>false</value>
-	</binding>
-	<binding> 
-      <command>nasal</command>
-      <script>MD88.eng_more0();</script>
+      <property>/controls/engines/engine[0]/start-switch</property>
     </binding>
   </action>
 </animation>
@@ -649,7 +624,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwEngStartR</object-name>
-  <property>controls/switches/eng-start[1]/position</property>
+  <property>/controls/engines/engine[1]/start-switch</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>25</dep></entry>
@@ -673,20 +648,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>/controls/switches/eng-start[1]/position</property>
-    </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.eng_startup_1(1);</script>
-    </binding>
-	<binding>
-	 <command>property-assign</command>
-	 <property>/engines/engine[1]/out-of-fuel</property>
-	 <value>false</value>
-	</binding>
-	<binding> 
-      <command>nasal</command>
-      <script>MD88.eng_more1();</script>
+      <property>/controls/engines/engine[1]/start-switch</property>
     </binding>
   </action>
 </animation>
@@ -694,7 +656,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpLaft</object-name>
-  <property>controls/switches/pumpLaft</property>
+  <property>/controls/fuel/switches/left-aft</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -718,7 +680,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpLaft</property>
+      <property>/controls/fuel/switches/left-aft</property>
     </binding>
   </action>
 </animation>
@@ -726,7 +688,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpLfwd</object-name>
-  <property>controls/switches/pumpLfwd</property>
+  <property>/controls/fuel/switches/left-fwd</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -750,7 +712,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpLfwd</property>
+      <property>/controls/fuel/switches/left-fwd</property>
     </binding>
     <binding>
 	 <command>property-assign</command>
@@ -763,7 +725,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpRaft</object-name>
-  <property>controls/switches/pumpRaft</property>
+  <property>/controls/fuel/switches/right-aft</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -787,7 +749,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpRaft</property>
+      <property>/controls/fuel/switches/right-aft</property>
     </binding>
   </action>
 </animation>
@@ -795,7 +757,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpRfwd</object-name>
-  <property>controls/switches/pumpRfwd</property>
+  <property>/controls/fuel/switches/right-fwd</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -819,7 +781,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpRfwd</property>
+      <property>/controls/fuel/switches/right-fwd</property>
     </binding>
     <binding>
 	 <command>property-assign</command>
@@ -832,7 +794,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpCaft</object-name>
-  <property>controls/switches/pumpCaft</property>
+  <property>/controls/fuel/switches/center-aft</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -856,7 +818,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpCaft</property>
+      <property>/controls/fuel/switches/center-aft</property>
     </binding>
   </action>
 </animation>
@@ -864,7 +826,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
 <animation>
   <type>rotate</type>
   <object-name>SwPumpCfwd</object-name>
-  <property>controls/switches/pumpCfwd</property>
+  <property>/controls/fuel/switches/center-fwd</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
@@ -888,7 +850,7 @@ Gary R. Neely 'Buckaroo', Nov 2010
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/switches/pumpCfwd</property>
+      <property>/controls/fuel/switches/center-fwd</property>
     </binding>
   </action>
 </animation>

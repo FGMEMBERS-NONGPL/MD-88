@@ -14,7 +14,14 @@
 #
 # 04/11/2012 - Fixed Fuel consumption issue caused by change in core fuel routines in FG 2.4.
 
-
+# Basic fuel pump switches for engine/apu start/run. Not tyed into fuel system yet.
+setprop("/controls/fuel/switches/left-fwd", 0);
+setprop("/controls/fuel/switches/left-aft", 0);
+setprop("/controls/fuel/switches/center-fwd", 0);
+setprop("/controls/fuel/switches/center-aft", 0);
+setprop("/controls/fuel/switches/right-fwd", 0);
+setprop("/controls/fuel/switches/right-aft", 0);
+setprop("/controls/fuel/switches/start-pump", 0);
 
 # Properties under /consumables/fuel/tank[n]:
 # + level-gal_us    - Current fuel load.  Can be set by user code.
@@ -151,7 +158,6 @@ setprop("engines/engine[1]/fuel-flow-pph",pph2* PPG);
 
     if (cutoffs[i].getNode("cutoff").getValue()) {			# Engine fuel cutoff
       e.getNode("fuel-consumed-lbs").setDoubleValue(0);			# Reset engine's consumed fuel
-      e.getNode("out-of-fuel").setBoolValue(1);				# Kill engine
       i += 1;								# Skip other fuel stuff, move on to next engine
       continue;
     }
@@ -235,7 +241,7 @@ setprop("engines/engine[1]/fuel-flow-pph",pph2* PPG);
       }
 
       if (!satisfied) {							# Were engine's fuel needs met?
-        e.getNode("out-of-fuel").setBoolValue(1);			# If not, kill engine
+
       }
 
     }
@@ -248,7 +254,6 @@ setprop("engines/engine[1]/fuel-flow-pph",pph2* PPG);
     else			{ tank_lbs[1] -=  LBS_APU_NOAIR; }	# No air
     if (tank_lbs[1] < 0) {						# Right tank dry?
       tank_lbs[1] = 0;
-      apu_shutdown();
     }
   }
 
@@ -306,7 +311,14 @@ var init_double_prop = func(node, prop, val) {
 }
 
 
-var FuelInit = func {
+var fuel_init = func {
+setprop("/controls/fuel/switches/left-fwd", 0);
+setprop("/controls/fuel/switches/left-aft", 0);
+setprop("/controls/fuel/switches/center-fwd", 0);
+setprop("/controls/fuel/switches/center-aft", 0);
+setprop("/controls/fuel/switches/right-fwd", 0);
+setprop("/controls/fuel/switches/right-aft", 0);
+setprop("/controls/fuel/switches/start-pump", 0);
   fuel.update = func{};							# Remove default fuel fuel system
   setlistener("/sim/freeze/fuel", func(n) { fuel_freeze = n.getBoolValue() }, 1);
   

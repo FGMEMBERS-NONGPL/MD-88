@@ -25,6 +25,17 @@
    </volume>
   </apoff>
   
+  <apoff>
+   <name>apoff3</name>
+   <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
+   <condition>
+	 <property>/systems/electrical/bus/dcL</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apoff>
+  
 	<!-- ENGINE 1 IDLE -->
 	
 	<MDA_WHN>
@@ -248,30 +259,27 @@
 		</pitch>
 	</MDB_CMB>
 	
-	<!-- COCKPIT AMBIENCE -->
-	
-	<MDAMB>
-		<name>MD CPT 2</name>
-		<path>FL2070/83cockpit.wav</path>
-		<mode>looped</mode>
-		<property>sim/current-view/internal</property>
-		<volume>
-			<property>MD80/ambience/cockpit-amb-z</property>
-		</volume>
-	</MDAMB>
-	
 	<!-- AVIONICS -->
 	
 	<MDAMB>
 		<name>MD EFIS</name>
-		<path>FL2070/83system.wav</path>
+		<path>FL2070/83cockpit.wav</path>
 		<mode>looped</mode>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/systems/electrical/bus/dcL</property>
+					<value>20</value>
+				</greater-than>
+				<greater-than>
+					<property>/systems/electrical/bus/dcR</property>
+					<value>20</value>
+				</greater-than>
+			</or>
+		</condition>
 		<property>sim/current-view/internal</property>
 		<volume>
 			<property>MD80/ambience/cockpit-amb-z</property>
-		</volume>
-		<volume>
-			<property>systems/electrical/outputs/efis</property>
 		</volume>
 	</MDAMB>
 	

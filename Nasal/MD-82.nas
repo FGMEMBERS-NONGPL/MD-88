@@ -31,27 +31,21 @@ var controls_nav	= props.globals.getNode("/controls/lighting/nav");
 var controls_wingtipaft	= props.globals.getNode("/controls/lighting/wingtipaft");
 var controls_beacon	= props.globals.getNode("/controls/lighting/beacon");
 var lights_nav_toggle = func {
-  MD88_screenmssg.fg = [1, 1, 1, 1];
   if (controls_nav.getValue()) {
     controls_nav.setValue(0);
     controls_wingtipaft.setValue(0);
-    MD88_screenmssg.write("Nav lights off.");
   }
   else {
     controls_nav.setValue(1);
     controls_wingtipaft.setValue(1);
-    MD88_screenmssg.write("Nav lights on.");
   }
 }
 var lights_beacon_toggle = func {
-  MD88_screenmssg.fg = [1, 1, 1, 1];
   if (controls_beacon.getValue()) {
     controls_beacon.setBoolValue(0);
-    MD88_screenmssg.write("Beacon lights off.");
   }
   else {
     controls_beacon.setBoolValue(1);
-    MD88_screenmssg.write("Beacon lights on.");
   }
 }
 
@@ -70,18 +64,12 @@ var MD88_Savedata = func {
 								# Initialization:
 
 setlistener("/sim/signals/fdm-initialized", func {
-  elec_init();					# Start the electrical system
-								# Start the fuel system. The MD-88 uses a customized
-								# fuel routine to avoid the default cross-feed situation.
-  FuelInit();					# See MD-88_fuel.nas
-								# Start the custom flight surface system. The MD-88 uses
-								# this to handle spoiler operations and tabbed control
-								# surface simulation.
-  FlightSurfaceInit();			# See MD-88_flightsurfaces.nas
-  PneumaticsInit();				# See MD-88_pneumatics.nas
-  InstrumentationInit();		# See MD-88_instrumentation_drivers.nas
-  itaf.ap_init();				# See it-autoflight.nas
-  nd_init();					# See MD-88-efis.nas
+  systems.elec_init();
+  systems.fuel_init();
+  FlightSurfaceInit();
+  InstrumentationInit();
+  itaf.ap_init();
+  nd_init();
   setprop("/engines/engine/oil-q", 14);
   setprop("/engines/engine[1]/oil-q", 13);
   var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");

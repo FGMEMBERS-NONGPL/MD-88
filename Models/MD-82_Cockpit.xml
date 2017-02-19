@@ -728,10 +728,6 @@
       <command>property-toggle</command>
       <property>controls/engines/engine[0]/cutoff</property>
     </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.eng_startup_2(0);</script>
-    </binding>
   </action>
 </animation>
 
@@ -763,10 +759,6 @@
     <binding>
       <command>property-toggle</command>
       <property>controls/engines/engine[1]/cutoff</property>
-    </binding>
-    <binding> 
-      <command>nasal</command>
-      <script>MD88.eng_startup_2(1);</script>
     </binding>
   </action>
 </animation>
