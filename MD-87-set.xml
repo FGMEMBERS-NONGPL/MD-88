@@ -403,7 +403,6 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
   </keyboard>
 </input>
 
-
 <nasal>
   <MD88>
     <file>Aircraft/MD-88/Nasal/MD-88_flightsurfaces.nas</file>

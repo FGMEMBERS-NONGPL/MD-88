@@ -183,7 +183,7 @@ var taxi_c = func {
 	# Add fuel to engine 2.
 	setprop("/controls/engines/engine[1]/cutoff", 0);
 	var eng_two_chk_b = setlistener("/engines/engine[1]/n2-actual", func {
-		if (getprop("/engines/engine[1]/n2-actual") >= 55) {
+		if (getprop("/engines/engine[1]/state") == 3) {
 			removelistener(eng_two_chk_b);
 			taxi_d();
 		}
@@ -203,7 +203,7 @@ var taxi_e = func {
 	# Add fuel to engine 1.
 	setprop("/controls/engines/engine[0]/cutoff", 0);
 	var eng_one_chk_b = setlistener("/engines/engine[0]/n2-actual", func {
-		if (getprop("/engines/engine[0]/n2-actual") >= 55) {
+		if (getprop("/engines/engine[0]/state") == 3) {
 			removelistener(eng_one_chk_b);
 			taxi_f();
 		}

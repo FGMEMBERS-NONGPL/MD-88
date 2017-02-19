@@ -78,10 +78,6 @@
 	<object-name>HydQTYR2</object-name>
 	<object-name>FlapL</object-name>
 	<object-name>FlapR</object-name>
-	<object-name>statTO</object-name>
-	<object-name>statDISAG</object-name>
-	<object-name>statAUTO</object-name>
-	<object-name>statLAND</object-name>
 	<condition>
 		<or>
 		<greater-than>
@@ -815,6 +811,16 @@
 				<property>/surface-positions/slat-pos-norm</property>
 				<value>0.76</value>
 			</less-than>
+			<or>
+				<greater-than>
+					<property>systems/electrical/bus/dcL</property>
+					<value>15</value>
+				</greater-than>
+				<greater-than>
+					<property>systems/electrical/bus/dcR</property>
+					<value>15</value>
+				</greater-than>
+			</or>
 		</and>
 	</condition>
 </animation>
@@ -823,28 +829,40 @@
 	<type>select</type>
 	<object-name>slatDISAG</object-name>
 	<condition>
-		<or>
-			<and>	
-				<greater-than-equals>
-					<property>/surface-positions/slat-pos-norm</property>
-					<value>0.01</value>
-				</greater-than-equals>
-				<less-than-equals>
-					<property>/surface-positions/slat-pos-norm</property>
-					<value>0.74</value>
-				</less-than-equals>
-			</and>
-			<and>
-				<greater-than-equals>
-					<property>/surface-positions/slat-pos-norm</property>
-					<value>0.76</value>
-				</greater-than-equals>
-				<less-than-equals>
-					<property>/surface-positions/slat-pos-norm</property>
-					<value>0.99</value>
-				</less-than-equals>
-			</and>
-		</or>
+		<and>
+			<or>
+				<and>	
+					<greater-than-equals>
+						<property>/surface-positions/slat-pos-norm</property>
+						<value>0.01</value>
+					</greater-than-equals>
+					<less-than-equals>
+						<property>/surface-positions/slat-pos-norm</property>
+						<value>0.74</value>
+					</less-than-equals>
+				</and>
+				<and>
+					<greater-than-equals>
+						<property>/surface-positions/slat-pos-norm</property>
+						<value>0.76</value>
+					</greater-than-equals>
+					<less-than-equals>
+						<property>/surface-positions/slat-pos-norm</property>
+						<value>0.99</value>
+					</less-than-equals>
+				</and>
+			</or>
+			<or>
+				<greater-than>
+					<property>systems/electrical/bus/dcL</property>
+					<value>15</value>
+				</greater-than>
+				<greater-than>
+					<property>systems/electrical/bus/dcR</property>
+					<value>15</value>
+				</greater-than>
+			</or>
+		</and>
 	</condition>
 </animation>
 
@@ -852,10 +870,22 @@
 	<type>select</type>
 	<object-name>slatAUTO</object-name>
 	<condition>
-		<greater-than>
-			<property>/unused/value</property>
-			<value>999</value>
-		</greater-than>
+		<and>
+			<greater-than>
+				<property>/unused/value</property>
+				<value>999</value>
+			</greater-than>
+			<or>
+				<greater-than>
+					<property>systems/electrical/bus/dcL</property>
+					<value>15</value>
+				</greater-than>
+				<greater-than>
+					<property>systems/electrical/bus/dcR</property>
+					<value>15</value>
+				</greater-than>
+			</or>
+		</and>
 	</condition>
 </animation>
 
@@ -863,10 +893,22 @@
 	<type>select</type>
 	<object-name>slatLAND</object-name>
 	<condition>
-		<greater-than>
-			<property>/surface-positions/slat-pos-norm</property>
-			<value>0.99</value>
-		</greater-than>
+		<and>
+			<greater-than>
+				<property>/surface-positions/slat-pos-norm</property>
+				<value>0.99</value>
+			</greater-than>
+			<or>
+				<greater-than>
+					<property>systems/electrical/bus/dcL</property>
+					<value>15</value>
+				</greater-than>
+				<greater-than>
+					<property>systems/electrical/bus/dcR</property>
+					<value>15</value>
+				</greater-than>
+			</or>
+		</and>
 	</condition>
 </animation>
 
