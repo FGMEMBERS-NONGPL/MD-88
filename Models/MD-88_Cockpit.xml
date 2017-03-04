@@ -244,6 +244,8 @@
   <object-name>KnobABS</object-name>
   <object-name>LampABS</object-name>
   <object-name>LampABSon</object-name>
+  <object-name>apoff</object-name>
+  <object-name>apoff2</object-name>
   <object-name>PitchTrim</object-name>
   <object-name>AToffL</object-name>
   <object-name>AToffR</object-name>
