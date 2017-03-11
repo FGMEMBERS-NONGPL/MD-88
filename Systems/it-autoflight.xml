@@ -1052,7 +1052,7 @@
 		</input>
 		<output>/it-autoflight/internal/target-pitch</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>8</max-rate-of-change>
+		<max-rate-of-change>10</max-rate-of-change>
 	</filter>
 
 	<pid-controller>
