@@ -214,7 +214,7 @@ controls.flapsDown = func(step) {
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 3) {
 			setprop("/controls/flight/slats", 1.000);
-			setprop("/controls/flight/flaps", 0.700);
+			setprop("/controls/flight/flaps", 0.690);
 			setprop("/controls/flight/flap-lever", 4);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 4) {
@@ -226,7 +226,7 @@ controls.flapsDown = func(step) {
 	} else if (step == -1) {
 		if (getprop("/controls/flight/flap-lever") == 5) {
 			setprop("/controls/flight/slats", 1.000);
-			setprop("/controls/flight/flaps", 0.700);
+			setprop("/controls/flight/flaps", 0.690);
 			setprop("/controls/flight/flap-lever", 4);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 4) {

@@ -14,6 +14,9 @@
 <engines>
   <kp>0.01</kp>
   <kp-spd>0.5</kp-spd>
+  <epr-roc-thr>20</epr-roc-thr>
+  <epr-roc-pitch>5</epr-roc-pitch>
+  <epr-roc-retard>20</epr-roc-retard>
   <engine n="0">
 	<start-switch type="bool">0</start-switch>
     <cutoff type="bool">1</cutoff>

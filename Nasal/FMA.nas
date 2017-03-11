@@ -32,6 +32,9 @@ setlistener("/it-autoflight/mode/lat", func {
   } else if (lat == "ALGN") {
 	setprop("/FMA/roll", "ALN");
 	setprop("/FMA/roll2", " ");
+  } else if (lat == "T/O") {
+	setprop("/FMA/roll", "TAK");
+	setprop("/FMA/roll2", "OFF");
   }
 });
 
@@ -52,6 +55,21 @@ setlistener("/it-autoflight/mode/vert", func {
 	setprop("/FMA/pitch2", "TRK");
   } else if ((vert == "SPD CLB") or (vert == "SPD DES")) {
 	flch-spdmach();
+	setprop("/FMA/pitch2", " ");
+  } else if (vert == "FPA") {
+	setprop("/FMA/pitch", "FPA");
+	setprop("/FMA/pitch2", "TRK");
+  } else if (vert == "LAND 3") {
+	setprop("/FMA/pitch", "AUT");
+	setprop("/FMA/pitch2", "LND");
+  } else if (vert == "FLARE") {
+	setprop("/FMA/pitch", "FLAR");
+	setprop("/FMA/pitch2", " ");
+  } else if (vert == "T/O CLB") {
+	setprop("/FMA/pitch", "TAK");
+	setprop("/FMA/pitch2", "OFF");
+  } else if (vert == "G/A CLB") {
+	setprop("/FMA/pitch", "G/A");
 	setprop("/FMA/pitch2", " ");
   }
 });
