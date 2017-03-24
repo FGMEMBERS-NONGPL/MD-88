@@ -226,9 +226,9 @@ For Manual Engine Start, see the checlists in the Help Menu.
 <it-autoflight>
 	<config>
 		<roll>
-			<umin>-0.40</umin>
-			<umax>0.40</umax>
-			<kp>0.06</kp>
+			<umin>-0.50</umin>
+			<umax>0.50</umax>
+			<kp>0.08</kp>
 			<kp-vloc>0.09</kp-vloc>
 			<ti>10.0</ti>
 			<td>0.00001</td>
@@ -243,10 +243,10 @@ For Manual Engine Start, see the checlists in the Help Menu.
 			<kp-cws>-0.07</kp-cws>
 		</pitch>
 		<cmd>
-			<roll-scale>6.5</roll-scale>
+			<roll-scale>6.2</roll-scale>
 			<vorloc>-5.0</vorloc>
 			<alt>0.03</alt>
-			<vs>0.07</vs>
+			<vs>0.10</vs>
 			<fpa>0.30</fpa>
 			<flch>-4.0</flch>
 			<gs>0.11</gs>
@@ -264,7 +264,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 		<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
 		<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
 		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
-		<togaspd>158</togaspd> <!-- V2 + 10kts -->
+		<togaspd>168</togaspd> <!-- V2 + 10kts -->
 		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
 		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 	</settings>
