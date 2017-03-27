@@ -260,7 +260,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 	</config>
 	<settings>
 		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
-		<flare-altitude>35</flare-altitude> <!-- Autoland Flare AGL -->
+		<flare-altitude>25</flare-altitude> <!-- Autoland Flare AGL -->
 		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 		<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
 		<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
