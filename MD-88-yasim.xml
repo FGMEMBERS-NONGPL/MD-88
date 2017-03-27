@@ -25,8 +25,8 @@ weight configurations, based on MD-80 flight tables and lots of trial-and-error.
 AoA really should be 3 degrees, but 4 works better for the FDM solution.
 -->
 <approach speed="135" aoa="4" fuel="0.3">
-  <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.2"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.2"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.4"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.4"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/flight/slats" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
