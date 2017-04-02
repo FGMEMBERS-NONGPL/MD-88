@@ -103,7 +103,7 @@ var eng_one_n2_check = func {
 }
 
 var eng_one_loop = func {
-	if (getprop("/engines/engine[0]/n2-actual") >= n2_min) {
+	if (getprop("/engines/engine[0]/state") == 3) {
 		var e = engines[0];
 		e.getNode("n1-actual").setValue(e.getNode("n1").getValue());
 		e.getNode("n2-actual").setValue(e.getNode("n2").getValue());
@@ -184,7 +184,7 @@ var eng_two_n2_check = func {
 }
 
 var eng_two_loop = func {
-	if (getprop("/engines/engine[1]/n2-actual") >= n2_min) {
+	if (getprop("/engines/engine[1]/state") == 3) {
 		var e = engines[1];
 		e.getNode("n1-actual").setValue(e.getNode("n1").getValue());
 		e.getNode("n2-actual").setValue(e.getNode("n2").getValue());
