@@ -259,6 +259,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
 		</autoland>
 	</config>
 	<settings>
+		<default-bank-limit>30</default-bank-limit> <!-- Set the Default Bank Limit -->
 		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
 		<flare-altitude>25</flare-altitude> <!-- Autoland Flare AGL -->
 		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
