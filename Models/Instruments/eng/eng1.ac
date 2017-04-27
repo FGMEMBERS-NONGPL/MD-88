@@ -6,6 +6,7 @@ MATERIAL "buttonlights" rgb 0 0.835294 0  amb 0 0.835294 0  emis 0 0.835294 0  s
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 128  trans 0
 MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 1 0.466667 0  emis 0.341176 0.341176 0.341176  spec 0 0 0  shi 32  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0.47451 0.47451 0.47451  spec 1 1 1  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 0  trans 0
 OBJECT world
 kids 55
 OBJECT poly
@@ -2927,7 +2928,7 @@ numvert 4
 0 0.128633 0.0728357
 numsurf 1
 SURF 0x0
-mat 0
+mat 7
 refs 4
 0 1.00067 0.999407
 3 4.45843e-005 0.999407
