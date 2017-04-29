@@ -1,6 +1,6 @@
 # IT AUTOFLIGHT System Controller
 # Joshua Davidson (it0uchpods)
-# V3.0.0 Build 173
+# V3.0.0 Build 174
 # This program is 100% GPL!
 
 print("IT-AUTOFLIGHT: Please Wait!");
@@ -937,7 +937,7 @@ var vnav_des_tod = func {
 		var vnav_alt_wp = getprop("/autopilot/route-manager/route/wp",wp_curr,"altitude-ft");
 		var alt_curr = getprop("/instrumentation/altimeter/indicated-altitude-ft");
 		var dist = getprop("/autopilot/route-manager/wp/dist");
-		var vdist = dist - 1;
+		var vdist = dist + 1;
 		var alttl = abs(alt_curr - vnav_alt_wp);
 		setprop("/it-autoflight/internal/top-of-des-nm", (alttl / 1000) * 3);
 		if (vdist < getprop("/it-autoflight/internal/top-of-des-nm")) {
