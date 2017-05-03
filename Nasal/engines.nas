@@ -42,6 +42,7 @@ setprop("/systems/apu/egt", 42);
 
 setlistener("/sim/signals/fdm-initialized", func {
 	engines[0].getNode("out-of-fuel", create=1).setBoolValue(1);
+	engines[1].getNode("out-of-fuel", create=1).setBoolValue(1);
 });
 
 ####################
