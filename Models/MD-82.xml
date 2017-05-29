@@ -233,8 +233,33 @@ in some cases based on observable cases in photos.
         <object-name>RHLND.flare</object-name>
     </effect>
 
+<!--Exterior lighting and reflections-->
+    <effect>
+		<inherits-from>Models/Effects/Exterior/bumpspec</inherits-from>
+		<object-name>Fuselage</object-name>
+		<object-name>Wing</object-name>
+		<object-name>WingFairing</object-name>
+		<object-name>Engines</object-name>
+		<object-name>VStabilizer</object-name>
+		<object-name>Rudder</object-name>
+		<object-name>Stabilizer</object-name>
+		<object-name>AileronR</object-name>
+		<object-name>FlapOutR</object-name>
+		<object-name>FlapInR</object-name>
+		<object-name>AileronL</object-name>
+		<object-name>FlapOutL</object-name>
+		<object-name>FlapInL</object-name>
+		<object-name>SlatsR</object-name>
+		<object-name>SlatsL</object-name>
+		<object-name>RudderTabControl</object-name>
+    </effect>
 
-<animation>
+    <effect>
+		<inherits-from>Models/Effects/Exterior/exterior-glass-reflection</inherits-from>
+		<object-name>WindowsCockpit</object-name>
+    </effect>
+
+<!--animation>
   <type>material</type>
   <object-name>Fuselage</object-name>
   <object-name>Wing</object-name>
@@ -255,10 +280,10 @@ in some cases based on observable cases in photos.
   <emission>
     <red>0.05</red>
     <green>0.05</green>
-    <blue>0.05</blue>
+    <blue>0.05</blue-->
     <!--factor-prop>/controls/lighting/digital-norm</factor-prop-->
-  </emission>
-</animation>
+  <!--/emission>
+</animation-->
 
 
  <animation>
