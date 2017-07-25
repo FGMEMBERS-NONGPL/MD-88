@@ -246,15 +246,15 @@
 		<name>MDB CMB 0</name>
 		<path>FL2070/MDB_CMB_1.wav</path>
 		<mode>looped</mode>
-		<property>engines/engine[0]/epr</property>
+		<property>engines/engine[1]/epr</property>
 		<volume>
-			<property>MD80/engine/MDB_CMB_0</property>
+			<property>MD80/engine/MDB_CMB_1</property>
 		</volume>
 		<volume>
 			<property>sim/current-view/internal</property>
 		</volume>
 		<pitch>
-			<property>MD80/enginep/MDB_CMB_0</property>
+			<property>MD80/enginep/MDB_CMB_1</property>
 			<offset>0</offset>
 		</pitch>
 	</MDB_CMB>
