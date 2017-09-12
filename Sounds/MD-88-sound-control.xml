@@ -734,7 +734,7 @@
           <product>
 			<property>sim/current-view/z-offset-m</property>
 		  </product>
-			<entry><ind>3</ind> <dep>0.8</dep></entry>
+			<entry><ind>3</ind> <dep>1</dep></entry>
 			<entry><ind>4</ind> <dep>0</dep></entry>
         </table>
 		<property>sim/current-view/internal</property>
