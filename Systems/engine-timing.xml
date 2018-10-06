@@ -260,4 +260,16 @@
 		</max-rate-of-change>
 	</filter>
 
+	<filter>
+		<name>VS ABS</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<input> 
+			<expression>
+				<abs><property>/it-autoflight/input/vs</property></abs>
+			</expression>
+		</input>
+		<output>/it-autoflight/input/vs-abs</output>
+	</filter>
+
 </PropertyList>

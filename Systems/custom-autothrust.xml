@@ -22,10 +22,6 @@
 					<equals>
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
 					</equals>					
 					<equals>
 						<property>/it-autoflight/output/athr</property>
@@ -76,10 +72,6 @@
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
@@ -114,22 +106,18 @@
 	</pid-controller>
 
 	<!-- IDLE EPR -->
-	<pid-controller>
+	<filter>
 		<name>IDLE</name>
 		<debug>false</debug>
+		<type>gain</type>
+		<gain>1</gain>
 		<enable>
 			<condition>
 				<and>
-					<or>
-						<equals>
-							<property>/it-autoflight/output/thr-mode</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>/it-autoflight/output/retard</property>
-							<value>1</value>
-						</equals>
-					</or>
+					<equals>
+						<property>/it-autoflight/output/thr-mode</property>
+						<value>1</value>
+					</equals>
 					<equals>
 						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
@@ -138,49 +126,28 @@
 			</condition>
 		</enable>
 		<input>
-			<value>900</value>
+			<condition>
+				<equals>
+					<property>/it-autoflight/mode/thr</property>
+					<value>RETARD</value>
+				</equals>
+			</condition>
+			<value>80</value>
 		</input>
-		<reference>
-			<value>0</value>
-		</reference>
+		<input>
+			<value>104</value>
+		</input>
 		<output>
 			<property>/controls/engines/target-thrust-cmd</property>
 		</output>
-		<config>
-			<Kp>0.1</Kp>        
-			<beta>1.0</beta>    
-			<alpha>0.1</alpha>  
-			<gamma>0.0</gamma>  
-			<Ti>10.0</Ti>       
-			<Td>0.00001</Td>    
-			<u_min>
-				<condition>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
-				</condition>
-				<value>104</value>
-			</u_min>  
-			<u_min>
-				<condition>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>1</value>
-					</equals>
-				</condition>
-				<value>80</value>
-			</u_min> 
-			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
-		</config>
-	</pid-controller>
+	</filter>
 
 	<!-- CLB EPR -->
-	<pid-controller>
+	<filter>
 		<name>CLB</name>
 		<debug>false</debug>
+		<type>gain</type>
+		<gain>1</gain>
 		<enable>
 			<condition>
 				<and>
@@ -189,10 +156,6 @@
 						<value>2</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
@@ -200,28 +163,13 @@
 			</condition>
 		</enable>
 		<input>
-			<value>0</value>
+			<property>/controls/engines/eprlimx100</property>
 		</input>
-		<reference>
-			<value>900</value>
-		</reference>
 		<output>
 			<property>/controls/engines/target-thrust-cmd</property>
 		</output>
-		<config>
-			<Kp>0.1</Kp>        
-			<beta>1.0</beta>    
-			<alpha>0.1</alpha>  
-			<gamma>0.0</gamma>  
-			<Ti>10.0</Ti>       
-			<Td>0.00001</Td>    
-			<u_min>100</u_min>   
-			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
-		</config>
-	</pid-controller>
-	
+	</filter>
+
 	<filter>
 		<name>TARGET THRUST CMD ONE</name>
 		<debug>false</debug>
@@ -269,10 +217,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<property>/controls/engines/epr-roc-thr</property>
@@ -288,10 +236,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<property>/controls/engines/epr-roc-pitch</property>
@@ -304,8 +252,8 @@
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>1</value>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
 					</equals>
 				</and>
 			</condition>
@@ -359,10 +307,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<property>/controls/engines/epr-roc-thr</property>
@@ -378,10 +326,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<property>/controls/engines/epr-roc-pitch</property>
@@ -394,8 +342,8 @@
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>1</value>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
 					</equals>
 				</and>
 			</condition>

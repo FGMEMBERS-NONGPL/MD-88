@@ -226,39 +226,42 @@ For Manual Engine Start, see the checlists in the Help Menu.
 <it-autoflight>
 	<config>
 		<roll>
-			<umin>-0.50</umin>
-			<umax>0.50</umax>
-			<kp>0.05</kp>
-			<kp-vloc>0.09</kp-vloc>
-			<ti>10.0</ti>
-			<td>0.00001</td>
+			<kp-low>0.14</kp-low> <!-- Kp at low speed -->
+			<kp-high>0.07</kp-high> <!-- Kp at high speed -->
+			<ti>1.0</ti>
+			<td>0.0001</td>
 		</roll>
 		<pitch>
-			<umin>-0.50</umin>
-			<umax>0.50</umax>
-			<kp>-0.08</kp>
-			<ti>10.0</ti>
-			<td>0.0001</td>
+			<kp-low>-0.17</kp-low> <!-- Kp at low speed -->
+			<kp-high>-0.07</kp-high> <!-- Kp at high speed -->
+			<ti>0.5</ti>
+			<td>0.001</td>
 		</pitch>
 		<cmd>
-			<roll-kp>-1.9</roll-kp>
-			<roll-scale>1.0</roll-scale>
-			<vorloc>-3.0</vorloc>
-			<vs>0.01</vs>
+			<roll-kp>-1.6</roll-kp>
+			<vorloc>-2.5</vorloc>
+			<alt-gain>-5</alt-gain>
+			<vs-low>0.0029</vs-low> <!-- Kp at low speed -->
+			<vs-high>0.0010</vs-high> <!-- Kp at high speed -->
 		</cmd>
-		<autoland>
-			<kp-pitch>0.05</kp-pitch>
-			<kp-rudder>-0.1</kp-rudder>
+		<autoland> 
+			<kp-pitch>0.0051</kp-pitch>
+			<kp-rudder>-0.05</kp-rudder>
 		</autoland>
+		<rollout>
+			<defl-pitch>0.15</defl-pitch>
+			<kp-rudder>-0.02</kp-rudder>
+		</rollout>
 	</config>
 	<settings>
 		<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
+		<disable-final>0</disable-final> <!-- Disable the Final Controllers -->
 		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 		<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
-		<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
+		<retard-ft>50</retard-ft> <!-- Enable Thrust Retard -->
 		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
 		<togaspd>164</togaspd> <!-- V2 + 10kts -->
-		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
+		<lat-agl-ft>50</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to LNAV (if armed) -->
 		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 		<autoland-without-ap>0</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 	</settings>

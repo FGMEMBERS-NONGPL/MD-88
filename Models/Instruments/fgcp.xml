@@ -1466,9 +1466,8 @@
 <animation>
         <type>textranslate</type>
         <object-name>VS.led1</object-name>
-        <property>/it-autoflight/input/vs</property>
-        <factor>-0.0001</factor>
-	<bias>999</bias>
+        <property>/it-autoflight/input/vs-abs</property>
+        <factor>0.0001</factor>
         <step>1000</step>
         <axis>
             <x>0</x>
@@ -1476,33 +1475,29 @@
             <z>0</z>
         </axis>
     </animation>
-   
 
-  
- <animation>
+    <animation>
         <type>textranslate</type>
         <object-name>VS.led2</object-name>
-        <property>/it-autoflight/input/vs</property>
-	 <!--bias>10</bias-->
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.001</factor>
-        <step>-100</step>
+        <step>100</step>
         <axis>
             <x>0</x>
-            <y>-1</y>
+            <y>1</y>
             <z>0</z>
         </axis>
     </animation>
 
-<animation>
+    <animation>
         <type>textranslate</type>
         <object-name>VS.led3</object-name>
-        <property>/it-autoflight/input/vs</property>
-	<!--bias>1</bias-->
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.01</factor>
-        <step>-10</step>
+        <step>10</step>
         <axis>
             <x>0</x>
-            <y>-1</y>
+            <y>1</y>
             <z>0</z>
         </axis>
     </animation>
@@ -1510,12 +1505,12 @@
     <animation>
         <type>textranslate</type>
         <object-name>VS.led4</object-name>
-        <property>/it-autoflight/input/vs</property>
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.1</factor>
-        <step>-1</step>
+        <step>1</step>
         <axis>
             <x>0</x>
-            <y>-1</y>
+            <y>1</y>
             <z>0</z>
         </axis>
     </animation>
@@ -1545,7 +1540,7 @@
 <animation>
         <type>textranslate</type>
         <object-name>VS.led1.001</object-name>
-        <property>/it-autoflight/input/vs</property>
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.0001</factor>
         <step>1000</step>
         <axis>
@@ -1558,7 +1553,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>VS.led2.001</object-name>
-        <property>/it-autoflight/input/vs</property>
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.001</factor>
         <step>100</step>
         <axis>
@@ -1571,7 +1566,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>VS.led3.001</object-name>
-        <property>/it-autoflight/input/vs</property>
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.01</factor>
         <step>10</step>
         <axis>
@@ -1584,7 +1579,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>VS.led4.001</object-name>
-        <property>/it-autoflight/input/vs</property>
+        <property>/it-autoflight/input/vs-abs</property>
         <factor>0.1</factor>
         <step>1</step>
         <axis>
