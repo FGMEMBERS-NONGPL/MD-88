@@ -71,7 +71,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   nd_init();
   setprop("/engines/engine/oil-q", 14);
   setprop("/engines/engine[1]/oil-q", 13);
-  var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
   setlistener("engines/engine[0]/epr-actual", func {
     setprop("engines/engine[0]/epr-actualx100", (getprop("engines/engine[0]/epr-actual") * 100));
   });
