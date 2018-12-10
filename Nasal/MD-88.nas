@@ -67,7 +67,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   systems.fuel_init();
   FlightSurfaceInit();
   InstrumentationInit();
-  itaf.ap_init();
   nd_init();
   setprop("/engines/engine/oil-q", 14);
   setprop("/engines/engine[1]/oil-q", 13);
