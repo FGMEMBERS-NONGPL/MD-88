@@ -97,11 +97,28 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
 
 <animation>
   <type>select</type>
+  <object-name>LampStrobeLOn</object-name>
+  <object-name>LampStrobeROn</object-name>
+  <object-name>LampStrobeAftOn</object-name>
+  <object-name>GlowStrobeAftL</object-name>
+  <object-name>GlowStrobeL</object-name>
+  <object-name>GlowStrobeAftR</object-name>
+  <object-name>GlowStrobeR</object-name>
+  <condition>
+     <and>
+      <property>sim/multiplay/generic/float[12]</property>
+      <property>sim/multiplay/generic/int[1]</property>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
   <object-name>LampWingtipAftOn</object-name>
   <object-name>GlowWingtipAftL</object-name>
   <object-name>GlowWingtipAftR</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[1]</property>
+    <property>sim/multiplay/generic/int[2]</property>
   </condition>
 </animation>
 
@@ -160,6 +177,48 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
 
 <animation>
   <type>flash</type>
+  <object-name>GlowStrobeL</object-name>
+  <center>
+   <x-m>27.550</x-m>
+   <y-m>-16.055</y-m>
+   <z-m>-0.050</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>GlowStrobeR</object-name>
+  <center>
+   <x-m>27.550</x-m>
+   <y-m>16.055</y-m>
+   <z-m>0.050</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+<animation>
+  <type>flash</type>
   <object-name>GlowWingtipAftL</object-name>
   <center>
    <x-m>28.954</x-m>
@@ -178,9 +237,52 @@ So the cone point (flash center) will actually be somewhat behind the lamp objec
   <min>0.01</min>
   <max>1</max>
 </animation>
+
 <animation>
   <type>flash</type>
   <object-name>GlowWingtipAftR</object-name>
+  <center>
+   <x-m>28.954</x-m>
+   <y-m>16.364</y-m>
+   <z-m>-0.042</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>2</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>GlowStrobeAftL</object-name>
+  <center>
+   <x-m>28.954</x-m>
+   <y-m>-16.364</y-m>
+   <z-m>-0.042</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>2</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>GlowStrobeAftR</object-name>
   <center>
    <x-m>28.954</x-m>
    <y-m>16.364</y-m>

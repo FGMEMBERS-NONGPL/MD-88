@@ -565,8 +565,8 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>MD88.lights_beacon_toggle();</script>
+      <command>property-toggle</command>
+      <property>/controls/lighting/beacon</property>
     </binding>
   </action>
 </animation>
@@ -574,9 +574,10 @@
 <animation>
   <type>rotate</type>
   <object-name>SwNavLts</object-name>
-  <property>controls/lighting/nav</property>
+  <property>controls/lighting/pos-strobe</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>0.5</ind><dep>25</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
   </interpolation>   
   <center>
@@ -597,21 +598,124 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>MD88.lights_nav_toggle();</script>
+      <command>property-cycle</command>
+      <property>/controls/lighting/pos-strobe</property>
+	  <value>0</value>
+	  <value>0.5</value>
+	  <value>1</value>
     </binding>
   </action>
 </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>SwFloodLtsL</object-name>
+  <property>controls/lighting/floodL</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.48049</x-m>
+    <y-m>0.294822</y-m>
+    <z-m>1.18135</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation> 
+<animation>
+  <type>pick</type>
+  <object-name>SwFloodLtsL</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/lighting/floodL</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>SwFloodLtsR</object-name>
+  <property>controls/lighting/floodR</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.48049</x-m>
+    <y-m>0.3266</y-m>
+    <z-m>1.18135</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation> 
+<animation>
+  <type>pick</type>
+  <object-name>SwFloodLtsR</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/lighting/floodR</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>SwWingLts</object-name>
+  <property>/controls/lighting/floodNacl</property>
+  <interpolation>
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>0.5</ind><dep>25</dep></entry>
+    <entry><ind>1</ind><dep>50</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>2.48642</x-m>
+    <y-m>0.298422</y-m>
+    <z-m>1.15342</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>SwWingLts</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>controls/lighting/floodNacl</property>
+	  <value>0</value>
+	  <value>0.5</value>
+	  <value>1</value>
+    </binding>
+  </action>
+</animation>
 
 <!-- Left-side Light Switches -->
 
 <animation>
   <type>rotate</type>
   <object-name>SwNoseLts</object-name>
-  <property>sim/rendering/als-secondary-lights/use-landing-light</property>
+  <property>/controls/lighting/landN</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>0.5</ind><dep>25</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
   </interpolation>   
   <center>
@@ -632,8 +736,11 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-toggle</command>
-      <property>sim/rendering/als-secondary-lights/use-landing-light</property>
+      <command>property-cycle</command>
+      <property>controls/lighting/landN</property>
+	  <value>0</value>
+	  <value>0.5</value>
+	  <value>1</value>
     </binding>
   </action>
 </animation>
@@ -641,9 +748,10 @@
 <animation>
   <type>rotate</type>
   <object-name>SwLdgLtsL</object-name>
-  <property>controls/lighting/landing-left</property>
+  <property>/controls/lighting/landL</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>0.5</ind><dep>25</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
   </interpolation>   
   <center>
@@ -664,8 +772,11 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-toggle</command>
-      <property>controls/lighting/landing-left</property>
+      <command>property-cycle</command>
+      <property>controls/lighting/landL</property>
+	  <value>0</value>
+	  <value>0.5</value>
+	  <value>1</value>
     </binding>
   </action>
 </animation>
@@ -673,9 +784,10 @@
 <animation>
   <type>rotate</type>
   <object-name>SwLdgLtsR</object-name>
-  <property>controls/lighting/landing-right</property>
+  <property>/controls/lighting/landR</property>
   <interpolation>
     <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>0.5</ind><dep>25</dep></entry>
     <entry><ind>1</ind><dep>50</dep></entry>
   </interpolation>   
   <center>
@@ -696,8 +808,11 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>property-toggle</command>
-      <property>controls/lighting/landing-right</property>
+      <command>property-cycle</command>
+      <property>controls/lighting/landR</property>
+	  <value>0</value>
+	  <value>0.5</value>
+	  <value>1</value>
     </binding>
   </action>
 </animation>
