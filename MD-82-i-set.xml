@@ -204,9 +204,10 @@ For Manual Engine Start, see the checlists in the Help Menu.
       <float n="9" alias="/controls/flight/aileron"/>
       <float n="10" alias="/controls/flight/elevator"/>
       <float n="11" alias="/controls/flight/elevator-trim"/>
+      <!--<float n="12" alias="/sim/model/lighting/strobe"/> same as beacon -->
       <int n="0" alias="/controls/lighting/beacon"/>
-      <int n="1" alias="/controls/lighting/wingtipaft"/>
-      <int n="2" alias="/controls/lighting/nav"/>
+      <int n="1" alias="/controls/lighting/strobe"/>
+      <int n="2" alias="/sim/model/lighting/nav-lt"/>
       <int n="3" alias="/controls/lighting/landing-left"/>
       <int n="4" alias="/controls/lighting/landing-right"/>
     </generic>
@@ -416,6 +417,7 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
   <systems>
     <file>Aircraft/MD-88/Nasal/electrical.nas</file>
     <file>Aircraft/MD-88/Nasal/engines.nas</file>
+    <file>Aircraft/MD-88/Nasal/lighting.nas</file>
     <file>Aircraft/MD-88/Nasal/fuel.nas</file>
   </systems>
   <itaf>
