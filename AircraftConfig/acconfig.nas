@@ -32,7 +32,7 @@ var colddark = func {
 	MD88.spoiler_disarm();
 	setprop("/controls/gear/gear-down", 1);
 	systems.elec_init();
-	itaf.ap_init();
+	itaf.ITAF.init();
 	MD88.nd_init();
 	if (getprop("/engines/engine[1]/n2-actual") < 2) {
 		colddark_b();
@@ -74,7 +74,7 @@ var beforestart = func {
 	MD88.spoiler_disarm();
 	setprop("/controls/gear/gear-down", 1);
 	systems.elec_init();
-	itaf.ap_init();
+	itaf.ITAF.init();
 	MD88.nd_init();
 	setprop("/controls/engines/engine[0]/start-switch", 0);
 	setprop("/controls/engines/engine[1]/start-switch", 0);
@@ -132,7 +132,7 @@ var taxi = func {
 	MD88.spoiler_disarm();
 	setprop("/controls/gear/gear-down", 1);
 	systems.elec_init();
-	itaf.ap_init();
+	itaf.ITAF.init();
 	MD88.nd_init();
 	setprop("/controls/engines/engine[0]/start-switch", 0);
 	setprop("/controls/engines/engine[1]/start-switch", 0);

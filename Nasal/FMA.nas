@@ -59,9 +59,6 @@ setlistener("/it-autoflight/mode/vert", func {
 	} else if (vert == "FPA") {
 		setprop("/FMA/pitch", "FPA");
 		setprop("/FMA/pitch2", "TRK");
-	} else if (vert == "LAND") {
-		setprop("/FMA/pitch", "AUT");
-		setprop("/FMA/pitch2", "LND");
 	} else if (vert == "FLARE") {
 		setprop("/FMA/pitch", "FLAR");
 		setprop("/FMA/pitch2", " ");
