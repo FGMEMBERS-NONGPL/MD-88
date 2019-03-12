@@ -5,7 +5,7 @@
 
   <apoff>
    <name>apoff</name>
-   <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
+   <path>Aircraft/MD-88/Sounds/apoff.wav</path>
    <condition>
 	 <property>/it-autoflight/sound/apoffsound</property>
    </condition>
@@ -15,19 +15,8 @@
   </apoff>
   
   <apoff>
-   <name>apoff2</name>
-   <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
-   <condition>
-	 <property>/it-autoflight/sound/apoffsound2</property>
-   </condition>
-   <volume>
-    <factor>10.0</factor>
-   </volume>
-  </apoff>
-  
-  <apoff>
-   <name>apoff3</name>
-   <path>/Aircraft/MD-88/Sounds/apoff.wav</path>
+   <name>apoff elec</name>
+   <path>Aircraft/MD-88/Sounds/apoff.wav</path>
    <condition>
 	 <property>/systems/electrical/bus/dcL</property>
    </condition>
