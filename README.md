@@ -2,8 +2,7 @@
 MD-88 by it0uchpods Hanger, based off Gary Neely's MD-81
 
 This is a project to develop advanced simulation of the McDonnell Douglas MD-82, MD-87, and MD-88 aircrafts for [FGFS](http://www.flightgear.org/).
-
-Aircraft currently in development.
+(Being Added with additional Liveries and additional Improvements.)
 
 ## License
 
