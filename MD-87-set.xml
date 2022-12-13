@@ -7,7 +7,7 @@ McDonnell Douglas MD-88
 
 <sim include="Systems/MD-87-views.xml">
   <description>McDonnell Douglas MD-87</description>
-  <author>Joshua Davidson (it0uchpods/411), Martien van der P (exterior model)</author>
+  <author>Joshua Davidson (Octal450), Martien van der P (exterior model)</author>
 	<status>0.0.5</status>
 	<aircraft-version>V0.0.5</aircraft-version>
 	<rating>

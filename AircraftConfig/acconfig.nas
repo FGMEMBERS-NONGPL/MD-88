@@ -1,5 +1,5 @@
 # Aircraft Config Center
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
 setprop("/systems/acconfig/autoconfig-running", 0);
 var main_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/main/dialog", "Aircraft/MD-88/AircraftConfig/main.xml");

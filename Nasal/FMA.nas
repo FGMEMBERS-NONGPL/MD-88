@@ -1,5 +1,5 @@
 # This file converts the IT-AUTOFLIGHT Outputs, and converts them into text strings needed for the FMA.
-# Joshua Davidson (it0uchpods/411)
+# Joshua Davidson (Octal450/411)
 
 # IAS or MACH FLCH?
 var flch-speedmach = func {

@@ -1,5 +1,5 @@
 # MD-88/MD-90 Electrical System
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
 var ELEC_UPDATE_PERIOD	= 1;
 var STD_VOLTS_AC	= 115;

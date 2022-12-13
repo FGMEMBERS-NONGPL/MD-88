@@ -4,7 +4,7 @@
 #
 # Gary Neely aka 'Buckaroo'
 #
-# Modified by Joshua Davidson (it0uchpods/411)
+# Modified by Joshua Davidson (Octal450/411)
 #
 # Elevator operations:
 #
@@ -190,7 +190,7 @@ var spoiler_disarm = func {
 var pos_flaps	= props.globals.getNode("/controls/flight/flaps");
 var pos_slats	= props.globals.getNode("/controls/flight/slats");
 
-# Custom Flap/Slat System by Joshua Davidson (it0uchpods/411)
+# Custom Flap/Slat System by Joshua Davidson (Octal450/411)
 # Dial a Flap will be added as soon as I can find enough infos about it
 
 setprop("/controls/flight/flap-lever", 0);

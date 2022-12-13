@@ -1,4 +1,4 @@
-# MD-88/MD-90 EFIS controller by Joshua Davidson (it0uchpods/411).
+# MD-88/MD-90 EFIS controller by Joshua Davidson (Octal450/411).
 
 var nd_init = func {
 	setprop("/instrumentation/efis/inputs/range-nm", 10);

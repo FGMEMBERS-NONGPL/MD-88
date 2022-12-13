@@ -1,5 +1,5 @@
 # MD-88/MD-90 Engine System
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
 #####################
 # Initializing Vars #
