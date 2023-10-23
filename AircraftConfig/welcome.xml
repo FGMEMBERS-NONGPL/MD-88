@@ -33,23 +33,15 @@
 			
 			<text>
 				<halign>center</halign>
-				<label>Welcome to the Octal450 MD-8X/MD-90 Series!</label>
+				<label>This is a out of date simulation</label>
 			</text>
 			<text>
 				<halign>center</halign>
-				<label>This is a complex simulation of these amazing McDonnell Douglas Aircraft.</label>
-			</text>
-			<text>
-				<halign>center</halign>
-				<label>They are currently still under development, and therefore are not complete yet.</label>
+				<label>Please visit github.com/Octal450/MD-80 for continued development</label>
 			</text>
 			<text>
 				<halign>center</halign>
 				<label>Use the Aircraft Config to select livery, manage panel states, and more!</label>
-			</text>
-			<text>
-				<halign>center</halign>
-				<label>Please report bugs on the FlightGear forums! Enjoy!</label>
 			</text>
 			
 		</group>

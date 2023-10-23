@@ -182,7 +182,7 @@
 		<object-name>ROff</object-name>
 		<condition>
 			<greater-than>
-          <property>position/altitude-agl-ft</property>
+          <property>position/gear-agl-ft</property>
           <value>2505</value>
           </greater-than>
   </condition>
@@ -191,7 +191,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>Alttape1</object-name>
-  <property>position/altitude-agl-ft</property>
+  <property>position/gear-agl-ft</property>
   <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>9500</ind><dep>0.9068</dep></entry>
@@ -284,7 +284,7 @@
       </greater-than>
       <greater-than>
         <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
-        <property>position/altitude-agl-ft</property>
+        <property>position/gear-agl-ft</property>
       </greater-than>
     </and>
   </condition>
@@ -303,7 +303,7 @@
       </greater-than>
       <less-than-equals>
         <property>/instrumentation/mk-viii/inputs/arinc429/decision-height</property>
-        <property>position/altitude-agl-ft</property>
+        <property>position/gear-agl-ft</property>
       </less-than-equals>
     </and>
   </condition>
