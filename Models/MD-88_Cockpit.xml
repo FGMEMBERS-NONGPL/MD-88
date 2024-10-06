@@ -176,8 +176,6 @@
   </axis>
 </animation>
 
-
-
 <!-- Sub-Model Imports -->
 
 <model>
@@ -189,7 +187,6 @@
   <name>Instruments</name>
   <path>Aircraft/MD-88/Models/MD-88_Instruments.xml</path>
 </model>
-
 
 <!-- Level Of Detail -->
 

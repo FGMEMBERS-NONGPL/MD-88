@@ -5,9 +5,9 @@ McDonnell Douglas MD-88
 
 <PropertyList>
 
-<sim include="Systems/MD-88-views.xml">
-  <description>McDonnell Douglas MD-88</description>
-  <author>Joshua Davidson (Octal450)</author>
+<sim include="Systems/MD-87-views.xml">
+  <description>McDonnell Douglas MD-87 Tanker</description>
+  <author>Joshua Davidson (Octal450), Martien van der P (exterior model)</author>
 	<status>0.0.5</status>
 	<aircraft-version>V0.0.5</aircraft-version>
 	<rating>
@@ -17,21 +17,61 @@ McDonnell Douglas MD-88
             <model type="int">4</model>
     </rating>
   <flight-model>yasim</flight-model>
-  <aero>MD-88-yasim</aero>
+  <aero>MD-87-yasim</aero>
   <variant-of>MD-87</variant-of>
   <fuel-fraction>0.5</fuel-fraction>
 
   <startup>
-            <splash-texture>Aircraft/MD-88/MD-88-splash.png</splash-texture>
+            <splash-texture>Aircraft/MD-88/MD-87-splash.png</splash-texture>
   </startup>
 
 
   <model>
-    <path>Aircraft/MD-88/Models/MD-88.xml</path>
+    <path>Aircraft/MD-88/Models/MD-87/MD-87.xml</path>
     <livery>
-      <file type="string">American</file>
+      <file type="string">White</file>
     </livery>
+	
+	<MD-87>
+		<effects>
+		  <particles>
+			<enabled type="bool">true</enabled>
+			<redcombined type="float">0</redcombined>
+			<greencombined type="float">0</greencombined>
+			<bluecombined type="float">0</bluecombined>
+		  </particles>
+		</effects>  
+	</MD-87>
+
+	<watercannon>
+		<tank-volume type="float">0</tank-volume>
+		<tank-weight type="float">0</tank-weight>
+	</watercannon>
+
+	<firetank>
+		<enabled type="bool">true</enabled>
+		<opentankdoors type="bool">0</opentankdoors>
+		<foam type="bool">0</foam>
+		<arm type="bool">1</arm>
+		<lowhydpres type="bool">0</lowhydpres>
+		<test type="bool">0</test>
+		<!-- tank is 0 = safe / 1, 2, 3 = tank / 4 = all -->
+		<tank type="int">4</tank>
+		<!-- quantity is 1 = 25% 2 = 50% 3 = 75% 4 = salvo -->
+		<quantity type="int">4</quantity>
+		<foamconcentrate type="int">0</foamconcentrate>
+		<droprate type="int">300</droprate><!-- for particles only -->
+		<waterdropparticlectrl type="bool">false</waterdropparticlectrl>
+		<waterdropretardantctrl type="bool">false</waterdropretardantctrl>
+		<retardantdropparticlectrl type="bool">false</retardantdropparticlectrl>
+	</firetank>
+
   </model> 
+
+  <submodels>
+		<serviceable type="bool">true</serviceable>
+		<path>Aircraft/MD-88/Models/submodels.xml</path>
+  </submodels>
 
   <systems>
 	<!-- Disable the generic electrical system -->
@@ -51,6 +91,9 @@ McDonnell Douglas MD-88
     <autopilot>
       <path>Aircraft/MD-88/Systems/engine-timing.xml</path>
     </autopilot>
+	<property-rule n="102">
+		<path>Aircraft/MD-88/Systems/model-effects.xml</path>
+	</property-rule>
   </systems> 
 
   <instrumentation>
@@ -95,6 +138,14 @@ McDonnell Douglas MD-88
     <min-lb>0</min-lb>      
   </weight>
 
+  <!-- 6764.85 lb each blader -->
+	<weight n="2">
+	  <name>Water Tank</name>
+	  <weight-lb>0</weight-lb>
+	  <max-lb>35480</max-lb>
+	  <min-lb>0</min-lb>
+	</weight>
+
   <yoke-visible type="bool">1</yoke-visible>
 
 <help>
@@ -132,8 +183,6 @@ McDonnell Douglas MD-88
         <desc>Retract Speedbrakes</desc>
     </key>
 
-
-
    <!--text>
 
 For Manual Engine Start, see the checlists in the Help Menu.
@@ -147,7 +196,7 @@ For Manual Engine Start, see the checlists in the Help Menu.
   <menubar>
     <default>
       <menu n="100">
-		<label>MD-88</label>
+		<label>MD-87</label>
         <item>
 			<label>Aircraft Config</label>
 			<binding> 
@@ -183,6 +232,16 @@ For Manual Engine Start, see the checlists in the Help Menu.
 				<script>
 				var stair = gui.Dialog.new("sim/gui/dialogs/stairs/dialog", "Aircraft/MD-88/Systems/stairs.xml");
 				stair.open();
+				</script>
+			</binding>
+		</item>
+		<item>
+			<label>Fire Tank System</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+				var firetank = gui.Dialog.new("/sim/gui/dialogs/firetank/dialog", "Aircraft/MD-88/Systems/firetank-dialog.xml");
+				firetank.open();
 				</script>
 			</binding>
 		</item>
@@ -374,30 +433,55 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
       </binding>
     </key>
 	<key n="115">
-                <name>S</name>
-                <desc>Autostart</desc>
-                <binding> 
-            <command>nasal</command>
-            <script>MD88.eng_magicstartup();</script>
-          </binding>
-            </key>
+		<name>S</name>
+		<desc>Autostart</desc>
+		<binding> 
+			<command>nasal</command>
+			<script>MD88.eng_magicstartup();</script>
+		</binding>
+    </key>
 	<key n="108">
-                <name>l</name>
-                <desc>toggle landing lights</desc>
+		<name>l</name>
+		<desc>toggle landing lights</desc>
 		<repeatable>false</repeatable>
-                <binding>
-                    <command>property-toggle</command>
-                     <property>controls/lighting/landing-lights</property>
-                </binding>
 		<binding>
-                    <command>property-toggle</command>
-                     <property>controls/lighting/landing-left</property>
-                </binding>
+			<command>property-toggle</command>
+			<property>controls/lighting/landing-lights</property>
+		</binding>
 		<binding>
-                    <command>property-toggle</command>
-                     <property>controls/lighting/landing-right</property>
-                </binding>
-            </key>
+			<command>property-toggle</command>
+			<property>controls/lighting/landing-left</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/lighting/landing-right</property>
+		</binding>
+	</key>
+
+	<!--key n="107">
+	  <name>k</name>
+	  <desc>Close Tank Doors</desc>
+	  <binding>
+		<command>property-toggle</command>
+		<property>sim/model/firetank/opencannonvalve</property>
+	  </binding>
+	</key-->
+	<key n="75">
+	  <name>K</name>
+	  <desc>Open Tank Doors</desc>
+	  <binding>
+		<command>nasal</command>
+		<script>
+		  if (getprop("sim/model/firetank/opentankdoors") == 0) {
+			if (getprop("sim/model/firetank/quantity") > 0) {
+			  setprop("sim/model/firetank/opentankdoors", 1);
+			} else {
+			  screen.log.write("Quantity set to safe!");
+			}
+		  }
+		</script>
+	  </binding>
+	</key>
   </keyboard>
 </input>
 
@@ -406,11 +490,12 @@ State: off (0), startup stage 1 (1), startup stage 2 (2), running (3), shutdown 
     <file>Aircraft/MD-88/Nasal/MD-88_flightsurfaces.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_abs.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88_instrumentation_drivers.nas</file>
-    <file>Aircraft/MD-88/Nasal/MD-88.nas</file>
+    <file>Aircraft/MD-88/Nasal/MD-87.nas</file>
     <file>Aircraft/MD-88/Nasal/ground-services.nas</file>
     <file>Aircraft/MD-88/Nasal/tyresmoke.nas</file>
 	<file>Aircraft/MD-88/Models/Instruments/ND/ND.nas</file>
     <file>Aircraft/MD-88/Nasal/MD-88-efis.nas</file>
+	<file>Aircraft/MD-88/Nasal/tankoperations.nas</file>
   </MD88>
   <acconfig>
 	<file>Aircraft/MD-88/AircraftConfig/acconfig.nas</file>

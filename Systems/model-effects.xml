@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  <filter>
+    <name>Retardant Drop to Wildfire Trigger</name>
+    <type>gain</type>
+	<enable>
+      <condition>
+          <property>sim/model/firetank/retardantdropparticlectrl</property>
+      </condition>
+    </enable>
+    <input>
+     <property>sim/model/firetank/retardantdropparticlectrl</property>
+    </input>
+    <output>controls/drop/trigger</output>
+  </filter>
+  <filter>
+    <name>Water or Foam Drop to Wildfire Trigger</name>
+    <type>gain</type>
+	<enable>
+      <condition>
+		 <and>
+           <property>sim/model/firetank/waterdropparticlectrl</property>
+		   <property>sim/model/firetank/foam</property>
+		 </and>
+      </condition>
+    </enable>
+    <input>
+     <property>sim/model/firetank/waterdropparticlectrl</property>
+    </input>
+    <output>controls/drop/trigger</output>
+  </filter>
+
+</PropertyList>

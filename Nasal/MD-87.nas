@@ -5,6 +5,7 @@
 # Gary Neely aka 'Buckaroo'
 #
 var engine_dialog = gui.Dialog.new("Aircraft/MD-88/Systems/announcements-dialog.xml");
+var firetank_dialog = gui.Dialog.new("Aircraft/MD-88/Systems/firetank-dialog.xml");
 
 aircraft.livery.init("Aircraft/MD-88/Models/Liveries87");
 								# Set up screen message windows
