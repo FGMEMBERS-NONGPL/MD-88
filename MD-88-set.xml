@@ -18,7 +18,6 @@ McDonnell Douglas MD-88
     </rating>
   <flight-model>yasim</flight-model>
   <aero>MD-88-yasim</aero>
-  <variant-of>MD-87</variant-of>
   <fuel-fraction>0.5</fuel-fraction>
 
   <startup>
